@@ -1,0 +1,562 @@
+[
+ {
+  "id": "sansevieria",
+  "nome": "Sansevieria (oggi Dracaena)",
+  "fam": "Asparagaceae · Africa tropicale",
+  "illu": "sansevieria",
+  "rappr": "Dracaena trifasciata",
+  "totale": "Circa 70 specie erano collocate in Sansevieria prima del passaggio a Dracaena.",
+  "inverno": "Nessuna Dracaena di questo gruppo è una pianta da terrazzo in inverno. Sono tropicali: la trifasciata regge intorno ai 10 °C, masoniana e kirkii vogliono stare sopra i 13 °C, e sotto quelle soglie il tessuto si danneggia. Con minime notturne di 2-3 °C il danno è certo, e ha la caratteristica sgradevole di comparire settimane dopo, quando la base della foglia diventa molle e traslucida e la pianta non si riprende più. Vanno ritirate tutte quando le minime si avvicinano ai 12 °C, in un locale luminoso, e in casa si annaffia pochissimo: acqua fredda su un substrato che non asciuga è l'altra metà del problema.",
+  "keys": [
+   "sansevieria",
+   "dracaena",
+   "lingua di suocera",
+   "snake plant",
+   "trifasciata",
+   "masoniana",
+   "cylindrica",
+   "zeylanica",
+   "moonshine",
+   "laurentii",
+   "hahnii"
+  ],
+  "intro": "Gli studi molecolari hanno fatto confluire l'intero genere Sansevieria dentro Dracaena: il nome corretto oggi è Dracaena trifasciata, anche se in vivaio si continua a leggere Sansevieria. Vengono da habitat rocciosi e aridi dell'Africa tropicale, ed è da lì che discende tutto il resto della coltivazione.",
+  "spec": [
+   [
+    "Luce",
+    "Gradiscono molta luce ma tollerano la mezz'ombra. In estate vanno protette dal sole più caldo delle esposizioni a sud. Sopravvivono anche in luce scarsa, ma per crescere davvero serve sole moderato e per fiorire serve luce abbondante."
+   ],
+   [
+    "Acqua",
+    "L'eccesso d'acqua è la causa di insuccesso più frequente in assoluto. In vegetazione si lascia asciugare completamente il substrato tra un'annaffiatura e l'altra; da ottobre a febbraio si annaffia pochissimo, indicativamente ogni due settimane, quel tanto che basta a non far raggrinzire le foglie."
+   ],
+   [
+    "Terriccio",
+    "Miscela drenante: circa un terzo di sabbia grossolana o perlite e fino a un terzo di torba, il resto terriccio."
+   ],
+   [
+    "Temperatura",
+    "Bene tra 18 e 27 °C. Non scendere sotto i 13 °C ed evitare le correnti d'aria fredda invernali."
+   ],
+   [
+    "Concime",
+    "Concime liquido diluito a metà dose, una volta al mese e solo nella stagione di crescita."
+   ],
+   [
+    "Propagazione",
+    "Si staccano i polloni dai rizomi quando hanno 4-5 foglie. Se hanno già radici si invasano subito; se sono senza radici si lasciano cicatrizzare qualche giorno e si mettono in substrato drenante a circa 21 °C in luce indiretta luminosa. La talea di foglia funziona, ma le varietà variegate (come 'Laurentii') ripartono verdi: la variegatura si conserva solo dividendo la pianta."
+   ],
+   [
+    "Errori tipici",
+    "Foglie che si piegano o si afflosciano: troppa acqua o troppo poca luce. Punta spezzata: quella foglia smette di allungarsi per sempre. Spostamento improvviso dall'ombra al pieno sole: scottature."
+   ]
+  ]
+ },
+ {
+  "id": "echeveria",
+  "nome": "Echeveria",
+  "fam": "Crassulaceae · Messico e America centrale",
+  "illu": "echeveria",
+  "rappr": "Echeveria elegans",
+  "totale": "219 specie accettate secondo Plants of the World Online (Kew).",
+  "inverno": "Le Echeveria hanno poca resistenza al freddo — sono piante da zone 9-11 — ma sul tuo terrazzo il nemico non è il freddo: è il freddo insieme all'acqua. A 2-3 °C una rosetta perfettamente asciutta se la cava, la stessa rosetta sotto la pioggia di novembre marcisce dal colletto. Se hai un angolo coperto, luminoso e ventilato dove la pioggia non arriva, la maggior parte può passare l'inverno fuori, all'asciutto e senza mai annaffiare da ottobre a febbraio. Le specie pelose e le più pruinose stanno meglio in casa: i peli trattengono l'acqua per giorni e la pruina, una volta rovinata, non si riforma.",
+  "keys": [
+   "echeveria",
+   "elegans",
+   "agavoides",
+   "lola",
+   "perle von nurnberg",
+   "purpusorum",
+   "setosa",
+   "runyonii",
+   "colorata"
+  ],
+  "intro": "Le rosette simmetriche che tutti immaginano quando si dice succulenta. Sono anche le più esigenti in fatto di luce: la forma compatta della rosetta è direttamente proporzionale alle ore di sole che ricevono. Al numero delle specie va aggiunta una quantità enorme di ibridi orticoli, che non hanno un registro completo.",
+  "spec": [
+   [
+    "Luce",
+    "Il massimo possibile: diverse ore di sole diretto al giorno o una posizione molto luminosa. In carenza di luce la rosetta si apre, si allunga e impallidisce (filatura), e non torna più compatta."
+   ],
+   [
+    "Acqua",
+    "Inzuppa e asciuga: si bagna a fondo finché l'acqua esce dai fori, poi si aspetta che il substrato sia completamente asciutto. Non versare acqua nel cuore della rosetta: ristagna tra le foglie e fa marcire il colletto. Meglio annaffiare al mattino."
+   ],
+   [
+    "Terriccio",
+    "Prevalentemente minerale: terriccio per cactacee alleggerito con pomice, lapillo o perlite fino al 50-70%."
+   ],
+   [
+    "Temperatura",
+    "Tenerle sopra i 5 °C. Fuori d'estate, al riparo e all'asciutto d'inverno."
+   ],
+   [
+    "Propagazione",
+    "Foglia intera staccata alla base con un movimento laterale: deve venire via completa, se si strappa non germoglia. Callo di 2-4 giorni, poi appoggiata sul substrato. In alternativa si decapita la rosetta filata e si radica il ciuffo, mentre il moncone rimasto emette nuovi getti laterali."
+   ],
+   [
+    "Attenzione",
+    "La pruina biancastra sulle foglie è una protezione dal sole e non si riforma: prendere le piante dal vaso, mai dalle foglie."
+   ]
+  ]
+ },
+ {
+  "id": "haworthia",
+  "nome": "Haworthia, Haworthiopsis e Gasteria",
+  "fam": "Asphodelaceae · Sudafrica",
+  "illu": "haworthia",
+  "rappr": "Haworthiopsis fasciata",
+  "totale": "Haworthia: circa 150 specie accettate dopo la revisione del 2013 (Bayer ne riconosceva una sessantina nel 2012). Gasteria: 29 specie accettate secondo la revisione di van Jaarsveld del 2007.",
+  "inverno": "Qui il terrazzo non è un'opzione: sotto i 5 °C le Haworthia si perdono e le Gasteria vogliono restare sopra i 10 °C. La buona notizia è che sono le succulente più facili da svernare in casa, perché vogliono luce indiretta e non si filano al chiuso come tutte le altre: una finestra a est o a nord va benissimo, con acqua una volta al mese o anche meno. Il problema opposto è l'estate: al sole pieno del terrazzo si scottano, le foglie virano al rosso scuro o al bianco e si seccano. Da aprile a settembre vogliono ombra luminosa.",
+  "keys": [
+   "haworthia",
+   "haworthiopsis",
+   "gasteria",
+   "tulista",
+   "fasciata",
+   "attenuata",
+   "cooperi",
+   "truncata",
+   "retusa",
+   "zebra"
+  ],
+  "intro": "Le uniche succulente comuni che stanno davvero bene lontano dal sole diretto: in natura crescono all'ombra di arbusti e tra le rocce. Nel 2013 il genere Haworthia è stato riconosciuto come polifiletico e le specie a foglia dura e rigata sono state separate in Haworthiopsis, mentre un altro gruppo è passato a Tulista.",
+  "spec": [
+   [
+    "Luce",
+    "Luce indiretta luminosa, finestra a est o a nord. Il sole diretto estivo le arrossa e le brucia. Con poca luce la rosetta si allarga e produce meno polloni, ma la pianta sopravvive."
+   ],
+   [
+    "Acqua",
+    "Ogni 2-3 settimane in vegetazione, ogni 3-4 in autunno, una volta al mese o anche meno d'inverno in ambiente fresco. Il substrato deve essere completamente asciutto, non appena umido."
+   ],
+   [
+    "Terriccio",
+    "Drenaggio rapido: 2 parti di terriccio, 2 di sabbia grossolana o perlite, 1 di pomice. Vasi bassi e larghi."
+   ],
+   [
+    "Temperatura",
+    "Ottimale 18-24 °C. Un periodo fresco invernale a 12-15 °C fa bene. Sotto i 5 °C si perdono."
+   ],
+   [
+    "Propagazione",
+    "Polloni già radicati staccati e appoggiati su terra asciutta senza annaffiare subito: radicano in 2-4 settimane. La foglia funziona ma è lenta, servono 3-4 mesi per una piantina."
+   ],
+   [
+    "Errori tipici",
+    "Crescita molto lenta per natura: la rosetta quasi non cresce in altezza, si moltiplica per polloni. Rosetta pallida e slargata significa poca luce; base nera e molle significa marciume radicale."
+   ]
+  ]
+ },
+ {
+  "id": "aloe",
+  "nome": "Aloe",
+  "fam": "Asphodelaceae · Africa e penisola arabica",
+  "illu": "aloe",
+  "rappr": "Aloe vera",
+  "totale": "Oltre 650 specie secondo World Flora Online (2022); più di 600 sono considerate accettate.",
+  "inverno": "Qui la risposta cambia rispetto alle Sansevieria: buona parte delle Aloe è più rustica di quanto si creda e con minime di 2-3 °C può restare in terrazzo tutto l'anno. Diverse sono date per le zone 8-9, cioè fino a -6 °C e oltre, e la striatula regge addirittura -9 °C. Ma ogni rusticità dichiarata presuppone una condizione sola: che d'inverno il substrato sia asciutto. Il pericolo del tuo terrazzo non è la notte a 2 °C, è la pioggia di novembre su un vaso che non asciuga più. Da novembre a febbraio acqua zero, e le miniature del Madagascar — che in vasetti piccoli sentono subito il freddo umido alle radici — al coperto.",
+  "keys": [
+   "aloe",
+   "vera",
+   "arborescens",
+   "aristata",
+   "brevifolia",
+   "juvenna",
+   "polyphylla",
+   "ferox",
+   "variegata"
+  ],
+  "intro": "Rosette carnose e dentate che in vaso restano tra i 30 e i 60 cm. Rustiche solo nelle zone più calde: in Italia si coltivano in vaso, fuori da primavera a ottobre e al riparo d'inverno. Alcune specie storiche sono state spostate in generi separati: Aloe plicatilis è oggi Kumara, A. dichotoma è Aloidendron, A. variegata è Gonialoe.",
+  "spec": [
+   [
+    "Luce",
+    "Pieno sole, 6 ore o più di diretto; tollerano la mezz'ombra con 2-6 ore. Le piante da interno vanno riabituate al sole gradualmente in primavera."
+   ],
+   [
+    "Acqua",
+    "Substrato completamente asciutto tra un'annaffiatura e l'altra, con netta riduzione nei mesi freddi. L'eccesso porta rapidamente al marciume radicale."
+   ],
+   [
+    "Terriccio",
+    "Molto drenante, sabbioso, pH da neutro ad alcalino. I vasi in terracotta con foro sono i più adatti perché asciugano prima."
+   ],
+   [
+    "Temperatura",
+    "Rustiche solo in zone a inverno mite. Portarle al riparo quando le minime scendono verso i 5 °C."
+   ],
+   [
+    "Propagazione",
+    "Per divisione dei polloni, che l'Aloe produce spontaneamente alla base. Si staccano con qualche radice e si invasano in substrato asciutto."
+   ],
+   [
+    "Attenzione",
+    "Tossicità bassa ma reale: l'ingestione può dare crampi e diarrea e la linfa può irritare la pelle. Considerata problematica per cani, gatti e cavalli. Parassiti frequenti: cocciniglia cotonosa, afidi, cocciniglia bruna e ruggine dell'aloe."
+   ]
+  ]
+ },
+ {
+  "id": "crassula",
+  "nome": "Crassula",
+  "fam": "Crassulaceae · Sudafrica",
+  "illu": "crassula",
+  "rappr": "Crassula ovata",
+  "totale": "Circa 200 specie accettate secondo Plants of the World Online (Kew, dicembre 2024).",
+  "inverno": "Il genere sta nelle zone 9a-10b: la maggior parte tollera brevi gelate ma si danneggia sotto zero, quindi con minime di 2-3 °C il freddo in sé non è il problema. Il problema è che le Crassula perdono le radici se il substrato resta freddo e bagnato a lungo — è così che muore in terrazzo l'albero di giada, non per il gelo. Servono un angolo coperto e ventilato e acqua praticamente zero da novembre a febbraio. Due eccezioni da tenere a mente: la sarcocaulis è rustica per davvero (rusticità RHS H3, da -5 a 1 °C) e resta fuori senza discussioni; il gruppo delle sudafricane a crescita fresca — columnaris, barklyi, plegmatoides, tecta e simili — riposa invece in piena estate, ed è a luglio e agosto che va tenuto all'asciutto.",
+  "keys": [
+   "crassula",
+   "ovata",
+   "albero di giada",
+   "jade",
+   "gollum",
+   "hobbit",
+   "perforata",
+   "muscosa",
+   "tetragona",
+   "falcata"
+  ],
+  "intro": "L'albero di giada (Crassula ovata) è la specie di riferimento: in coltivazione libera arriva a 1-1,8 m di altezza e diventa un piccolo albero con tronco legnoso. Il genere comprende però anche moltissime specie in miniatura, colonnari o a foglie sovrapposte.",
+  "spec": [
+   [
+    "Luce",
+    "Luce intensa. Da adulta gradisce anche qualche ora di sole diretto; in ombra i rami si allungano e si spezzano sotto il proprio peso."
+   ],
+   [
+    "Acqua",
+    "Con moderazione, solo a terreno asciutto, riducendo nettamente dall'autunno a fine inverno. L'eccesso d'acqua provoca caduta delle foglie e marciume radicale."
+   ],
+   [
+    "Terriccio",
+    "Terriccio ben drenante con una buona componente di terra grassa (loam) e inerti."
+   ],
+   [
+    "Temperatura",
+    "Preferisce ambienti interni freschi. In Italia sta fuori tutta l'estate, al riparo d'inverno."
+   ],
+   [
+    "Propagazione",
+    "Fra le più facili in assoluto: sia per foglia sia per talea di ramo, con callo di qualche giorno prima di appoggiare sul substrato."
+   ],
+   [
+    "Attenzione",
+    "Tossica per cani, gatti e cavalli. Parassiti abituali: afidi, cocciniglia bruna, cocciniglia cotonosa e ragnetto rosso."
+   ]
+  ]
+ },
+ {
+  "id": "sedum",
+  "nome": "Sedum, Hylotelephium e Phedimus",
+  "fam": "Crassulaceae · emisfero boreale",
+  "illu": "sedum",
+  "rappr": "Sedum morganianum",
+  "totale": "Da 420 a 470 specie, dopo lo scorporo di una trentina di generi segregati come Hylotelephium, Phedimus e Rhodiola.",
+  "inverno": "Il genere è spaccato in due, e la differenza conta più di ogni altra cosa. I Sedum europei e asiatici da giardino — album, acre, spurium, reflexum, kamtschaticum, sexangulare, dasyphyllum, sediforme — sono rustici fino a temperature che il tuo terrazzo non vedrà mai: restano fuori tutto l'anno, senza riparo e senza attenzioni. I messicani e i cascanti — morganianum, rubrotinctum, nussbaumerianum, pachyphyllum, dendroideum — non sono rustici e vogliono un riparo asciutto. C'è anche un rovescio della medaglia: più un Sedum è rustico, meno sopporta il caldo, quindi le specie da zona 2-5 d'estate gradiscono un po' d'ombra a mezzogiorno.",
+  "keys": [
+   "sedum",
+   "hylotelephium",
+   "phedimus",
+   "morganianum",
+   "coda d'asino",
+   "burrito",
+   "album",
+   "palmeri",
+   "spurium",
+   "spectabile",
+   "rupestre",
+   "rubrotinctum"
+  ],
+  "intro": "Genere enorme e diseguale: comprende sia specie perfettamente rustiche da giardino roccioso, sia specie pendule delicate da vaso. Molte specie da giardino sono state spostate nei generi Hylotelephium (spectabile, telephium) e Phedimus (spurium, kamtschaticum).",
+  "spec": [
+   [
+    "Luce",
+    "Pieno sole per quasi tutte. È il gruppo che sopporta meglio le esposizioni estreme e la coltivazione all'aperto tutto l'anno nelle specie rustiche."
+   ],
+   [
+    "Acqua",
+    "Molto poca. Le specie rustiche in piena terra si accontentano della pioggia; quelle in vaso vogliono il classico inzuppa e asciuga."
+   ],
+   [
+    "Terriccio",
+    "Povero e drenante. I Sedum tappezzanti vivono su pochi centimetri di substrato, tetti verdi compresi."
+   ],
+   [
+    "Temperatura",
+    "Le specie rustiche (album, rupestre, spurium) reggono il gelo in piena terra. Le pendule tropicali come S. morganianum vanno protette sotto i 5 °C."
+   ],
+   [
+    "Propagazione",
+    "Praticamente automatica: ogni foglia che cade radica. La coda d'asino perde foglie al minimo tocco, ed è il modo più rapido per moltiplicarla."
+   ],
+   [
+    "Errori tipici",
+    "Le pendule vanno maneggiate il meno possibile: le foglie si staccano, e i tralci spogliati non rivestono più."
+   ]
+  ]
+ },
+ {
+  "id": "kalanchoe",
+  "nome": "Kalanchoe",
+  "fam": "Crassulaceae · Madagascar e Africa",
+  "illu": "kalanchoe",
+  "rappr": "Kalanchoe blossfeldiana",
+  "totale": "Circa 125 specie.",
+  "inverno": "Tutte in casa: il genere vuole 7-18 °C di notte e 10-21 °C di giorno, e le tue minime sono troppo basse. Ma per la blossfeldiana e le altre brevidiurne il ricovero ha un secondo scopo, ed è quello che quasi tutti sbagliano: da ottobre a marzo servono notti lunghe e buie di 14-16 ore per formare i boccioli. Se passano l'inverno in una stanza dove la sera accendi la luce, non rifioriranno mai, per quanto bene le curi. La stanza giusta è quella che di sera resta al buio.",
+  "keys": [
+   "kalanchoe",
+   "blossfeldiana",
+   "tomentosa",
+   "daigremontiana",
+   "thyrsiflora",
+   "luciae",
+   "madre di migliaia",
+   "delagoensis",
+   "fedtschenkoi"
+  ],
+  "intro": "La Kalanchoe blossfeldiana è la succulenta fiorita più venduta al mondo, e quasi sempre viene buttata dopo la fioritura. Rifiorisce eccome, ma solo rispettando il fotoperiodo: è una pianta brevidiurna.",
+  "spec": [
+   [
+    "Luce",
+    "Pieno sole o posizione molto luminosa. In luce scarsa diventa spigata e lunga."
+   ],
+   [
+    "Acqua",
+    "Sensibile agli eccessi: si lascia asciugare leggermente il substrato tra le annaffiature."
+   ],
+   [
+    "Terriccio",
+    "Ben drenante; una miscela collaudata è 60% torba e 40% perlite."
+   ],
+   [
+    "Temperatura",
+    "Ambiente fresco: 7-18 °C di notte e 10-21 °C di giorno. Le notti fresche allungano molto la durata della fioritura."
+   ],
+   [
+    "Rifioritura",
+    "Per formare i boccioli servono giorni corti e notti lunghe di 14-16 ore, per circa sei settimane: sono le condizioni naturali fra il 1° ottobre e il 1° marzo. Durante le notti lunghe la temperatura non deve superare i 27 °C, altrimenti la fioritura si blocca. Una pianta esposta ai giorni corti a inizio ottobre fiorisce entro gennaio, circa dodici settimane dopo."
+   ],
+   [
+    "Propagazione",
+    "Talee erbacee di 5-7 cm con due paia di foglie, in primavera o inizio estate. Si tolgono le foglie basali, si lascia cicatrizzare qualche giorno e si mette in 50% torba e 50% perlite: in 14-21 giorni sono pronte per il trapianto."
+   ],
+   [
+    "Attenzione",
+    "Tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti. Parassiti abituali: cocciniglia cotonosa, afidi e cocciniglia bruna."
+   ]
+  ]
+ },
+ {
+  "id": "curio",
+  "nome": "Senecio e Curio",
+  "fam": "Asteraceae · Sudafrica",
+  "illu": "curio",
+  "rappr": "Curio rowleyanus",
+  "totale": "Curio conta oltre 20 specie, tutte precedentemente collocate in Senecio; le altre succulente restano divise fra Senecio e Kleinia.",
+  "inverno": "Il genere si divide in due gruppi opposti. Le chalk sticks azzurre — Curio talinoides, Senecio serpens e mandraliscae — sono date per le zone 9a-11b, fino a -6,7 °C: restano fuori tutto l'anno. Le collane — rowleyanus e herreanus — vogliono invece un riposo invernale asciutto a 13-15 °C, ed è proprio quel riposo che le fa fiorire l'estate dopo: quelle vanno in casa. Per tutte, il rischio invernale vero è la pioggia sulle foglie carnose, più della temperatura.",
+  "keys": [
+   "senecio",
+   "curio",
+   "kleinia",
+   "rowleyanus",
+   "collana di perle",
+   "string of pearls",
+   "herreianus",
+   "radicans",
+   "serpens",
+   "haworthii",
+   "mandraliscae"
+  ],
+  "intro": "Sono succulente della famiglia delle margherite. La collana di perle, oggi Curio rowleyanus, ha steli penduli che arrivano a novanta centimetri e in natura cresce sotto gli arbusti e fra le rocce: da qui la sua richiesta di luce brillante ma non bruciante.",
+  "spec": [
+   [
+    "Luce",
+    "Luce brillante ma filtrata. Il sole diretto di mezzogiorno secca le perle."
+   ],
+   [
+    "Acqua",
+    "Substrato completamente asciutto tra le annaffiature: più acqua in estate, molto poca in inverno. Il marciume radicale da eccesso d'acqua è la causa di morte più comune. Il segnale giusto per annaffiare è la perla leggermente raggrinzita."
+   ],
+   [
+    "Terriccio",
+    "Molto drenante, con inerti fino al 50%: ghiaietto, sabbia grossa, grit o pomice. Vaso in terracotta, che asciuga più in fretta di plastica e ceramica."
+   ],
+   [
+    "Temperatura",
+    "Un riposo invernale asciutto a 13-15 °C favorisce la fioritura estiva."
+   ],
+   [
+    "Propagazione",
+    "Talee di 8-10 cm, si tolgono le foglie basali e si appoggiano i nodi sul substrato appena umido: radicano rapidamente da ogni nodo. I semi in commercio praticamente non esistono."
+   ],
+   [
+    "Attenzione",
+    "Foglie leggermente tossiche: l'ingestione può causare vomito o diarrea, e la linfa può irritare la pelle nei soggetti sensibili."
+   ]
+  ]
+ },
+ {
+  "id": "euphorbia",
+  "nome": "Euphorbia succulente",
+  "fam": "Euphorbiaceae · Africa e Madagascar",
+  "illu": "euphorbia",
+  "rappr": "Euphorbia trigona",
+  "totale": "Il genere conta circa 2.000 specie: circa 850 sono succulente in senso stretto, che salgono a un migliaio includendo le xerofite (Planetary Biodiversity Inventory, 2022).",
+  "inverno": "Due gruppi con esigenze opposte. Le tropicali e le malgasce — trigona, tirucalli, ingens, milii, decaryi, platyclada — vogliono un riposo intorno ai 13 °C e vanno in casa. Le globose e colonnari sudafricane — horrida, polygona, enopla, ferox, globosa, obesa, caput-medusae — in coltivazione asciutta sono documentate resistenti fino a -3 o -4 °C, e in qualche caso oltre: sul tuo terrazzo, sotto una tettoia e senza una goccia d'acqua da ottobre, stanno benissimo. Quel \"tutte asciutte\" non è un dettaglio: bagnate, le stesse specie marciscono già a 5 °C. E in ogni caso resta il lattice, che non va in letargo: guanti e occhiali a ogni potatura, tutto l'anno.",
+  "keys": [
+   "euphorbia",
+   "trigona",
+   "tirucalli",
+   "ingens",
+   "milii",
+   "obesa",
+   "lactea",
+   "candelabro",
+   "caput-medusae",
+   "horrida"
+  ],
+  "intro": "Non sono cactus, anche se sembrano: è convergenza evolutiva. Si riconoscono perché le spine crescono a coppie sui bordi del fusto e non da areole lanose, e perché da ogni ferita esce lattice bianco.",
+  "spec": [
+   [
+    "Attenzione",
+    "Tutte le Euphorbia contengono un lattice bianco tossico che irrita pelle e mucose, macchia in modo permanente e in alcune persone provoca reazioni allergiche serie. Si lavora sempre con guanti e occhiali protettivi, senza mai portarsi le mani agli occhi."
+   ],
+   [
+    "Luce",
+    "Molto esigenti: 6-8 ore di sole diretto al giorno, finestra a sud. Ruotare il vaso ogni settimana per una crescita simmetrica. Senza luce sufficiente il fusto si allunga e perde rigidità."
+   ],
+   [
+    "Acqua",
+    "Bagnare a fondo, far drenare tutto e lasciare asciugare bene. Da ottobre a febbraio ridurre drasticamente: solo l'acqua necessaria a evitare che il fusto si raggrinzisca."
+   ],
+   [
+    "Terriccio",
+    "Metà terriccio organico senza concime aggiunto e metà sabbia grossolana o perlite. Vaso in terracotta con foro, non smaltato, di misura contenuta."
+   ],
+   [
+    "Temperatura",
+    "18-32 °C di giorno, 15-24 °C di notte. Un riposo invernale intorno ai 13 °C aiuta la pianta ad affrontare la scarsa luce."
+   ],
+   [
+    "Propagazione",
+    "Talee di circa 12 cm da rami giovani, tarda primavera o inizio estate. Il lattice si ferma con acqua fredda; poi callo al caldo e all'asciutto, anche un mese intero. Si mette in substrato drenante con uno strato superficiale di sabbia o vermiculite, appena umido, per 2-6 mesi fino alla radicazione. Mai in acqua."
+   ],
+   [
+    "Errori tipici",
+    "Rami che cadono: stress radicale grave. Costole brune e screpolate: annaffiature irregolari. Ramo che imbrunisce all'improvviso: colpo di freddo. Marciume del fusto: interrato troppo in profondità o substrato sempre umido."
+   ]
+  ]
+ },
+ {
+  "id": "caudici",
+  "nome": "Adenium e Pachypodium",
+  "fam": "Apocynaceae · Africa, Arabia, Madagascar",
+  "illu": "caudici",
+  "rappr": "Adenium obesum",
+  "totale": "Adenium: fino a dodici nomi pubblicati, ridotti a cinque o sei specie riconosciute. Pachypodium: 25 specie.",
+  "inverno": "Nessuna eccezione: sotto i 10 °C gli Adenium soffrono e il gelo li uccide, e i Pachypodium malgasci non stanno molto meglio. Vanno tutti in casa o in serra calda. La regola che davvero salva queste piante però è un'altra: nel riposo, quando perdono le foglie e i giorni si accorciano, l'acqua va sospesa quasi del tutto. Il marciume del caudice è il modo in cui muore la maggior parte degli Adenium in Italia, e succede d'inverno, in casa, per eccesso di cure. Un'eccezione di calendario da ricordare: il Pachypodium namaquanum è sudafricano, cresce nella stagione fresca e riposa in estate.",
+  "keys": [
+   "adenium",
+   "obesum",
+   "rosa del deserto",
+   "pachypodium",
+   "lamerei",
+   "desert rose",
+   "caudice",
+   "arabicum",
+   "brevicaule"
+  ],
+  "intro": "Caudiciformi: accumulano acqua in un fusto ingrossato alla base. Il caudice si sviluppa con il pieno sole e si perde con il marciume, che qui è il rischio numero uno. Gli Adenium in commercio sono in larga parte ibridi orticoli senza nome botanico.",
+  "spec": [
+   [
+    "Luce",
+    "Il pieno sole è indispensabile, sia per la fioritura sia per l'ingrossamento del caudice."
+   ],
+   [
+    "Acqua",
+    "In vegetazione si bagna a fondo quando il substrato è completamente asciutto. Nel riposo, con giorni corti e temperature basse, si tiene quasi all'asciutto: il marciume di radici e caudice da eccesso d'acqua è il problema più comune."
+   ],
+   [
+    "Terriccio",
+    "Miscela per cactacee molto grossolana e drenante, con aggiunta di perlite o pomice. Vaso in terracotta."
+   ],
+   [
+    "Temperatura",
+    "Bene tra 18 e 32 °C. Sotto i 10 °C soffrono e il gelo è fatale: in Italia svernano in casa o in serra."
+   ],
+   [
+    "Concime",
+    "In primavera ed estate concime bilanciato con fosforo leggermente più alto per favorire la fioritura; sospeso del tutto durante il riposo."
+   ],
+   [
+    "Potatura",
+    "Si pota dopo la fioritura per stimolare la ramificazione e costruire la forma scultorea della pianta."
+   ],
+   [
+    "Attenzione",
+    "La linfa delle Apocynaceae è tossica: guanti durante potature e talee. In inverno, in casa, controllare il ragnetto rosso, oltre a cocciniglie e marciumi."
+   ]
+  ]
+ },
+ {
+  "id": "lithops",
+  "nome": "Lithops e mesembriantemi",
+  "fam": "Aizoaceae · Sudafrica e Namibia",
+  "illu": "lithops",
+  "rappr": "Lithops karasmontana",
+  "totale": "37 specie secondo la monografia di Cole & Cole, più un centinaio fra sottospecie e varietà; nuove specie continuano a essere descritte.",
+  "inverno": "Qui il freddo non è il nemico. Svernano intorno ai 5 °C e sopportano brevi punte sotto zero, ma a una condizione tassativa: essere completamente asciutti. Da novembre a metà aprile non devono ricevere una sola goccia d'acqua, perché in quei mesi il nuovo paio di foglie si forma consumando il vecchio, e annaffiare adesso produce paia doppie e deformi, o li fa marcire. Il tuo terrazzo quindi va benissimo, purché abbiano sopra una tettoia che li tiene fuori dalla pioggia, in un punto luminoso, freddo e ventilato: sono forse le uniche piante per cui l'inverno all'aperto non è un compromesso ma la scelta migliore.",
+  "keys": [
+   "lithops",
+   "conophytum",
+   "fenestraria",
+   "pietre viventi",
+   "sassi viventi",
+   "argyroderma",
+   "pleiospilos",
+   "karasmontana",
+   "lesliei",
+   "aucampiae"
+  ],
+  "intro": "Due sole foglie fuse che ogni anno vengono sostituite da un nuovo paio, alimentato dalle riserve di quello vecchio. Tutto il calendario di coltivazione ruota intorno a questo ricambio, ed è l'esatto contrario di quello delle altre succulente.",
+  "spec": [
+   [
+    "Ciclo · nov-aprile",
+    "Riposo. Nessuna acqua. Il nuovo paio di foglie si forma all'interno assorbendo il vecchio. Ambiente fresco, intorno ai 5 °C, luminoso e ventilato."
+   ],
+   [
+    "Ciclo · metà apr-giu",
+    "Il nuovo paio emerge. Si riprende ad annaffiare con delicatezza, ogni 2-3 settimane, solo quando il substrato si è asciugato del tutto (bastano 3-4 giorni)."
+   ],
+   [
+    "Ciclo · lug-ago",
+    "Sopra i 35 °C entrano in riposo estivo: si sospende completamente l'acqua. Annaffiare adesso significa farli marcire."
+   ],
+   [
+    "Ciclo · fine ago-ott",
+    "Si riprende ad annaffiare, ed è l'acqua che innesca la fioritura: prima le specie a fiore giallo, poi quelle a fiore bianco fino a novembre."
+   ],
+   [
+    "Luce",
+    "Alta intensità luminosa tutto l'anno, ma niente sole di mezzogiorno: meglio esposizione mattutina o pomeridiana. Da aprile a settembre, sopra i 40 °C, serve una rete ombreggiante al 40% o ventilazione."
+   ],
+   [
+    "Terriccio",
+    "80% inerte e 20% organico: metà ghiaia di fiume o sabbia di quarzo da 2-5 mm, 30% perlite, e solo un quinto di terra da giardino. Niente substrati a base di torba."
+   ],
+   [
+    "Vaso",
+    "Profondo: minimo 7 cm, meglio 10 o più, perché la radice è fittonante e lunga. Vanno evitati i vasetti bassi da vivaio e la terracotta."
+   ],
+   [
+    "Segnale di sete",
+    "Rughe orizzontali che compaiono di notte sul corpo della pianta."
+   ],
+   [
+    "Propagazione",
+    "Da seme: la capsula matura otto mesi dopo l'impollinazione e le piantine sono trapiantabili in circa tre mesi. È il modo più economico per averne molti."
+   ],
+   [
+    "Errore capitale",
+    "Annaffiare durante il cambio delle foglie: la pianta produce paia doppie e deformi e si indebolisce."
+   ]
+  ]
+ }
+]

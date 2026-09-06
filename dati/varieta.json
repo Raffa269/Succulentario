@@ -1,0 +1,4727 @@
+[
+ {
+  "key": "sansevieria#dracaena-trifasciata",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata",
+  "sinonimo": "Sansevieria trifasciata",
+  "descrizione": "la specie tipo: foglie erette, marmorizzate di verde chiaro e scuro",
+  "ricovero": "casa",
+  "note": "La più tollerante del genere: sopporta l'aria secca di casa e temperature intorno ai 10 °C. Ma quei 10 °C sono il limite inferiore, non una temperatura di riposo. Va ritirata quando le minime notturne scendono verso i 12 °C."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-laurentii",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Laurentii'",
+  "sinonimo": "",
+  "descrizione": "bordi gialli continui su entrambi i lati",
+  "ricovero": "casa",
+  "note": "Come la specie tipo, ma la variegatura gialla chiede più luce: al buio i bordi impallidiscono. Si moltiplica solo per divisione, la talea di foglia riparte verde."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-black-gold",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Black Gold'",
+  "sinonimo": "",
+  "descrizione": "foglia verde molto scura con margine giallo oro",
+  "ricovero": "casa",
+  "note": "Come la specie tipo. Il contrasto fra verde scuro e bordo oro si mantiene solo con luce abbondante."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-moonshine",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Moonshine'",
+  "sinonimo": "",
+  "descrizione": "foglie larghe, verde argento uniforme",
+  "ricovero": "casa",
+  "note": "Vuole molta luce ma filtrata: il sole diretto estivo macchia le foglie argentate, mentre in ombra il colore vira al verde comune. È la cultivar che patisce di più i cambi bruschi di esposizione."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-black-diamond",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Black Diamond'",
+  "sinonimo": "",
+  "descrizione": "il verde più scuro del gruppo, con un filo giallo sottile",
+  "ricovero": "casa",
+  "note": "Nessuna esigenza documentata diversa dalla specie tipo."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-metallica",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Metallica'",
+  "sinonimo": "",
+  "descrizione": "striature argentate metalliche",
+  "ricovero": "casa",
+  "note": "Come la specie tipo: le striature argentate restano nitide solo con luce abbondante."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-futura-superba",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Futura Superba'",
+  "sinonimo": "",
+  "descrizione": "più bassa e larga della 'Laurentii'",
+  "ricovero": "casa",
+  "note": "Nessuna esigenza documentata diversa dalla specie tipo."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-robusta",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Robusta'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Nessuna esigenza documentata diversa dalla specie tipo."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-bantel-s-sensation",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Bantel's Sensation'",
+  "sinonimo": "",
+  "descrizione": "strisce bianche verticali",
+  "ricovero": "casa",
+  "note": "Le zone bianche non fanno fotosintesi: cresce più lentamente e ha bisogno di più luce delle altre. Solo per divisione, la talea perde la variegatura."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-twisted-sister",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Twisted Sister'",
+  "sinonimo": "",
+  "descrizione": "foglie corte e attorcigliate",
+  "ricovero": "casa",
+  "note": "Come la specie tipo. Essendo variegata, si moltiplica per divisione."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-hahnii",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Hahnii'",
+  "sinonimo": "",
+  "descrizione": "rosetta nana a imbuto, raramente oltre i 20 cm",
+  "ricovero": "casa",
+  "note": "La rosetta a imbuto raccoglie l'acqua nel cuore: annaffia sul bordo del vaso, mai al centro. In terrazzo la pioggia si accumula lì dentro, ed è un motivo in più per tenerla al riparo."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-golden-hahnii",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Golden Hahnii'",
+  "sinonimo": "",
+  "descrizione": "nana con bordatura gialla su ogni foglia",
+  "ricovero": "casa",
+  "note": "Come la 'Hahnii', con l'acqua mai al centro della rosetta, più la maggiore richiesta di luce delle variegate."
+ },
+ {
+  "key": "sansevieria#dracaena-trifasciata-jade-hahnii",
+  "genere": "sansevieria",
+  "nome": "Dracaena trifasciata 'Jade Hahnii'",
+  "sinonimo": "",
+  "descrizione": "nana verde scuro, senza variegatura",
+  "ricovero": "casa",
+  "note": "Come la 'Hahnii'. Essendo tutta verde tollera un po' meno luce delle sorelle variegate."
+ },
+ {
+  "key": "sansevieria#dracaena-zeylanica",
+  "genere": "sansevieria",
+  "nome": "Dracaena zeylanica",
+  "sinonimo": "Sansevieria zeylanica",
+  "descrizione": "verde screziato a bande irregolari",
+  "ricovero": "casa",
+  "note": "Nessuna esigenza documentata diversa dalla trifasciata."
+ },
+ {
+  "key": "sansevieria#dracaena-masoniana-whale-fin",
+  "genere": "sansevieria",
+  "nome": "Dracaena masoniana 'Whale Fin'",
+  "sinonimo": "Sansevieria masoniana",
+  "descrizione": "foglia singola larghissima, a pinna di balena",
+  "ricovero": "casa!",
+  "note": "Più delicata della trifasciata: va tenuta sopra i 13 °C, vuole mezz'ombra perché il sole diretto scotta la foglia, e chiede almeno il 50% di umidità dell'aria. Su una pianta che ha una sola foglia enorme ogni cicatrice resta per anni. In casa, lontano dai termosifoni."
+ },
+ {
+  "key": "sansevieria#dracaena-aubrytiana-dragon",
+  "genere": "sansevieria",
+  "nome": "Dracaena aubrytiana 'Dragon'",
+  "sinonimo": "Sansevieria aubrytiana",
+  "descrizione": "maculata, con un sottile bordo scarlatto",
+  "ricovero": "casa",
+  "note": "Non ho trovato dati specifici diversi da quelli del genere: trattala come la trifasciata."
+ },
+ {
+  "key": "sansevieria#dracaena-aubrytiana-lauren",
+  "genere": "sansevieria",
+  "nome": "Dracaena aubrytiana 'Lauren'",
+  "sinonimo": "",
+  "descrizione": "striature gialle e lime su tutta la foglia",
+  "ricovero": "casa",
+  "note": "Come la 'Dragon', con la maggiore richiesta di luce tipica delle variegate."
+ },
+ {
+  "key": "sansevieria#dracaena-kirkii-silver-blue",
+  "genere": "sansevieria",
+  "nome": "Dracaena kirkii 'Silver Blue'",
+  "sinonimo": "Sansevieria kirkii",
+  "descrizione": "foglie spesse, portamento espanso, riflesso argenteo",
+  "ricovero": "casa!",
+  "note": "Fra le prime da ritirare: sta bene fra 15 e 23 °C e sotto i 10 °C il danno da freddo è documentato. Luce brillante ma indiretta, perché il sole diretto ingiallisce e rovina le foglie. Cresce lentissima e può metterci anni a fare i primi polloni."
+ },
+ {
+  "key": "sansevieria#dracaena-kirkii-coppertone",
+  "genere": "sansevieria",
+  "nome": "Dracaena kirkii 'Coppertone'",
+  "sinonimo": "",
+  "descrizione": "foglie molto scure, brune e ramate",
+  "ricovero": "casa!",
+  "note": "Come la 'Silver Blue': sotto i 10 °C soffre, e il colore ramato si mantiene con luce brillante ma non diretta."
+ },
+ {
+  "key": "sansevieria#dracaena-kirkii-subsp-pulchra",
+  "genere": "sansevieria",
+  "nome": "Dracaena kirkii subsp. pulchra",
+  "sinonimo": "Sansevieria kirkii ssp. pulchra",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Stesse esigenze della kirkii: minimo 10 °C, meglio sopra i 15 °C, luce indiretta e crescita molto lenta."
+ },
+ {
+  "key": "sansevieria#dracaena-angolensis-african-spear",
+  "genere": "sansevieria",
+  "nome": "Dracaena angolensis 'African Spear'",
+  "sinonimo": "Sansevieria cylindrica",
+  "descrizione": "foglie cilindriche e appuntite, durissime",
+  "ricovero": "casa",
+  "note": "Va ritirata quando si scende sotto i 13 °C. D'estate in terrazzo solo sole del mattino, perché il diretto delle ore centrali danneggia le foglie; in casa vuole la finestra più luminosa che hai."
+ },
+ {
+  "key": "sansevieria#dracaena-angolensis-sansiam-shabiki",
+  "genere": "sansevieria",
+  "nome": "Dracaena angolensis 'Sansiam Shabiki'",
+  "sinonimo": "",
+  "descrizione": "fusti spessi che si aprono a ventaglio",
+  "ricovero": "casa",
+  "note": "Come l'African Spear: ricovero sotto i 13 °C, sole solo del mattino, finestra molto luminosa in casa."
+ },
+ {
+  "key": "sansevieria#dracaena-boncel",
+  "genere": "sansevieria",
+  "nome": "Dracaena 'Boncel'",
+  "sinonimo": "",
+  "descrizione": "cilindrica nana, aspetto a stella marina",
+  "ricovero": "casa",
+  "note": "Come le altre cilindriche: sotto i 13 °C in casa, e la posizione più luminosa possibile."
+ },
+ {
+  "key": "sansevieria#dracaena-bacularis-mikado",
+  "genere": "sansevieria",
+  "nome": "Dracaena bacularis 'Mikado'",
+  "sinonimo": "Sansevieria bacularis",
+  "descrizione": "steli cilindrici sottili, marcature poco contrastate",
+  "ricovero": "casa",
+  "note": "Trattala come le cilindriche: ricovero invernale, substrato molto drenante e luce abbondante ma non sole diretto nelle ore centrali."
+ },
+ {
+  "key": "sansevieria#dracaena-canaliculata",
+  "genere": "sansevieria",
+  "nome": "Dracaena canaliculata",
+  "sinonimo": "Sansevieria canaliculata",
+  "descrizione": "foglie solcate, con costole arrotondate",
+  "ricovero": "casa",
+  "note": "Non ho trovato dati specifici diversi da quelli del genere: trattala come le cilindriche, con substrato prevalentemente minerale."
+ },
+ {
+  "key": "sansevieria#dracaena-pinguicula",
+  "genere": "sansevieria",
+  "nome": "Dracaena pinguicula",
+  "sinonimo": "Sansevieria pinguicula",
+  "descrizione": "foglie corte e grasse bordate di rosso, cammina sui rizomi",
+  "ricovero": "casa",
+  "note": "Non ho trovato dati di coltivazione affidabili diversi da quelli del genere. Come tutte le foglie molto spesse del gruppo, vuole substrato quasi solo minerale, luce forte e ricovero invernale."
+ },
+ {
+  "key": "sansevieria#dracaena-ehrenbergii-samurai-dwarf",
+  "genere": "sansevieria",
+  "nome": "Dracaena ehrenbergii 'Samurai Dwarf'",
+  "sinonimo": "Sansevieria ehrenbergii",
+  "descrizione": "foglie corte a ventaglio, margini rossi",
+  "ricovero": "casa",
+  "note": "Substrato con 50-70% di inerti (sabbia grossa, pomice o perlite) e luce filtrata. Non sopravvive alle gelate: in Italia sverna sempre al riparo."
+ },
+ {
+  "key": "sansevieria#dracaena-fernwood",
+  "genere": "sansevieria",
+  "nome": "Dracaena 'Fernwood'",
+  "sinonimo": "Sansevieria parva × suffruticosa",
+  "descrizione": "compatta, verde scuro con marcature chiare",
+  "ricovero": "casa",
+  "note": "Nessuna esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "sansevieria#dracaena-parva",
+  "genere": "sansevieria",
+  "nome": "Dracaena parva",
+  "sinonimo": "Sansevieria parva",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Nessuna esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "sansevieria#dracaena-suffruticosa",
+  "genere": "sansevieria",
+  "nome": "Dracaena suffruticosa",
+  "sinonimo": "Sansevieria suffruticosa",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Nessuna esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "sansevieria#dracaena-gracilis",
+  "genere": "sansevieria",
+  "nome": "Dracaena gracilis",
+  "sinonimo": "Sansevieria gracilis",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Nessuna esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "sansevieria#dracaena-hyacinthoides",
+  "genere": "sansevieria",
+  "nome": "Dracaena hyacinthoides",
+  "sinonimo": "Sansevieria hyacinthoides",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Nessuna esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "sansevieria#dracaena-pearsonii",
+  "genere": "sansevieria",
+  "nome": "Dracaena pearsonii",
+  "sinonimo": "Sansevieria pearsonii",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Nessuna esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "sansevieria#dracaena-scabrifolia",
+  "genere": "sansevieria",
+  "nome": "Dracaena scabrifolia",
+  "sinonimo": "Sansevieria scabrifolia",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Nessuna esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "echeveria#echeveria-agavoides",
+  "genere": "echeveria",
+  "nome": "Echeveria agavoides",
+  "sinonimo": "",
+  "descrizione": "rosetta rigida a punte acuminate, spesso rosse",
+  "ricovero": "riparo",
+  "note": "Foglie rigide e cerose che arrossano sulle punte con molto sole: è fra le più tolleranti del genere alla luce diretta. Le foglie carnose e serrate trattengono l'acqua alla base, quindi annaffia il substrato e non la rosetta."
+ },
+ {
+  "key": "echeveria#echeveria-agavoides-var-prolifera",
+  "genere": "echeveria",
+  "nome": "Echeveria agavoides var. prolifera",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-agavoides-colorata",
+  "genere": "echeveria",
+  "nome": "Echeveria agavoides × colorata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-arlie-wright",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Arlie Wright'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-black-prince",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Black Prince'",
+  "sinonimo": "",
+  "descrizione": "rosetta quasi nera",
+  "ricovero": "riparo",
+  "note": "Il nero non è un pigmento stabile: si forma con molte ore di sole e in condizioni di leggero stress. In poca luce la rosetta torna verde e si apre."
+ },
+ {
+  "key": "echeveria#echeveria-blue-heron",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Blue Heron'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-cante",
+  "genere": "echeveria",
+  "nome": "Echeveria cante",
+  "sinonimo": "",
+  "descrizione": "grande, pruinosa, margini rosati",
+  "ricovero": "casa",
+  "note": "Grande e coperta da una pruina spessa e fragile: ogni impronta resta per la vita della foglia. Fra le meno tolleranti all'umidità invernale, quindi in casa d'inverno o in un riparo davvero asciutto."
+ },
+ {
+  "key": "echeveria#echeveria-coccinea",
+  "genere": "echeveria",
+  "nome": "Echeveria coccinea",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-colorata",
+  "genere": "echeveria",
+  "nome": "Echeveria colorata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Rosetta compatta e pruinosa: prendila dal vaso, mai dalle foglie."
+ },
+ {
+  "key": "echeveria#echeveria-crenulata",
+  "genere": "echeveria",
+  "nome": "Echeveria crenulata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-derenbergii",
+  "genere": "echeveria",
+  "nome": "Echeveria derenbergii",
+  "sinonimo": "",
+  "descrizione": "piccola, compatta, punte rosse",
+  "ricovero": "riparo",
+  "note": "Molto prolifica: forma cuscini di polloni fitti dove l'aria non circola. Diradali, o alla base resta umidità e comincia il marciume."
+ },
+ {
+  "key": "echeveria#echeveria-deresina",
+  "genere": "echeveria",
+  "nome": "Echeveria × deresina",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-dondo",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Dondo'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-doris-taylor",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Doris Taylor'",
+  "sinonimo": "",
+  "descrizione": "foglie pelose, argentate",
+  "ricovero": "casa",
+  "note": "Foglie coperte di peluria: l'acqua resta intrappolata fra i peli e non evapora. Annaffia solo il substrato e tienila al coperto dalla pioggia. In casa d'inverno."
+ },
+ {
+  "key": "echeveria#echeveria-elatior",
+  "genere": "echeveria",
+  "nome": "Echeveria elatior",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-elegans",
+  "genere": "echeveria",
+  "nome": "Echeveria elegans",
+  "sinonimo": "",
+  "descrizione": "la classica rosetta azzurra e pruinosa",
+  "ricovero": "riparo",
+  "note": "La più rustica del gruppo (zona 9a): sopporta brevi gelate solo se il substrato è perfettamente asciutto. Con 2-3 °C notturni e all'asciutto sta bene fuori; è l'acqua a ucciderla, non il freddo."
+ },
+ {
+  "key": "echeveria#echeveria-hoveyi",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Hoveyi'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-imbricata",
+  "genere": "echeveria",
+  "nome": "Echeveria × imbricata",
+  "sinonimo": "",
+  "descrizione": "rosette larghe e piatte, si accestisce molto",
+  "ricovero": "riparo",
+  "note": "Fra le più tolleranti e generose di polloni: le rosette larghe e piatte raccolgono però pioggia al centro, quindi vuole un riparo dall'acqua più che dal freddo."
+ },
+ {
+  "key": "echeveria#echeveria-kirchneriana",
+  "genere": "echeveria",
+  "nome": "Echeveria × kirchneriana",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-lauii",
+  "genere": "echeveria",
+  "nome": "Echeveria lauii",
+  "sinonimo": "",
+  "descrizione": "fortemente pruinosa, delicatissima al tocco",
+  "ricovero": "casa",
+  "note": "La più delicata del genere: pruina bianchissima che si segna al minimo tocco, crescita lenta e tendenza al marciume. Va tenuta in casa d'inverno, all'asciutto e senza mai bagnare le foglie."
+ },
+ {
+  "key": "echeveria#echeveria-leucotricha",
+  "genere": "echeveria",
+  "nome": "Echeveria leucotricha",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie e steli coperti di peli bianchi che trattengono l'acqua: annaffia solo alla base e riparala dalla pioggia. In casa d'inverno."
+ },
+ {
+  "key": "echeveria#echeveria-lola",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Lola'",
+  "sinonimo": "",
+  "descrizione": "rosetta pallida, quasi perlacea",
+  "ricovero": "riparo",
+  "note": "Ibrido molto pruinoso: non toccare le foglie, la patina non si riforma."
+ },
+ {
+  "key": "echeveria#echeveria-nodulosa",
+  "genere": "echeveria",
+  "nome": "Echeveria nodulosa",
+  "sinonimo": "",
+  "descrizione": "foglie striate di rosso",
+  "ricovero": "riparo",
+  "note": "Le striature rosse compaiono solo con molte ore di sole; in ombra restano verdi e i fusti si allungano."
+ },
+ {
+  "key": "echeveria#echeveria-painted-lady",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Painted Lady'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-pallida",
+  "genere": "echeveria",
+  "nome": "Echeveria pallida",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-peacockii",
+  "genere": "echeveria",
+  "nome": "Echeveria peacockii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-potosina",
+  "genere": "echeveria",
+  "nome": "Echeveria potosina",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-prolifica",
+  "genere": "echeveria",
+  "nome": "Echeveria prolifica",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-pulidonis",
+  "genere": "echeveria",
+  "nome": "Echeveria pulidonis",
+  "sinonimo": "",
+  "descrizione": "margini rossi netti",
+  "ricovero": "riparo",
+  "note": "I margini rossi sono un indicatore di luce: se sbiadiscono, la pianta ne sta ricevendo troppo poca."
+ },
+ {
+  "key": "echeveria#echeveria-pulvinata",
+  "genere": "echeveria",
+  "nome": "Echeveria pulvinata",
+  "sinonimo": "",
+  "descrizione": "foglie vellutate, portamento arbustivo",
+  "ricovero": "casa",
+  "note": "Tutta la pianta è vellutata e i peli trattengono l'acqua: mai bagnarla dall'alto, mai lasciarla sotto la pioggia. Portamento arbustivo che si spoglia alla base con poca luce. In casa d'inverno."
+ },
+ {
+  "key": "echeveria#echeveria-pulvinata-frosty",
+  "genere": "echeveria",
+  "nome": "Echeveria pulvinata 'Frosty'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Come la pulvinata: peluria fitta, acqua solo alla base e ricovero in casa d'inverno."
+ },
+ {
+  "key": "echeveria#echeveria-pulvinata-ruby-blush",
+  "genere": "echeveria",
+  "nome": "Echeveria pulvinata 'Ruby Blush'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Come la pulvinata: i margini rossi si accentuano col sole, ma i peli non devono mai restare bagnati."
+ },
+ {
+  "key": "echeveria#echeveria-pumila",
+  "genere": "echeveria",
+  "nome": "Echeveria pumila",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-purpusorum",
+  "genere": "echeveria",
+  "nome": "Echeveria purpusorum",
+  "sinonimo": "",
+  "descrizione": "foglie brune screziate, molto rigide",
+  "ricovero": "riparo",
+  "note": "Foglie rigide e screziate, crescita molto lenta: non aspettarti polloni prima di anni. Tollera bene il sole diretto."
+ },
+ {
+  "key": "echeveria#echeveria-ruberia",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Ruberia'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-runyonii",
+  "genere": "echeveria",
+  "nome": "Echeveria runyonii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-runyonii-topsy-turvy",
+  "genere": "echeveria",
+  "nome": "Echeveria runyonii 'Topsy Turvy'",
+  "sinonimo": "",
+  "descrizione": "foglie ripiegate al contrario",
+  "ricovero": "riparo",
+  "note": "Le foglie rovesciate formano canaline che raccolgono e trattengono l'acqua verso il centro: annaffia solo il substrato e riparala dalla pioggia."
+ },
+ {
+  "key": "echeveria#echeveria-sanchez-mejoradae",
+  "genere": "echeveria",
+  "nome": "Echeveria sanchez-mejoradae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-scheerii",
+  "genere": "echeveria",
+  "nome": "Echeveria scheerii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-sedoides",
+  "genere": "echeveria",
+  "nome": "Echeveria sedoides",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-set-oliver",
+  "genere": "echeveria",
+  "nome": "Echeveria × set-oliver",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-setosa",
+  "genere": "echeveria",
+  "nome": "Echeveria setosa",
+  "sinonimo": "",
+  "descrizione": "coperta di peli bianchi",
+  "ricovero": "casa",
+  "note": "Interamente coperta di setole bianche rigide: è la peggiore del genere a bagnarsi, perché l'acqua resta fra i peli per giorni. Solo acqua alla base, e in casa d'inverno."
+ },
+ {
+  "key": "echeveria#echeveria-shaviana",
+  "genere": "echeveria",
+  "nome": "Echeveria shaviana",
+  "sinonimo": "",
+  "descrizione": "margini ondulati e crespi",
+  "ricovero": "riparo",
+  "note": "I margini crespi e ondulati trattengono acqua e polvere; perde le foglie basali più in fretta delle altre, ed è normale."
+ },
+ {
+  "key": "echeveria#echeveria-tundelii",
+  "genere": "echeveria",
+  "nome": "Echeveria tundelii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-wavy-curls",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Wavy Curls'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-perle-von-nurnberg",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Perle von Nürnberg'",
+  "sinonimo": "",
+  "descrizione": "ibrido storico, rosa polveroso e grigio",
+  "ricovero": "riparo",
+  "note": "Ibrido pruinoso: il rosa-lilla si sviluppa con molta luce e sparisce in ombra. Non toccare le foglie."
+ },
+ {
+  "key": "echeveria#echeveria-afterglow",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Afterglow'",
+  "sinonimo": "",
+  "descrizione": "grande, lilla con bordi rosa",
+  "ricovero": "riparo",
+  "note": "I colori accesi dipendono direttamente dalle ore di sole: in penombra diventa una comune rosetta verdastra."
+ },
+ {
+  "key": "echeveria#echeveria-blue-bird",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Blue Bird'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "echeveria#echeveria-neon-breakers",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Neon Breakers'",
+  "sinonimo": "",
+  "descrizione": "margini crespi viola acceso",
+  "ricovero": "riparo",
+  "note": "Il viola acceso dei margini crespi si mantiene solo con molte ore di luce diretta."
+ },
+ {
+  "key": "echeveria#echeveria-purple-pearl",
+  "genere": "echeveria",
+  "nome": "Echeveria 'Purple Pearl'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessuna esigenza documentata diversa dal genere: fuori va bene finché resta completamente asciutta e sopra lo zero."
+ },
+ {
+  "key": "haworthia#haworthia-arachnoidea",
+  "genere": "haworthia",
+  "nome": "Haworthia arachnoidea",
+  "sinonimo": "",
+  "descrizione": "rosetta coperta da una ragnatela di setole",
+  "ricovero": "casa",
+  "note": "La ragnatela di setole trattiene l'acqua al centro della rosetta e la fa marcire: annaffia solo il substrato, mai dall'alto. Ombra luminosa."
+ },
+ {
+  "key": "haworthia#haworthia-bayeri",
+  "genere": "haworthia",
+  "nome": "Haworthia bayeri",
+  "sinonimo": "",
+  "descrizione": "finestre trasparenti con disegno reticolato",
+  "ricovero": "casa",
+  "note": "Specie lenta e ricercata, con finestre reticolate: ombra luminosa e annaffiature molto misurate. Le scottature restano visibili per anni."
+ },
+ {
+  "key": "haworthia#haworthia-bolusii",
+  "genere": "haworthia",
+  "nome": "Haworthia bolusii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Come l'arachnoidea: setole fitte che non devono restare bagnate, e ombra luminosa."
+ },
+ {
+  "key": "haworthia#haworthia-bruynsii",
+  "genere": "haworthia",
+  "nome": "Haworthia bruynsii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-cooperi",
+  "genere": "haworthia",
+  "nome": "Haworthia cooperi",
+  "sinonimo": "",
+  "descrizione": "foglie traslucide e globose",
+  "ricovero": "casa",
+  "note": "Le foglie globose e traslucide si scottano rapidamente al sole diretto e restano segnate. Ombra luminosa, acqua solo a substrato del tutto asciutto."
+ },
+ {
+  "key": "haworthia#haworthia-cooperi-var-truncata",
+  "genere": "haworthia",
+  "nome": "Haworthia cooperi var. truncata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Come la cooperi: finestre traslucide da tenere lontane dal sole diretto."
+ },
+ {
+  "key": "haworthia#haworthia-cooperi-var-pilifera",
+  "genere": "haworthia",
+  "nome": "Haworthia cooperi var. pilifera",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Come la cooperi, con setole terminali che trattengono l'acqua: annaffia solo il substrato."
+ },
+ {
+  "key": "haworthia#haworthia-cymbiformis",
+  "genere": "haworthia",
+  "nome": "Haworthia cymbiformis",
+  "sinonimo": "",
+  "descrizione": "rosetta a barchetta, verde chiaro",
+  "ricovero": "casa",
+  "note": "Fra le più tolleranti del gruppo molle e fra le più veloci a fare polloni; resta comunque una pianta da ombra luminosa."
+ },
+ {
+  "key": "haworthia#haworthia-decipiens",
+  "genere": "haworthia",
+  "nome": "Haworthia decipiens",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-emelyae",
+  "genere": "haworthia",
+  "nome": "Haworthia emelyae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-emelyae-var-comptoniana",
+  "genere": "haworthia",
+  "nome": "Haworthia emelyae var. comptoniana",
+  "sinonimo": "",
+  "descrizione": "finestre larghe e reticolate",
+  "ricovero": "casa",
+  "note": "Finestre larghe e reticolate: crescita lenta, ombra, e nessuna acqua sulle foglie."
+ },
+ {
+  "key": "haworthia#haworthia-floribunda",
+  "genere": "haworthia",
+  "nome": "Haworthia floribunda",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-gracilis",
+  "genere": "haworthia",
+  "nome": "Haworthia gracilis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-heidelbergensis",
+  "genere": "haworthia",
+  "nome": "Haworthia heidelbergensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-herbacea",
+  "genere": "haworthia",
+  "nome": "Haworthia herbacea",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-lockwoodii",
+  "genere": "haworthia",
+  "nome": "Haworthia lockwoodii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Come la semiviva: nel riposo le punte delle foglie si seccano e diventano cartacee. Non annaffiare per correggere quello che sembra un avvizzimento."
+ },
+ {
+  "key": "haworthia#haworthia-magnifica",
+  "genere": "haworthia",
+  "nome": "Haworthia magnifica",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-maraisii",
+  "genere": "haworthia",
+  "nome": "Haworthia maraisii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-marumiana",
+  "genere": "haworthia",
+  "nome": "Haworthia marumiana",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-mirabilis",
+  "genere": "haworthia",
+  "nome": "Haworthia mirabilis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-mucronata",
+  "genere": "haworthia",
+  "nome": "Haworthia mucronata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-mutica",
+  "genere": "haworthia",
+  "nome": "Haworthia mutica",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-nortieri",
+  "genere": "haworthia",
+  "nome": "Haworthia nortieri",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-outeniquensis",
+  "genere": "haworthia",
+  "nome": "Haworthia outeniquensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-parksiana",
+  "genere": "haworthia",
+  "nome": "Haworthia parksiana",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-pubescens",
+  "genere": "haworthia",
+  "nome": "Haworthia pubescens",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-pulchella",
+  "genere": "haworthia",
+  "nome": "Haworthia pulchella",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-pygmaea",
+  "genere": "haworthia",
+  "nome": "Haworthia pygmaea",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-reticulata",
+  "genere": "haworthia",
+  "nome": "Haworthia reticulata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-retusa",
+  "genere": "haworthia",
+  "nome": "Haworthia retusa",
+  "sinonimo": "",
+  "descrizione": "foglie tronche rivolte verso l'alto",
+  "ricovero": "casa",
+  "note": "Le facce tronche rivolte verso l'alto raccolgono acqua e detriti: annaffia il substrato e tienila al riparo dalla pioggia."
+ },
+ {
+  "key": "haworthia#haworthia-semiviva",
+  "genere": "haworthia",
+  "nome": "Haworthia semiviva",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Nel riposo le foglie esterne si seccano e la pianta sembra morta: è il suo comportamento normale, non è un segnale di sete. Annaffiarla per \"farla riprendere\" la uccide."
+ },
+ {
+  "key": "haworthia#haworthia-springbokvlakensis",
+  "genere": "haworthia",
+  "nome": "Haworthia springbokvlakensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Rosetta di poche foglie tronche, molto lenta: ogni errore d'acqua si paga a lungo."
+ },
+ {
+  "key": "haworthia#haworthia-truncata",
+  "genere": "haworthia",
+  "nome": "Haworthia truncata",
+  "sinonimo": "",
+  "descrizione": "foglie tagliate di netto, allineate su due file",
+  "ricovero": "casa",
+  "note": "In natura vive quasi interrata, con solo le finestre a livello del suolo: vuole ombra e cresce lentissima. Il sole diretto opacizza e cicatrizza le finestre, che sono tutta la pianta."
+ },
+ {
+  "key": "haworthia#haworthia-truncata-var-maughanii",
+  "genere": "haworthia",
+  "nome": "Haworthia truncata var. maughanii",
+  "sinonimo": "",
+  "descrizione": "versione a rosetta circolare",
+  "ricovero": "casa",
+  "note": "Come la truncata, in versione a rosetta circolare: ombra, crescita lentissima e finestre da non esporre mai al sole diretto."
+ },
+ {
+  "key": "haworthia#haworthia-turgida",
+  "genere": "haworthia",
+  "nome": "Haworthia turgida",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-variegata",
+  "genere": "haworthia",
+  "nome": "Haworthia variegata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-vlokii",
+  "genere": "haworthia",
+  "nome": "Haworthia vlokii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-wittebergensis",
+  "genere": "haworthia",
+  "nome": "Haworthia wittebergensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-zantneriana",
+  "genere": "haworthia",
+  "nome": "Haworthia zantneriana",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-angustifolia",
+  "genere": "haworthia",
+  "nome": "Haworthia angustifolia",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-blackburniae",
+  "genere": "haworthia",
+  "nome": "Haworthia blackburniae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie filiformi da sembrare un ciuffo d'erba, con radici ingrossate: annaffiature più misurate delle altre, perché le riserve stanno sottoterra."
+ },
+ {
+  "key": "haworthia#haworthia-chloracantha",
+  "genere": "haworthia",
+  "nome": "Haworthia chloracantha",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-monticola",
+  "genere": "haworthia",
+  "nome": "Haworthia monticola",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthia-serrata",
+  "genere": "haworthia",
+  "nome": "Haworthia serrata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglie molli con finestre traslucide: vuole ombra luminosa e non regge il sole diretto del terrazzo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthiopsis-attenuata",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis attenuata",
+  "sinonimo": "Haworthia attenuata",
+  "descrizione": "la zebra più diffusa, tubercoli bianchi su entrambe le facce",
+  "ricovero": "casa",
+  "note": "La zebra più diffusa: si distingue dalla fasciata perché ha i tubercoli bianchi su entrambe le facce della foglia. Tollera più luce delle Haworthia molli, ma non il sole pieno."
+ },
+ {
+  "key": "haworthia#haworthiopsis-fasciata",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis fasciata",
+  "sinonimo": "Haworthia fasciata",
+  "descrizione": "tubercoli solo sulla faccia esterna",
+  "ricovero": "casa",
+  "note": "Ha i tubercoli solo sulla faccia esterna, la pagina interna è liscia: è il modo per distinguerla dall'attenuata. Con troppo sole le foglie virano al rosso scuro o al bianco e si seccano; con troppo poca luce il disegno sbiadisce."
+ },
+ {
+  "key": "haworthia#haworthiopsis-coarctata",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis coarctata",
+  "sinonimo": "Haworthia coarctata",
+  "descrizione": "colonne di foglie sovrapposte",
+  "ricovero": "casa",
+  "note": "Forma colonne di foglie sovrapposte che si allungano e si piegano se la luce non basta. È fra le più tolleranti al sole del gruppo, ma va abituata per gradi."
+ },
+ {
+  "key": "haworthia#haworthiopsis-glauca",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis glauca",
+  "sinonimo": "Haworthia glauca",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglia dura: tollera più luce delle Haworthia a finestra, ma non il sole pieno estivo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthiopsis-koelmaniorum",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis koelmaniorum",
+  "sinonimo": "Haworthia koelmaniorum",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglia dura: tollera più luce delle Haworthia a finestra, ma non il sole pieno estivo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthiopsis-limifolia",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis limifolia",
+  "sinonimo": "Haworthia limifolia",
+  "descrizione": "foglie a onde concentriche, come una lima",
+  "ricovero": "casa",
+  "note": "Le creste concentriche si accentuano con la luce; sopporta più sole delle Haworthia molli, ma non le ore centrali d'estate."
+ },
+ {
+  "key": "haworthia#haworthiopsis-longiana",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis longiana",
+  "sinonimo": "Haworthia longiana",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglia dura: tollera più luce delle Haworthia a finestra, ma non il sole pieno estivo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthiopsis-nigra",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis nigra",
+  "sinonimo": "Haworthia nigra",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglia dura: tollera più luce delle Haworthia a finestra, ma non il sole pieno estivo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthiopsis-pungens",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis pungens",
+  "sinonimo": "Haworthia pungens",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglia dura: tollera più luce delle Haworthia a finestra, ma non il sole pieno estivo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthiopsis-reinwardtii",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis reinwardtii",
+  "sinonimo": "Haworthia reinwardtii",
+  "descrizione": "torri strette di foglie appuntite",
+  "ricovero": "casa",
+  "note": "Come la coarctata: torri di foglie che si sfilano e si afflosciano in penombra. Ruota il vaso per tenerle dritte."
+ },
+ {
+  "key": "haworthia#haworthiopsis-scabra",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis scabra",
+  "sinonimo": "Haworthia scabra",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglia dura: tollera più luce delle Haworthia a finestra, ma non il sole pieno estivo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthiopsis-sordida",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis sordida",
+  "sinonimo": "Haworthia sordida",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglia dura: tollera più luce delle Haworthia a finestra, ma non il sole pieno estivo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthiopsis-venosa",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis venosa",
+  "sinonimo": "Haworthia venosa",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Foglia dura: tollera più luce delle Haworthia a finestra, ma non il sole pieno estivo. Nessuna altra esigenza documentata diversa dal genere."
+ },
+ {
+  "key": "haworthia#haworthiopsis-viscosa",
+  "genere": "haworthia",
+  "nome": "Haworthiopsis viscosa",
+  "sinonimo": "Haworthia viscosa",
+  "descrizione": "foglie disposte su tre file",
+  "ricovero": "casa",
+  "note": "Foglie disposte su tre file rigide: fra le più resistenti del gruppo alla luce e alla siccità."
+ },
+ {
+  "key": "haworthia#tulista-kingiana",
+  "genere": "haworthia",
+  "nome": "Tulista kingiana",
+  "sinonimo": "Haworthia kingiana",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Le Tulista sono le più grandi e coriacee del gruppo e sopportano più sole delle Haworthia, ma non il pieno sole estivo del terrazzo."
+ },
+ {
+  "key": "haworthia#tulista-marginata",
+  "genere": "haworthia",
+  "nome": "Tulista marginata",
+  "sinonimo": "Haworthia marginata",
+  "descrizione": "foglie lisce e lucide, quasi di plastica",
+  "ricovero": "casa",
+  "note": "Le Tulista sono le più grandi e coriacee del gruppo e sopportano più sole delle Haworthia, ma non il pieno sole estivo del terrazzo."
+ },
+ {
+  "key": "haworthia#tulista-maxima",
+  "genere": "haworthia",
+  "nome": "Tulista maxima",
+  "sinonimo": "Haworthia maxima",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Le Tulista sono le più grandi e coriacee del gruppo e sopportano più sole delle Haworthia, ma non il pieno sole estivo del terrazzo."
+ },
+ {
+  "key": "haworthia#tulista-minima",
+  "genere": "haworthia",
+  "nome": "Tulista minima",
+  "sinonimo": "Haworthia minima",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Le Tulista sono le più grandi e coriacee del gruppo e sopportano più sole delle Haworthia, ma non il pieno sole estivo del terrazzo."
+ },
+ {
+  "key": "haworthia#gasteria-acinacifolia",
+  "genere": "haworthia",
+  "nome": "Gasteria acinacifolia",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-batesiana",
+  "genere": "haworthia",
+  "nome": "Gasteria batesiana",
+  "sinonimo": "",
+  "descrizione": "foglie ruvide, molto tubercolate",
+  "ricovero": "casa!",
+  "note": "Foglie molto ruvide e tubercolate: la polvere e l'acqua restano fra i tubercoli. Luce brillante indiretta e inverno sopra i 10 °C."
+ },
+ {
+  "key": "haworthia#gasteria-baylissiana",
+  "genere": "haworthia",
+  "nome": "Gasteria baylissiana",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-bicolor",
+  "genere": "haworthia",
+  "nome": "Gasteria bicolor",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-bicolor-var-liliputana",
+  "genere": "haworthia",
+  "nome": "Gasteria bicolor var. liliputana",
+  "sinonimo": "",
+  "descrizione": "miniatura, rosetta di pochi centimetri",
+  "ricovero": "casa!",
+  "note": "Miniatura di pochi centimetri: il vaso piccolo asciuga in fretta, ma vale sempre la regola di non bagnare le foglie. Inverno sopra i 10 °C."
+ },
+ {
+  "key": "haworthia#gasteria-brachyphylla",
+  "genere": "haworthia",
+  "nome": "Gasteria brachyphylla",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-carinata",
+  "genere": "haworthia",
+  "nome": "Gasteria carinata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-croucheri",
+  "genere": "haworthia",
+  "nome": "Gasteria croucheri",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-disticha",
+  "genere": "haworthia",
+  "nome": "Gasteria disticha",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-ellaphieae",
+  "genere": "haworthia",
+  "nome": "Gasteria ellaphieae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-excelsa",
+  "genere": "haworthia",
+  "nome": "Gasteria excelsa",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-glauca",
+  "genere": "haworthia",
+  "nome": "Gasteria glauca",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-glomerata",
+  "genere": "haworthia",
+  "nome": "Gasteria glomerata",
+  "sinonimo": "",
+  "descrizione": "foglie corte, grigie, disposte su due file",
+  "ricovero": "casa!",
+  "note": "Piccola e a due file di foglie grigie: si propaga bene per foglia, cosa non scontata nel gruppo. Mai acqua fra le foglie, inverno sopra i 10 °C."
+ },
+ {
+  "key": "haworthia#gasteria-nitida",
+  "genere": "haworthia",
+  "nome": "Gasteria nitida",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-nitida-var-armstrongii",
+  "genere": "haworthia",
+  "nome": "Gasteria nitida var. armstrongii",
+  "sinonimo": "",
+  "descrizione": "foglie tozze e ripiegate verso il basso",
+  "ricovero": "casa!",
+  "note": "Foglie tozze e ripiegate verso il basso, crescita lentissima: annaffiature rare e mai sulle foglie."
+ },
+ {
+  "key": "haworthia#gasteria-pendulifolia",
+  "genere": "haworthia",
+  "nome": "Gasteria pendulifolia",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-pillansii",
+  "genere": "haworthia",
+  "nome": "Gasteria pillansii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-polita",
+  "genere": "haworthia",
+  "nome": "Gasteria polita",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-pulchra",
+  "genere": "haworthia",
+  "nome": "Gasteria pulchra",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-rawlinsonii",
+  "genere": "haworthia",
+  "nome": "Gasteria rawlinsonii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "haworthia#gasteria-vlokii",
+  "genere": "haworthia",
+  "nome": "Gasteria vlokii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come tutte le Gasteria: luce brillante ma mai diretta (col sole le foglie diventano bianche o gialle), mai acqua fra le foglie perché compaiono macchie nere fungine, e inverno sopra i 10 °C con acqua ogni due mesi."
+ },
+ {
+  "key": "aloe#aloe-vera",
+  "genere": "aloe",
+  "nome": "Aloe vera",
+  "sinonimo": "Aloe barbadensis",
+  "descrizione": "la specie officinale, rosetta chiara con denti morbidi",
+  "ricovero": "riparo",
+  "note": "Zone 10a-12b: le tue minime di 2-3 °C sono al limite ma sostenibili se il vaso è in terracotta con più fori e resta asciutto. Riducila drasticamente d'acqua da novembre. Ricorda che è tossica per cani, gatti e cavalli, e che la linfa può irritare la pelle."
+ },
+ {
+  "key": "aloe#aloe-arborescens",
+  "genere": "aloe",
+  "nome": "Aloe arborescens",
+  "sinonimo": "",
+  "descrizione": "grande arbusto ramificato, fiori rosso corallo",
+  "ricovero": "fuori",
+  "note": "Rustica in zone 9-11, quindi il tuo terrazzo non è un problema. Vale però solo all'asciutto: la rusticità dichiarata presuppone un substrato che non trattenga acqua d'inverno. Fiorisce in pieno inverno, ed è uno dei pochi fiori che avrai a dicembre e gennaio."
+ },
+ {
+  "key": "aloe#aloe-aristata",
+  "genere": "aloe",
+  "nome": "Aloe aristata",
+  "sinonimo": "Aristaloe aristata",
+  "descrizione": "piccola rosetta con setole bianche sulle punte",
+  "ricovero": "fuori",
+  "note": "Come Aristaloe aristata è fra le più rustiche in assoluto, data per zone 8-12. Resta fuori tutto l'anno senza problemi, purché all'asciutto: la rosetta piccola e fitta trattiene l'acqua fra le foglie, quindi riparala dalla pioggia battente."
+ },
+ {
+  "key": "aloe#aloe-brevifolia",
+  "genere": "aloe",
+  "nome": "Aloe brevifolia",
+  "sinonimo": "",
+  "descrizione": "rosetta compatta azzurra, molto prolifica",
+  "ricovero": "fuori",
+  "note": "Zone 8-11, ma la fonte è esplicita: è intollerante ai terreni bagnati. La sua rusticità vale solo se d'inverno resta perfettamente asciutta, altrimenti marcisce ben prima di soffrire il freddo."
+ },
+ {
+  "key": "aloe#aloe-humilis",
+  "genere": "aloe",
+  "nome": "Aloe humilis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Rosetta bassa e prolifica: i cuscini fitti di polloni trattengono umidità alla base, quindi diradali ogni tanto."
+ },
+ {
+  "key": "aloe#aloe-juvenna",
+  "genere": "aloe",
+  "nome": "Aloe juvenna",
+  "sinonimo": "",
+  "descrizione": "piccole foglie triangolari macchiate, a torretta",
+  "ricovero": "riparo",
+  "note": "Piccole foglie triangolari a torretta: con poca luce si allunga e si spoglia alla base."
+ },
+ {
+  "key": "aloe#aloe-variegata",
+  "genere": "aloe",
+  "nome": "Aloe variegata",
+  "sinonimo": "Gonialoe variegata",
+  "descrizione": "foglie a V su tre file, fasce bianche",
+  "ricovero": "riparo",
+  "note": "Oggi Gonialoe variegata. Le foglie a V su tre file formano canaline che portano l'acqua verso il centro: è la ragione per cui in terrazzo va tenuta al coperto dalla pioggia più che dal freddo."
+ },
+ {
+  "key": "aloe#aloe-ferox",
+  "genere": "aloe",
+  "nome": "Aloe ferox",
+  "sinonimo": "",
+  "descrizione": "grande, spinosa, tronco singolo",
+  "ricovero": "fuori",
+  "note": "Zone 9-12. Vale però solo all'asciutto: la rusticità dichiarata presuppone un substrato che non trattenga acqua d'inverno. Diventa grande e con un tronco vero: pensa al posto prima di metterla a terra."
+ },
+ {
+  "key": "aloe#aloe-marlothii",
+  "genere": "aloe",
+  "nome": "Aloe marlothii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Zone 9-12. Vale però solo all'asciutto: la rusticità dichiarata presuppone un substrato che non trattenga acqua d'inverno."
+ },
+ {
+  "key": "aloe#aloe-plicatilis",
+  "genere": "aloe",
+  "nome": "Aloe plicatilis",
+  "sinonimo": "Kumara plicatilis",
+  "descrizione": "foglie a ventaglio su due file",
+  "ricovero": "fuori",
+  "note": "Oggi Kumara plicatilis, data per zone 9-12. Vale però solo all'asciutto: la rusticità dichiarata presuppone un substrato che non trattenga acqua d'inverno. Le foglie a ventaglio su due file la rendono inconfondibile."
+ },
+ {
+  "key": "aloe#aloe-polyphylla",
+  "genere": "aloe",
+  "nome": "Aloe polyphylla",
+  "sinonimo": "",
+  "descrizione": "rosetta a spirale perfetta, rara e protetta",
+  "ricovero": "fuori",
+  "note": "Viene dalle montagne del Lesotho, dove d'inverno prende la neve, ed è data per zone 9-12: il freddo non la spaventa. Il ristagno sì, ed è la ragione per cui muore quasi sempre in coltivazione. Substrato quasi tutto minerale e acqua zero d'inverno. È specie rara e protetta."
+ },
+ {
+  "key": "aloe#aloe-dichotoma",
+  "genere": "aloe",
+  "nome": "Aloe dichotoma",
+  "sinonimo": "Aloidendron dichotomum",
+  "descrizione": "albero faretra, tronco liscio e dorato",
+  "ricovero": "riparo",
+  "note": "Oggi Aloidendron dichotomum, l'albero faretra: in vaso resta piccolo per anni. Cresce lentissimo e non perdona il ristagno."
+ },
+ {
+  "key": "aloe#aloe-ramosissima",
+  "genere": "aloe",
+  "nome": "Aloe ramosissima",
+  "sinonimo": "Aloidendron ramosissimum",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Oggi Aloidendron ramosissimum: stesse esigenze del dichotoma, con portamento più cespuglioso."
+ },
+ {
+  "key": "aloe#aloe-striata",
+  "genere": "aloe",
+  "nome": "Aloe striata",
+  "sinonimo": "",
+  "descrizione": "foglie lisce senza denti, margini rosati",
+  "ricovero": "fuori",
+  "note": "Data come resistente al gelo, zone 9-11. Vale però solo all'asciutto: la rusticità dichiarata presuppone un substrato che non trattenga acqua d'inverno. Non ha denti sui margini: si riconosce al tatto prima che alla vista."
+ },
+ {
+  "key": "aloe#aloe-striata-subsp-karasbergensis",
+  "genere": "aloe",
+  "nome": "Aloe striata subsp. karasbergensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Come la striata: zone 9-11 e margini lisci. Vale però solo all'asciutto: la rusticità dichiarata presuppone un substrato che non trattenga acqua d'inverno."
+ },
+ {
+  "key": "aloe#aloe-maculata",
+  "genere": "aloe",
+  "nome": "Aloe maculata",
+  "sinonimo": "Aloe saponaria",
+  "descrizione": "foglie maculate, fiori a ombrella",
+  "ricovero": "riparo",
+  "note": "Molto prolifica e adattabile. Nessun dato di rusticità specifico oltre a quello del genere."
+ },
+ {
+  "key": "aloe#aloe-mitriformis",
+  "genere": "aloe",
+  "nome": "Aloe mitriformis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-distans",
+  "genere": "aloe",
+  "nome": "Aloe distans",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-jucunda",
+  "genere": "aloe",
+  "nome": "Aloe jucunda",
+  "sinonimo": "",
+  "descrizione": "miniatura lucida, macchie chiare",
+  "ricovero": "riparo",
+  "note": "Miniatura lucida a macchie chiare, dalla Somalia. Nessun dato di rusticità specifico: al coperto e all'asciutto."
+ },
+ {
+  "key": "aloe#aloe-descoingsii",
+  "genere": "aloe",
+  "nome": "Aloe descoingsii",
+  "sinonimo": "",
+  "descrizione": "una delle Aloe più piccole in assoluto",
+  "ricovero": "riparo",
+  "note": "Miniatura del Madagascar, fra le Aloe più piccole in assoluto. Non ho trovato dati di rusticità specifici: in un vaso così piccolo il freddo umido arriva subito alle radici, quindi tienila al coperto e all'asciutto."
+ },
+ {
+  "key": "aloe#aloe-haworthioides",
+  "genere": "aloe",
+  "nome": "Aloe haworthioides",
+  "sinonimo": "",
+  "descrizione": "coperta di setole bianche",
+  "ricovero": "riparo",
+  "note": "Miniatura del Madagascar coperta di setole bianche: l'acqua resta fra i peli, quindi annaffia solo il substrato. Nessun dato di rusticità specifico."
+ },
+ {
+  "key": "aloe#aloe-bellatula",
+  "genere": "aloe",
+  "nome": "Aloe bellatula",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Miniatura del Madagascar. Nessun dato di rusticità specifico: al coperto e all'asciutto d'inverno."
+ },
+ {
+  "key": "aloe#aloe-rauhii",
+  "genere": "aloe",
+  "nome": "Aloe rauhii",
+  "sinonimo": "",
+  "descrizione": "miniatura del Madagascar, foglie punteggiate",
+  "ricovero": "riparo",
+  "note": "Miniatura del Madagascar a foglie punteggiate. Nessun dato di rusticità specifico: trattala come le altre piccole malgasce, al coperto e all'asciutto."
+ },
+ {
+  "key": "aloe#aloe-somaliensis",
+  "genere": "aloe",
+  "nome": "Aloe somaliensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Dalla Somalia, quindi da clima caldo: nessun dato di rusticità specifico, tienila al coperto e all'asciutto d'inverno."
+ },
+ {
+  "key": "aloe#aloe-squarrosa",
+  "genere": "aloe",
+  "nome": "Aloe squarrosa",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Da Socotra, clima caldo e arido: al coperto d'inverno, con substrato quasi solo minerale."
+ },
+ {
+  "key": "aloe#aloe-melanacantha",
+  "genere": "aloe",
+  "nome": "Aloe melanacantha",
+  "sinonimo": "",
+  "descrizione": "spine nere robuste",
+  "ricovero": "riparo",
+  "note": "Spine nere robuste e crescita molto lenta. Nessun dato di rusticità specifico: il ristagno invernale è il rischio principale."
+ },
+ {
+  "key": "aloe#aloe-melanacantha-var-erinacea",
+  "genere": "aloe",
+  "nome": "Aloe melanacantha var. erinacea",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Come la melanacantha, ancora più compatta e lenta: substrato quasi solo minerale, mai acqua ferma d'inverno."
+ },
+ {
+  "key": "aloe#aloe-pearsonii",
+  "genere": "aloe",
+  "nome": "Aloe pearsonii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Foglie che virano al rosso intenso con stress idrico e sole forte. Vuole substrato estremamente drenante."
+ },
+ {
+  "key": "aloe#aloe-suprafoliata",
+  "genere": "aloe",
+  "nome": "Aloe suprafoliata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-castanea",
+  "genere": "aloe",
+  "nome": "Aloe castanea",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-cameronii",
+  "genere": "aloe",
+  "nome": "Aloe cameronii",
+  "sinonimo": "",
+  "descrizione": "foglie che virano al rosso rame in pieno sole",
+  "ricovero": "riparo",
+  "note": "Il rosso rame si sviluppa con pieno sole e substrato asciutto: se resta verde, sta ricevendo troppa acqua o troppa poca luce."
+ },
+ {
+  "key": "aloe#aloe-capitata",
+  "genere": "aloe",
+  "nome": "Aloe capitata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "La var. quartziticola è data per zone 9-12. Vale però solo all'asciutto: la rusticità dichiarata presuppone un substrato che non trattenga acqua d'inverno."
+ },
+ {
+  "key": "aloe#aloe-camperi",
+  "genere": "aloe",
+  "nome": "Aloe camperi",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-comptonii",
+  "genere": "aloe",
+  "nome": "Aloe comptonii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-cryptopoda",
+  "genere": "aloe",
+  "nome": "Aloe cryptopoda",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-dorotheae",
+  "genere": "aloe",
+  "nome": "Aloe dorotheae",
+  "sinonimo": "",
+  "descrizione": "foglie rosso vivo con luce forte",
+  "ricovero": "riparo",
+  "note": "Il rosso acceso delle foglie è una risposta alla luce forte: in ombra torna verde. Non ho trovato dati di rusticità specifici."
+ },
+ {
+  "key": "aloe#aloe-gariepensis",
+  "genere": "aloe",
+  "nome": "Aloe gariepensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-glauca",
+  "genere": "aloe",
+  "nome": "Aloe glauca",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-hereroensis",
+  "genere": "aloe",
+  "nome": "Aloe hereroensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Zone 9-11. Vale però solo all'asciutto: la rusticità dichiarata presuppone un substrato che non trattenga acqua d'inverno."
+ },
+ {
+  "key": "aloe#aloe-krapohliana",
+  "genere": "aloe",
+  "nome": "Aloe krapohliana",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-littoralis",
+  "genere": "aloe",
+  "nome": "Aloe littoralis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-longistyla",
+  "genere": "aloe",
+  "nome": "Aloe longistyla",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-microstigma",
+  "genere": "aloe",
+  "nome": "Aloe microstigma",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Zone 9-11. Vale però solo all'asciutto: la rusticità dichiarata presuppone un substrato che non trattenga acqua d'inverno."
+ },
+ {
+  "key": "aloe#aloe-millotii",
+  "genere": "aloe",
+  "nome": "Aloe millotii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie del Madagascar. Nessun dato di rusticità specifico: al coperto e all'asciutto d'inverno."
+ },
+ {
+  "key": "aloe#aloe-nobilis",
+  "genere": "aloe",
+  "nome": "Aloe nobilis",
+  "sinonimo": "",
+  "descrizione": "margini con denti gialli vistosi",
+  "ricovero": "riparo",
+  "note": "I denti gialli sui margini si accentuano con il sole pieno."
+ },
+ {
+  "key": "aloe#aloe-parvula",
+  "genere": "aloe",
+  "nome": "Aloe parvula",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Miniatura del Madagascar, lenta: al coperto e all'asciutto d'inverno."
+ },
+ {
+  "key": "aloe#aloe-peglerae",
+  "genere": "aloe",
+  "nome": "Aloe peglerae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-petricola",
+  "genere": "aloe",
+  "nome": "Aloe petricola",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-pillansii",
+  "genere": "aloe",
+  "nome": "Aloe pillansii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-pluridens",
+  "genere": "aloe",
+  "nome": "Aloe pluridens",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-pratensis",
+  "genere": "aloe",
+  "nome": "Aloe pratensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-reynoldsii",
+  "genere": "aloe",
+  "nome": "Aloe reynoldsii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-rupestris",
+  "genere": "aloe",
+  "nome": "Aloe rupestris",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-saundersiae",
+  "genere": "aloe",
+  "nome": "Aloe saundersiae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-speciosa",
+  "genere": "aloe",
+  "nome": "Aloe speciosa",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Zone 9-10. Vale però solo all'asciutto: la rusticità dichiarata presuppone un substrato che non trattenga acqua d'inverno."
+ },
+ {
+  "key": "aloe#aloe-suzannae",
+  "genere": "aloe",
+  "nome": "Aloe suzannae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie rarissima del Madagascar, di crescita lentissima: al coperto e all'asciutto."
+ },
+ {
+  "key": "aloe#aloe-thraskii",
+  "genere": "aloe",
+  "nome": "Aloe thraskii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-vanbalenii",
+  "genere": "aloe",
+  "nome": "Aloe vanbalenii",
+  "sinonimo": "",
+  "descrizione": "foglie ricurve verso il basso, color rame",
+  "ricovero": "fuori",
+  "note": "Zone 9-11. Vale però solo all'asciutto: la rusticità dichiarata presuppone un substrato che non trattenga acqua d'inverno. Le foglie ricurve virano al rame con molto sole e stress idrico."
+ },
+ {
+  "key": "aloe#aloe-zebrina",
+  "genere": "aloe",
+  "nome": "Aloe zebrina",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-barberae",
+  "genere": "aloe",
+  "nome": "Aloe barberae",
+  "sinonimo": "Aloidendron barberae",
+  "descrizione": "la più grande di tutte, un vero albero",
+  "ricovero": "riparo",
+  "note": "Oggi Aloidendron barberae, la più grande di tutte: in piena terra diventa un albero. In vaso va contenuta e tenuta all'asciutto d'inverno."
+ },
+ {
+  "key": "aloe#aloe-bakeri",
+  "genere": "aloe",
+  "nome": "Aloe bakeri",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-striatula",
+  "genere": "aloe",
+  "nome": "Aloe striatula",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "La più rustica di tutte: come Aloiampelos striatula è data per zone 8b-11b, fino a -9,4 °C. È l'unica del gruppo che potresti mettere in piena terra e dimenticare lì."
+ },
+ {
+  "key": "aloe#aloe-tenuior",
+  "genere": "aloe",
+  "nome": "Aloe tenuior",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "aloe#aloe-arenicola",
+  "genere": "aloe",
+  "nome": "Aloe arenicola",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Nessun dato di rusticità specifico per questa specie. Con minime di 2-3 °C può restare fuori in un punto molto drenante e al riparo dalla pioggia continua: è il substrato freddo e bagnato a farla marcire, non l'aria fredda."
+ },
+ {
+  "key": "crassula#crassula-ovata",
+  "genere": "crassula",
+  "nome": "Crassula ovata",
+  "sinonimo": "",
+  "descrizione": "l'albero di giada, fino a 1,8 m con tronco legnoso",
+  "ricovero": "riparo",
+  "note": "Zone 9a-10b: a 2-3 °C regge se asciutta, ma il substrato freddo e bagnato le fa perdere le radici. In estate il sole pomeridiano più intenso può bruciare le foglie: meglio sole del mattino. È tossica per cani, gatti e cavalli. In poca luce i rami si allungano e si spezzano sotto il proprio peso."
+ },
+ {
+  "key": "crassula#crassula-ovata-gollum",
+  "genere": "crassula",
+  "nome": "Crassula ovata 'Gollum'",
+  "sinonimo": "",
+  "descrizione": "foglie tubolari con la punta a ventosa",
+  "ricovero": "riparo",
+  "note": "Come la ovata, tossicità compresa. Le foglie tubolari con la punta a ventosa sono la parte che si scotta per prima con il sole pomeridiano d'agosto."
+ },
+ {
+  "key": "crassula#crassula-ovata-hobbit",
+  "genere": "crassula",
+  "nome": "Crassula ovata 'Hobbit'",
+  "sinonimo": "",
+  "descrizione": "foglie arrotolate su sé stesse",
+  "ricovero": "riparo",
+  "note": "Come la ovata, tossicità compresa: stesse esigenze, foglie arrotolate su sé stesse."
+ },
+ {
+  "key": "crassula#crassula-arborescens",
+  "genere": "crassula",
+  "nome": "Crassula arborescens",
+  "sinonimo": "",
+  "descrizione": "foglie tonde grigio-azzurre bordate di rosso",
+  "ricovero": "riparo",
+  "note": "Come la ovata ma più lenta; le foglie tonde grigio-azzurre sono coperte da una pruina che il sole forte e l'acqua sulle foglie rovinano."
+ },
+ {
+  "key": "crassula#crassula-alba",
+  "genere": "crassula",
+  "nome": "Crassula alba",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-alpestris",
+  "genere": "crassula",
+  "nome": "Crassula alpestris",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di ambienti freschi. Appartiene al gruppo di Crassula sudafricane che vegetano nelle stagioni fresche e riposano in piena estate: a luglio e agosto vanno tenute più asciutte delle altre, ed è in quel periodo che marciscono se annaffiate come le comuni."
+ },
+ {
+  "key": "crassula#crassula-ausensis-subsp-titanopsis",
+  "genere": "crassula",
+  "nome": "Crassula ausensis subsp. titanopsis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Miniatura a foglie tubercolate. Appartiene al gruppo di Crassula sudafricane che vegetano nelle stagioni fresche e riposano in piena estate: a luglio e agosto vanno tenute più asciutte delle altre, ed è in quel periodo che marciscono se annaffiate come le comuni."
+ },
+ {
+  "key": "crassula#crassula-barklyi",
+  "genere": "crassula",
+  "nome": "Crassula barklyi",
+  "sinonimo": "",
+  "descrizione": "colonne squamose, dette a coda di ratto",
+  "ricovero": "riparo",
+  "note": "Colonne squamose dette a coda di ratto, crescita lentissima. Appartiene al gruppo di Crassula sudafricane che vegetano nelle stagioni fresche e riposano in piena estate: a luglio e agosto vanno tenute più asciutte delle altre, ed è in quel periodo che marciscono se annaffiate come le comuni."
+ },
+ {
+  "key": "crassula#crassula-buddha-s-temple",
+  "genere": "crassula",
+  "nome": "Crassula 'Buddha's Temple'",
+  "sinonimo": "",
+  "descrizione": "colonna quadrangolare di foglie sovrapposte",
+  "ricovero": "riparo",
+  "note": "Ibrido derivato dal gruppo delle colonnari a foglie sovrapposte: come i genitori, vuole essere tenuto più asciutto in piena estate e teme l'acqua ferma nella colonna di foglie."
+ },
+ {
+  "key": "crassula#crassula-capitella-subsp-thyrsiflora",
+  "genere": "crassula",
+  "nome": "Crassula capitella subsp. thyrsiflora",
+  "sinonimo": "",
+  "descrizione": "foglie che virano al rosso acceso",
+  "ricovero": "riparo",
+  "note": "Il rosso acceso arriva con molto sole e poca acqua: in ombra resta verde e si allunga."
+ },
+ {
+  "key": "crassula#crassula-clavata",
+  "genere": "crassula",
+  "nome": "Crassula clavata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-columella",
+  "genere": "crassula",
+  "nome": "Crassula columella",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Colonnina di foglie serrate. Appartiene al gruppo di Crassula sudafricane che vegetano nelle stagioni fresche e riposano in piena estate: a luglio e agosto vanno tenute più asciutte delle altre, ed è in quel periodo che marciscono se annaffiate come le comuni."
+ },
+ {
+  "key": "crassula#crassula-columnaris",
+  "genere": "crassula",
+  "nome": "Crassula columnaris",
+  "sinonimo": "",
+  "descrizione": "corpo compatto a colonna di foglie embricate",
+  "ricovero": "riparo",
+  "note": "È monocarpica: fiorisce una volta sola e poi muore, lasciando semi. Non è un errore di coltivazione. Appartiene al gruppo di Crassula sudafricane che vegetano nelle stagioni fresche e riposano in piena estate: a luglio e agosto vanno tenute più asciutte delle altre, ed è in quel periodo che marciscono se annaffiate come le comuni."
+ },
+ {
+  "key": "crassula#crassula-corallina",
+  "genere": "crassula",
+  "nome": "Crassula corallina",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-cornuta",
+  "genere": "crassula",
+  "nome": "Crassula cornuta",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-cultrata",
+  "genere": "crassula",
+  "nome": "Crassula cultrata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-deltoidea",
+  "genere": "crassula",
+  "nome": "Crassula deltoidea",
+  "sinonimo": "",
+  "descrizione": "foglie triangolari coperte di pruina bianca",
+  "ricovero": "riparo",
+  "note": "Foglie triangolari coperte di pruina bianca, che l'acqua sulle foglie rovina. Appartiene al gruppo di Crassula sudafricane che vegetano nelle stagioni fresche e riposano in piena estate: a luglio e agosto vanno tenute più asciutte delle altre, ed è in quel periodo che marciscono se annaffiate come le comuni."
+ },
+ {
+  "key": "crassula#crassula-elegans",
+  "genere": "crassula",
+  "nome": "Crassula elegans",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-erosula-campfire",
+  "genere": "crassula",
+  "nome": "Crassula erosula 'Campfire'",
+  "sinonimo": "",
+  "descrizione": "foglie che d'inverno diventano rosso fuoco",
+  "ricovero": "riparo",
+  "note": "Il rosso fuoco è una risposta al freddo asciutto e alla luce forte: proprio l'inverno in terrazzo, all'asciutto, è quando dà il meglio."
+ },
+ {
+  "key": "crassula#crassula-exilis-var-cooperi",
+  "genere": "crassula",
+  "nome": "Crassula exilis var. cooperi",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-falcata",
+  "genere": "crassula",
+  "nome": "Crassula falcata",
+  "sinonimo": "Crassula perfoliata var. minor",
+  "descrizione": "foglie a falce grigie, fiori rossi",
+  "ricovero": "riparo",
+  "note": "Foglie a falce grigie e pruinose: la pruina non si riforma, quindi non toccarle e non bagnarle dall'alto."
+ },
+ {
+  "key": "crassula#crassula-gillii",
+  "genere": "crassula",
+  "nome": "Crassula gillii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-globularioides",
+  "genere": "crassula",
+  "nome": "Crassula globularioides",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-herrei",
+  "genere": "crassula",
+  "nome": "Crassula herrei",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-hottentotta",
+  "genere": "crassula",
+  "nome": "Crassula hottentotta",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-ivory-pagoda",
+  "genere": "crassula",
+  "nome": "Crassula 'Ivory Pagoda'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Ibrido a foglie sovrapposte e pruinose: acqua solo al substrato."
+ },
+ {
+  "key": "crassula#crassula-lactea",
+  "genere": "crassula",
+  "nome": "Crassula lactea",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-mesembryanthemoides",
+  "genere": "crassula",
+  "nome": "Crassula mesembryanthemoides",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-mesembryanthemopsis",
+  "genere": "crassula",
+  "nome": "Crassula mesembryanthemopsis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Corpo compatto con le facce delle foglie a livello del suolo, come i Lithops. Appartiene al gruppo di Crassula sudafricane che vegetano nelle stagioni fresche e riposano in piena estate: a luglio e agosto vanno tenute più asciutte delle altre, ed è in quel periodo che marciscono se annaffiate come le comuni."
+ },
+ {
+  "key": "crassula#crassula-morgan-s-beauty",
+  "genere": "crassula",
+  "nome": "Crassula 'Morgan's Beauty'",
+  "sinonimo": "",
+  "descrizione": "fiori rosa densi su rosetta pruinosa",
+  "ricovero": "riparo",
+  "note": "Ibrido pruinoso a fiori rosa densi: non bagnare le foglie, la pruina si macchia."
+ },
+ {
+  "key": "crassula#crassula-multicava",
+  "genere": "crassula",
+  "nome": "Crassula multicava",
+  "sinonimo": "",
+  "descrizione": "tollera l'ombra meglio delle altre",
+  "ricovero": "riparo",
+  "note": "L'unica del gruppo che tollera davvero l'ombra: utile per gli angoli poco luminosi del terrazzo."
+ },
+ {
+  "key": "crassula#crassula-muscosa",
+  "genere": "crassula",
+  "nome": "Crassula muscosa",
+  "sinonimo": "",
+  "descrizione": "fusti sottili a coda di topo, foglioline embricate",
+  "ricovero": "riparo",
+  "note": "I fusti sottilissimi in vaso piccolo asciugano molto in fretta: è una delle poche Crassula che d'estate va controllata più spesso delle altre."
+ },
+ {
+  "key": "crassula#crassula-namaquensis",
+  "genere": "crassula",
+  "nome": "Crassula namaquensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-nudicaulis",
+  "genere": "crassula",
+  "nome": "Crassula nudicaulis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-orbicularis",
+  "genere": "crassula",
+  "nome": "Crassula orbicularis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-pellucida-var-marginalis",
+  "genere": "crassula",
+  "nome": "Crassula pellucida var. marginalis",
+  "sinonimo": "",
+  "descrizione": "tappezzante, variegata di rosa e crema",
+  "ricovero": "riparo",
+  "note": "Tappezzante a crescita rapida: è fra le poche Crassula che tollera qualche annaffiatura in più."
+ },
+ {
+  "key": "crassula#crassula-perfoliata",
+  "genere": "crassula",
+  "nome": "Crassula perfoliata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-perforata",
+  "genere": "crassula",
+  "nome": "Crassula perforata",
+  "sinonimo": "",
+  "descrizione": "foglie infilzate sul fusto come spiedini",
+  "ricovero": "riparo",
+  "note": "Le foglie infilzate sul fusto formano tasche dove l'acqua ristagna: annaffia il substrato, non la pianta."
+ },
+ {
+  "key": "crassula#crassula-perforata-pagoda",
+  "genere": "crassula",
+  "nome": "Crassula perforata 'Pagoda'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Come la perforata: acqua solo al substrato, mai fra le foglie sovrapposte."
+ },
+ {
+  "key": "crassula#crassula-plegmatoides",
+  "genere": "crassula",
+  "nome": "Crassula plegmatoides",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Vegeta in primavera e autunno ed è dormiente in estate; è data resistente fino a circa -5 °C (zone 9b-12), ma il substrato bagnato d'inverno provoca rapidamente marciume di radici e fusto. Tienila più asciutta delle altre Crassula tutto l'anno, e in piena ombra si sfila e cade."
+ },
+ {
+  "key": "crassula#crassula-pruinosa",
+  "genere": "crassula",
+  "nome": "Crassula pruinosa",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-pubescens",
+  "genere": "crassula",
+  "nome": "Crassula pubescens",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-punctata",
+  "genere": "crassula",
+  "nome": "Crassula punctata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-pyramidalis",
+  "genere": "crassula",
+  "nome": "Crassula pyramidalis",
+  "sinonimo": "",
+  "descrizione": "colonna a sezione quadrata perfetta",
+  "ricovero": "riparo",
+  "note": "Colonna a sezione quadrata perfetta, molto lenta. Appartiene al gruppo di Crassula sudafricane che vegetano nelle stagioni fresche e riposano in piena estate: a luglio e agosto vanno tenute più asciutte delle altre, ed è in quel periodo che marciscono se annaffiate come le comuni."
+ },
+ {
+  "key": "crassula#crassula-radicans",
+  "genere": "crassula",
+  "nome": "Crassula radicans",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-rogersii",
+  "genere": "crassula",
+  "nome": "Crassula rogersii",
+  "sinonimo": "",
+  "descrizione": "foglie ovali pelose, punte rosse",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-rupestris",
+  "genere": "crassula",
+  "nome": "Crassula rupestris",
+  "sinonimo": "",
+  "descrizione": "foglie opposte saldate attorno al fusto",
+  "ricovero": "riparo",
+  "note": "Foglie opposte saldate attorno al fusto: stesse tasche d'acqua della perforata, stessa precauzione."
+ },
+ {
+  "key": "crassula#crassula-rupestris-subsp-marnierana",
+  "genere": "crassula",
+  "nome": "Crassula rupestris subsp. marnierana",
+  "sinonimo": "",
+  "descrizione": "catenella di foglie tonde bordate di rosso",
+  "ricovero": "riparo",
+  "note": "Come la rupestris; i bordi rossi si accentuano con il sole e il freddo asciutto."
+ },
+ {
+  "key": "crassula#crassula-sarcocaulis",
+  "genere": "crassula",
+  "nome": "Crassula sarcocaulis",
+  "sinonimo": "",
+  "descrizione": "bonsai naturale, rustica in zone miti",
+  "ricovero": "fuori",
+  "note": "L'eccezione rustica del genere: la RHS le dà rusticità H3, cioè da -5 a 1 °C. Sul tuo terrazzo resta fuori tutto l'anno, in pieno sole e in un punto molto drenante e riparato. Perde le foglie d'inverno e sembra un bonsai spoglio: è normale."
+ },
+ {
+  "key": "crassula#crassula-sarmentosa",
+  "genere": "crassula",
+  "nome": "Crassula sarmentosa",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-socialis",
+  "genere": "crassula",
+  "nome": "Crassula socialis",
+  "sinonimo": "",
+  "descrizione": "tappeto di piccole rosette",
+  "ricovero": "riparo",
+  "note": "Forma tappeti fitti di piccole rosette dove l'aria non circola: diradali, o alla base resta umidità."
+ },
+ {
+  "key": "crassula#crassula-streyi",
+  "genere": "crassula",
+  "nome": "Crassula streyi",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-susannae",
+  "genere": "crassula",
+  "nome": "Crassula susannae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Miniatura lentissima. Appartiene al gruppo di Crassula sudafricane che vegetano nelle stagioni fresche e riposano in piena estate: a luglio e agosto vanno tenute più asciutte delle altre, ed è in quel periodo che marciscono se annaffiate come le comuni."
+ },
+ {
+  "key": "crassula#crassula-tecta",
+  "genere": "crassula",
+  "nome": "Crassula tecta",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Superficie coperta di papille bianche che trattengono l'acqua: annaffia solo il substrato. Appartiene al gruppo di Crassula sudafricane che vegetano nelle stagioni fresche e riposano in piena estate: a luglio e agosto vanno tenute più asciutte delle altre, ed è in quel periodo che marciscono se annaffiate come le comuni."
+ },
+ {
+  "key": "crassula#crassula-tetragona",
+  "genere": "crassula",
+  "nome": "Crassula tetragona",
+  "sinonimo": "",
+  "descrizione": "portamento a pino in miniatura",
+  "ricovero": "riparo",
+  "note": "Portamento a pino in miniatura: con poca luce si spoglia in basso e i rami si piegano."
+ },
+ {
+  "key": "crassula#crassula-tom-thumb",
+  "genere": "crassula",
+  "nome": "Crassula 'Tom Thumb'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-volkensii",
+  "genere": "crassula",
+  "nome": "Crassula volkensii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il genere sta nelle zone 9a-10b: a 2-3 °C non gela, ma le radici si perdono se il substrato resta freddo e bagnato a lungo. Fuori in un angolo coperto e drenante, praticamente senza acqua da novembre a febbraio."
+ },
+ {
+  "key": "crassula#crassula-helmsii",
+  "genere": "crassula",
+  "nome": "Crassula helmsii",
+  "sinonimo": "",
+  "descrizione": "attenzione: specie invasiva negli ambienti acquatici",
+  "ricovero": "fuori",
+  "note": "Attenzione seria: è una specie acquatica invasiva, vietata alla commercializzazione in Unione Europea e nel Regno Unito. Non va coltivata né dispersa; è nell'elenco solo perché appartiene al genere."
+ },
+ {
+  "key": "sedum#sedum-morganianum",
+  "genere": "sedum",
+  "nome": "Sedum morganianum",
+  "sinonimo": "",
+  "descrizione": "coda d'asino, tralci penduli di foglie embricate",
+  "ricovero": "riparo",
+  "note": "Messicano e non rustico: al riparo d'inverno, all'asciutto. Il vero problema però è meccanico — le foglie si staccano al minimo urto e i tralci spogliati non rivestono più, quindi scegli il posto e non spostarlo."
+ },
+ {
+  "key": "sedum#sedum-burrito",
+  "genere": "sedum",
+  "nome": "Sedum burrito",
+  "sinonimo": "",
+  "descrizione": "come la coda d'asino ma con foglie più tozze e arrotondate",
+  "ricovero": "riparo",
+  "note": "Come la coda d'asino ma con foglie più tozze, che si staccano un po' meno facilmente. Non rustico."
+ },
+ {
+  "key": "sedum#sedum-rubrotinctum",
+  "genere": "sedum",
+  "nome": "Sedum rubrotinctum",
+  "sinonimo": "",
+  "descrizione": "fagiolini verdi che arrossano al sole",
+  "ricovero": "riparo",
+  "note": "Il rosso dei \"fagiolini\" è una risposta al sole e al freddo asciutto: d'inverno, al riparo ma luminoso, dà il meglio. Non rustico. La linfa può irritare la pelle."
+ },
+ {
+  "key": "sedum#sedum-nussbaumerianum",
+  "genere": "sedum",
+  "nome": "Sedum nussbaumerianum",
+  "sinonimo": "",
+  "descrizione": "foglie color rame in pieno sole",
+  "ricovero": "riparo",
+  "note": "Il colore rame dipende dalla luce diretta: in ombra torna verde e si allunga. Non rustico."
+ },
+ {
+  "key": "sedum#sedum-adolphii",
+  "genere": "sedum",
+  "nome": "Sedum adolphii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-pachyphyllum",
+  "genere": "sedum",
+  "nome": "Sedum pachyphyllum",
+  "sinonimo": "",
+  "descrizione": "foglie a dito con la punta rossa",
+  "ricovero": "riparo",
+  "note": "Le punte rosse compaiono con molta luce. Non rustico: riparo asciutto d'inverno."
+ },
+ {
+  "key": "sedum#sedum-clavatum",
+  "genere": "sedum",
+  "nome": "Sedum clavatum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-acre",
+  "genere": "sedum",
+  "nome": "Sedum acre",
+  "sinonimo": "",
+  "descrizione": "tappezzante rustico, giallo in fiore",
+  "ricovero": "fuori",
+  "note": "Dato per la zona 3, cioè ben oltre -30 °C: uno dei Sedum più rustici in assoluto. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora."
+ },
+ {
+  "key": "sedum#sedum-album",
+  "genere": "sedum",
+  "nome": "Sedum album",
+  "sinonimo": "",
+  "descrizione": "rustico, tappeto fitto che arrossa d'inverno",
+  "ricovero": "fuori",
+  "note": "Specie europea spontanea anche in Italia. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora. D'inverno il tappeto vira al rosso bronzo."
+ },
+ {
+  "key": "sedum#sedum-allantoides",
+  "genere": "sedum",
+  "nome": "Sedum allantoides",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-anglicum",
+  "genere": "sedum",
+  "nome": "Sedum anglicum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Specie atlantica europea, abituata a inverni freddi e umidi. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora."
+ },
+ {
+  "key": "sedum#sedum-aurora",
+  "genere": "sedum",
+  "nome": "Sedum 'Aurora'",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-australe",
+  "genere": "sedum",
+  "nome": "Sedum australe",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-brevifolium",
+  "genere": "sedum",
+  "nome": "Sedum brevifolium",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Specie europea di alta quota. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora."
+ },
+ {
+  "key": "sedum#sedum-cauticola",
+  "genere": "sedum",
+  "nome": "Sedum cauticola",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Oggi Hylotelephium cauticola, erbacea rustica: d'inverno secca del tutto in superficie e ributta in primavera. Non buttarla credendola morta."
+ },
+ {
+  "key": "sedum#sedum-compressum",
+  "genere": "sedum",
+  "nome": "Sedum compressum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-confusum",
+  "genere": "sedum",
+  "nome": "Sedum confusum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-dasyphyllum",
+  "genere": "sedum",
+  "nome": "Sedum dasyphyllum",
+  "sinonimo": "",
+  "descrizione": "foglioline azzurre minute, molto rustico",
+  "ricovero": "fuori",
+  "note": "Spontaneo sui muri a secco italiani. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora."
+ },
+ {
+  "key": "sedum#sedum-dendroideum",
+  "genere": "sedum",
+  "nome": "Sedum dendroideum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Messicano, arbustivo: non rustico, e i rami legnosi si spezzano se cresce all'ombra."
+ },
+ {
+  "key": "sedum#sedum-ellacombeanum",
+  "genere": "sedum",
+  "nome": "Sedum ellacombeanum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Oggi Phedimus, rustico da giardino. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora."
+ },
+ {
+  "key": "sedum#sedum-furfuraceum",
+  "genere": "sedum",
+  "nome": "Sedum furfuraceum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-lineare",
+  "genere": "sedum",
+  "nome": "Sedum lineare",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Tappezzante asiatico rustico, spesso in versione variegata. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora."
+ },
+ {
+  "key": "sedum#sedum-lucidum",
+  "genere": "sedum",
+  "nome": "Sedum lucidum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-moranense",
+  "genere": "sedum",
+  "nome": "Sedum moranense",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-oxypetalum",
+  "genere": "sedum",
+  "nome": "Sedum oxypetalum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-palmeri",
+  "genere": "sedum",
+  "nome": "Sedum palmeri",
+  "sinonimo": "",
+  "descrizione": "cascata gialla in fiore, rustico in vaso",
+  "ricovero": "riparo",
+  "note": "In Italia viene spesso coltivato fuori tutto l'anno e regge bene, ma non ho trovato un dato di rusticità certificato: un riparo dalla pioggia invernale resta la scelta prudente. Fiorisce giallo a fine inverno."
+ },
+ {
+  "key": "sedum#sedum-praealtum",
+  "genere": "sedum",
+  "nome": "Sedum praealtum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Messicano, arbustivo e vigoroso: non rustico, ma regge bene il caldo estivo."
+ },
+ {
+  "key": "sedum#sedum-reflexum",
+  "genere": "sedum",
+  "nome": "Sedum reflexum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Dato per le zone 2-9. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora. Attenzione al rovescio della medaglia: più un Sedum è rustico, meno tollera il caldo estivo, quindi d'estate gradisce un po' d'ombra nelle ore centrali."
+ },
+ {
+  "key": "sedum#sedum-reptans",
+  "genere": "sedum",
+  "nome": "Sedum reptans",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-sarmentosum",
+  "genere": "sedum",
+  "nome": "Sedum sarmentosum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Tappezzante rustico e molto espansivo: tienilo in un vaso a sé, o colonizza quelli vicini."
+ },
+ {
+  "key": "sedum#sedum-sediforme",
+  "genere": "sedum",
+  "nome": "Sedum sediforme",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Spontaneo in tutta l'area mediterranea, Italia compresa. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora."
+ },
+ {
+  "key": "sedum#sedum-sexangulare",
+  "genere": "sedum",
+  "nome": "Sedum sexangulare",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Tappezzante europeo rustico. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora."
+ },
+ {
+  "key": "sedum#sedum-sieboldii",
+  "genere": "sedum",
+  "nome": "Sedum sieboldii",
+  "sinonimo": "Hylotelephium sieboldii",
+  "descrizione": "foglie tonde a tre a tre, cascante",
+  "ricovero": "fuori",
+  "note": "Rustico: d'inverno perde tutta la parte aerea e ributta in primavera dalle gemme alla base. Non è morto."
+ },
+ {
+  "key": "sedum#sedum-spathulifolium",
+  "genere": "sedum",
+  "nome": "Sedum spathulifolium",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Dato per le zone 5-9. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora. Come gli altri rustici soffre più il caldo estivo che il freddo."
+ },
+ {
+  "key": "sedum#sedum-stahlii",
+  "genere": "sedum",
+  "nome": "Sedum stahlii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-makinoi",
+  "genere": "sedum",
+  "nome": "Sedum makinoi",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie giapponese: non ho trovato un dato di rusticità affidabile, quindi trattala come le tenere e riparala dalla pioggia invernale."
+ },
+ {
+  "key": "sedum#sedum-treleasei",
+  "genere": "sedum",
+  "nome": "Sedum treleasei",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Specie di origine messicana o macaronesica, quindi non rustica come i Sedum da giardino: con 2-3 °C sta fuori all'asciutto, ma un riparo dalla pioggia invernale evita il marciume."
+ },
+ {
+  "key": "sedum#sedum-spurium",
+  "genere": "sedum",
+  "nome": "Sedum spurium",
+  "sinonimo": "Phedimus spurius",
+  "descrizione": "tappezzante rustico da giardino",
+  "ricovero": "fuori",
+  "note": "Dato per la zona 3. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora."
+ },
+ {
+  "key": "sedum#sedum-kamtschaticum",
+  "genere": "sedum",
+  "nome": "Sedum kamtschaticum",
+  "sinonimo": "Phedimus kamtschaticus",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Dato per le zone 2-9: rustichissimo. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora."
+ },
+ {
+  "key": "sedum#sedum-spectabile",
+  "genere": "sedum",
+  "nome": "Sedum spectabile",
+  "sinonimo": "Hylotelephium spectabile",
+  "descrizione": "grande erbacea da bordura, fiori rosa in autunno",
+  "ricovero": "fuori",
+  "note": "Erbacea perenne rustica da bordura: secca completamente d'inverno e ributta a primavera. Lascia i fusti secchi in piedi, reggono la neve e nutrono gli insetti."
+ },
+ {
+  "key": "sedum#sedum-telephium",
+  "genere": "sedum",
+  "nome": "Sedum telephium",
+  "sinonimo": "Hylotelephium telephium",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Come lo spectabile: rustico, secca d'inverno e ributta in primavera."
+ },
+ {
+  "key": "sedum#sedum-hispanicum",
+  "genere": "sedum",
+  "nome": "Sedum hispanicum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "Specie mediterranea rustica. Rustico in piena terra: sul tuo terrazzo resta fuori tutto l'anno senza alcuna protezione, e più fa freddo asciutto più si colora."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-blossfeldiana",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe blossfeldiana",
+  "sinonimo": "",
+  "descrizione": "la Kalanchoe fiorita da vivaio, brevidiurna",
+  "ricovero": "casa",
+  "note": "Il ricovero invernale non serve solo contro il freddo: da ottobre a marzo le servono notti lunghe e buie di 14-16 ore per formare i boccioli. Mettila in una stanza dove la sera non accendi la luce, altrimenti non rifiorisce più. Sopra i 27 °C durante le notti lunghe la fioritura si blocca."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-tomentosa",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe tomentosa",
+  "sinonimo": "",
+  "descrizione": "orecchie di gatto: foglie vellutate con punte brune",
+  "ricovero": "casa",
+  "note": "Le foglie sono interamente feltrate e i peli trattengono l'acqua: annaffia solo il substrato, mai dall'alto, e non nebulizzarla. Le macchie sulle foglie restano."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-thyrsiflora",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe thyrsiflora",
+  "sinonimo": "",
+  "descrizione": "foglie tonde impilate, bordi rossi",
+  "ricovero": "casa",
+  "note": "Spesso confusa con la luciae: la thyrsiflora è più pruinosa e ha fiori profumati. Anche lei muore dopo la fioritura, lasciando polloni."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-luciae",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe luciae",
+  "sinonimo": "",
+  "descrizione": "simile alla thyrsiflora ma più colorata e meno pruinosa",
+  "ricovero": "casa",
+  "note": "Il rosso intenso dei bordi arriva con molto sole e freddo asciutto. È monocarpica: la rosetta che fiorisce muore, lasciando i polloni alla base."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-daigremontiana",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe daigremontiana",
+  "sinonimo": "",
+  "descrizione": "madre di migliaia: plantule sui bordi delle foglie",
+  "ricovero": "casa",
+  "note": "Madre di migliaia. Produce plantule già radicate che cadono e attecchiscono ovunque: in molte regioni calde è considerata infestante, quindi non disperderla e controlla i vasi vicini. È anche fra le più tossiche del genere per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-delagoensis",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe delagoensis",
+  "sinonimo": "Kalanchoe tubiflora",
+  "descrizione": "foglie tubolari con plantule sulle punte",
+  "ricovero": "casa",
+  "note": "Madre di migliaia a foglia tubolare. Produce plantule già radicate che cadono e attecchiscono ovunque: in molte regioni calde è considerata infestante, quindi non disperderla e controlla i vasi vicini. È anche fra le più tossiche del genere per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-fedtschenkoi",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe fedtschenkoi",
+  "sinonimo": "",
+  "descrizione": "foglie dentellate glauche, spesso variegate di rosa",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-beharensis",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe beharensis",
+  "sinonimo": "",
+  "descrizione": "foglie enormi, feltrose, ondulate",
+  "ricovero": "casa",
+  "note": "Foglie enormi e feltrose, che si segnano al tocco e con l'acqua. In casa d'inverno, dove non prende correnti fredde."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-orgyalis",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe orgyalis",
+  "sinonimo": "",
+  "descrizione": "foglie color cuoio, bronzee sopra e argentate sotto",
+  "ricovero": "casa",
+  "note": "Il rivestimento bronzeo delle foglie giovani si rovina con l'acqua sopra: annaffia solo alla base."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-pumila",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe pumila",
+  "sinonimo": "",
+  "descrizione": "pruinosa e ricadente, fiori rosa",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-rhombopilosa",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe rhombopilosa",
+  "sinonimo": "",
+  "descrizione": "foglioline a ventaglio maculate",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-millotii",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe millotii",
+  "sinonimo": "",
+  "descrizione": "foglie verdi feltrate e dentate",
+  "ricovero": "casa",
+  "note": "Foglie feltrate e dentate: acqua solo al substrato."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-marmorata",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe marmorata",
+  "sinonimo": "",
+  "descrizione": "foglie chiare con macchie brune",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-synsepala",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe synsepala",
+  "sinonimo": "",
+  "descrizione": "emette stoloni con nuove piante alle estremità",
+  "ricovero": "casa",
+  "note": "Emette lunghi stoloni con nuove piante all'estremità, come le fragole: lasciale radicare in un vaso vicino."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-gastonis-bonnieri",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe gastonis-bonnieri",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-bracteata",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe bracteata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-crundallii",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe crundallii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-eriophylla",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe eriophylla",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Interamente coperta di peluria bianca: l'acqua sulle foglie resta e macchia. Solo acqua alla base."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-flammea",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe flammea",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-kewensis",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe × kewensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-lateritia",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe lateritia",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-linearifolia",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe linearifolia",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-longiflora",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe longiflora",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-manginii",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe manginii",
+  "sinonimo": "",
+  "descrizione": "fiori pendenti a campanella",
+  "ricovero": "casa",
+  "note": "Fiori penduli a campanella; come la blossfeldiana è brevidiurna, quindi per rifiorire vuole notti lunghe e buie da ottobre."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-pinnata",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe pinnata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Produce plantule dai margini delle foglie anche staccate. Produce plantule già radicate che cadono e attecchiscono ovunque: in molte regioni calde è considerata infestante, quindi non disperderla e controlla i vasi vicini. È anche fra le più tossiche del genere per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-humilis",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe humilis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-laciniata",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe laciniata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-prolifera",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe prolifera",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-sexangularis",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe sexangularis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Genere tropicale del Madagascar: vuole 7-18 °C di notte e 10-21 °C di giorno, quindi con minime di 2-3 °C il terrazzo non va. In casa d'inverno, in posizione molto luminosa. Ricorda che tutte le Kalanchoe contengono glicosidi cardioattivi e sono tossiche per cani e gatti."
+ },
+ {
+  "key": "kalanchoe#kalanchoe-beauverdii",
+  "genere": "kalanchoe",
+  "nome": "Kalanchoe beauverdii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Rampicante che produce plantule lungo i fusti. Produce plantule già radicate che cadono e attecchiscono ovunque: in molte regioni calde è considerata infestante, quindi non disperderla e controlla i vasi vicini. È anche fra le più tossiche del genere per cani e gatti."
+ },
+ {
+  "key": "curio#curio-rowleyanus",
+  "genere": "curio",
+  "nome": "Curio rowleyanus",
+  "sinonimo": "Senecio rowleyanus",
+  "descrizione": "la collana di perle, steli fino a 90 cm",
+  "ricovero": "casa",
+  "note": "Vuole un riposo invernale asciutto a 13-15 °C: è quello che le fa fare i fiori l'estate dopo. Con 2-3 °C in terrazzo, e la pioggia sulle perle, marcisce. In casa d'inverno, in luce brillante ma filtrata, e annaffia quando le perle sono leggermente raggrinzite."
+ },
+ {
+  "key": "curio#curio-herreanus",
+  "genere": "curio",
+  "nome": "Curio herreanus",
+  "sinonimo": "Senecio herreianus",
+  "descrizione": "perle a oliva con una finestra longitudinale",
+  "ricovero": "casa",
+  "note": "Come la collana di perle: riposo invernale asciutto intorno ai 13-15 °C, quindi in casa. Le perle a oliva hanno una finestra longitudinale che va tenuta lontana dal sole cocente."
+ },
+ {
+  "key": "curio#curio-radicans",
+  "genere": "curio",
+  "nome": "Curio radicans",
+  "sinonimo": "Senecio radicans",
+  "descrizione": "collana di banane, foglie a mezzaluna",
+  "ricovero": "riparo",
+  "note": "Più robusta e vigorosa della collana di perle, ma non rustica: riparo asciutto e luminoso d'inverno."
+ },
+ {
+  "key": "curio#curio-articulatus",
+  "genere": "curio",
+  "nome": "Curio articulatus",
+  "sinonimo": "Senecio articulatus",
+  "descrizione": "fusti a salsicciotto, decidui",
+  "ricovero": "riparo",
+  "note": "Perde tutte le foglie ed entra in riposo restando solo con i fusti a salsicciotto: non è morta, ed è in quel periodo che non va annaffiata."
+ },
+ {
+  "key": "curio#curio-ficoides",
+  "genere": "curio",
+  "nome": "Curio ficoides",
+  "sinonimo": "Senecio ficoides",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-talinoides",
+  "genere": "curio",
+  "nome": "Curio talinoides",
+  "sinonimo": "Senecio talinoides",
+  "descrizione": "",
+  "ricovero": "fuori",
+  "note": "La specie di riferimento delle chalk sticks: zone 9a-11b, fino a -6,7 °C. Fuori tutto l'anno, in un punto drenante."
+ },
+ {
+  "key": "curio#curio-acaulis",
+  "genere": "curio",
+  "nome": "Curio acaulis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-archeri",
+  "genere": "curio",
+  "nome": "Curio archeri",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-avasimontanus",
+  "genere": "curio",
+  "nome": "Curio avasimontanus",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-citriformis",
+  "genere": "curio",
+  "nome": "Curio citriformis",
+  "sinonimo": "",
+  "descrizione": "foglie a goccia di limone",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-corymbifer",
+  "genere": "curio",
+  "nome": "Curio corymbifer",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-crassulifolius",
+  "genere": "curio",
+  "nome": "Curio crassulifolius",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-cuneifolius",
+  "genere": "curio",
+  "nome": "Curio cuneifolius",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-hallianus",
+  "genere": "curio",
+  "nome": "Curio hallianus",
+  "sinonimo": "Senecio hallianus",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-humbertii",
+  "genere": "curio",
+  "nome": "Curio humbertii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-muirii",
+  "genere": "curio",
+  "nome": "Curio muirii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-ovoideus",
+  "genere": "curio",
+  "nome": "Curio ovoideus",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-peregrinus",
+  "genere": "curio",
+  "nome": "Curio × peregrinus",
+  "sinonimo": "",
+  "descrizione": "collana di delfini, ibrido",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-pondoensis",
+  "genere": "curio",
+  "nome": "Curio pondoensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-repens",
+  "genere": "curio",
+  "nome": "Curio repens",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#curio-sulcicalyx",
+  "genere": "curio",
+  "nome": "Curio sulcicalyx",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#senecio-serpens",
+  "genere": "curio",
+  "nome": "Senecio serpens",
+  "sinonimo": "",
+  "descrizione": "tappeto azzurro compatto",
+  "ricovero": "fuori",
+  "note": "Il gruppo delle chalk sticks è dato per le zone 9a-11b, cioè fino a circa -6,7 °C: sul tuo terrazzo resta fuori tutto l'anno. La pruina azzurra però si rovina con l'acqua e col tocco, quindi meglio sotto una tettoia."
+ },
+ {
+  "key": "curio#senecio-mandraliscae",
+  "genere": "curio",
+  "nome": "Senecio mandraliscae",
+  "sinonimo": "",
+  "descrizione": "più alto e più azzurro del serpens",
+  "ricovero": "fuori",
+  "note": "Oggi Curio talinoides var. mandraliscae, dato per le zone 9a-11b, fino a -6,7 °C: resta fuori tutto l'anno. D'estate all'aperto preferisce mezz'ombra, e in ombra piena si allunga e si sfoltisce."
+ },
+ {
+  "key": "curio#senecio-haworthii",
+  "genere": "curio",
+  "nome": "Senecio haworthii",
+  "sinonimo": "",
+  "descrizione": "foglie bianche come feltro",
+  "ricovero": "riparo",
+  "note": "Il feltro bianco che la ricopre trattiene l'acqua e si macchia: annaffia solo il substrato e tienila al coperto dalla pioggia."
+ },
+ {
+  "key": "curio#senecio-scaposus",
+  "genere": "curio",
+  "nome": "Senecio scaposus",
+  "sinonimo": "",
+  "descrizione": "foglie a clava rivestite di peli argentei",
+  "ricovero": "riparo",
+  "note": "Le foglie a clava sono rivestite da una pellicola argentea che si stacca a placche se bagnata: acqua solo alla base."
+ },
+ {
+  "key": "curio#senecio-crassissimus",
+  "genere": "curio",
+  "nome": "Senecio crassissimus",
+  "sinonimo": "",
+  "descrizione": "foglie piatte a lama, bordate di viola",
+  "ricovero": "riparo",
+  "note": "Le foglie piatte si orientano di taglio al sole per difendersi: se restano piatte verso l'alto, sta ricevendo poca luce."
+ },
+ {
+  "key": "curio#senecio-kleiniiformis",
+  "genere": "curio",
+  "nome": "Senecio kleiniiformis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#senecio-anteuphorbium",
+  "genere": "curio",
+  "nome": "Senecio anteuphorbium",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#senecio-cylindricus",
+  "genere": "curio",
+  "nome": "Senecio cylindricus",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#senecio-pendulus",
+  "genere": "curio",
+  "nome": "Senecio pendulus",
+  "sinonimo": "",
+  "descrizione": "fusto a verme che si arcua e radica",
+  "ricovero": "riparo",
+  "note": "Il fusto a verme si arcua e radica dove tocca il substrato: lascialo fare, è il suo modo di espandersi."
+ },
+ {
+  "key": "curio#senecio-stapeliiformis",
+  "genere": "curio",
+  "nome": "Senecio stapeliiformis",
+  "sinonimo": "Senecio stapeliaeformis",
+  "descrizione": "fusti a candela con disegni scuri",
+  "ricovero": "riparo",
+  "note": "Si allarga con fusti sotterranei che spuntano lontano dal vaso madre: normale, non è un'altra pianta."
+ },
+ {
+  "key": "curio#senecio-macroglossus",
+  "genere": "curio",
+  "nome": "Senecio macroglossus",
+  "sinonimo": "",
+  "descrizione": "rampicante, foglie simili all'edera",
+  "ricovero": "riparo",
+  "note": "Rampicante con foglie simili all'edera: tollera più ombra delle altre, ma non il gelo."
+ },
+ {
+  "key": "curio#senecio-vira-vira",
+  "genere": "curio",
+  "nome": "Senecio vira-vira",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#senecio-deflersii",
+  "genere": "curio",
+  "nome": "Senecio deflersii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "curio#senecio-bulbinefolius",
+  "genere": "curio",
+  "nome": "Senecio bulbinefolius",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Non ho trovato un dato di rusticità specifico. Il genere non è rustico: con 2-3 °C va tenuto all'asciutto e al riparo dalla pioggia, che è il vero rischio invernale."
+ },
+ {
+  "key": "euphorbia#euphorbia-trigona",
+  "genere": "euphorbia",
+  "nome": "Euphorbia trigona",
+  "sinonimo": "",
+  "descrizione": "candelabro a tre costole, la più diffusa in casa",
+  "ricovero": "casa",
+  "note": "Riposo invernale intorno ai 13 °C e da ottobre a febbraio solo l'acqua che evita il raggrinzimento. Ruota il vaso ogni settimana o cresce storta."
+ },
+ {
+  "key": "euphorbia#euphorbia-trigona-rubra",
+  "genere": "euphorbia",
+  "nome": "Euphorbia trigona 'Rubra'",
+  "sinonimo": "",
+  "descrizione": "versione con costole e foglie rosso vino",
+  "ricovero": "casa",
+  "note": "Come la trigona: il rosso vino delle costole si mantiene solo con molta luce diretta."
+ },
+ {
+  "key": "euphorbia#euphorbia-tirucalli",
+  "genere": "euphorbia",
+  "nome": "Euphorbia tirucalli",
+  "sinonimo": "",
+  "descrizione": "matita del diavolo, fusti sottili senza foglie",
+  "ricovero": "casa",
+  "note": "In casa d'inverno. Il lattice di questa specie è particolarmente aggressivo per occhi e mucose: è la peggiore del genere da potare senza protezioni."
+ },
+ {
+  "key": "euphorbia#euphorbia-ingens",
+  "genere": "euphorbia",
+  "nome": "Euphorbia ingens",
+  "sinonimo": "",
+  "descrizione": "grande candelabro africano",
+  "ricovero": "casa",
+  "note": "Diventa un albero: in vaso va contenuta. In casa d'inverno, sopra i 13 °C."
+ },
+ {
+  "key": "euphorbia#euphorbia-lactea",
+  "genere": "euphorbia",
+  "nome": "Euphorbia lactea",
+  "sinonimo": "",
+  "descrizione": "fusti marmorizzati di bianco",
+  "ricovero": "casa",
+  "note": "In casa d'inverno. La forma marmorizzata di bianco ha meno clorofilla e cresce più lenta."
+ },
+ {
+  "key": "euphorbia#euphorbia-lactea-cristata",
+  "genere": "euphorbia",
+  "nome": "Euphorbia lactea 'Cristata'",
+  "sinonimo": "",
+  "descrizione": "forma a cresta, spesso innestata",
+  "ricovero": "casa",
+  "note": "Quasi sempre innestata su un portainnesto: controlla il punto d'innesto, ed è quello che marcisce per primo se annaffi troppo. In casa d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-milii",
+  "genere": "euphorbia",
+  "nome": "Euphorbia milii",
+  "sinonimo": "",
+  "descrizione": "spina di Cristo, fiorisce quasi tutto l'anno",
+  "ricovero": "casa",
+  "note": "Molto variabile: le cultivar thailandesi a fiore grande sono da interno stretto in inverno. Fiorisce quasi tutto l'anno se tenuta al caldo e luminosa. Spine numerose e lattice: guanti."
+ },
+ {
+  "key": "euphorbia#euphorbia-milii-var-splendens",
+  "genere": "euphorbia",
+  "nome": "Euphorbia milii var. splendens",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Come la milii: in casa d'inverno, luminosa, e attenzione alle spine."
+ },
+ {
+  "key": "euphorbia#euphorbia-milii-var-hislopii",
+  "genere": "euphorbia",
+  "nome": "Euphorbia milii var. hislopii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Come la milii, con spine ancora più robuste: in casa d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-obesa",
+  "genere": "euphorbia",
+  "nome": "Euphorbia obesa",
+  "sinonimo": "",
+  "descrizione": "sfera a otto costole, senza spine",
+  "ricovero": "riparo",
+  "note": "Data resistente solo fino a circa -2 °C: con le tue minime ci sta, ma solo se perfettamente asciutta. Cresce lentissima ed è a sessi separati, servono due piante per i semi."
+ },
+ {
+  "key": "euphorbia#euphorbia-symmetrica",
+  "genere": "euphorbia",
+  "nome": "Euphorbia symmetrica",
+  "sinonimo": "",
+  "descrizione": "simile alla obesa, più larga che alta",
+  "ricovero": "riparo",
+  "note": "Come la obesa: resistenza al freddo limitata e solo all'asciutto."
+ },
+ {
+  "key": "euphorbia#euphorbia-meloformis",
+  "genere": "euphorbia",
+  "nome": "Euphorbia meloformis",
+  "sinonimo": "",
+  "descrizione": "corpo globoso con disegni a bande",
+  "ricovero": "riparo",
+  "note": "Come la obesa. I peduncoli fiorali secchi restano attaccati per anni e sono normali."
+ },
+ {
+  "key": "euphorbia#euphorbia-horrida",
+  "genere": "euphorbia",
+  "nome": "Euphorbia horrida",
+  "sinonimo": "",
+  "descrizione": "colonna grigia con spine robuste",
+  "ricovero": "riparo",
+  "note": "Fra le Euphorbia globose e colonnari sudafricane, che in coltivazione asciutta sopportano il freddo molto meglio delle tropicali. Documentata resistente almeno fino a -4 °C, quindi in terrazzo all'asciutto sta bene. Bagnata, no."
+ },
+ {
+  "key": "euphorbia#euphorbia-polygona",
+  "genere": "euphorbia",
+  "nome": "Euphorbia polygona",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Fra le Euphorbia globose e colonnari sudafricane, che in coltivazione asciutta sopportano il freddo molto meglio delle tropicali. Data resistente fino a circa -4 °C se completamente asciutta."
+ },
+ {
+  "key": "euphorbia#euphorbia-caput-medusae",
+  "genere": "euphorbia",
+  "nome": "Euphorbia caput-medusae",
+  "sinonimo": "",
+  "descrizione": "testa di medusa: rami serpentiformi da un caudice",
+  "ricovero": "riparo",
+  "note": "Sudafricana: all'asciutto sopporta il freddo meglio delle tropicali. I rami serpentiformi partono da un caudice che non va mai interrato troppo."
+ },
+ {
+  "key": "euphorbia#euphorbia-flanaganii",
+  "genere": "euphorbia",
+  "nome": "Euphorbia flanaganii",
+  "sinonimo": "",
+  "descrizione": "medusa a rami sottili e numerosi",
+  "ricovero": "riparo",
+  "note": "Come la caput-medusae: sudafricana, all'asciutto regge bene il freddo del terrazzo."
+ },
+ {
+  "key": "euphorbia#euphorbia-gorgonis",
+  "genere": "euphorbia",
+  "nome": "Euphorbia gorgonis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Sudafricana del gruppo medusa: riparo asciutto, mai substrato bagnato d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-inermis",
+  "genere": "euphorbia",
+  "nome": "Euphorbia inermis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-esculenta",
+  "genere": "euphorbia",
+  "nome": "Euphorbia esculenta",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-mammillaris",
+  "genere": "euphorbia",
+  "nome": "Euphorbia mammillaris",
+  "sinonimo": "",
+  "descrizione": "colonna a tubercoli, spesso variegata",
+  "ricovero": "riparo",
+  "note": "Colonnare sudafricana, spesso in versione variegata: la forma variegata è più delicata e vuole più luce. All'asciutto sopporta bene il freddo del terrazzo."
+ },
+ {
+  "key": "euphorbia#euphorbia-submammillaris",
+  "genere": "euphorbia",
+  "nome": "Euphorbia submammillaris",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Fra le Euphorbia globose e colonnari sudafricane, che in coltivazione asciutta sopportano il freddo molto meglio delle tropicali. Data resistente fino a circa -4 °C o meno."
+ },
+ {
+  "key": "euphorbia#euphorbia-pulvinata",
+  "genere": "euphorbia",
+  "nome": "Euphorbia pulvinata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-enopla",
+  "genere": "euphorbia",
+  "nome": "Euphorbia enopla",
+  "sinonimo": "",
+  "descrizione": "spine rosse vistose",
+  "ricovero": "riparo",
+  "note": "Fra le Euphorbia globose e colonnari sudafricane, che in coltivazione asciutta sopportano il freddo molto meglio delle tropicali. Data resistente fino a circa -3 °C. Le spine rosse si accendono con il sole pieno."
+ },
+ {
+  "key": "euphorbia#euphorbia-stellispina",
+  "genere": "euphorbia",
+  "nome": "Euphorbia stellispina",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Fra le Euphorbia globose e colonnari sudafricane, che in coltivazione asciutta sopportano il freddo molto meglio delle tropicali. Nessun danno osservato a -4 °C in coltivazione asciutta."
+ },
+ {
+  "key": "euphorbia#euphorbia-ferox",
+  "genere": "euphorbia",
+  "nome": "Euphorbia ferox",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Fra le Euphorbia globose e colonnari sudafricane, che in coltivazione asciutta sopportano il freddo molto meglio delle tropicali. Fra le più resistenti al freddo del gruppo, data sotto i -5 °C in condizioni asciutte."
+ },
+ {
+  "key": "euphorbia#euphorbia-globosa",
+  "genere": "euphorbia",
+  "nome": "Euphorbia globosa",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Fra le Euphorbia globose e colonnari sudafricane, che in coltivazione asciutta sopportano il freddo molto meglio delle tropicali. Data resistente intorno ai -6 °C all'asciutto."
+ },
+ {
+  "key": "euphorbia#euphorbia-pseudocactus",
+  "genere": "euphorbia",
+  "nome": "Euphorbia pseudocactus",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-grandicornis",
+  "genere": "euphorbia",
+  "nome": "Euphorbia grandicornis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-coerulescens",
+  "genere": "euphorbia",
+  "nome": "Euphorbia coerulescens",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-canariensis",
+  "genere": "euphorbia",
+  "nome": "Euphorbia canariensis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-abyssinica",
+  "genere": "euphorbia",
+  "nome": "Euphorbia abyssinica",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Grande candelabro africano: in casa d'inverno, sopra i 13 °C."
+ },
+ {
+  "key": "euphorbia#euphorbia-ammak",
+  "genere": "euphorbia",
+  "nome": "Euphorbia ammak",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Come la ingens: grande candelabro, in casa d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-cooperi",
+  "genere": "euphorbia",
+  "nome": "Euphorbia cooperi",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Grande e con lattice particolarmente irritante: guanti e occhiali. In casa d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-virosa",
+  "genere": "euphorbia",
+  "nome": "Euphorbia virosa",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Il nome dice tutto: lattice fra i più tossici del genere. In casa d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-resinifera",
+  "genere": "euphorbia",
+  "nome": "Euphorbia resinifera",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Fra le colonnari più resistenti al freddo del genere. Il lattice di questa specie è storicamente il più caustico: massima attenzione durante le potature."
+ },
+ {
+  "key": "euphorbia#euphorbia-echinus",
+  "genere": "euphorbia",
+  "nome": "Euphorbia echinus",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Marocchina, data resistente almeno fino a -4 °C se asciutta."
+ },
+ {
+  "key": "euphorbia#euphorbia-officinarum",
+  "genere": "euphorbia",
+  "nome": "Euphorbia officinarum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-aeruginosa",
+  "genere": "euphorbia",
+  "nome": "Euphorbia aeruginosa",
+  "sinonimo": "",
+  "descrizione": "fusti verde-azzurro con spine bronzee",
+  "ricovero": "riparo",
+  "note": "Sudafricana a fusti verde-azzurro e spine bronzee: all'asciutto regge il freddo, bagnata no."
+ },
+ {
+  "key": "euphorbia#euphorbia-knuthii",
+  "genere": "euphorbia",
+  "nome": "Euphorbia knuthii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-stenoclada",
+  "genere": "euphorbia",
+  "nome": "Euphorbia stenoclada",
+  "sinonimo": "",
+  "descrizione": "arbusto argentato molto ramificato",
+  "ricovero": "casa",
+  "note": "Malgascia, molto spinosa e argentata: in casa d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-decaryi",
+  "genere": "euphorbia",
+  "nome": "Euphorbia decaryi",
+  "sinonimo": "",
+  "descrizione": "foglie ondulate, pianta bassa e stolonifera",
+  "ricovero": "casa",
+  "note": "Malgascia e delicata: in casa d'inverno, sopra i 13 °C, e substrato mai completamente inzuppato."
+ },
+ {
+  "key": "euphorbia#euphorbia-francoisii",
+  "genere": "euphorbia",
+  "nome": "Euphorbia francoisii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Malgascia, molto ricercata e delicata: in casa d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-cylindrifolia",
+  "genere": "euphorbia",
+  "nome": "Euphorbia cylindrifolia",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Malgascia: in casa d'inverno, con substrato che asciughi in fretta."
+ },
+ {
+  "key": "euphorbia#euphorbia-platyclada",
+  "genere": "euphorbia",
+  "nome": "Euphorbia platyclada",
+  "sinonimo": "",
+  "descrizione": "rami piatti color cuoio, sembra secca",
+  "ricovero": "casa",
+  "note": "Sembra secca anche quando è in perfetta salute: non annaffiarla di più per \"rianimarla\". Malgascia, in casa d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-neohumbertii",
+  "genere": "euphorbia",
+  "nome": "Euphorbia neohumbertii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Esplicitamente indicata come sensibile al gelo: in casa d'inverno, sopra i 13 °C."
+ },
+ {
+  "key": "euphorbia#euphorbia-viguieri",
+  "genere": "euphorbia",
+  "nome": "Euphorbia viguieri",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Richiede lo svernamento in casa: nelle zone fresche è marginale anche in serra fredda."
+ },
+ {
+  "key": "euphorbia#euphorbia-lophogona",
+  "genere": "euphorbia",
+  "nome": "Euphorbia lophogona",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-leuconeura",
+  "genere": "euphorbia",
+  "nome": "Euphorbia leuconeura",
+  "sinonimo": "",
+  "descrizione": "foglie con nervature bianche, si semina da sola",
+  "ricovero": "casa",
+  "note": "Si semina da sola lanciando i semi a distanza: troverai piantine negli altri vasi. In casa d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-geroldii",
+  "genere": "euphorbia",
+  "nome": "Euphorbia geroldii",
+  "sinonimo": "",
+  "descrizione": "simile alla milii ma senza spine",
+  "ricovero": "casa",
+  "note": "Come la milii ma senza spine: in casa d'inverno, luminosa."
+ },
+ {
+  "key": "euphorbia#euphorbia-gottlebei",
+  "genere": "euphorbia",
+  "nome": "Euphorbia gottlebei",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-hedyotoides",
+  "genere": "euphorbia",
+  "nome": "Euphorbia hedyotoides",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-susannae",
+  "genere": "euphorbia",
+  "nome": "Euphorbia susannae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Comincia a soffrire intorno ai -6 °C: con le tue minime sta fuori all'asciutto. Produce molti polloni alla base."
+ },
+ {
+  "key": "euphorbia#euphorbia-piscidermis",
+  "genere": "euphorbia",
+  "nome": "Euphorbia piscidermis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-gymnocalycioides",
+  "genere": "euphorbia",
+  "nome": "Euphorbia gymnocalycioides",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-bupleurifolia",
+  "genere": "euphorbia",
+  "nome": "Euphorbia bupleurifolia",
+  "sinonimo": "",
+  "descrizione": "fusto a pigna con ciuffo di foglie",
+  "ricovero": "casa",
+  "note": "Fra le più difficili: perde le foglie in riposo e in quel periodo va tenuta completamente all'asciutto. In casa d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-poissonii",
+  "genere": "euphorbia",
+  "nome": "Euphorbia poissonii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Lattice estremamente irritante, usato tradizionalmente come veleno da caccia: massima prudenza. In casa d'inverno."
+ },
+ {
+  "key": "euphorbia#euphorbia-antisyphilitica",
+  "genere": "euphorbia",
+  "nome": "Euphorbia antisyphilitica",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Messicana del deserto di Chihuahua, abituata a notti fredde: all'asciutto tollera bene il freddo del terrazzo."
+ },
+ {
+  "key": "euphorbia#euphorbia-tortirama",
+  "genere": "euphorbia",
+  "nome": "Euphorbia tortirama",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "euphorbia#euphorbia-valida",
+  "genere": "euphorbia",
+  "nome": "Euphorbia valida",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Specie tropicale o malgascia: il genere vuole un riposo invernale intorno ai 13 °C, quindi con minime di 2-3 °C va in casa. Da ottobre a febbraio acqua ridotta al minimo. Ricorda il lattice: guanti e occhiali a ogni potatura."
+ },
+ {
+  "key": "caudici#adenium-obesum",
+  "genere": "caudici",
+  "nome": "Adenium obesum",
+  "sinonimo": "",
+  "descrizione": "la rosa del deserto: caudice largo e fiori a trombetta",
+  "ricovero": "casa!",
+  "note": "Non sopravvive sotto i 10 °C e il gelo la uccide: in casa d'inverno, senza eccezioni. Nel riposo, con giorni corti e freschi, quasi zero acqua — il marciume di radici e caudice è il problema numero uno. Serve pieno sole per fiorire e per ingrossare il caudice, e la linfa è tossica: guanti quando poti."
+ },
+ {
+  "key": "caudici#adenium-arabicum",
+  "genere": "caudici",
+  "nome": "Adenium arabicum",
+  "sinonimo": "",
+  "descrizione": "caudice più basso e allargato, molte ramificazioni",
+  "ricovero": "casa!",
+  "note": "Come la obesum: minimo 10 °C, riposo all'asciutto e pieno sole. Il caudice resta più basso e allargato."
+ },
+ {
+  "key": "caudici#adenium-swazicum",
+  "genere": "caudici",
+  "nome": "Adenium swazicum",
+  "sinonimo": "",
+  "descrizione": "fiori rosa scuro, riposo invernale marcato",
+  "ricovero": "casa!",
+  "note": "Come la obesum, con un riposo invernale ancora più marcato: perde le foglie e va tenuta praticamente a secco."
+ },
+ {
+  "key": "caudici#adenium-multiflorum",
+  "genere": "caudici",
+  "nome": "Adenium multiflorum",
+  "sinonimo": "",
+  "descrizione": "fiori bianchi con bordo rosso",
+  "ricovero": "casa!",
+  "note": "Come la obesum. Fiorisce in pieno riposo, a pianta spoglia."
+ },
+ {
+  "key": "caudici#adenium-boehmianum",
+  "genere": "caudici",
+  "nome": "Adenium boehmianum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa!",
+  "note": "Come la obesum: minimo 10 °C e riposo all'asciutto."
+ },
+ {
+  "key": "caudici#adenium-oleifolium",
+  "genere": "caudici",
+  "nome": "Adenium oleifolium",
+  "sinonimo": "",
+  "descrizione": "foglie strette e grigie, pianta piccola",
+  "ricovero": "casa!",
+  "note": "Come la obesum, di taglia più piccola: minimo 10 °C e riposo all'asciutto."
+ },
+ {
+  "key": "caudici#pachypodium-lamerei",
+  "genere": "caudici",
+  "nome": "Pachypodium lamerei",
+  "sinonimo": "",
+  "descrizione": "palma del Madagascar: tronco spinoso e ciuffo apicale",
+  "ricovero": "casa",
+  "note": "In casa d'inverno: perde le foglie con il freddo e in quel periodo va tenuto all'asciutto. Le spine sono robuste, occhio a dove lo metti. In vaso resta gestibile per anni."
+ },
+ {
+  "key": "caudici#pachypodium-geayi",
+  "genere": "caudici",
+  "nome": "Pachypodium geayi",
+  "sinonimo": "",
+  "descrizione": "simile al lamerei ma con foglie più strette e grigie",
+  "ricovero": "casa",
+  "note": "Come il lamerei, con foglie più strette e grigie: in casa d'inverno, all'asciutto quando è spoglio."
+ },
+ {
+  "key": "caudici#pachypodium-brevicaule",
+  "genere": "caudici",
+  "nome": "Pachypodium brevicaule",
+  "sinonimo": "",
+  "descrizione": "caudice piatto e schiacciato, cresce lentissimo",
+  "ricovero": "casa",
+  "note": "Il più difficile del genere: caudice piatto che marcisce facilmente, crescita lentissima. In casa d'inverno e substrato quasi solo minerale."
+ },
+ {
+  "key": "caudici#pachypodium-rosulatum",
+  "genere": "caudici",
+  "nome": "Pachypodium rosulatum",
+  "sinonimo": "",
+  "descrizione": "caudice tondo argentato, fiori gialli",
+  "ricovero": "casa",
+  "note": "Perde le foglie ed entra in riposo: da quel momento e fino alla ripresa, acqua zero. In casa d'inverno."
+ },
+ {
+  "key": "caudici#pachypodium-densiflorum",
+  "genere": "caudici",
+  "nome": "Pachypodium densiflorum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Come il rosulatum: riposo secco, ricovero in casa, fiori gialli in primavera."
+ },
+ {
+  "key": "caudici#pachypodium-horombense",
+  "genere": "caudici",
+  "nome": "Pachypodium horombense",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Come il rosulatum: riposo secco e ricovero in casa."
+ },
+ {
+  "key": "caudici#pachypodium-saundersii",
+  "genere": "caudici",
+  "nome": "Pachypodium saundersii",
+  "sinonimo": "",
+  "descrizione": "caudice tondo e fiori bianchi",
+  "ricovero": "casa",
+  "note": "Perde le foglie in riposo e fiorisce bianco: in casa d'inverno, all'asciutto quando è spoglio."
+ },
+ {
+  "key": "caudici#pachypodium-succulentum",
+  "genere": "caudici",
+  "nome": "Pachypodium succulentum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Sudafricano, caudice grosso e rami sottili: non ho trovato dati di rusticità specifici. Ricovero in casa e riposo all'asciutto."
+ },
+ {
+  "key": "caudici#pachypodium-bispinosum",
+  "genere": "caudici",
+  "nome": "Pachypodium bispinosum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Sudafricano a caudice sotterraneo, con ciclo diverso dai malgasci: non ho trovato dati di rusticità affidabili, quindi ricovero in casa e riposo asciutto."
+ },
+ {
+  "key": "caudici#pachypodium-namaquanum",
+  "genere": "caudici",
+  "nome": "Pachypodium namaquanum",
+  "sinonimo": "",
+  "descrizione": "colonna eretta detta halfmens",
+  "ricovero": "casa",
+  "note": "Sudafricano e non malgascio: cresce nella stagione fresca e riposa in estate, quindi il calendario è rovesciato rispetto agli altri Pachypodium. Lentissimo e difficile."
+ },
+ {
+  "key": "caudici#pachypodium-gracilius",
+  "genere": "caudici",
+  "nome": "Pachypodium gracilius",
+  "sinonimo": "",
+  "descrizione": "versione compattissima del rosulatum",
+  "ricovero": "casa",
+  "note": "Come il rosulatum, in versione compattissima e ancora più lenta: riposo secco e ricovero in casa."
+ },
+ {
+  "key": "caudici#pachypodium-baronii",
+  "genere": "caudici",
+  "nome": "Pachypodium baronii",
+  "sinonimo": "",
+  "descrizione": "fiori rossi",
+  "ricovero": "casa",
+  "note": "Malgascio a fiori rossi, fra i più sensibili al freddo: in casa d'inverno, mai sotto i 13 °C."
+ },
+ {
+  "key": "caudici#pachypodium-ambongense",
+  "genere": "caudici",
+  "nome": "Pachypodium ambongense",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-bicolor",
+  "genere": "caudici",
+  "nome": "Pachypodium bicolor",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-cactipes",
+  "genere": "caudici",
+  "nome": "Pachypodium cactipes",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-decaryi",
+  "genere": "caudici",
+  "nome": "Pachypodium decaryi",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-eburneum",
+  "genere": "caudici",
+  "nome": "Pachypodium eburneum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-enigmaticum",
+  "genere": "caudici",
+  "nome": "Pachypodium enigmaticum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-inopinatum",
+  "genere": "caudici",
+  "nome": "Pachypodium inopinatum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-lealii",
+  "genere": "caudici",
+  "nome": "Pachypodium lealii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-makayense",
+  "genere": "caudici",
+  "nome": "Pachypodium makayense",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-menabeum",
+  "genere": "caudici",
+  "nome": "Pachypodium menabeum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-meridionale",
+  "genere": "caudici",
+  "nome": "Pachypodium meridionale",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-mikea",
+  "genere": "caudici",
+  "nome": "Pachypodium mikea",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-rutenbergianum",
+  "genere": "caudici",
+  "nome": "Pachypodium rutenbergianum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-sofiense",
+  "genere": "caudici",
+  "nome": "Pachypodium sofiense",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "caudici#pachypodium-windsorii",
+  "genere": "caudici",
+  "nome": "Pachypodium windsorii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "casa",
+  "note": "Caudiciforme tropicale: sotto i 10 °C soffre e il gelo è fatale, quindi in casa o in serra calda d'inverno. Nel riposo si tiene quasi completamente all'asciutto, perché il marciume del caudice è il modo in cui muoiono quasi tutte."
+ },
+ {
+  "key": "lithops#lithops-amicorum",
+  "genere": "lithops",
+  "nome": "Lithops amicorum",
+  "sinonimo": "",
+  "descrizione": "descritta nel 2006",
+  "ricovero": "riparo",
+  "note": "Descritta nel 2006, fra le ultime arrivate: rara e costosa."
+ },
+ {
+  "key": "lithops#lithops-aucampiae",
+  "genere": "lithops",
+  "nome": "Lithops aucampiae",
+  "sinonimo": "",
+  "descrizione": "bruno rossastra, una delle più facili",
+  "ricovero": "riparo",
+  "note": "Fra le più facili del genere, buona per cominciare. Freddo asciutto sì, acqua invernale mai."
+ },
+ {
+  "key": "lithops#lithops-bromfieldii",
+  "genere": "lithops",
+  "nome": "Lithops bromfieldii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-coleorum",
+  "genere": "lithops",
+  "nome": "Lithops coleorum",
+  "sinonimo": "",
+  "descrizione": "descritta nel 1994",
+  "ricovero": "riparo",
+  "note": "Descritta nel 1994 e dedicata ai Cole, gli autori della monografia del genere."
+ },
+ {
+  "key": "lithops#lithops-comptonii",
+  "genere": "lithops",
+  "nome": "Lithops comptonii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-dinteri",
+  "genere": "lithops",
+  "nome": "Lithops dinteri",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-divergens",
+  "genere": "lithops",
+  "nome": "Lithops divergens",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-dorotheae",
+  "genere": "lithops",
+  "nome": "Lithops dorotheae",
+  "sinonimo": "",
+  "descrizione": "finestre chiare con venature rosse",
+  "ricovero": "riparo",
+  "note": "Finestre chiare con venature rosse, molto ricercata: le scottature sulla finestra restano per tutto l'anno, quindi niente sole di mezzogiorno."
+ },
+ {
+  "key": "lithops#lithops-francisci",
+  "genere": "lithops",
+  "nome": "Lithops francisci",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-fulviceps",
+  "genere": "lithops",
+  "nome": "Lithops fulviceps",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-gesinae",
+  "genere": "lithops",
+  "nome": "Lithops gesinae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-geyeri",
+  "genere": "lithops",
+  "nome": "Lithops geyeri",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-gracilidelineata",
+  "genere": "lithops",
+  "nome": "Lithops gracilidelineata",
+  "sinonimo": "",
+  "descrizione": "superficie chiara con solchi netti",
+  "ricovero": "riparo",
+  "note": "Superficie chiara con solchi netti: fra le più sensibili al sole diretto estivo."
+ },
+ {
+  "key": "lithops#lithops-hallii",
+  "genere": "lithops",
+  "nome": "Lithops hallii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-helmutii",
+  "genere": "lithops",
+  "nome": "Lithops helmutii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-hermetica",
+  "genere": "lithops",
+  "nome": "Lithops hermetica",
+  "sinonimo": "",
+  "descrizione": "descritta nel 2000",
+  "ricovero": "riparo",
+  "note": "Descritta solo nel 2000, rara in coltivazione. Calendario standard del genere."
+ },
+ {
+  "key": "lithops#lithops-herrei",
+  "genere": "lithops",
+  "nome": "Lithops herrei",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-hookeri",
+  "genere": "lithops",
+  "nome": "Lithops hookeri",
+  "sinonimo": "Lithops turbiniformis",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Corpo grande e rugoso, fra i più vistosi. Calendario standard del genere."
+ },
+ {
+  "key": "lithops#lithops-julii",
+  "genere": "lithops",
+  "nome": "Lithops julii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-karasmontana",
+  "genere": "lithops",
+  "nome": "Lithops karasmontana",
+  "sinonimo": "",
+  "descrizione": "una delle più coltivate, molte varietà",
+  "ricovero": "riparo",
+  "note": "Una delle più coltivate, con moltissime varietà e forme di colore. Calendario standard: acqua zero da novembre ad aprile."
+ },
+ {
+  "key": "lithops#lithops-lesliei",
+  "genere": "lithops",
+  "nome": "Lithops lesliei",
+  "sinonimo": "",
+  "descrizione": "la più comune in coltivazione",
+  "ricovero": "riparo",
+  "note": "La più diffusa in coltivazione e fra le più tolleranti agli errori: resta comunque all'asciutto da novembre ad aprile."
+ },
+ {
+  "key": "lithops#lithops-localis",
+  "genere": "lithops",
+  "nome": "Lithops localis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-marmorata",
+  "genere": "lithops",
+  "nome": "Lithops marmorata",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-meyeri",
+  "genere": "lithops",
+  "nome": "Lithops meyeri",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-naureeniae",
+  "genere": "lithops",
+  "nome": "Lithops naureeniae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-olivacea",
+  "genere": "lithops",
+  "nome": "Lithops olivacea",
+  "sinonimo": "",
+  "descrizione": "premiata dalla Royal Horticultural Society",
+  "ricovero": "riparo",
+  "note": "Premiata dalla Royal Horticultural Society. Calendario standard del genere."
+ },
+ {
+  "key": "lithops#lithops-optica",
+  "genere": "lithops",
+  "nome": "Lithops optica",
+  "sinonimo": "",
+  "descrizione": "può fiorire dopo il solstizio d'inverno",
+  "ricovero": "riparo",
+  "note": "Può fiorire dopo il solstizio d'inverno, quindi con la pianta ancora in riposo: la fioritura fuori stagione non è un invito ad annaffiare."
+ },
+ {
+  "key": "lithops#lithops-otzeniana",
+  "genere": "lithops",
+  "nome": "Lithops otzeniana",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-pseudotruncatella",
+  "genere": "lithops",
+  "nome": "Lithops pseudotruncatella",
+  "sinonimo": "",
+  "descrizione": "può fiorire prima del solstizio d'estate",
+  "ricovero": "riparo",
+  "note": "Può fiorire prima del solstizio d'estate, in anticipo sulle altre. Per il resto, calendario standard del genere."
+ },
+ {
+  "key": "lithops#lithops-ruschiorum",
+  "genere": "lithops",
+  "nome": "Lithops ruschiorum",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-salicola",
+  "genere": "lithops",
+  "nome": "Lithops salicola",
+  "sinonimo": "",
+  "descrizione": "tollerante, cresce su suoli salini",
+  "ricovero": "riparo",
+  "note": "Cresce su suoli salini ed è fra le più tolleranti del genere: buona seconda specie dopo la lesliei."
+ },
+ {
+  "key": "lithops#lithops-schwantesii",
+  "genere": "lithops",
+  "nome": "Lithops schwantesii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-vallis-mariae",
+  "genere": "lithops",
+  "nome": "Lithops vallis-mariae",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-verruculosa",
+  "genere": "lithops",
+  "nome": "Lithops verruculosa",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-villetii",
+  "genere": "lithops",
+  "nome": "Lithops villetii",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-viridis",
+  "genere": "lithops",
+  "nome": "Lithops viridis",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ },
+ {
+  "key": "lithops#lithops-werneri",
+  "genere": "lithops",
+  "nome": "Lithops werneri",
+  "sinonimo": "",
+  "descrizione": "",
+  "ricovero": "riparo",
+  "note": "Il freddo asciutto non è il problema: svernano intorno ai 5 °C e sopportano brevi punte sotto zero solo se completamente asciutti. Il problema è la pioggia. Da novembre a metà aprile non ricevono una goccia d'acqua, in un posto luminoso, freddo e ventilato al riparo dall'acqua: il tuo terrazzo va benissimo se hanno una tettoia sopra."
+ }
+]

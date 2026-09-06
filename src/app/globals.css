@@ -1,26 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Palette del Succulentario: i quattro colori del ricovero non sono
+     decorazione, codificano dove sverna la pianta (vedi SPECIFICA.md §10). */
+  --color-fuori: #2f6045; /* resta in terrazzo tutto l'anno */
+  --color-riparo: #2a5878; /* riparo freddo ma luminoso */
+  --color-casa: #7e5a1f; /* in casa d'inverno */
+  --color-casa-esclamativo: #8f3527; /* delicata, fra le prime da ritirare */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: #f1f2ec;
+  --color-surface: #fbfbf7;
+  --color-text: #141811;
+  --color-text-secondary: #555d4f;
+
+  --font-serif: "Newsreader", ui-serif, Georgia, serif;
+  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Variante scura non ancora ricopiata dall'artifact originale (non
+       disponibile in questo progetto): valori provvisori, da verificare
+       per contrasto quando l'artifact sarà a disposizione. */
+    --color-fuori: #63a583;
+    --color-riparo: #6fa2c4;
+    --color-casa: #c99a4d;
+    --color-casa-esclamativo: #d97b64;
+
+    --color-bg: #14170f;
+    --color-surface: #1d211a;
+    --color-text: #eceee6;
+    --color-text-secondary: #a6ac9c;
   }
 }
 
+@theme inline {
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Aree toccabili di almeno 40px e input a 16px: iOS zooma sotto quella
+   soglia (SPECIFICA.md §10). */
+input,
+button,
+select,
+textarea {
+  font-size: 16px;
 }

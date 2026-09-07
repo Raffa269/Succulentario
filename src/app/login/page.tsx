@@ -1,21 +1,33 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { Suspense, useState, type FormEvent } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { createClient } from "@/lib/supabase/client";
 
-type Stato = "idle" | "invio" | "inviato" | "errore";
+type Stato = "idle" | "invio" | "codiceInviato" | "verifica" | "errore";
 
-export default function PaginaLogin() {
+function FormLogin() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const supabase = createClient();
+
   const [email, setEmail] = useState("");
+  const [codice, setCodice] = useState("");
   const [stato, setStato] = useState<Stato>("idle");
-  const [messaggio, setMessaggio] = useState<string | null>(null);
+  const [messaggio, setMessaggio] = useState<string | null>(() => {
+    const errore = searchParams.get("errore");
+    return errore
+      ? `Il precedente tentativo di accesso non è riuscito (${errore}). Riprova qui sotto.`
+      : null;
+  });
 
-  async function inviaLink(e: FormEvent<HTMLFormElement>) {
+  async function inviaCodice(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStato("invio");
     setMessaggio(null);
 
     try {
-      const res = await fetch("/api/auth/request-link", {
+      const res = await fetch("/api/auth/request-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -28,12 +40,38 @@ export default function PaginaLogin() {
         return;
       }
 
-      setStato("inviato");
+      setStato("codiceInviato");
     } catch {
       setStato("errore");
       setMessaggio("Non riesco a contattare il server. Controlla la connessione.");
     }
   }
+
+  async function verificaCodice(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStato("verifica");
+    setMessaggio(null);
+
+    const { error } = await supabase.auth.verifyOtp({
+      email,
+      token: codice.trim(),
+      type: "email",
+    });
+
+    if (error) {
+      setStato("codiceInviato");
+      setMessaggio("Codice non valido o scaduto. Controlla e riprova, o richiedine uno nuovo.");
+      return;
+    }
+
+    // push + refresh, non solo push: refresh forza Next a rileggere i
+    // Server Component dal server, dove proxy.ts deve rivedere i cookie di
+    // sessione appena scritti dal client Supabase per lasciarci entrare.
+    router.push("/");
+    router.refresh();
+  }
+
+  const inCorsoVerifica = stato === "codiceInviato" || stato === "verifica";
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center px-6 py-12">
@@ -43,15 +81,50 @@ export default function PaginaLogin() {
           Il catalogo personale della collezione di piante grasse.
         </p>
 
-        {stato === "inviato" ? (
-          <div className="mt-8 rounded-lg border border-[var(--color-fuori)]/30 bg-[var(--color-fuori)]/10 p-4 text-[var(--color-text)]">
-            <p>
-              Controlla la posta di <strong>{email}</strong>: se l&apos;indirizzo è
-              autorizzato, il link di accesso è in arrivo.
+        {inCorsoVerifica ? (
+          <form onSubmit={verificaCodice} className="mt-8 flex flex-col gap-4">
+            <p className="text-[var(--color-text)]">
+              Controlla la posta di <strong>{email}</strong>: trovi un link su cui toccare,
+              e — appena disponibile — anche un codice da scrivere qui sotto.
             </p>
-          </div>
+            <label className="flex flex-col gap-1.5">
+              <span className="text-sm text-[var(--color-text-secondary)]">
+                Codice a 6 cifre (se presente nell&apos;email)
+              </span>
+              <input
+                type="text"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                autoComplete="one-time-code"
+                required
+                maxLength={6}
+                value={codice}
+                onChange={(e) => setCodice(e.target.value)}
+                className="h-11 rounded-lg border border-black/10 bg-[var(--color-surface)] px-3 text-center font-mono text-lg tracking-[0.3em] text-[var(--color-text)] outline-none focus:border-[var(--color-fuori)]"
+                placeholder="123456"
+              />
+            </label>
+            <button
+              type="submit"
+              disabled={stato === "verifica"}
+              className="h-11 rounded-lg bg-[var(--color-fuori)] font-medium text-white disabled:opacity-60"
+            >
+              {stato === "verifica" ? "Verifica…" : "Entra"}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setStato("idle");
+                setCodice("");
+                setMessaggio(null);
+              }}
+              className="h-10 text-sm text-[var(--color-text-secondary)] underline underline-offset-2"
+            >
+              Usa un altro indirizzo
+            </button>
+          </form>
         ) : (
-          <form onSubmit={inviaLink} className="mt-8 flex flex-col gap-4">
+          <form onSubmit={inviaCodice} className="mt-8 flex flex-col gap-4">
             <label className="flex flex-col gap-1.5">
               <span className="text-sm text-[var(--color-text-secondary)]">
                 Indirizzo email
@@ -73,13 +146,13 @@ export default function PaginaLogin() {
               disabled={stato === "invio"}
               className="h-11 rounded-lg bg-[var(--color-fuori)] font-medium text-white disabled:opacity-60"
             >
-              {stato === "invio" ? "Invio…" : "Invia il link di accesso"}
+              {stato === "invio" ? "Invio…" : "Invia il codice di accesso"}
             </button>
-
-            {stato === "errore" && messaggio && (
-              <p className="text-sm text-[var(--color-casa-esclamativo)]">{messaggio}</p>
-            )}
           </form>
+        )}
+
+        {messaggio && (
+          <p className="mt-4 text-sm text-[var(--color-casa-esclamativo)]">{messaggio}</p>
         )}
 
         <p className="mt-10 text-sm text-[var(--color-text-secondary)]">
@@ -88,5 +161,13 @@ export default function PaginaLogin() {
         </p>
       </div>
     </main>
+  );
+}
+
+export default function PaginaLogin() {
+  return (
+    <Suspense fallback={null}>
+      <FormLogin />
+    </Suspense>
   );
 }

@@ -28,9 +28,12 @@ const icone = {
       <path d="M12 9c2-4 6-5 8-4 0 4-3 6-8 4Z" />
     </svg>
   ),
-  guida: (
+  collezione: (
     <svg {...iconaProps}>
-      <path d="M5 4.5h9a2 2 0 0 1 2 2V20l-5.5-2L5 20V4.5Z" />
+      <rect x="4" y="4" width="7" height="7" rx="1" />
+      <rect x="13" y="4" width="7" height="7" rx="1" />
+      <rect x="4" y="13" width="7" height="7" rx="1" />
+      <rect x="13" y="13" width="7" height="7" rx="1" />
     </svg>
   ),
   cerca: (
@@ -67,8 +70,8 @@ export default function AppLayout({ children }: { children: ReactNode }) {
 
       <nav className="fixed inset-x-0 bottom-0 z-10 flex border-t border-black/10 bg-[var(--color-surface)]">
         <NavLink href="/" label="Home" icona={icone.home} />
+        <NavLink href="/collezione" label="Collezione" icona={icone.collezione} />
         <NavLink href="/generi" label="Generi" icona={icone.generi} />
-        <NavLink href="/guida" label="Guida" icona={icone.guida} />
         <NavLink href="/cerca" label="Cerca" icona={icone.cerca} />
       </nav>
     </div>

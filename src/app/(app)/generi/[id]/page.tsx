@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { generi, getGenere, getVarietaDiGenere } from "@/lib/catalogo";
 import { IllustrazioneGenere } from "@/components/illustrazione-genere";
 import { BadgeRicovero } from "@/components/badge-ricovero";
+import { creaDaVarieta } from "@/app/actions/plants";
 
 export function generateStaticParams() {
   return generi.map((g) => ({ id: g.id }));
@@ -73,6 +74,24 @@ export default async function PaginaGenere({ params }: PageProps<"/generi/[id]">
                 <p className="mt-1 text-sm text-[var(--color-text-secondary)]">{v.descrizione}</p>
               )}
               <p className="mt-1 text-sm text-[var(--color-text)]">{v.note}</p>
+              <div className="mt-2 flex gap-2">
+                <form action={creaDaVarieta.bind(null, "collection", v.key)} className="flex-1">
+                  <button
+                    type="submit"
+                    className="h-10 w-full rounded-lg border border-[var(--color-fuori)] text-sm font-medium text-[var(--color-fuori)]"
+                  >
+                    Ho questa
+                  </button>
+                </form>
+                <form action={creaDaVarieta.bind(null, "wishlist", v.key)} className="flex-1">
+                  <button
+                    type="submit"
+                    className="h-10 w-full rounded-lg border border-black/10 text-sm font-medium text-[var(--color-text-secondary)]"
+                  >
+                    La voglio
+                  </button>
+                </form>
+              </div>
             </li>
           );
         })}

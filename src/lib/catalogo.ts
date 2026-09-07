@@ -97,11 +97,27 @@ export function ordineRicovero(r: Ricovero): number {
 // diacritico separato (categoria Unicode "Mark, nonspacing"): rimuoverlo
 // permette di confrontare "e" ed "è" nella ricerca, stesso approccio dello
 // slug descritto in SPECIFICA.md §5.
-function normalizza(s: string): string {
+export function normalizza(s: string): string {
   return s
     .toLowerCase()
     .normalize("NFD")
     .replace(/\p{Mn}/gu, "");
+}
+
+/**
+ * "Relink" dell'importazione backup (SPECIFICA.md §7): se `varKey` non
+ * esiste più nel catalogo, cerca il nome normalizzato fra nomi e sinonimi
+ * delle 525 varietà e riassegna la chiave. Va tenuta identica a quella
+ * dell'artifact: è ciò che permette a un backup vecchio di riagganciarsi.
+ */
+export function relinkVarKey(varKeyOriginale: string | undefined, nome: string): string | null {
+  if (varKeyOriginale && getVarietaByKey(varKeyOriginale)) return varKeyOriginale;
+
+  const nomeNorm = normalizza(nome);
+  const trovata = varieta.find(
+    (v) => normalizza(v.nome) === nomeNorm || (v.sinonimo && normalizza(v.sinonimo) === nomeNorm),
+  );
+  return trovata ? trovata.key : null;
 }
 
 export interface RisultatoRicerca {

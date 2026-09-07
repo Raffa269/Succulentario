@@ -7,7 +7,18 @@ export default async function Home() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const { totaleGeneri, totaleVarieta } = contaCatalogo();
+  const { totaleVarieta } = contaCatalogo();
+
+  const { data: piante } = await supabase
+    .from("plants")
+    .select("kind, var_key")
+    .eq("owner", user!.id);
+
+  const collezione = (piante ?? []).filter((p) => p.kind === "collection");
+  const wishlist = (piante ?? []).filter((p) => p.kind === "wishlist");
+  const cimitero = (piante ?? []).filter((p) => p.kind === "lost");
+  const varietaPossedute = new Set(collezione.map((p) => p.var_key).filter(Boolean)).size;
+  const copertura = totaleVarieta > 0 ? Math.round((varietaPossedute / totaleVarieta) * 100) : 0;
 
   return (
     <div className="mx-auto flex max-w-2xl flex-col gap-6 px-4 py-6">
@@ -15,40 +26,48 @@ export default async function Home() {
         Accesso eseguito come <strong>{user?.email}</strong>.
       </p>
 
-      <div className="grid grid-cols-2 gap-3">
-        <Link
-          href="/generi"
-          className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-5"
-        >
-          <p className="font-mono text-2xl text-[var(--color-fuori)]">{totaleGeneri}</p>
-          <p className="mt-1 text-sm text-[var(--color-text-secondary)]">generi</p>
-        </Link>
-        <Link
-          href="/cerca"
-          className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-5"
-        >
-          <p className="font-mono text-2xl text-[var(--color-fuori)]">{totaleVarieta}</p>
-          <p className="mt-1 text-sm text-[var(--color-text-secondary)]">varietà schedate</p>
-        </Link>
-      </div>
-
       <Link
-        href="/guida"
+        href="/collezione"
         className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-5"
       >
-        <p className="font-medium text-[var(--color-text)]">Guida generale</p>
+        <p className="font-mono text-2xl text-[var(--color-fuori)]">{collezione.length}</p>
         <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
-          Luce, acqua, terriccio, rinvaso, propagazione, calendario stagionale.
+          piante in collezione — copertura del catalogo {copertura}%
         </p>
       </Link>
 
-      <div className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-5">
-        <p className="font-mono text-sm text-[var(--color-text-secondary)]">Tappa 2</p>
-        <p className="mt-1 text-[var(--color-text)]">
-          Catalogo consultabile: generi, varietà con etichetta di ricovero, guida,
-          ricerca. La collezione personale (piante, foto, wishlist) arriva nella
-          prossima tappa.
-        </p>
+      <div className="grid grid-cols-2 gap-3">
+        <Link
+          href="/wishlist"
+          className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-5"
+        >
+          <p className="font-mono text-2xl text-[var(--color-riparo)]">{wishlist.length}</p>
+          <p className="mt-1 text-sm text-[var(--color-text-secondary)]">in wishlist</p>
+        </Link>
+        <Link
+          href="/cimitero"
+          className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-5"
+        >
+          <p className="font-mono text-2xl text-[var(--color-casa-esclamativo)]">{cimitero.length}</p>
+          <p className="mt-1 text-sm text-[var(--color-text-secondary)]">nel cimitero</p>
+        </Link>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3">
+        <Link
+          href="/guida"
+          className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-4"
+        >
+          <p className="font-medium text-[var(--color-text)]">Guida generale</p>
+          <p className="mt-1 text-sm text-[var(--color-text-secondary)]">Luce, acqua, calendario.</p>
+        </Link>
+        <Link
+          href="/impostazioni"
+          className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-4"
+        >
+          <p className="font-medium text-[var(--color-text)]">Impostazioni</p>
+          <p className="mt-1 text-sm text-[var(--color-text-secondary)]">Importa il backup dell&apos;artifact.</p>
+        </Link>
       </div>
     </div>
   );

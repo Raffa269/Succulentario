@@ -83,6 +83,7 @@ export async function creaManuale(formData: FormData) {
   if (!name) throw new Error("Il nome è obbligatorio.");
 
   const genusId = String(formData.get("genusId") ?? "").trim() || null;
+  const varKey = String(formData.get("varKey") ?? "").trim() || null;
   const photoPath = String(formData.get("photoPath") ?? "").trim() || null;
   const notes = String(formData.get("notes") ?? "").trim();
   const num = kind === "collection" ? await prossimoNumero(supabase, userId) : null;
@@ -94,6 +95,7 @@ export async function creaManuale(formData: FormData) {
       kind,
       name,
       genus_id: genusId,
+      var_key: varKey,
       photo_path: photoPath,
       notes,
       num,

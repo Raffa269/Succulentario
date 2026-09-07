@@ -78,6 +78,19 @@ export function getVarietaByKey(key: string): Varieta | undefined {
   return varieta.find((v) => v.key === key);
 }
 
+/**
+ * Abbina il genere restituito da un servizio esterno (es. Pl@ntNet, che dà
+ * solo il nome scientifico) a uno degli 11 generi del catalogo, cercando
+ * fra il nome e i sinonimi in `keys` (SPECIFICA.md §8.2).
+ */
+export function trovaGenerePerNomeScientifico(nome: string): Genere | undefined {
+  const norm = normalizza(nome);
+  if (!norm) return undefined;
+  return generi.find(
+    (g) => normalizza(g.nome).includes(norm) || g.keys.some((k) => normalizza(k) === norm),
+  );
+}
+
 /** Conteggio di controllo: 11 generi, 525 varietà, 39/256/199/31 per ricovero. */
 export function contaCatalogo() {
   const perRicovero: Record<Ricovero, number> = { fuori: 0, riparo: 0, casa: 0, "casa!": 0 };

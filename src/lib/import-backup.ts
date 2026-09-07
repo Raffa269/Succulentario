@@ -2,9 +2,11 @@ import { relinkVarKey } from "@/lib/catalogo";
 import type { PlantKind } from "@/lib/plants";
 
 /**
- * Legge il backup esportato dall'artifact (SPECIFICA.md §7): sia il .json
- * sia la pagina .html autonoma, dove i dati stanno in
- * `<script id="succulentario-data" type="application/json">`.
+ * Legge un backup, in uno dei due formati: quello dell'artifact originale
+ * (SPECIFICA.md §7, collection/wishlist/lost separati) o quello nativo
+ * dell'app (app/actions/export.ts, un solo elenco `plants`). Entrambi
+ * possono arrivare come .json puro o come pagina .html autonoma, con i
+ * dati in `<script id="succulentario-data" type="application/json">`.
  */
 function estraiDatiGrezzi(testo: string): unknown {
   const t = testo.trim();
@@ -42,7 +44,8 @@ function testo(v: unknown): string {
   return typeof v === "string" ? v : "";
 }
 
-function analizzaVoce(v: Record<string, unknown>, kind: PlantKind): VoceDaImportare {
+/** Formato storico dell'artifact: collection/wishlist/lost separati, nomi di campo diversi dai nostri. */
+function analizzaVoceArtifact(v: Record<string, unknown>, kind: PlantKind): VoceDaImportare {
   const nome = testo(v.name) || "Senza nome";
   const varKeyOriginale = testo(v.varKey) || null;
   const varKey = relinkVarKey(varKeyOriginale ?? undefined, nome);
@@ -68,6 +71,34 @@ function analizzaVoce(v: Record<string, unknown>, kind: PlantKind): VoceDaImport
   };
 }
 
+/** Formato proprio dell'app (vedi app/actions/export.ts): un solo elenco `plants`, nomi di campo identici ai nostri. */
+function analizzaVoceApp(v: Record<string, unknown>): VoceDaImportare {
+  const nome = testo(v.name) || "Senza nome";
+  const varKeyOriginale = testo(v.varKey) || null;
+  const varKey = relinkVarKey(varKeyOriginale ?? undefined, nome);
+  const kind = (testo(v.kind) as PlantKind) || "collection";
+
+  return {
+    importId: testo(v.id) || crypto.randomUUID(),
+    kind,
+    name: nome,
+    genusId: testo(v.genusId) || (varKey ? varKey.split("#")[0] : null),
+    varKey,
+    varKeyOriginale,
+    relinkFallito: Boolean(varKeyOriginale) && !varKey,
+    fotoDataUrl: typeof v.photoDataUrl === "string" ? v.photoDataUrl : null,
+    num: typeof v.num === "number" ? v.num : null,
+    purchaseYm: testo(v.purchaseYm) || null,
+    propSoil: Boolean(v.propSoil),
+    propHum: Boolean(v.propHum),
+    notes: testo(v.notes),
+    addedAt: testo(v.addedAt) || null,
+    lostYm: testo(v.lostYm) || null,
+    cause: testo(v.cause) || null,
+    lesson: testo(v.lesson),
+  };
+}
+
 export interface BackupAnalizzato {
   exportedAt: string | null;
   voci: VoceDaImportare[];
@@ -80,6 +111,15 @@ export function analizzaBackup(testoFile: string): BackupAnalizzato {
   }
 
   const d = dati as Record<string, unknown>;
+
+  if (d.formatVersion === "app-v1") {
+    const elenco = (Array.isArray(d.plants) ? d.plants : []) as Record<string, unknown>[];
+    return {
+      exportedAt: testo(d.exportedAt) || null,
+      voci: elenco.map(analizzaVoceApp),
+    };
+  }
+
   const collezione = (Array.isArray(d.collection) ? d.collection : []) as Record<string, unknown>[];
   const wishlist = (Array.isArray(d.wishlist) ? d.wishlist : []) as Record<string, unknown>[];
   const persi = (Array.isArray(d.lost) ? d.lost : []) as Record<string, unknown>[];
@@ -87,9 +127,9 @@ export function analizzaBackup(testoFile: string): BackupAnalizzato {
   return {
     exportedAt: testo(d.exportedAt) || null,
     voci: [
-      ...collezione.map((v) => analizzaVoce(v, "collection")),
-      ...wishlist.map((v) => analizzaVoce(v, "wishlist")),
-      ...persi.map((v) => analizzaVoce(v, "lost")),
+      ...collezione.map((v) => analizzaVoceArtifact(v, "collection")),
+      ...wishlist.map((v) => analizzaVoceArtifact(v, "wishlist")),
+      ...persi.map((v) => analizzaVoceArtifact(v, "lost")),
     ],
   };
 }

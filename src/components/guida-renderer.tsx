@@ -16,12 +16,16 @@ function conGrassetto(testo: string): ReactNode[] {
 
 function TabellaGuida({ tabella }: { tabella: { head: string[]; rows: string[][] } }) {
   return (
-    <div className="overflow-x-auto rounded-lg border border-black/10">
+    <div className="overflow-x-auto rounded-2xl" style={{ background: "var(--color-neutral-100)" }}>
       <table className="w-full min-w-[480px] border-collapse text-sm">
         <thead>
-          <tr className="bg-[var(--color-surface)]">
+          <tr>
             {tabella.head.map((cella, i) => (
-              <th key={i} className="border-b border-black/10 p-3 text-left font-medium">
+              <th
+                key={i}
+                className="p-3 text-left font-sans text-xs font-bold uppercase tracking-wide text-[var(--color-text-secondary)]"
+                style={{ borderBottom: "1px solid var(--color-divider)" }}
+              >
                 {cella}
               </th>
             ))}
@@ -29,9 +33,9 @@ function TabellaGuida({ tabella }: { tabella: { head: string[]; rows: string[][]
         </thead>
         <tbody>
           {tabella.rows.map((riga, i) => (
-            <tr key={i} className="border-b border-black/5 last:border-0">
+            <tr key={i} style={{ borderBottom: i < tabella.rows.length - 1 ? "1px solid var(--color-divider)" : undefined }}>
               {riga.map((cella, j) => (
-                <td key={j} className="p-3 align-top text-[var(--color-text-secondary)]">
+                <td key={j} className="p-3 align-top text-[var(--color-text)]">
                   {cella}
                 </td>
               ))}
@@ -45,27 +49,27 @@ function TabellaGuida({ tabella }: { tabella: { head: string[]; rows: string[][]
 
 function CalloutGuida({ callout }: { callout: { t: string; x: string } }) {
   return (
-    <aside className="rounded-lg border border-[var(--color-riparo)]/30 bg-[var(--color-riparo)]/10 p-4">
-      <p className="font-medium text-[var(--color-text)]">{callout.t}</p>
-      <p className="mt-1 text-sm text-[var(--color-text-secondary)]">{callout.x}</p>
+    <aside className="rounded-2xl p-4" style={{ background: "var(--color-riparo-tinta)" }}>
+      <p className="font-sans text-[15px] font-bold text-[var(--color-text)]">{callout.t}</p>
+      <p className="mt-1 text-sm leading-relaxed text-[var(--color-text)]">{callout.x}</p>
     </aside>
   );
 }
 
 export function BloccoGuidaView({ blocco }: { blocco: BloccoGuida }) {
   if ("h" in blocco) {
-    return <h1 className="font-serif text-3xl text-[var(--color-text)]">{blocco.h}</h1>;
+    return <h1 className="font-heading text-3xl text-[var(--color-text)]">{blocco.h}</h1>;
   }
   if ("lead" in blocco) {
-    return <p className="text-lg text-[var(--color-text-secondary)]">{blocco.lead}</p>;
+    return <p className="text-lg leading-relaxed text-[var(--color-text-secondary)]">{blocco.lead}</p>;
   }
   if ("h2" in blocco) {
     return (
-      <h2 className="mt-4 font-serif text-2xl text-[var(--color-text)]">{blocco.h2}</h2>
+      <h2 className="mt-4 font-heading text-2xl text-[var(--color-text)]">{blocco.h2}</h2>
     );
   }
   if ("h3" in blocco) {
-    return <h3 className="font-serif text-xl text-[var(--color-text)]">{blocco.h3}</h3>;
+    return <h3 className="font-heading text-xl text-[var(--color-text)]">{blocco.h3}</h3>;
   }
   if ("p" in blocco) {
     return <p className="text-[var(--color-text)]">{blocco.p}</p>;

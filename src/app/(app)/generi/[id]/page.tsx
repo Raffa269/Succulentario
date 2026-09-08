@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { generi, getGenere, getVarietaDiGenere } from "@/lib/catalogo";
+import { generi, getGenere, getVarietaDiGenere, type Ricovero } from "@/lib/catalogo";
 import { IllustrazioneGenere } from "@/components/illustrazione-genere";
-import { BadgeRicovero } from "@/components/badge-ricovero";
-import { creaDaVarieta } from "@/app/actions/plants";
+import { SezioniVarietaGenere } from "@/components/sezioni-varieta-genere";
+import { createClient } from "@/lib/supabase/server";
 
 export function generateStaticParams() {
   return generi.map((g) => ({ id: g.id }));
@@ -14,6 +15,26 @@ export async function generateMetadata({ params }: PageProps<"/generi/[id]">) {
   return { title: genere ? `${genere.nome} · Succulentario` : "Succulentario" };
 }
 
+const ORDINE: Ricovero[] = ["fuori", "riparo", "casa", "casa!"];
+const TINTA: Record<Ricovero, string> = {
+  fuori: "var(--color-fuori-tinta)",
+  riparo: "var(--color-riparo-tinta)",
+  casa: "var(--color-casa-tinta)",
+  "casa!": "var(--color-casa-esclamativo-tinta)",
+};
+const SOLIDO: Record<Ricovero, { bg: string; testoChiaro: boolean }> = {
+  fuori: { bg: "var(--color-fuori)", testoChiaro: true },
+  riparo: { bg: "var(--color-riparo)", testoChiaro: true },
+  casa: { bg: "var(--color-casa)", testoChiaro: false },
+  "casa!": { bg: "var(--color-casa-esclamativo)", testoChiaro: true },
+};
+const INCHIOSTRO: Record<Ricovero, string> = {
+  fuori: "#0f5c30",
+  riparo: "#0d5486",
+  casa: "#8a5c00",
+  "casa!": "#8f2a1a",
+};
+
 export default async function PaginaGenere({ params }: PageProps<"/generi/[id]">) {
   const { id } = await params;
   const genere = getGenere(id);
@@ -21,81 +42,92 @@ export default async function PaginaGenere({ params }: PageProps<"/generi/[id]">
 
   const varieta = getVarietaDiGenere(id);
 
+  // La sezione dominante (più varietà) intona l'intestazione, come nel
+  // mockup 1e (Haworthia è a dominante "riparo").
+  const conteggi: Record<Ricovero, number> = { fuori: 0, riparo: 0, casa: 0, "casa!": 0 };
+  for (const v of varieta) conteggi[v.ricovero]++;
+  const dominante = ORDINE.reduce((migliore, r) => (conteggi[r] > conteggi[migliore] ? r : migliore), "fuori" as Ricovero);
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  const { data: possedute } = await supabase
+    .from("plants")
+    .select("var_key")
+    .eq("owner", user!.id)
+    .eq("kind", "collection")
+    .eq("genus_id", id);
+  const varKeyPossedute = (possedute ?? []).map((p) => p.var_key).filter((k): k is string => !!k);
+
   return (
-    <div className="mx-auto max-w-2xl px-4 py-6">
-      <div className="flex items-center gap-4">
-        <IllustrazioneGenere genereId={genere.id} className="h-20 w-20 shrink-0 text-[var(--color-fuori)]" />
-        <div>
-          <h1 className="font-serif text-2xl text-[var(--color-text)]">{genere.nome}</h1>
-          <p className="text-sm text-[var(--color-text-secondary)]">{genere.fam}</p>
+    <div className="pb-8">
+      <div className="px-4 pb-4 pt-3" style={{ background: TINTA[dominante] }}>
+        <Link
+          href="/generi"
+          className="mb-2 flex h-11 items-center gap-2 font-sans text-[15px] font-bold"
+          style={{ color: INCHIOSTRO[dominante] }}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={INCHIOSTRO[dominante]} strokeWidth={3} strokeLinecap="round" aria-hidden="true">
+            <path d="M14 6l-6 6 6 6" />
+          </svg>
+          Generi
+        </Link>
+        <div className="flex items-end justify-between gap-3">
+          <div>
+            <h1 className="font-heading text-2xl leading-tight" style={{ color: INCHIOSTRO[dominante] }}>
+              {genere.nome}
+            </h1>
+            <p className="mt-1 font-sans text-sm font-medium" style={{ color: INCHIOSTRO[dominante], fontVariantNumeric: "tabular-nums" }}>
+              {varieta.length} {varieta.length === 1 ? "varietà" : "varietà"}
+              {varKeyPossedute.length > 0 ? ` · ${varKeyPossedute.length} in collezione` : ""}
+            </p>
+          </div>
+          <IllustrazioneGenere genereId={genere.id} className="h-[72px] w-[72px] shrink-0" style={{ color: INCHIOSTRO[dominante] }} />
         </div>
       </div>
 
-      <p className="mt-4 text-[var(--color-text)]">{genere.intro}</p>
-      <p className="mt-2 text-sm text-[var(--color-text-secondary)]">{genere.totale}</p>
+      <div className="px-4 pt-4">
+        <p className="mb-4 text-[15px] leading-relaxed text-[var(--color-text)]">{genere.intro}</p>
 
-      <section className="mt-5 rounded-lg border border-[var(--color-casa-esclamativo)]/30 bg-[var(--color-casa-esclamativo)]/10 p-4">
-        <p className="font-medium text-[var(--color-text)]">Ricovero invernale</p>
-        <p className="mt-1 text-sm text-[var(--color-text)]">{genere.inverno}</p>
-      </section>
-
-      <section className="mt-5 space-y-3">
-        {genere.spec.map(([etichetta, testo]) => (
-          <div key={etichetta}>
-            <p className="font-mono text-xs uppercase tracking-wide text-[var(--color-text-secondary)]">
-              {etichetta}
-            </p>
-            <p className="mt-0.5 text-[var(--color-text)]">{testo}</p>
+        <section
+          className="mb-4 rounded-[22px] px-[18px] pb-4 pt-[18px]"
+          style={{ background: SOLIDO[dominante].bg, color: SOLIDO[dominante].testoChiaro ? "#fff" : "var(--color-text)" }}
+        >
+          <p className="mb-2 font-sans text-xs font-bold uppercase tracking-wider opacity-85">Ricovero invernale</p>
+          <p className="mb-2.5 font-heading text-xl leading-tight">{genere.totale}</p>
+          <p className="mb-3.5 text-[15px] leading-relaxed">{genere.inverno}</p>
+          <div className="flex flex-wrap gap-1.5" style={{ fontVariantNumeric: "tabular-nums" }}>
+            {ORDINE.filter((r) => conteggi[r] > 0).map((r) => (
+              <span
+                key={r}
+                className="rounded-[9px] px-2.5 py-2 font-sans text-xs font-bold"
+                style={{ background: SOLIDO[r].bg, color: SOLIDO[r].testoChiaro ? "#fff" : "var(--color-text)" }}
+              >
+                {conteggi[r]} {r}
+              </span>
+            ))}
           </div>
-        ))}
-      </section>
+        </section>
 
-      <h2 className="mt-8 font-serif text-xl text-[var(--color-text)]">
-        Varietà <span className="font-mono text-base text-[var(--color-text-secondary)]">({varieta.length})</span>
-      </h2>
+        <section className="mb-4 space-y-3 rounded-[20px] p-4" style={{ background: "var(--color-neutral-100)" }}>
+          {genere.spec.map(([etichetta, testo]) => (
+            <div key={etichetta}>
+              <p className="font-sans text-xs font-bold uppercase tracking-wide text-[var(--color-text-secondary)]">
+                {etichetta}
+              </p>
+              <p className="mt-0.5 text-sm leading-relaxed text-[var(--color-text)]">{testo}</p>
+            </div>
+          ))}
+        </section>
 
-      <ul className="mt-3 divide-y divide-black/5">
-        {varieta.map((v) => {
-          const slug = v.key.split("#")[1] ?? v.key;
-          return (
-            <li key={v.key} id={slug} className="scroll-mt-4 py-3">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                <p className="font-medium italic text-[var(--color-text)]">
-                  {v.nome}
-                  {v.sinonimo && (
-                    <span className="ml-1.5 font-sans not-italic text-sm text-[var(--color-text-secondary)]">
-                      ({v.sinonimo})
-                    </span>
-                  )}
-                </p>
-                <BadgeRicovero valore={v.ricovero} />
-              </div>
-              {v.descrizione && (
-                <p className="mt-1 text-sm text-[var(--color-text-secondary)]">{v.descrizione}</p>
-              )}
-              <p className="mt-1 text-sm text-[var(--color-text)]">{v.note}</p>
-              <div className="mt-2 flex gap-2">
-                <form action={creaDaVarieta.bind(null, "collection", v.key)} className="flex-1">
-                  <button
-                    type="submit"
-                    className="h-10 w-full rounded-lg border border-[var(--color-fuori)] text-sm font-medium text-[var(--color-fuori)]"
-                  >
-                    Ho questa
-                  </button>
-                </form>
-                <form action={creaDaVarieta.bind(null, "wishlist", v.key)} className="flex-1">
-                  <button
-                    type="submit"
-                    className="h-10 w-full rounded-lg border border-black/10 text-sm font-medium text-[var(--color-text-secondary)]"
-                  >
-                    La voglio
-                  </button>
-                </form>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+        <div className="mb-2.5 flex items-baseline justify-between">
+          <span className="font-heading text-xl">Le {varieta.length} varietà</span>
+          <span className="font-sans text-xs font-medium text-[var(--color-text-secondary)]">per etichetta</span>
+        </div>
+
+        <SezioniVarietaGenere varieta={varieta} varKeyPossedute={varKeyPossedute} />
+      </div>
     </div>
   );
 }

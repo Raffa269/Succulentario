@@ -86,6 +86,9 @@ export async function creaManuale(formData: FormData) {
   const varKey = String(formData.get("varKey") ?? "").trim() || null;
   const photoPath = String(formData.get("photoPath") ?? "").trim() || null;
   const notes = String(formData.get("notes") ?? "").trim();
+  const purchaseYmForm = String(formData.get("purchaseYm") ?? "").trim() || null;
+  const propSoil = formData.get("propSoil") === "1";
+  const propHum = formData.get("propHum") === "1";
   const num = kind === "collection" ? await prossimoNumero(supabase, userId) : null;
 
   const { data, error } = await supabase
@@ -99,7 +102,9 @@ export async function creaManuale(formData: FormData) {
       photo_path: photoPath,
       notes,
       num,
-      purchase_ym: kind === "collection" ? meseCorrente() : null,
+      prop_soil: propSoil,
+      prop_hum: propHum,
+      purchase_ym: kind === "collection" ? (purchaseYmForm ?? meseCorrente()) : null,
     })
     .select("id")
     .single();

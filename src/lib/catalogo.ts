@@ -106,6 +106,21 @@ export function ordineRicovero(r: Ricovero): number {
   return ORDINE_RICOVERO.indexOf(r);
 }
 
+/**
+ * Copertura del catalogo: quante varietà distinte (tra quelle passate,
+ * es. i `var_key` della collezione) sono possedute, in totale e per
+ * ricovero. Usato dalla card "In collezione" della home (mockup 1a).
+ */
+export function copertura(varKeys: (string | null | undefined)[]) {
+  const perRicovero: Record<Ricovero, number> = { fuori: 0, riparo: 0, casa: 0, "casa!": 0 };
+  const distinte = new Set(varKeys.filter((k): k is string => !!k));
+  for (const key of distinte) {
+    const v = getVarietaByKey(key);
+    if (v) perRicovero[v.ricovero]++;
+  }
+  return { totale: distinte.size, perRicovero };
+}
+
 // Dopo NFD un carattere accentato si scompone in lettera base + segno
 // diacritico separato (categoria Unicode "Mark, nonspacing"): rimuoverlo
 // permette di confrontare "e" ed "è" nella ricerca, stesso approccio dello
@@ -138,6 +153,23 @@ export interface RisultatoRicerca {
   titolo: string;
   sottotitolo: string;
   href: string;
+}
+
+/**
+ * Varietà il cui nome (o sinonimo) contiene la query: usata dal
+ * completamento automatico del modulo "nuova pianta" (mockup 1c).
+ */
+export function cercaVarietaPerNome(query: string, limite = 6): Varieta[] {
+  const q = normalizza(query.trim());
+  if (q.length < 2) return [];
+  const risultati: Varieta[] = [];
+  for (const v of varieta) {
+    if (normalizza(v.nome).includes(q) || (v.sinonimo && normalizza(v.sinonimo).includes(q))) {
+      risultati.push(v);
+      if (risultati.length >= limite) break;
+    }
+  }
+  return risultati;
 }
 
 /** Ricerca semplice per sottostringa, usata dalla pagina /cerca. */

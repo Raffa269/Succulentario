@@ -1,78 +1,62 @@
 import type { ReactNode } from "react";
-import Link from "next/link";
 import { NavLink } from "@/components/nav-link";
-import { signOut } from "@/app/actions/auth";
 
 const iconaProps = {
   viewBox: "0 0 24 24",
   fill: "none",
   stroke: "currentColor",
-  strokeWidth: 1.6,
+  strokeWidth: 2.75,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
-  className: "h-5 w-5",
+  className: "h-6 w-6",
   "aria-hidden": true,
 };
 
 const icone = {
-  home: (
+  collezione: (
     <svg {...iconaProps}>
-      <path d="M4 11.5 12 4l8 7.5" />
-      <path d="M6 10v9h12v-9" />
+      <rect x="3" y="3" width="8" height="8" rx="2.5" />
+      <rect x="13" y="3" width="8" height="8" rx="2.5" />
+      <rect x="3" y="13" width="8" height="8" rx="2.5" />
+      <rect x="13" y="13" width="8" height="8" rx="2.5" />
     </svg>
   ),
   generi: (
     <svg {...iconaProps}>
-      <path d="M12 20V9" />
-      <path d="M12 9c-2-4-6-5-8-4 0 4 3 6 8 4Z" />
-      <path d="M12 9c2-4 6-5 8-4 0 4-3 6-8 4Z" />
+      <path d="M4 5h16M4 12h16M4 19h10" />
     </svg>
   ),
-  collezione: (
+  allerte: (
     <svg {...iconaProps}>
-      <rect x="4" y="4" width="7" height="7" rx="1" />
-      <rect x="13" y="4" width="7" height="7" rx="1" />
-      <rect x="4" y="13" width="7" height="7" rx="1" />
-      <rect x="13" y="13" width="7" height="7" rx="1" />
+      <path d="M12 3v18M5 7l14 10M19 7L5 17" />
     </svg>
   ),
-  cerca: (
+  numeri: (
     <svg {...iconaProps}>
-      <circle cx="10.5" cy="10.5" r="6" />
-      <path d="m20 20-4.8-4.8" />
+      <path d="M5 20V10M12 20V4M19 20v-7" />
     </svg>
   ),
 };
 
 /**
  * Layout condiviso dalle pagine dell'app (autenticazione già garantita da
- * src/proxy.ts su tutto ciò che non è pubblico). Barra di navigazione in
- * basso: pensata per l'uso reale, una mano, in piedi, in terrazzo.
+ * src/proxy.ts). Barra di navigazione in basso, prugna: Collezione è la
+ * schermata di apertura, non c'è più una Home separata. Ogni pagina porta
+ * la propria intestazione — qui restano solo i contenuti e la barra.
  */
 export default function AppLayout({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="flex items-center justify-between border-b border-black/10 px-4 py-3">
-        <Link href="/" className="font-serif text-xl text-[var(--color-text)]">
-          Succulentario
-        </Link>
-        <form action={signOut}>
-          <button
-            type="submit"
-            className="h-9 rounded-lg border border-black/10 px-3 text-sm text-[var(--color-text-secondary)]"
-          >
-            Esci
-          </button>
-        </form>
-      </header>
+      <main className="flex-1 pb-24">{children}</main>
 
-      <main className="flex-1 pb-16">{children}</main>
-
-      <nav className="fixed inset-x-0 bottom-0 z-10 flex border-t border-black/10 bg-[var(--color-surface)]">
-        <NavLink href="/" label="Home" icona={icone.home} />
+      <nav
+        className="fixed inset-x-0 bottom-0 z-10 flex justify-around rounded-t-3xl pt-3"
+        style={{ background: "var(--color-brand)", paddingBottom: "max(4px, env(safe-area-inset-bottom))" }}
+      >
         <NavLink href="/collezione" label="Collezione" icona={icone.collezione} />
         <NavLink href="/generi" label="Generi" icona={icone.generi} />
-        <NavLink href="/cerca" label="Cerca" icona={icone.cerca} />
+        <NavLink href="/allerte" label="Allerte" icona={icone.allerte} />
+        <NavLink href="/numeri" label="Numeri" icona={icone.numeri} />
       </nav>
     </div>
   );

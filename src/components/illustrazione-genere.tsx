@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { illustrazioni } from "@/lib/catalogo";
 
 /**
@@ -8,9 +9,11 @@ import { illustrazioni } from "@/lib/catalogo";
 export function IllustrazioneGenere({
   genereId,
   className,
+  style,
 }: {
   genereId: string;
   className?: string;
+  style?: CSSProperties;
 }) {
   const svg = illustrazioni[genereId];
   if (!svg) return null;
@@ -18,6 +21,7 @@ export function IllustrazioneGenere({
   return (
     <div
       className={className}
+      style={style}
       aria-hidden="true"
       dangerouslySetInnerHTML={{ __html: svg }}
     />

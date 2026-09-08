@@ -17,6 +17,20 @@ import type { Genere } from "@/lib/catalogo";
 import type { Plant } from "@/lib/plants";
 
 const PAGINA_PER_KIND = { collection: "/collezione", wishlist: "/wishlist", lost: "/cimitero" } as const;
+const BORDO_CAMPO = "1.5px solid rgba(32,30,29,.16)";
+
+function Etichetta({ children }: { children: string }) {
+  return (
+    <span className="mb-1.5 block font-sans text-xs font-bold uppercase tracking-wider text-[var(--color-text-secondary)]">
+      {children}
+    </span>
+  );
+}
+
+const classeCampo =
+  "h-[52px] w-full rounded-2xl bg-white px-[15px] text-[17px] text-[var(--color-text)] outline-none";
+const classeArea =
+  "w-full rounded-2xl bg-white p-[15px] text-base text-[var(--color-text)] outline-none";
 
 export function DettaglioPianta({
   plant,
@@ -147,39 +161,34 @@ export function DettaglioPianta({
 
   return (
     <div>
-      <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-lg bg-[var(--color-surface)]">
+      <div
+        className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-[20px]"
+        style={{ background: "var(--color-neutral-100)" }}
+      >
         {fotoUrl ? (
           <Image src={fotoUrl} alt={name} fill unoptimized className="object-cover" />
         ) : genusId ? (
           <IllustrazioneGenere
             genereId={genusId}
-            className="flex h-full w-full items-center justify-center p-10 text-[var(--color-fuori)]/50"
+            className="flex h-full w-full items-center justify-center p-10"
+            style={{ color: "var(--color-riparo)" }}
           />
         ) : null}
       </div>
-      <label className="mt-2 block text-center text-sm text-[var(--color-fuori)]">
+      <label className="mt-2.5 block text-center font-sans text-sm font-bold" style={{ color: "var(--color-brand)" }}>
         {fotoUrl ? "Cambia foto" : "Aggiungi foto"}
         <input type="file" accept="image/*" capture="environment" onChange={cambiaFoto} className="hidden" />
       </label>
 
-      <form onSubmit={salva} className="mt-4 flex flex-col gap-4">
-        <label className="flex flex-col gap-1.5">
-          <span className="text-sm text-[var(--color-text-secondary)]">Nome</span>
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            className="h-11 rounded-lg border border-black/10 bg-[var(--color-surface)] px-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-fuori)]"
-          />
+      <form onSubmit={salva} className="mt-5 flex flex-col gap-4">
+        <label>
+          <Etichetta>Nome</Etichetta>
+          <input value={name} onChange={(e) => setName(e.target.value)} required className={classeCampo} style={{ border: BORDO_CAMPO }} />
         </label>
 
-        <label className="flex flex-col gap-1.5">
-          <span className="text-sm text-[var(--color-text-secondary)]">Genere</span>
-          <select
-            value={genusId}
-            onChange={(e) => setGenusId(e.target.value)}
-            className="h-11 rounded-lg border border-black/10 bg-[var(--color-surface)] px-3 text-base text-[var(--color-text)]"
-          >
+        <label>
+          <Etichetta>Genere</Etichetta>
+          <select value={genusId} onChange={(e) => setGenusId(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }}>
             <option value="">—</option>
             {generi.map((g) => (
               <option key={g.id} value={g.id}>
@@ -190,67 +199,71 @@ export function DettaglioPianta({
         </label>
 
         {plant.kind !== "wishlist" && (
-          <label className="flex flex-col gap-1.5">
-            <span className="text-sm text-[var(--color-text-secondary)]">Mese di acquisto</span>
+          <label>
+            <Etichetta>Mese di acquisto</Etichetta>
             <input
               type="month"
               value={purchaseYm}
               onChange={(e) => setPurchaseYm(e.target.value)}
-              className="h-11 rounded-lg border border-black/10 bg-[var(--color-surface)] px-3 text-base text-[var(--color-text)]"
+              className={classeCampo}
+              style={{ border: BORDO_CAMPO }}
             />
           </label>
         )}
 
         {plant.kind === "collection" && (
-          <div className="flex gap-4">
-            <label className="flex h-11 flex-1 items-center gap-2 rounded-lg border border-black/10 px-3 text-sm text-[var(--color-text)]">
-              <input type="checkbox" checked={propSoil} onChange={(e) => setPropSoil(e.target.checked)} />
-              In propagazione (terra)
-            </label>
-            <label className="flex h-11 flex-1 items-center gap-2 rounded-lg border border-black/10 px-3 text-sm text-[var(--color-text)]">
-              <input type="checkbox" checked={propHum} onChange={(e) => setPropHum(e.target.checked)} />
-              In propagazione (umidità)
-            </label>
+          <div>
+            <Etichetta>Propagazione</Etichetta>
+            <div className="flex gap-2.5">
+              {(
+                [
+                  ["In terra", propSoil, setPropSoil],
+                  ["Per umidità", propHum, setPropHum],
+                ] as const
+              ).map(([etichetta, valore, imposta]) => (
+                <button
+                  key={etichetta}
+                  type="button"
+                  onClick={() => imposta(!valore)}
+                  className="flex h-[52px] flex-1 items-center gap-2.5 rounded-2xl px-3.5"
+                  style={
+                    valore
+                      ? { background: "var(--color-fuori)", color: "#fff" }
+                      : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text-secondary)" }
+                  }
+                >
+                  {valore ? (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth={3} strokeLinecap="round" aria-hidden="true">
+                      <path d="M4 12l5 5 11-11" />
+                    </svg>
+                  ) : (
+                    <i className="block h-[18px] w-[18px] rounded-md" style={{ border: "2px solid rgba(32,30,29,.3)" }} />
+                  )}
+                  <span className="font-sans text-sm font-bold">{etichetta}</span>
+                </button>
+              ))}
+            </div>
           </div>
         )}
 
-        <label className="flex flex-col gap-1.5">
-          <span className="text-sm text-[var(--color-text-secondary)]">Note</span>
-          <textarea
-            value={notes}
-            onChange={(e) => setNotes(e.target.value)}
-            rows={3}
-            className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-fuori)]"
-          />
+        <label>
+          <Etichetta>Note</Etichetta>
+          <textarea value={notes} onChange={(e) => setNotes(e.target.value)} rows={3} className={classeArea} style={{ border: BORDO_CAMPO }} />
         </label>
 
         {plant.kind === "lost" && (
           <>
-            <label className="flex flex-col gap-1.5">
-              <span className="text-sm text-[var(--color-text-secondary)]">Mese della perdita</span>
-              <input
-                type="month"
-                value={lostYm}
-                onChange={(e) => setLostYm(e.target.value)}
-                className="h-11 rounded-lg border border-black/10 bg-[var(--color-surface)] px-3 text-base text-[var(--color-text)]"
-              />
+            <label>
+              <Etichetta>Mese della perdita</Etichetta>
+              <input type="month" value={lostYm} onChange={(e) => setLostYm(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
             </label>
-            <label className="flex flex-col gap-1.5">
-              <span className="text-sm text-[var(--color-text-secondary)]">Causa</span>
-              <input
-                value={cause}
-                onChange={(e) => setCause(e.target.value)}
-                className="h-11 rounded-lg border border-black/10 bg-[var(--color-surface)] px-3 text-base text-[var(--color-text)]"
-              />
+            <label>
+              <Etichetta>Causa</Etichetta>
+              <input value={cause} onChange={(e) => setCause(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
             </label>
-            <label className="flex flex-col gap-1.5">
-              <span className="text-sm text-[var(--color-text-secondary)]">Lezione imparata</span>
-              <textarea
-                value={lesson}
-                onChange={(e) => setLesson(e.target.value)}
-                rows={2}
-                className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-3 text-base text-[var(--color-text)]"
-              />
+            <label>
+              <Etichetta>Lezione imparata</Etichetta>
+              <textarea value={lesson} onChange={(e) => setLesson(e.target.value)} rows={2} className={classeArea} style={{ border: BORDO_CAMPO }} />
             </label>
           </>
         )}
@@ -260,18 +273,20 @@ export function DettaglioPianta({
         <button
           type="submit"
           disabled={salvando}
-          className="h-11 rounded-lg bg-[var(--color-fuori)] font-medium text-white disabled:opacity-60"
+          className="h-[52px] rounded-2xl font-heading text-[15px] text-white disabled:opacity-60"
+          style={{ background: "var(--color-brand)" }}
         >
           {salvando ? "Salvo…" : "Salva modifiche"}
         </button>
       </form>
 
-      <div className="mt-6 flex flex-col gap-2 border-t border-black/10 pt-6">
+      <div className="mt-6 flex flex-col gap-2.5 pt-6" style={{ borderTop: "1px solid var(--color-divider)" }}>
         {plant.kind === "wishlist" && (
           <button
             onClick={promuovi}
             disabled={salvando}
-            className="h-11 rounded-lg border border-[var(--color-fuori)] font-medium text-[var(--color-fuori)]"
+            className="h-[52px] rounded-2xl font-heading text-[15px]"
+            style={{ border: "2px solid var(--color-fuori)", color: "var(--color-fuori)" }}
           >
             Promuovi a collezione
           </button>
@@ -280,52 +295,40 @@ export function DettaglioPianta({
         {plant.kind === "collection" && !mostraFormPersa && (
           <button
             onClick={() => setMostraFormPersa(true)}
-            className="h-11 rounded-lg border border-[var(--color-casa-esclamativo)] font-medium text-[var(--color-casa-esclamativo)]"
+            className="h-[52px] rounded-2xl font-heading text-[15px]"
+            style={{ border: "2px solid var(--color-casa-esclamativo)", color: "var(--color-casa-esclamativo)" }}
           >
             Segna come persa
           </button>
         )}
 
         {plant.kind === "collection" && mostraFormPersa && (
-          <div className="rounded-lg border border-[var(--color-casa-esclamativo)]/30 bg-[var(--color-casa-esclamativo)]/10 p-4">
-            <p className="font-medium text-[var(--color-text)]">Sposta al cimitero</p>
-            <label className="mt-3 flex flex-col gap-1.5">
-              <span className="text-sm text-[var(--color-text-secondary)]">Mese</span>
-              <input
-                type="month"
-                value={lostYm}
-                onChange={(e) => setLostYm(e.target.value)}
-                className="h-11 rounded-lg border border-black/10 bg-[var(--color-surface)] px-3 text-base text-[var(--color-text)]"
-              />
+          <div className="rounded-[20px] p-4" style={{ background: "var(--color-casa-esclamativo-tinta)" }}>
+            <p className="font-heading text-base text-[var(--color-text)]">Sposta al cimitero</p>
+            <label className="mt-3 block">
+              <Etichetta>Mese</Etichetta>
+              <input type="month" value={lostYm} onChange={(e) => setLostYm(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
             </label>
-            <label className="mt-3 flex flex-col gap-1.5">
-              <span className="text-sm text-[var(--color-text-secondary)]">Causa</span>
-              <input
-                value={cause}
-                onChange={(e) => setCause(e.target.value)}
-                className="h-11 rounded-lg border border-black/10 bg-[var(--color-surface)] px-3 text-base text-[var(--color-text)]"
-              />
+            <label className="mt-3 block">
+              <Etichetta>Causa</Etichetta>
+              <input value={cause} onChange={(e) => setCause(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
             </label>
-            <label className="mt-3 flex flex-col gap-1.5">
-              <span className="text-sm text-[var(--color-text-secondary)]">Lezione imparata</span>
-              <textarea
-                value={lesson}
-                onChange={(e) => setLesson(e.target.value)}
-                rows={2}
-                className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-3 text-base text-[var(--color-text)]"
-              />
+            <label className="mt-3 block">
+              <Etichetta>Lezione imparata</Etichetta>
+              <textarea value={lesson} onChange={(e) => setLesson(e.target.value)} rows={2} className={classeArea} style={{ border: BORDO_CAMPO }} />
             </label>
-            <div className="mt-3 flex gap-2">
+            <div className="mt-3 flex gap-2.5">
               <button
                 onClick={() => setMostraFormPersa(false)}
-                className="h-10 flex-1 rounded-lg border border-black/10 text-sm text-[var(--color-text-secondary)]"
+                className="h-11 flex-1 rounded-xl bg-white text-sm font-medium text-[var(--color-text-secondary)]"
               >
                 Annulla
               </button>
               <button
                 onClick={confermaPersa}
                 disabled={salvando}
-                className="h-10 flex-1 rounded-lg bg-[var(--color-casa-esclamativo)] text-sm font-medium text-white disabled:opacity-60"
+                className="h-11 flex-1 rounded-xl text-sm font-medium text-white disabled:opacity-60"
+                style={{ background: "var(--color-casa-esclamativo)" }}
               >
                 Conferma
               </button>
@@ -337,7 +340,8 @@ export function DettaglioPianta({
           <button
             onClick={riporta}
             disabled={salvando}
-            className="h-11 rounded-lg border border-[var(--color-fuori)] font-medium text-[var(--color-fuori)]"
+            className="h-[52px] rounded-2xl font-heading text-[15px]"
+            style={{ border: "2px solid var(--color-fuori)", color: "var(--color-fuori)" }}
           >
             Riporta in collezione
           </button>
@@ -346,7 +350,7 @@ export function DettaglioPianta({
         <button
           onClick={elimina}
           disabled={salvando}
-          className="h-11 rounded-lg text-sm text-[var(--color-text-secondary)] underline underline-offset-2"
+          className="h-11 text-sm text-[var(--color-text-secondary)] underline underline-offset-2"
         >
           Elimina
         </button>

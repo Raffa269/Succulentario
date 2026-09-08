@@ -1,38 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,400;1,500&family=Caprasimo&family=Figtree:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
   /* Palette del Succulentario: i quattro colori del ricovero non sono
-     decorazione, codificano dove sverna la pianta (vedi SPECIFICA.md §10). */
-  --color-fuori: #2f6045; /* resta in terrazzo tutto l'anno */
-  --color-riparo: #2a5878; /* riparo freddo ma luminoso */
-  --color-casa: #7e5a1f; /* in casa d'inverno */
-  --color-casa-esclamativo: #8f3527; /* delicata, fra le prime da ritirare */
+     decorazione, codificano dove sverna la pianta (vedi SPECIFICA.md §10).
+     Il prugna (--color-brand) è la quinta tinta, deliberatamente fuori
+     dalla ruota calda/fredda dei quattro: va al marchio e ai pulsanti
+     primari, così i quattro restano puri e significano solo una cosa. */
+  --color-brand: #7a2e86;
+  --color-fuori: #16713c; /* resta in terrazzo tutto l'anno */
+  --color-riparo: #12669e; /* riparo freddo ma luminoso */
+  --color-casa: #e9a21e; /* in casa d'inverno */
+  --color-casa-esclamativo: #be3a26; /* delicata, fra le prime da ritirare */
 
-  --color-bg: #f1f2ec;
-  --color-surface: #fbfbf7;
-  --color-text: #141811;
-  --color-text-secondary: #555d4f;
+  --color-fuori-tinta: #dcede0;
+  --color-riparo-tinta: #d9e7f2;
+  --color-casa-tinta: #f7e6c4;
+  --color-casa-esclamativo-tinta: #f4dcd6;
 
-  --font-serif: "Newsreader", ui-serif, Georgia, serif;
-  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --color-bg: #f5ead8;
+  --color-surface: #ebddc5;
+  --color-neutral-100: #f9f4ed;
+  --color-neutral-200: #eee7db;
+  --color-neutral-300: #dcd3c4;
+  --color-text: #201e1d;
+  --color-text-secondary: #645c50;
+  --color-divider: rgb(32 30 29 / 16%);
+
+  --font-heading: "Caprasimo", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", ui-serif, Georgia, serif; /* solo per i binomi botanici, in corsivo */
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-lg: 28px;
+  --radius-md: 16px;
+  --shadow-sm: 0 1px 2px rgb(46 43 37 / 14%);
+  --shadow-md: 0 3px 10px rgb(46 43 37 / 16%);
+  --shadow-lg: 0 12px 32px rgb(46 43 37 / 22%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Variante scura non ancora ricopiata dall'artifact originale (non
-       disponibile in questo progetto): valori provvisori, da verificare
-       per contrasto quando l'artifact sarà a disposizione. */
-    --color-fuori: #63a583;
-    --color-riparo: #6fa2c4;
-    --color-casa: #c99a4d;
-    --color-casa-esclamativo: #d97b64;
+    /* Variante scura non fornita dal mockup: valori derivati, da
+       riverificare per contrasto quando serve davvero. */
+    --color-brand: #c087cb;
+    --color-fuori: #6bc490;
+    --color-riparo: #6fabd6;
+    --color-casa: #f0bd5c;
+    --color-casa-esclamativo: #e08a72;
 
-    --color-bg: #14170f;
-    --color-surface: #1d211a;
-    --color-text: #eceee6;
-    --color-text-secondary: #a6ac9c;
+    --color-fuori-tinta: #17301f;
+    --color-riparo-tinta: #142a3a;
+    --color-casa-tinta: #3a2e12;
+    --color-casa-esclamativo-tinta: #3a1f19;
+
+    --color-bg: #1c1a17;
+    --color-surface: #262320;
+    --color-neutral-100: #2b2824;
+    --color-neutral-200: #35322c;
+    --color-neutral-300: #45413a;
+    --color-text: #f2ebe0;
+    --color-text-secondary: #b3a99a;
+    --color-divider: rgb(242 235 224 / 16%);
   }
 }
 
@@ -56,12 +84,17 @@ body {
   font-family: var(--font-sans);
 }
 
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
 .font-serif {
   font-family: var(--font-serif);
 }
 
-.font-mono {
-  font-family: var(--font-mono);
+.font-heading {
+  font-family: var(--font-heading);
 }
 
 /* Aree toccabili di almeno 40px e input a 16px: iOS zooma sotto quella

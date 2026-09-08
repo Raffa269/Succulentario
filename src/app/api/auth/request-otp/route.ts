@@ -2,17 +2,19 @@ import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 
 /**
- * Invia il codice/link di accesso via email.
+ * Invia il codice a 6 cifre di accesso via email.
  *
- * Il piano è passare al solo codice a 6 cifre (niente più link: su iPhone
- * toccare il link apre una webview di Mail con cookie separati da Safari,
- * dove il code_verifier PKCE non esiste e lo scambio fallisce sempre — con
- * un codice digitato nello stesso browser il problema non si pone). Ma
- * Supabase permette di modificare il template email (per mostrare
- * {{ .Token }}) solo con un SMTP personalizzato configurato: finché non è
- * a posto, si mantiene anche `emailRedirectTo` così il link resta un modo
- * di accesso funzionante in parallelo al campo codice della pagina di login
- * (che resterà inutilizzato finché il template non mostra il codice).
+ * Solo codice, niente link cliccabile nel template email (Authentication →
+ * Emails → Templates → Magic Link su Supabase, riscritto per mostrare solo
+ * {{ .Token }}): un link avrebbe due problemi che il codice evita entrambi —
+ * su iPhone toccarlo apre una webview di Mail con cookie separati da
+ * Safari, dove il code_verifier PKCE non esiste e lo scambio fallisce
+ * sempre; e gli scanner antiphishing di Gmail/Outlook aprono da soli i link
+ * nelle email per controllarli, consumando il codice monouso prima ancora
+ * che l'utente clicchi (causa reale già osservata: "parametri_mancanti" su
+ * /auth/callback). `emailRedirectTo` resta impostato per compatibilità con
+ * altri tipi di email Supabase (es. inviti), ma il template dell'accesso
+ * non genera più nessun link da seguire.
  *
  * Utente singolo: l'indirizzo deve corrispondere a ALLOWED_LOGIN_EMAIL *e*
  * deve già esistere in Supabase Auth (shouldCreateUser: false) — doppia
@@ -45,7 +47,6 @@ export async function POST(request: Request) {
     email: email.trim(),
     options: {
       shouldCreateUser: false,
-      // Provvisorio: vedi commento in cima al file.
       emailRedirectTo: `${origin}/auth/callback`,
     },
   });

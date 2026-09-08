@@ -131,10 +131,9 @@ function FormLogin() {
               Indietro
             </button>
 
-            <h1 className="mb-2 font-heading text-[28px] text-[var(--color-text)]">Controlla la posta</h1>
+            <h1 className="mb-2 font-heading text-[28px] text-[var(--color-text)]">Il codice</h1>
             <p className="mb-8 text-base leading-relaxed" style={{ color: "#3d3a33" }}>
-              Ti abbiamo scritto a <strong>{email}</strong>: tocca il link nell&apos;email per
-              entrare. Se vedi anche un codice a 6 cifre, puoi scriverlo qui sotto invece.
+              Sei cifre appena arrivate a <strong>{email}</strong>. Valgono pochi minuti.
             </p>
 
             <form onSubmit={verificaCodice} className="flex flex-col gap-4">
@@ -211,7 +210,7 @@ function FormLogin() {
                 className="h-14 rounded-2xl font-heading text-[17px] text-white disabled:opacity-60"
                 style={{ background: "var(--color-brand)" }}
               >
-                {stato === "invio" ? "Invio…" : "Mandami il link di accesso"}
+                {stato === "invio" ? "Invio…" : "Mandami il codice"}
               </button>
             </form>
           </>

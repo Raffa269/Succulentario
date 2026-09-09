@@ -16,9 +16,14 @@ import { createClient } from "@/lib/supabase/server";
  * altri tipi di email Supabase (es. inviti), ma il template dell'accesso
  * non genera più nessun link da seguire.
  *
- * Utente singolo: l'indirizzo deve corrispondere a ALLOWED_LOGIN_EMAIL *e*
+ * Accesso su invito: l'indirizzo deve comparire in ALLOWED_LOGIN_EMAILS
+ * (elenco separato da virgole — un solo indirizzo va bene comunque) *e*
  * deve già esistere in Supabase Auth (shouldCreateUser: false) — doppia
- * barriera, non solo lato client.
+ * barriera, non solo lato client. Per aggiungere un tester servono
+ * entrambe le cose: il suo indirizzo in questa variabile d'ambiente, e un
+ * suo utente creato a mano in Supabase (Authentication → Users → Add
+ * user) — altrimenti la barriera lato client passerebbe ma Supabase non
+ * manderebbe comunque nessuna email.
  */
 export async function POST(request: Request) {
   let email: unknown;
@@ -32,8 +37,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Indirizzo email non valido." }, { status: 400 });
   }
 
-  const allowed = process.env.ALLOWED_LOGIN_EMAIL;
-  if (allowed && email.trim().toLowerCase() !== allowed.trim().toLowerCase()) {
+  const consentiti = (process.env.ALLOWED_LOGIN_EMAILS ?? "")
+    .split(",")
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
+  if (consentiti.length > 0 && !consentiti.includes(email.trim().toLowerCase())) {
     return NextResponse.json(
       { error: "Questo Succulentario è privato: nessun accesso per questo indirizzo." },
       { status: 403 },

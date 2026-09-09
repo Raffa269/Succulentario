@@ -168,7 +168,8 @@ export function ModuloNuovaPianta({
     <form onSubmit={invia} className="px-4 pb-10 pt-3">
       <input ref={inputScatta} type="file" accept="image/*" capture="environment" onChange={scegliFoto} className="hidden" />
       <input ref={inputGalleria} type="file" accept="image/*" onChange={scegliFoto} className="hidden" />
-      <input ref={inputIdentifica} type="file" accept="image/*" capture="environment" onChange={identificaDaFile} className="hidden" />
+      {/* Niente `capture`: deve restare la scelta fra scattare e pescare dalla galleria (il selettore nativo la offre di suo). */}
+      <input ref={inputIdentifica} type="file" accept="image/*" onChange={identificaDaFile} className="hidden" />
 
       <div className="mb-2 flex h-12 items-center justify-between">
         <Link href={etichettaLista} className="font-sans text-base font-bold" style={{ color: "var(--color-brand)" }}>

@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { createClient } from "@/lib/supabase/client";
 import { comprimiImmagine } from "@/lib/immagine";
 import {
   aggiornaPianta,
+  aggiungiFotoCrescita,
+  eliminaFotoCrescita,
   eliminaPianta,
   promuoviACollezione,
   riportaInCollezione,
@@ -14,7 +16,7 @@ import {
 } from "@/app/actions/plants";
 import { IllustrazioneGenere } from "@/components/illustrazione-genere";
 import type { Genere } from "@/lib/catalogo";
-import type { Plant } from "@/lib/plants";
+import { formattaMeseAnnoDaData, type Plant, type PlantPhoto } from "@/lib/plants";
 
 const PAGINA_PER_KIND = { collection: "/collezione", wishlist: "/wishlist", lost: "/cimitero" } as const;
 const BORDO_CAMPO = "1.5px solid rgba(32,30,29,.16)";
@@ -89,14 +91,116 @@ function SelettoreCausa({ value, onChange }: { value: string; onChange: (v: stri
   );
 }
 
+/** Striscia di foto datate per seguire la crescita nel tempo (non tocca la foto di copertina). */
+function GalleriaCrescita({
+  plantId,
+  foto,
+  fotoUrl,
+}: {
+  plantId: string;
+  foto: PlantPhoto[];
+  fotoUrl: Record<string, string | undefined>;
+}) {
+  const router = useRouter();
+  const supabase = createClient();
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [caricando, setCaricando] = useState(false);
+  const [errore, setErrore] = useState<string | null>(null);
+
+  async function aggiungi(e: ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    setCaricando(true);
+    setErrore(null);
+
+    try {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (!user) throw new Error("Sessione scaduta: ricarica la pagina.");
+
+      const blob = await comprimiImmagine(file);
+      const percorso = `${user.id}/${crypto.randomUUID()}.jpg`;
+      const { error } = await supabase.storage.from("foto").upload(percorso, blob, { contentType: "image/jpeg" });
+      if (error) throw new Error(error.message);
+
+      await aggiungiFotoCrescita(plantId, percorso);
+      router.refresh();
+    } catch (err) {
+      setErrore(err instanceof Error ? err.message : "Caricamento foto fallito.");
+    } finally {
+      setCaricando(false);
+    }
+  }
+
+  async function elimina(f: PlantPhoto) {
+    if (!confirm("Togliere questa foto dalla cronologia?")) return;
+    try {
+      await eliminaFotoCrescita(f.id, plantId, f.photo_path);
+      router.refresh();
+    } catch (err) {
+      setErrore(err instanceof Error ? err.message : "Eliminazione fallita.");
+    }
+  }
+
+  return (
+    <div className="mt-5">
+      <Etichetta>Foto nel tempo</Etichetta>
+      <div className="flex gap-2.5 overflow-x-auto pb-1">
+        {foto.map((f) => (
+          <div key={f.id} className="relative shrink-0">
+            <div className="relative h-20 w-20 overflow-hidden rounded-2xl" style={{ background: "var(--color-neutral-100)" }}>
+              {fotoUrl[f.id] && <Image src={fotoUrl[f.id]!} alt="" fill unoptimized className="object-cover" />}
+              <button
+                type="button"
+                onClick={() => elimina(f)}
+                aria-label="Togli questa foto"
+                className="absolute right-1 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-white text-xs text-[var(--color-text)]"
+                style={{ boxShadow: "var(--shadow-sm)" }}
+              >
+                ×
+              </button>
+            </div>
+            <p className="mt-1 text-center text-[10px] capitalize text-[var(--color-text-secondary)]">
+              {formattaMeseAnnoDaData(f.created_at)}
+            </p>
+          </div>
+        ))}
+
+        <button
+          type="button"
+          onClick={() => inputRef.current?.click()}
+          disabled={caricando}
+          className="flex h-20 w-20 shrink-0 flex-col items-center justify-center gap-1 rounded-2xl disabled:opacity-60"
+          style={{ background: "var(--color-neutral-200)", border: "2px dashed rgba(32,30,29,.28)" }}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#645c50" strokeWidth={2.75} strokeLinecap="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+          <span className="font-sans text-[10px] font-bold text-[var(--color-text-secondary)]">
+            {caricando ? "…" : "Aggiungi"}
+          </span>
+        </button>
+        <input ref={inputRef} type="file" accept="image/*" onChange={aggiungi} className="hidden" />
+      </div>
+      {errore && <p className="mt-1.5 text-sm text-[var(--color-casa-esclamativo)]">{errore}</p>}
+    </div>
+  );
+}
+
 export function DettaglioPianta({
   plant,
   fotoUrlIniziale,
   generi,
+  fotoCrescita,
+  fotoCrescitaUrl,
 }: {
   plant: Plant;
   fotoUrlIniziale: string | undefined;
   generi: Genere[];
+  fotoCrescita: PlantPhoto[];
+  fotoCrescitaUrl: Record<string, string | undefined>;
 }) {
   const router = useRouter();
   const supabase = createClient();
@@ -106,6 +210,7 @@ export function DettaglioPianta({
   const [purchaseYm, setPurchaseYm] = useState(plant.purchase_ym ?? "");
   const [propSoil, setPropSoil] = useState(plant.prop_soil);
   const [propHum, setPropHum] = useState(plant.prop_hum);
+  const [casaTuttoAnno, setCasaTuttoAnno] = useState(plant.casa_tutto_anno);
   const [notes, setNotes] = useState(plant.notes);
   const [photoPath, setPhotoPath] = useState(plant.photo_path);
   const [fotoUrl, setFotoUrl] = useState(fotoUrlIniziale);
@@ -156,6 +261,7 @@ export function DettaglioPianta({
           propSoil,
           propHum,
           notes,
+          casaTuttoAnno,
           photoPath,
         },
         plant.photo_path,
@@ -234,8 +340,11 @@ export function DettaglioPianta({
       </div>
       <label className="mt-2.5 block text-center font-sans text-sm font-bold" style={{ color: "var(--color-brand)" }}>
         {fotoUrl ? "Cambia foto" : "Aggiungi foto"}
-        <input type="file" accept="image/*" capture="environment" onChange={cambiaFoto} className="hidden" />
+        {/* Niente `capture`: deve restare la scelta fra scattare e pescare dalla galleria. */}
+        <input type="file" accept="image/*" onChange={cambiaFoto} className="hidden" />
       </label>
+
+      <GalleriaCrescita plantId={plant.id} foto={fotoCrescita} fotoUrl={fotoCrescitaUrl} />
 
       <form onSubmit={salva} className="mt-5 flex flex-col gap-4">
         <label>
@@ -300,6 +409,37 @@ export function DettaglioPianta({
                 </button>
               ))}
             </div>
+          </div>
+        )}
+
+        {plant.kind === "collection" && (
+          <div>
+            <Etichetta>Ricovero</Etichetta>
+            <button
+              type="button"
+              onClick={() => setCasaTuttoAnno((v) => !v)}
+              className="flex h-[52px] w-full items-center gap-2.5 rounded-2xl px-3.5"
+              style={
+                casaTuttoAnno
+                  ? { background: "var(--color-fuori)", color: "#fff" }
+                  : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text-secondary)" }
+              }
+            >
+              {casaTuttoAnno ? (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth={3} strokeLinecap="round" aria-hidden="true">
+                  <path d="M4 12l5 5 11-11" />
+                </svg>
+              ) : (
+                <i className="block h-[18px] w-[18px] rounded-md" style={{ border: "2px solid rgba(32,30,29,.3)" }} />
+              )}
+              <span className="font-sans text-sm font-bold">
+                Questa pianta sta bene in casa tutto l&apos;anno
+              </span>
+            </button>
+            <p className="mt-1.5 text-xs leading-relaxed text-[var(--color-text-secondary)]">
+              Un&apos;annotazione tua su questo esemplare, indipendente dall&apos;etichetta di ricovero
+              generale della varietà.
+            </p>
           </div>
         )}
 

@@ -190,6 +190,19 @@ export function ModuloNuovaPianta({
         </button>
       </div>
 
+      {/* Duplicato del pulsante Salva qui sopra, fisso in basso: comodo quando il modulo è compilato e si è scesi con lo scroll. */}
+      <button
+        type="submit"
+        disabled={inviando}
+        className="fixed bottom-24 right-4 z-10 flex h-14 items-center gap-2 rounded-full pl-5 pr-6 text-white disabled:opacity-70"
+        style={{ background: "var(--color-brand)", boxShadow: "var(--shadow-md)" }}
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth={3} strokeLinecap="round" aria-hidden="true">
+          <path d="M20 6L9 17l-5-5" />
+        </svg>
+        <span className="font-heading text-[17px]">{inviando ? "Salvo…" : "Salva"}</span>
+      </button>
+
       <p className="mb-1.5 mt-2.5 font-sans text-xs font-bold uppercase tracking-wider text-[var(--color-text-secondary)]">
         Nome
       </p>

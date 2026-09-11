@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { PlantCard } from "@/components/plant-card";
-import { getGenere, getVarietaByKey, type Ricovero } from "@/lib/catalogo";
+import { generi, getGenere, getVarietaByKey, type Ricovero } from "@/lib/catalogo";
 import type { Plant } from "@/lib/plants";
 
 type Ordinamento = "catalogo" | "recenti" | "nome" | "genere";
@@ -53,6 +53,7 @@ export function ElencoPiante({
   const [ordine, setOrdine] = useState<Ordinamento>(ordinamenti[0]);
   const [filtriAperti, setFiltriAperti] = useState(false);
   const [ricoveriAttivi, setRicoveriAttivi] = useState<Set<Ricovero>>(new Set());
+  const [genereAttivo, setGenereAttivo] = useState("");
 
   // Stesso var_key su più piante della collezione: badge "doppio" sulla card
   // (mai per genere/genus_id soltanto — varietà diverse dello stesso genere
@@ -72,6 +73,7 @@ export function ElencoPiante({
         const r = ricoveroPianta(p);
         if (!r || !ricoveriAttivi.has(r)) return false;
       }
+      if (genereAttivo && p.genus_id !== genereAttivo) return false;
       if (!q) return true;
       return (
         p.name.toLowerCase().includes(q) ||
@@ -88,7 +90,7 @@ export function ElencoPiante({
       ordinate.sort((a, b) => nomeGenere(a).localeCompare(nomeGenere(b), "it"));
 
     return ordinate;
-  }, [piante, query, ordine, ricoveriAttivi]);
+  }, [piante, query, ordine, ricoveriAttivi, genereAttivo]);
 
   function alternaRicovero(r: Ricovero) {
     setRicoveriAttivi((precedente) => {
@@ -121,15 +123,15 @@ export function ElencoPiante({
         <button
           type="button"
           onClick={() => setFiltriAperti((v) => !v)}
-          aria-pressed={filtriAperti || ricoveriAttivi.size > 0}
-          aria-label="Filtra per ricovero"
+          aria-pressed={filtriAperti || ricoveriAttivi.size > 0 || !!genereAttivo}
+          aria-label="Filtra per ricovero e genere"
           className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full"
           style={{ background: "var(--color-neutral-100)" }}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" strokeWidth={2.75} strokeLinecap="round" aria-hidden="true">
             <path d="M4 7h16M7 12h10M10 17h4" />
           </svg>
-          {ricoveriAttivi.size > 0 && (
+          {(ricoveriAttivi.size > 0 || genereAttivo) && (
             <i className="absolute right-1.5 top-1.5 block h-2 w-2 rounded-full" style={{ background: "var(--color-brand)" }} />
           )}
         </button>
@@ -149,7 +151,7 @@ export function ElencoPiante({
       </div>
 
       {filtriAperti && (
-        <div className="mt-2 flex flex-wrap gap-1.5">
+        <div className="mt-2 flex flex-wrap items-center gap-1.5">
           {RICOVERI.map((r) => {
             const attivo = ricoveriAttivi.has(r);
             const colore = COLORE_RICOVERO[r];
@@ -168,6 +170,22 @@ export function ElencoPiante({
               </button>
             );
           })}
+          <select
+            value={genereAttivo}
+            onChange={(e) => setGenereAttivo(e.target.value)}
+            className="h-[30px] rounded-full px-3 font-sans text-xs font-bold tracking-wide"
+            style={{
+              background: genereAttivo ? "var(--color-brand)" : "var(--color-neutral-100)",
+              color: genereAttivo ? "#fff" : "var(--color-text-secondary)",
+            }}
+          >
+            <option value="">Tutti i generi</option>
+            {generi.map((g) => (
+              <option key={g.id} value={g.id}>
+                {g.nome}
+              </option>
+            ))}
+          </select>
         </div>
       )}
 

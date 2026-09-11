@@ -111,6 +111,13 @@ export async function creaManuale(formData: FormData) {
 
   if (error) throw new Error(error.message);
 
+  // La prima foto entra anche nella cronologia di crescita (plant_photos),
+  // così la timeline sulla scheda pianta parte dal giorno dell'aggiunta
+  // invece che dalla prima foto successiva caricata a mano.
+  if (photoPath) {
+    await supabase.from("plant_photos").insert({ owner: userId, plant_id: data.id, photo_path: photoPath });
+  }
+
   revalidatePath("/collezione");
   revalidatePath("/wishlist");
   return { id: data.id as string };
@@ -123,6 +130,7 @@ export interface CampiPianta {
   propSoil: boolean;
   propHum: boolean;
   notes: string;
+  casaTuttoAnno: boolean;
   photoPath?: string | null;
 }
 
@@ -143,6 +151,7 @@ export async function aggiornaPianta(id: string, campi: CampiPianta, fotoPrecede
       prop_soil: campi.propSoil,
       prop_hum: campi.propHum,
       notes: campi.notes,
+      casa_tutto_anno: campi.casaTuttoAnno,
       ...(campi.photoPath !== undefined ? { photo_path: campi.photoPath } : {}),
     })
     .eq("id", id);
@@ -152,6 +161,30 @@ export async function aggiornaPianta(id: string, campi: CampiPianta, fotoPrecede
   revalidatePath("/collezione");
   revalidatePath("/wishlist");
   revalidatePath(`/piante/${id}`);
+}
+
+/** Aggiunge una foto alla cronologia di crescita della pianta (galleria datata sulla scheda). */
+export async function aggiungiFotoCrescita(plantId: string, photoPath: string) {
+  const { supabase, userId } = await clientAutenticato();
+
+  const { error } = await supabase
+    .from("plant_photos")
+    .insert({ owner: userId, plant_id: plantId, photo_path: photoPath });
+  if (error) throw new Error(error.message);
+
+  revalidatePath(`/piante/${plantId}`);
+}
+
+/** Toglie una foto dalla cronologia di crescita (non tocca la foto di copertina). */
+export async function eliminaFotoCrescita(fotoId: string, plantId: string, photoPath: string) {
+  const { supabase } = await clientAutenticato();
+
+  await cancellaFotoSePresente(supabase, photoPath);
+
+  const { error } = await supabase.from("plant_photos").delete().eq("id", fotoId);
+  if (error) throw new Error(error.message);
+
+  revalidatePath(`/piante/${plantId}`);
 }
 
 /** Wishlist -> collezione, in un clic: mese corrente come acquisto (SPECIFICA.md §8.1). */
@@ -224,6 +257,15 @@ export async function eliminaPianta(id: string, photoPath: string | null) {
   const { supabase } = await clientAutenticato();
 
   await cancellaFotoSePresente(supabase, photoPath);
+
+  // La cancellazione della riga si propaga a plant_photos (on delete
+  // cascade), ma non ai file nello Storage: vanno tolti a mano prima,
+  // altrimenti restano foto orfane nel bucket.
+  const { data: fotoCrescita } = await supabase.from("plant_photos").select("photo_path").eq("plant_id", id);
+  const percorsiCrescita = (fotoCrescita ?? []).map((f) => f.photo_path);
+  if (percorsiCrescita.length > 0) {
+    await supabase.storage.from("foto").remove(percorsiCrescita);
+  }
 
   const { error } = await supabase.from("plants").delete().eq("id", id);
   if (error) throw new Error(error.message);

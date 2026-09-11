@@ -31,9 +31,12 @@ const COLORE_RICOVERO: Record<Ricovero, { bg: string; testoChiaro: boolean }> = 
 export function ModuloNuovaPianta({
   kindIniziale,
   generi,
+  varKeyPossedute = [],
 }: {
   kindIniziale: PlantKind;
   generi: Genere[];
+  /** var_key già presenti in collezione: avvisa (senza bloccare) se se ne sceglie una uguale. */
+  varKeyPossedute?: string[];
 }) {
   const router = useRouter();
   const supabase = createClient();
@@ -63,6 +66,7 @@ export function ModuloNuovaPianta({
   const [candidati, setCandidati] = useState<CandidatoIdentificazione[] | null>(null);
 
   const suggerimenti = suggerimentiAperti ? cercaVarietaPerNome(nome) : [];
+  const varietaGiaInCollezione = kind === "collection" && !!varKey && varKeyPossedute.includes(varKey);
 
   function scegliFoto(e: ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -225,6 +229,22 @@ export function ModuloNuovaPianta({
           </div>
         )}
       </div>
+
+      {varietaGiaInCollezione && (
+        <div
+          className="mt-2.5 flex gap-2.5 rounded-2xl p-3.5"
+          style={{ background: "var(--color-casa-esclamativo-tinta)" }}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-casa-esclamativo)" strokeWidth={2.5} strokeLinecap="round" className="mt-0.5 shrink-0" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 8v5M12 16h.01" />
+          </svg>
+          <p className="text-sm leading-relaxed text-[var(--color-text)]">
+            Hai già questa varietà in collezione. Puoi aggiungerla comunque — comparirà con
+            l&apos;etichetta <b>doppio</b> sulle schede, per tenerle d&apos;occhio.
+          </p>
+        </div>
+      )}
 
       <div className="mt-4 flex gap-2.5">
         <button

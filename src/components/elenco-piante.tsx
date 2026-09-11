@@ -54,6 +54,17 @@ export function ElencoPiante({
   const [filtriAperti, setFiltriAperti] = useState(false);
   const [ricoveriAttivi, setRicoveriAttivi] = useState<Set<Ricovero>>(new Set());
 
+  // Stesso var_key su più piante della collezione: badge "doppio" sulla card
+  // (mai per genere/genus_id soltanto — varietà diverse dello stesso genere
+  // non contano come doppioni).
+  const varKeyDuplicati = useMemo(() => {
+    const conteggio = new Map<string, number>();
+    for (const p of piante) {
+      if (p.var_key) conteggio.set(p.var_key, (conteggio.get(p.var_key) ?? 0) + 1);
+    }
+    return new Set([...conteggio].filter(([, n]) => n > 1).map(([k]) => k));
+  }, [piante]);
+
   const risultato = useMemo(() => {
     const q = query.trim().toLowerCase();
     const filtrate = piante.filter((p) => {
@@ -165,7 +176,12 @@ export function ElencoPiante({
       ) : (
         <div className="mt-4 grid grid-cols-2 gap-3">
           {risultato.map((p) => (
-            <PlantCard key={p.id} plant={p} fotoUrl={fotoUrl[p.id]} />
+            <PlantCard
+              key={p.id}
+              plant={p}
+              fotoUrl={fotoUrl[p.id]}
+              duplicato={!!p.var_key && varKeyDuplicati.has(p.var_key)}
+            />
           ))}
         </div>
       )}

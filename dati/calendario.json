@@ -1,0 +1,92 @@
+[
+  {
+    "mese": 1,
+    "voci": [
+      { "genere": "lithops", "azione": "In pieno riposo", "dettaglio": "Zero acqua: il nuovo paio di foglie si forma dentro il vecchio, consumandolo. Annaffiare ora produce paia doppie e deformi." },
+      { "genere": "kalanchoe", "azione": "Dovrebbero fiorire", "dettaglio": "Le piante messe al buio la sera a inizio ottobre dovrebbero aprire i boccioli in queste settimane, circa dodici settimane dopo." }
+    ]
+  },
+  {
+    "mese": 2,
+    "voci": [
+      { "genere": "lithops", "azione": "Ultimo mese di riposo", "dettaglio": "Ancora zero acqua: il cambio del paio di foglie continua fino a metà aprile." },
+      { "genere": "kalanchoe", "azione": "Ultime settimane di buio", "dettaglio": "Il fotoperiodo finisce il 1° marzo: fino ad allora niente luce artificiale la sera nella stanza dove sverna." }
+    ]
+  },
+  {
+    "mese": 3,
+    "voci": [
+      { "genere": "sansevieria", "azione": "Si torna ad annaffiare", "dettaglio": "Finisce la pausa invernale (poca acqua da ottobre a febbraio): si riprende il ritmo normale, sempre aspettando che il substrato sia asciutto." },
+      { "genere": "echeveria", "azione": "Si torna ad annaffiare", "dettaglio": "Fine dello stop invernale (ottobre-febbraio): si ricomincia con il classico inzuppa e asciuga." },
+      { "genere": "aloe", "azione": "Si torna ad annaffiare", "dettaglio": "Finisce l'acqua zero di novembre-febbraio. Le piante svernate in casa vanno riabituate al sole pieno gradualmente." },
+      { "genere": "crassula", "azione": "Si torna ad annaffiare", "dettaglio": "Finisce la pausa di novembre-febbraio: si riprende con moderazione, sempre a terreno asciutto." },
+      { "genere": "curio", "azione": "Finisce il riposo delle collane", "dettaglio": "Rowleyanus e herreanus escono dal riposo asciutto invernale: si torna ad annaffiare e possono tornare fuori." },
+      { "genere": "euphorbia", "azione": "Si torna ad annaffiare", "dettaglio": "Finisce la drastica riduzione di ottobre-febbraio: si ricomincia a bagnare a fondo, sempre lasciando asciugare bene tra un'annaffiatura e l'altra." },
+      { "genere": "kalanchoe", "azione": "Finisce il fotoperiodo", "dettaglio": "Dal 1° marzo la stanza dove svernano può tornare a essere illuminata la sera." }
+    ]
+  },
+  {
+    "mese": 4,
+    "voci": [
+      { "genere": "haworthia", "azione": "Iniziano i mesi d'ombra", "dettaglio": "Da qui a settembre vogliono ombra luminosa: il sole pieno del terrazzo scotta Haworthia e Gasteria." },
+      { "genere": "lithops", "azione": "Riprendono l'acqua", "dettaglio": "A metà mese il nuovo paio di foglie emerge: si riprende ad annaffiare con delicatezza, ogni 2-3 settimane, solo a substrato completamente asciutto." },
+      { "genere": "caudici", "azione": "Riprendono l'acqua", "dettaglio": "Alle prime foglie nuove su Adenium e Pachypodium si torna a bagnare a fondo, sempre aspettando che il substrato sia asciutto tra un'annaffiatura e l'altra." }
+    ]
+  },
+  {
+    "mese": 5,
+    "voci": []
+  },
+  {
+    "mese": 6,
+    "voci": []
+  },
+  {
+    "mese": 7,
+    "voci": [
+      { "genere": "crassula", "azione": "Riposo estivo per alcune", "dettaglio": "Le specie sudafricane a crescita fresca (columnaris, barklyi, plegmatoides, tecta e simili) entrano in riposo: acqua quasi a zero anche in piena estate." },
+      { "genere": "lithops", "azione": "Riposo estivo", "dettaglio": "Sopra i 35 °C entrano in riposo: si sospende di nuovo completamente l'acqua, fino a fine agosto." }
+    ]
+  },
+  {
+    "mese": 8,
+    "voci": [
+      { "genere": "lithops", "azione": "Ancora in riposo estivo", "dettaglio": "Zero acqua fino a fine mese: annaffiare ora li fa marcire." }
+    ]
+  },
+  {
+    "mese": 9,
+    "voci": [
+      { "genere": "lithops", "azione": "Riprendono l'acqua", "dettaglio": "È l'acqua stessa a innescare la fioritura: prima le specie a fiore giallo, poi quelle a fiore bianco fino a novembre." },
+      { "genere": "sansevieria", "azione": "Ultima concimazione", "dettaglio": "Il concime va sospeso con la fine della stagione di crescita: da qui si riprende solo in primavera." },
+      { "genere": "caudici", "azione": "Ultima concimazione", "dettaglio": "Per Adenium e Pachypodium il concime si sospende del tutto con l'avvicinarsi del riposo." }
+    ]
+  },
+  {
+    "mese": 10,
+    "voci": [
+      { "genere": "sansevieria", "azione": "Si ritirano", "dettaglio": "Quando le minime si avvicinano ai 12 °C vanno in un locale luminoso: da qui l'acqua scende a una volta ogni due settimane circa." },
+      { "genere": "echeveria", "azione": "Si sospende l'acqua fuori", "dettaglio": "Se restano in terrazzo, servono un angolo coperto, luminoso e ventilato dove la pioggia non arrivi: niente acqua fino a febbraio." },
+      { "genere": "euphorbia", "azione": "Acqua ridotta drasticamente", "dettaglio": "Da qui a febbraio solo il minimo per evitare che il fusto si raggrinzisca. Le tropicali e le malgasce (trigona, tirucalli, milii, decaryi...) vanno in casa a circa 13 °C." },
+      { "genere": "kalanchoe", "azione": "Inizia il fotoperiodo", "dettaglio": "Dal 1° ottobre servono notti buie di 14-16 ore per far formare i boccioli: niente luce artificiale la sera nella stanza dove sverna." },
+      { "genere": "caudici", "azione": "Iniziano a perdere le foglie", "dettaglio": "Con le prime foglie che cadono inizia il riposo: acqua quasi a zero, ed è proprio l'eccesso di cure invernali a far marcire la maggior parte degli Adenium in Italia." }
+    ]
+  },
+  {
+    "mese": 11,
+    "voci": [
+      { "genere": "aloe", "azione": "Acqua a zero", "dettaglio": "Da qui a febbraio è la pioggia su un vaso che non asciuga a far marcire le radici, non il freddo in sé. Le miniature del Madagascar vanno al coperto." },
+      { "genere": "crassula", "azione": "Acqua quasi a zero", "dettaglio": "Fino a febbraio, in un angolo coperto e ventilato: è il freddo umido a far marcire le radici. La sarcocaulis fa eccezione e resta fuori senza problemi." },
+      { "genere": "curio", "azione": "Riposo per le collane", "dettaglio": "Rowleyanus e herreanus vogliono un riposo asciutto a 13-15 °C in casa: è quello che le fa fiorire l'estate dopo. Le chalk sticks (talinoides, serpens, mandraliscae) restano fuori senza problemi." },
+      { "genere": "haworthia", "azione": "In casa", "dettaglio": "Le temperature si avvicinano alle soglie critiche (5 °C per Haworthia, 10 °C per Gasteria): vicino a una finestra a est o nord, con acqua una volta al mese o meno." },
+      { "genere": "sedum", "azione": "Al riparo le pendule", "dettaglio": "Le specie messicane e cascanti (morganianum, rubrotinctum, nussbaumerianum...) vanno protette sotto i 5 °C. Le specie rustiche da giardino restano fuori, gelo compreso." },
+      { "genere": "lithops", "azione": "Inizia il riposo", "dettaglio": "Zero acqua fino a metà aprile: il nuovo paio di foglie si forma consumando il vecchio." }
+    ]
+  },
+  {
+    "mese": 12,
+    "voci": [
+      { "genere": "kalanchoe", "azione": "Fotoperiodo in corso", "dettaglio": "Continua a tenere al buio la sera la stanza dove sverna: mancano ancora settimane alla fioritura." }
+    ]
+  }
+]

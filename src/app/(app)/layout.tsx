@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { NavLink } from "@/components/nav-link";
+import { voceCalendarioDelMese } from "@/lib/catalogo";
 
 const iconaProps = {
   viewBox: "0 0 24 24",
@@ -44,7 +45,18 @@ const icone = {
  * schermata di apertura, non c'è più una Home separata. Ogni pagina porta
  * la propria intestazione — qui restano solo i contenuti e la barra.
  */
+/**
+ * Il pallino su Allerte è calcolato qui, lato server: su questo layout
+ * girano anche pagine statiche (prerenderizzate una volta al deploy, es.
+ * /guida, /cerca) dove resterebbe congelato al mese della build finché non
+ * si ripubblica — accettabile per un indicatore secondario come questo
+ * (il contenuto vero di /allerte, che conta, è invece dinamico per scelta:
+ * vedi `export const dynamic` in quella pagina).
+ */
 export default function AppLayout({ children }: { children: ReactNode }) {
+  const meseCorrente = new Date().getMonth() + 1;
+  const cambiDiStagione = voceCalendarioDelMese(meseCorrente).length > 0;
+
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1 pb-24">{children}</main>
@@ -55,7 +67,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
       >
         <NavLink href="/collezione" label="Collezione" icona={icone.collezione} />
         <NavLink href="/generi" label="Generi" icona={icone.generi} />
-        <NavLink href="/allerte" label="Allerte" icona={icone.allerte} />
+        <NavLink href="/allerte" label="Allerte" icona={icone.allerte} segnale={cambiDiStagione} />
         <NavLink href="/numeri" label="Numeri" icona={icone.numeri} />
       </nav>
     </div>

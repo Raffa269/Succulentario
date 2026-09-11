@@ -113,7 +113,10 @@ export function ModuloImportazione() {
   if (fase === "scegli" || fase === "errore") {
     return (
       <div className="mt-4">
-        <label className="flex h-14 cursor-pointer items-center justify-center rounded-lg border border-dashed border-black/20 px-4 text-center text-sm text-[var(--color-text-secondary)]">
+        <label
+          className="flex h-14 cursor-pointer items-center justify-center rounded-2xl px-4 text-center font-sans text-sm font-medium text-[var(--color-text-secondary)]"
+          style={{ background: "#fff", border: "2px dashed rgba(32,30,29,.28)" }}
+        >
           Scegli il file di backup (.json o .html)
           <input
             type="file"
@@ -137,8 +140,8 @@ export function ModuloImportazione() {
     };
 
     return (
-      <div className="mt-4 flex flex-col gap-4">
-        <div className="rounded-lg border border-black/10 bg-[var(--color-surface)] p-4 text-sm text-[var(--color-text)]">
+      <div className="mt-4 flex flex-col gap-3.5">
+        <div className="rounded-2xl p-4 text-sm text-[var(--color-text)]" style={{ background: "var(--color-neutral-100)" }}>
           <p>
             {conteggi.collection} in collezione, {conteggi.wishlist} in wishlist, {conteggi.lost} nel
             cimitero.
@@ -147,8 +150,8 @@ export function ModuloImportazione() {
         </div>
 
         {relinkFalliti.length > 0 && (
-          <div className="rounded-lg border border-[var(--color-casa)]/30 bg-[var(--color-casa)]/10 p-4 text-sm">
-            <p className="font-medium text-[var(--color-text)]">
+          <div className="rounded-2xl p-4 text-sm" style={{ background: "var(--color-casa-tinta)" }}>
+            <p className="font-sans font-bold text-[var(--color-text)]">
               {relinkFalliti.length} varietà non riconosciute nel catalogo
             </p>
             <p className="mt-1 text-[var(--color-text-secondary)]">
@@ -158,39 +161,51 @@ export function ModuloImportazione() {
           </div>
         )}
 
-        <div className="flex rounded-lg border border-black/10 p-1">
-          <button
-            type="button"
-            onClick={() => setModalita("unisci")}
-            className="h-9 flex-1 rounded-md text-sm font-medium"
-            style={{
-              backgroundColor: modalita === "unisci" ? "var(--color-fuori)" : "transparent",
-              color: modalita === "unisci" ? "#fff" : "var(--color-text-secondary)",
-            }}
-          >
-            Unisci ai dati attuali
-          </button>
-          <button
-            type="button"
-            onClick={() => setModalita("sostituisci")}
-            className="h-9 flex-1 rounded-md text-sm font-medium"
-            style={{
-              backgroundColor: modalita === "sostituisci" ? "var(--color-casa-esclamativo)" : "transparent",
-              color: modalita === "sostituisci" ? "#fff" : "var(--color-text-secondary)",
-            }}
-          >
-            Sostituisci tutto
-          </button>
-        </div>
-        {modalita === "sostituisci" && (
-          <p className="text-sm text-[var(--color-casa-esclamativo)]">
-            Cancella prima tutte le piante attuali. Non si può annullare.
+        <div>
+          <div className="flex rounded-2xl p-1" style={{ background: "var(--color-neutral-100)" }}>
+            <button
+              type="button"
+              onClick={() => setModalita("unisci")}
+              className="h-10 flex-1 rounded-xl font-sans text-sm font-bold"
+              style={{
+                backgroundColor: modalita === "unisci" ? "var(--color-brand)" : "transparent",
+                color: modalita === "unisci" ? "#fff" : "var(--color-text-secondary)",
+              }}
+            >
+              Unisci ai dati attuali
+            </button>
+            <button
+              type="button"
+              onClick={() => setModalita("sostituisci")}
+              className="h-10 flex-1 rounded-xl font-sans text-sm font-bold"
+              style={{
+                backgroundColor: modalita === "sostituisci" ? "var(--color-casa-esclamativo)" : "transparent",
+                color: modalita === "sostituisci" ? "#fff" : "var(--color-text-secondary)",
+              }}
+            >
+              Sostituisci tutto
+            </button>
+          </div>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+            {modalita === "unisci" ? (
+              <>
+                Aggiunge solo le piante nuove: quelle già importate da questo stesso file vengono
+                riconosciute e aggiornate, mai duplicate. Puoi importare lo stesso backup più
+                volte senza pericolo.
+              </>
+            ) : (
+              <span style={{ color: "var(--color-casa-esclamativo)" }}>
+                Cancella prima tutte le piante attuali (foto comprese) e poi importa da zero. Non
+                si può annullare.
+              </span>
+            )}
           </p>
-        )}
+        </div>
 
         <button
           onClick={importa}
-          className="h-11 rounded-lg bg-[var(--color-fuori)] font-medium text-white"
+          className="h-[52px] rounded-2xl font-heading text-[15px] text-white"
+          style={{ background: "var(--color-brand)" }}
         >
           Importa {voci.length} piante
         </button>
@@ -202,7 +217,7 @@ export function ModuloImportazione() {
     return (
       <div className="mt-10 text-center">
         <p className="text-[var(--color-text)]">Importazione in corso…</p>
-        <p className="mt-1 font-mono text-sm text-[var(--color-text-secondary)]">
+        <p className="mt-1 font-sans text-sm text-[var(--color-text-secondary)]" style={{ fontVariantNumeric: "tabular-nums" }}>
           {progresso} / {voci.length}
         </p>
       </div>
@@ -214,7 +229,8 @@ export function ModuloImportazione() {
       <p className="text-[var(--color-text)]">Fatto: {voci.length} piante importate.</p>
       <button
         onClick={() => router.push("/collezione")}
-        className="mt-4 h-11 rounded-lg bg-[var(--color-fuori)] px-6 font-medium text-white"
+        className="mt-4 h-[52px] rounded-2xl px-6 font-heading text-[15px] text-white"
+        style={{ background: "var(--color-brand)" }}
       >
         Vai alla collezione
       </button>

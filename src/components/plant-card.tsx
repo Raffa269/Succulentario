@@ -32,7 +32,16 @@ function ChipPropagazione({ attiva, children }: { attiva: boolean; children: str
   );
 }
 
-export function PlantCard({ plant, fotoUrl }: { plant: Plant; fotoUrl?: string }) {
+export function PlantCard({
+  plant,
+  fotoUrl,
+  duplicato,
+}: {
+  plant: Plant;
+  fotoUrl?: string;
+  /** Un'altra pianta della collezione ha la stessa varietà schedata (stesso var_key). */
+  duplicato?: boolean;
+}) {
   const genere = plant.genus_id ? getGenere(plant.genus_id) : undefined;
   const varieta = plant.var_key ? getVarietaByKey(plant.var_key) : undefined;
   const ricovero = plant.kind === "lost" ? undefined : varieta?.ricovero;
@@ -47,11 +56,27 @@ export function PlantCard({ plant, fotoUrl }: { plant: Plant; fotoUrl?: string }
       {fotoUrl ? (
         <div className="relative h-[112px] w-full">
           <Image src={fotoUrl} alt={plant.name} fill unoptimized className="object-cover" />
+          {duplicato && (
+            <span
+              className="absolute bottom-1.5 left-1.5 rounded-md px-1.5 py-0.5 font-sans text-[10px] font-bold uppercase tracking-wide text-white"
+              style={{ background: "var(--color-casa-esclamativo)" }}
+            >
+              doppio
+            </span>
+          )}
         </div>
       ) : (
-        <div className="flex h-[112px] items-center justify-center" style={{ background: illustrazione.tinta }}>
+        <div className="relative flex h-[112px] items-center justify-center" style={{ background: illustrazione.tinta }}>
           {genere && (
             <IllustrazioneGenere genereId={genere.id} className="h-16 w-16" style={{ color: illustrazione.inchiostro }} />
+          )}
+          {duplicato && (
+            <span
+              className="absolute bottom-1.5 left-1.5 rounded-md px-1.5 py-0.5 font-sans text-[10px] font-bold uppercase tracking-wide text-white"
+              style={{ background: "var(--color-casa-esclamativo)" }}
+            >
+              doppio
+            </span>
           )}
         </div>
       )}

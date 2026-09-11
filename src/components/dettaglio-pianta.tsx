@@ -32,6 +32,63 @@ const classeCampo =
 const classeArea =
   "w-full rounded-2xl bg-white p-[15px] text-base text-[var(--color-text)] outline-none";
 
+const OPZIONI_CAUSA = ["Marciume", "Poca acqua", "Troppo sole", "Venduta", "Non saprei"];
+
+/** Chip predefinite + "Altro" con campo libero, per la causa della perdita. */
+function SelettoreCausa({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const [modalitaAltro, setModalitaAltro] = useState(value !== "" && !OPZIONI_CAUSA.includes(value));
+
+  return (
+    <div>
+      <div className="flex flex-wrap gap-2">
+        {OPZIONI_CAUSA.map((opzione) => (
+          <button
+            key={opzione}
+            type="button"
+            onClick={() => {
+              setModalitaAltro(false);
+              onChange(opzione);
+            }}
+            className="rounded-full px-3.5 py-2 font-sans text-sm font-medium"
+            style={
+              !modalitaAltro && value === opzione
+                ? { background: "var(--color-casa-esclamativo)", color: "#fff" }
+                : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text-secondary)" }
+            }
+          >
+            {opzione}
+          </button>
+        ))}
+        <button
+          type="button"
+          onClick={() => {
+            setModalitaAltro(true);
+            onChange("");
+          }}
+          className="rounded-full px-3.5 py-2 font-sans text-sm font-medium"
+          style={
+            modalitaAltro
+              ? { background: "var(--color-casa-esclamativo)", color: "#fff" }
+              : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text-secondary)" }
+          }
+        >
+          Altro
+        </button>
+      </div>
+      {modalitaAltro && (
+        <input
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder="Scrivi la causa…"
+          autoFocus
+          className={`${classeCampo} mt-2`}
+          style={{ border: BORDO_CAMPO }}
+        />
+      )}
+    </div>
+  );
+}
+
 export function DettaglioPianta({
   plant,
   fotoUrlIniziale,
@@ -257,10 +314,10 @@ export function DettaglioPianta({
               <Etichetta>Mese della perdita</Etichetta>
               <input type="month" value={lostYm} onChange={(e) => setLostYm(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
             </label>
-            <label>
+            <div>
               <Etichetta>Causa</Etichetta>
-              <input value={cause} onChange={(e) => setCause(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
-            </label>
+              <SelettoreCausa value={cause} onChange={setCause} />
+            </div>
             <label>
               <Etichetta>Lezione imparata</Etichetta>
               <textarea value={lesson} onChange={(e) => setLesson(e.target.value)} rows={2} className={classeArea} style={{ border: BORDO_CAMPO }} />
@@ -309,10 +366,10 @@ export function DettaglioPianta({
               <Etichetta>Mese</Etichetta>
               <input type="month" value={lostYm} onChange={(e) => setLostYm(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
             </label>
-            <label className="mt-3 block">
+            <div className="mt-3">
               <Etichetta>Causa</Etichetta>
-              <input value={cause} onChange={(e) => setCause(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
-            </label>
+              <SelettoreCausa value={cause} onChange={setCause} />
+            </div>
             <label className="mt-3 block">
               <Etichetta>Lezione imparata</Etichetta>
               <textarea value={lesson} onChange={(e) => setLesson(e.target.value)} rows={2} className={classeArea} style={{ border: BORDO_CAMPO }} />

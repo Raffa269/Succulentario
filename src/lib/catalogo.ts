@@ -2,11 +2,16 @@ import generiJson from "../../dati/generi.json";
 import varietaJson from "../../dati/varieta.json";
 import guidaJson from "../../dati/guida.json";
 import illustrazioniJson from "../../dati/illustrazioni.json";
+import calendarioJson from "../../dati/calendario.json";
 
 /**
- * Carica e indicizza i quattro JSON di `dati/`: dati di sola lettura
- * versionati nel repo (non righe di database — vedi SPECIFICA.md §5).
- * Non riscrivere i testi botanici: sono verificati su fonti reali.
+ * Carica e indicizza i JSON di `dati/`: dati di sola lettura versionati nel
+ * repo (non righe di database — vedi SPECIFICA.md §5). Non riscrivere i
+ * testi botanici di generi/varieta/guida: sono verificati su fonti reali.
+ * `calendario.json` fa eccezione: è una bozza scritta da Claude (settembre
+ * 2026, su richiesta esplicita di Raffaele) non ancora verificata riga per
+ * riga — segnalarlo se viene toccato, non trattarlo come i testi già
+ * verificati.
  */
 
 export type Ricovero = "fuori" | "riparo" | "casa" | "casa!";
@@ -48,9 +53,21 @@ export type BloccoGuida =
 
 export type Illustrazioni = Record<string, string>;
 
+export interface VoceCalendario {
+  genere: string;
+  azione: string;
+  dettaglio: string;
+}
+
+interface MeseCalendario {
+  mese: number;
+  voci: VoceCalendario[];
+}
+
 export const generi: Genere[] = generiJson as Genere[];
 export const varieta: Varieta[] = varietaJson as Varieta[];
 export const guida: BloccoGuida[] = guidaJson as BloccoGuida[];
+export const calendario: MeseCalendario[] = calendarioJson as MeseCalendario[];
 export const illustrazioni: Illustrazioni = illustrazioniJson as Illustrazioni;
 
 const ORDINE_RICOVERO: Ricovero[] = ["fuori", "riparo", "casa", "casa!"];
@@ -104,6 +121,11 @@ export function contaCatalogo() {
 
 export function ordineRicovero(r: Ricovero): number {
   return ORDINE_RICOVERO.indexOf(r);
+}
+
+/** Le voci del calendario stagionale per un mese (1 = gennaio, 12 = dicembre). Vedi il commento su `calendario.json` in cima al file. */
+export function voceCalendarioDelMese(mese: number): VoceCalendario[] {
+  return calendario.find((m) => m.mese === mese)?.voci ?? [];
 }
 
 /**

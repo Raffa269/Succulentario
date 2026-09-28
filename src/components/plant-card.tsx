@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { getGenere, getVarietaByKey, type Ricovero } from "@/lib/catalogo";
 import { IllustrazioneGenere } from "@/components/illustrazione-genere";
-import { formattaMese, type Plant } from "@/lib/plants";
-import { indicazioniPerPianta } from "@/lib/coltivazione";
+import type { Plant } from "@/lib/plants";
+import { indicazioniPerPianta, type Esposizione, type Terriccio } from "@/lib/coltivazione";
 
 const FASCIA: Record<Ricovero, { bg: string; testoChiaro: boolean; etichetta: string }> = {
   fuori: { bg: "var(--color-fuori)", testoChiaro: true, etichetta: "fuori" },
@@ -27,6 +27,85 @@ function ChipPropagazione({ attiva, children }: { attiva: boolean; children: str
         background: attiva ? "var(--color-fuori-tinta)" : "var(--color-neutral-200)",
         color: attiva ? "#0f5c30" : "var(--color-text-secondary)",
       }}
+    >
+      {children}
+    </span>
+  );
+}
+
+function IconaEsposizione({ valore }: { valore: Esposizione }) {
+  if (valore === "sole pieno") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" fill="currentColor" />
+        <path
+          d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeWidth="2"
+        />
+      </svg>
+    );
+  }
+  if (valore === "mezzo sole") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
+        <path d="M12 4a8 8 0 1 0 0 16Z" fill="currentColor" />
+        <path
+          d="M12 4a8 8 0 0 1 0 16M12 1.8v2.4M12 19.8v2.4M1.8 12h2.4M19.8 12h2.4"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeWidth="1.8"
+        />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
+      <path d="M5 18h14a7 7 0 0 0-14 0Z" fill="currentColor" opacity="0.28" />
+      <path d="M4 18h16M8 14.5a5 5 0 0 1 8 0" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
+      <path d="M3 7c3 2 6 2 9 0s6-2 9 0" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function IconaTerriccio({ valore }: { valore: Terriccio }) {
+  const punti = valore === "meno drenante" ? 3 : valore === "normale" ? 5 : 7;
+  const coordinate = [
+    [6, 15],
+    [10, 12],
+    [14, 16],
+    [18, 13],
+    [8, 18],
+    [13, 19],
+    [17, 18],
+  ];
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
+      <path d="M4 11h16l-2.2 8H6.2Z" fill="currentColor" opacity="0.22" />
+      <path d="M4 11h16M6.2 19h11.6" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
+      {coordinate.slice(0, punti).map(([cx, cy]) => (
+        <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="1.1" fill="currentColor" />
+      ))}
+    </svg>
+  );
+}
+
+function BadgeIndicazione({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <span
+      title={label}
+      aria-label={label}
+      className="flex h-7 w-7 items-center justify-center rounded-full"
+      style={{ background: "var(--color-neutral-200)", color: "var(--color-brand)" }}
     >
       {children}
     </span>
@@ -104,14 +183,15 @@ export function PlantCard({
           </p>
         )}
         <p className="mt-0.5 font-serif text-[17px] italic leading-tight text-[var(--color-text)]">{plant.name}</p>
-        <p className="mt-0.5 text-[11px] text-[var(--color-text-secondary)]">
-          {genere?.nome ?? "—"}
-          {plant.purchase_ym ? ` · ${formattaMese(plant.purchase_ym)}` : ""}
-        </p>
         {plant.kind !== "lost" && (
-          <p className="mt-1 text-[10px] leading-snug text-[var(--color-text-secondary)]">
-            {indicazioni.esposizione} · {indicazioni.terriccio}
-          </p>
+          <div className="mt-2 flex gap-1.5">
+            <BadgeIndicazione label={`Esposizione: ${indicazioni.esposizione}`}>
+              <IconaEsposizione valore={indicazioni.esposizione} />
+            </BadgeIndicazione>
+            <BadgeIndicazione label={`Terriccio: ${indicazioni.terriccio}`}>
+              <IconaTerriccio valore={indicazioni.terriccio} />
+            </BadgeIndicazione>
+          </div>
         )}
         {plant.kind === "collection" && (
           <div className="mt-2 flex gap-1.5">

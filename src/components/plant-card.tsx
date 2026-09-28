@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getGenere, getVarietaByKey, type Ricovero } from "@/lib/catalogo";
 import { IllustrazioneGenere } from "@/components/illustrazione-genere";
 import { formattaMese, type Plant } from "@/lib/plants";
+import { indicazioniPerPianta } from "@/lib/coltivazione";
 
 const FASCIA: Record<Ricovero, { bg: string; testoChiaro: boolean; etichetta: string }> = {
   fuori: { bg: "var(--color-fuori)", testoChiaro: true, etichetta: "fuori" },
@@ -46,6 +47,7 @@ export function PlantCard({
   const varieta = plant.var_key ? getVarietaByKey(plant.var_key) : undefined;
   const ricovero = plant.kind === "lost" ? undefined : varieta?.ricovero;
   const illustrazione = ricovero ? SFONDO_ILLUSTRAZIONE[ricovero] : SFONDO_ILLUSTRAZIONE.riparo;
+  const indicazioni = indicazioniPerPianta(plant);
 
   return (
     <Link
@@ -106,6 +108,11 @@ export function PlantCard({
           {genere?.nome ?? "—"}
           {plant.purchase_ym ? ` · ${formattaMese(plant.purchase_ym)}` : ""}
         </p>
+        {plant.kind !== "lost" && (
+          <p className="mt-1 text-[10px] leading-snug text-[var(--color-text-secondary)]">
+            {indicazioni.esposizione} · {indicazioni.terriccio}
+          </p>
+        )}
         {plant.kind === "collection" && (
           <div className="mt-2 flex gap-1.5">
             <ChipPropagazione attiva={plant.prop_soil}>TERRA</ChipPropagazione>

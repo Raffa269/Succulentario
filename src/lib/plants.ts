@@ -20,6 +20,11 @@ export interface Plant {
   updated_at: string;
   /** Annotazione dell'utente: questa pianta, a differenza dell'indicazione generale della varietà, sta bene in casa tutto l'anno. */
   casa_tutto_anno: boolean;
+  last_repot_date: string | null;
+  pot_diameter_cm: number | null;
+  max_height: string;
+  max_width: string;
+  dark_period: string;
 }
 
 /** Una foto della cronologia di crescita di una pianta (tabella plant_photos). */

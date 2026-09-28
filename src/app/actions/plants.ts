@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { getVarietaByKey } from "@/lib/catalogo";
 import { meseCorrente, type PlantKind } from "@/lib/plants";
+import { schedaColtivazioneSuggerita } from "@/lib/scheda-coltivazione";
 
 async function clientAutenticato() {
   const supabase = await createClient();
@@ -46,6 +47,7 @@ export async function creaDaVarieta(kind: "collection" | "wishlist", varKey: str
   if (!varieta) throw new Error("Varietà non trovata nel catalogo.");
 
   const num = kind === "collection" ? await prossimoNumero(supabase, userId) : null;
+  const scheda = schedaColtivazioneSuggerita(varieta.key, varieta.genere);
 
   const { data, error } = await supabase
     .from("plants")
@@ -57,6 +59,9 @@ export async function creaDaVarieta(kind: "collection" | "wishlist", varKey: str
       var_key: varieta.key,
       num,
       purchase_ym: kind === "collection" ? meseCorrente() : null,
+      max_height: scheda.maxHeight,
+      max_width: scheda.maxWidth,
+      dark_period: scheda.darkPeriod,
     })
     .select("id")
     .single();
@@ -90,6 +95,7 @@ export async function creaManuale(formData: FormData) {
   const propSoil = formData.get("propSoil") === "1";
   const propHum = formData.get("propHum") === "1";
   const num = kind === "collection" ? await prossimoNumero(supabase, userId) : null;
+  const scheda = schedaColtivazioneSuggerita(varKey, genusId);
 
   const { data, error } = await supabase
     .from("plants")
@@ -105,6 +111,9 @@ export async function creaManuale(formData: FormData) {
       prop_soil: propSoil,
       prop_hum: propHum,
       purchase_ym: kind === "collection" ? (purchaseYmForm ?? meseCorrente()) : null,
+      max_height: scheda.maxHeight,
+      max_width: scheda.maxWidth,
+      dark_period: scheda.darkPeriod,
     })
     .select("id")
     .single();
@@ -131,6 +140,11 @@ export interface CampiPianta {
   propHum: boolean;
   notes: string;
   casaTuttoAnno: boolean;
+  lastRepotDate: string | null;
+  potDiameterCm: number | null;
+  maxHeight: string;
+  maxWidth: string;
+  darkPeriod: string;
   photoPath?: string | null;
 }
 
@@ -152,6 +166,11 @@ export async function aggiornaPianta(id: string, campi: CampiPianta, fotoPrecede
       prop_hum: campi.propHum,
       notes: campi.notes,
       casa_tutto_anno: campi.casaTuttoAnno,
+      last_repot_date: campi.lastRepotDate,
+      pot_diameter_cm: campi.potDiameterCm,
+      max_height: campi.maxHeight || "???",
+      max_width: campi.maxWidth || "???",
+      dark_period: campi.darkPeriod || "???",
       ...(campi.photoPath !== undefined ? { photo_path: campi.photoPath } : {}),
     })
     .eq("id", id);

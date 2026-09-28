@@ -32,6 +32,13 @@ const icone = {
       <path d="M12 3v18M5 7l14 10M19 7L5 17" />
     </svg>
   ),
+  calendario: (
+    <svg {...iconaProps}>
+      <rect x="4" y="5" width="16" height="15" rx="3" />
+      <path d="M8 3v4M16 3v4M4 10h16" />
+      <path d="M8 14h.01M12 14h.01M16 14h.01" />
+    </svg>
+  ),
   numeri: (
     <svg {...iconaProps}>
       <path d="M5 20V10M12 20V4M19 20v-7" />
@@ -67,6 +74,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
       >
         <NavLink href="/collezione" label="Collezione" icona={icone.collezione} />
         <NavLink href="/generi" label="Generi" icona={icone.generi} />
+        <NavLink href="/calendario" label="Calendario" icona={icone.calendario} />
         <NavLink href="/allerte" label="Allerte" icona={icone.allerte} segnale={cambiDiStagione} />
         <NavLink href="/numeri" label="Numeri" icona={icone.numeri} />
       </nav>

@@ -25,8 +25,8 @@ export function AppHeader() {
           <path d="M12 14c0-3-2-5-5-5 0 3 2 5 5 5z" />
           <path d="M12 12c0-3.5 1.4-6 3-8-2.6.6-4 3-4 5" />
         </svg>
-        <span className="font-heading text-[23px]" style={{ color: "var(--color-brand)" }}>
-          Succulentario
+        <span className="font-heading text-[30px] font-bold leading-none" style={{ color: "var(--color-brand)" }}>
+          succulentario
         </span>
       </div>
       <Link

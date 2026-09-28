@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ModuloEsportazione } from "@/components/modulo-esportazione";
 import { signOut } from "@/app/actions/auth";
 import { AppHeader } from "@/components/app-header";
+import packageJson from "../../../../package.json";
 
 export const metadata = { title: "Impostazioni · Succulentario" };
 
@@ -56,6 +57,9 @@ export default function PaginaImpostazioni() {
       </div>
 
       <form action={signOut} className="mt-6">
+        <p className="mb-2 text-center font-sans text-xs text-[var(--color-text-secondary)]">
+          versione {packageJson.version}
+        </p>
         <button
           type="submit"
           className="h-11 w-full rounded-xl border border-black/10 text-sm font-medium text-[var(--color-text-secondary)]"

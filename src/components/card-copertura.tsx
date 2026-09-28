@@ -1,25 +1,43 @@
-import { copertura, type Ricovero } from "@/lib/catalogo";
+import { getVarietaByKey, type Ricovero } from "@/lib/catalogo";
+import type { Plant } from "@/lib/plants";
 
-const ETICHETTA: Record<Ricovero, string> = {
+type Segmento = Ricovero | "senza-scheda";
+
+const ETICHETTA: Record<Segmento, string> = {
   fuori: "fuori",
   riparo: "riparo",
   casa: "casa",
   "casa!": "casa!",
+  "senza-scheda": "senza scheda",
 };
-const COLORE: Record<Ricovero, string> = {
+const COLORE: Record<Segmento, string> = {
   fuori: "var(--color-fuori)",
   riparo: "var(--color-riparo)",
   casa: "var(--color-casa)",
   "casa!": "var(--color-casa-esclamativo)",
+  "senza-scheda": "var(--color-neutral-300)",
 };
-const ORDINE: Ricovero[] = ["fuori", "riparo", "casa", "casa!"];
+const ORDINE: Segmento[] = ["fuori", "riparo", "casa", "casa!", "senza-scheda"];
 
 /**
- * Card "In collezione": quante varietà distinte sono possedute, con barra
- * segmentata per tenere sott'occhio le proporzioni fra esigenze di ricovero.
+ * Card "In collezione": quante piante ci sono davvero, con barra segmentata
+ * per tenere sott'occhio le proporzioni fra esigenze di ricovero. Le piante
+ * non ancora collegate a una varietà catalogata contano come "senza scheda".
  */
-export function CardCopertura({ varKeys }: { varKeys: (string | null | undefined)[] }) {
-  const { totale, perRicovero } = copertura(varKeys);
+export function CardCopertura({ piante }: { piante: Plant[] }) {
+  const totale = piante.length;
+  const perSegmento: Record<Segmento, number> = {
+    fuori: 0,
+    riparo: 0,
+    casa: 0,
+    "casa!": 0,
+    "senza-scheda": 0,
+  };
+
+  for (const pianta of piante) {
+    const ricovero = pianta.var_key ? getVarietaByKey(pianta.var_key)?.ricovero : undefined;
+    perSegmento[ricovero ?? "senza-scheda"]++;
+  }
 
   return (
     <div className="mb-3 rounded-[20px] px-4 pb-[15px] pt-3.5" style={{ background: "var(--color-neutral-100)" }}>
@@ -31,17 +49,17 @@ export function CardCopertura({ varKeys }: { varKeys: (string | null | undefined
           </div>
         </div>
         <span className="pb-1 font-sans text-[13px] font-medium text-[var(--color-text-secondary)]">
-          {totale === 1 ? "varietà" : "varietà"}
+          {totale === 1 ? "pianta" : "piante"}
         </span>
       </div>
 
       {totale > 0 ? (
         <div className="flex h-4 gap-0.5 overflow-hidden rounded-full">
           {ORDINE.map((r) =>
-            perRicovero[r] > 0 ? (
+            perSegmento[r] > 0 ? (
               <div
                 key={r}
-                style={{ width: `${(perRicovero[r] / totale) * 100}%`, background: COLORE[r] }}
+                style={{ width: `${(perSegmento[r] / totale) * 100}%`, background: COLORE[r] }}
               />
             ) : null,
           )}
@@ -54,7 +72,7 @@ export function CardCopertura({ varKeys }: { varKeys: (string | null | undefined
         {ORDINE.map((r) => (
           <span key={r} className="flex items-center gap-1.5">
             <i className="block h-[9px] w-[9px] rounded-[3px]" style={{ background: COLORE[r] }} />
-            {perRicovero[r]} {ETICHETTA[r]}
+            {perSegmento[r]} {ETICHETTA[r]}
           </span>
         ))}
       </div>

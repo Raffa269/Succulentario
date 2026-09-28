@@ -17,6 +17,7 @@ import {
 import { IllustrazioneGenere } from "@/components/illustrazione-genere";
 import type { Genere } from "@/lib/catalogo";
 import { formattaMeseAnnoDaData, type Plant, type PlantPhoto } from "@/lib/plants";
+import { indicazioniPerPianta, type Esposizione, type Terriccio } from "@/lib/coltivazione";
 
 const PAGINA_PER_KIND = { collection: "/collezione", wishlist: "/wishlist", lost: "/cimitero" } as const;
 const BORDO_CAMPO = "1.5px solid rgba(32,30,29,.16)";
@@ -35,6 +36,45 @@ const classeArea =
   "w-full rounded-2xl bg-white p-[15px] text-base text-[var(--color-text)] outline-none";
 
 const OPZIONI_CAUSA = ["Marciume", "Poca acqua", "Troppo sole", "Venduta", "Non saprei"];
+
+function IconaEsposizione({ valore }: { valore: Esposizione }) {
+  if (valore === "sole pieno") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" fill="currentColor" />
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
+      </svg>
+    );
+  }
+  if (valore === "mezzo sole") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+        <path d="M12 4a8 8 0 1 0 0 16Z" fill="currentColor" />
+        <path d="M12 4a8 8 0 0 1 0 16M12 1.8v2.4M12 19.8v2.4M1.8 12h2.4M19.8 12h2.4" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.8" />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+      <path d="M5 18h14a7 7 0 0 0-14 0Z" fill="currentColor" opacity="0.28" />
+      <path d="M4 18h16M8 14.5a5 5 0 0 1 8 0M3 7c3 2 6 2 9 0s6-2 9 0" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function IconaTerriccio({ valore }: { valore: Terriccio }) {
+  const punti = valore === "meno drenante" ? 3 : valore === "normale" ? 5 : 7;
+  const coordinate = [[6, 15], [10, 12], [14, 16], [18, 13], [8, 18], [13, 19], [17, 18]];
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+      <path d="M4 11h16l-2.2 8H6.2Z" fill="currentColor" opacity="0.22" />
+      <path d="M4 11h16M6.2 19h11.6" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
+      {coordinate.slice(0, punti).map(([cx, cy]) => (
+        <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="1.1" fill="currentColor" />
+      ))}
+    </svg>
+  );
+}
 
 /** Chip predefinite + "Altro" con campo libero, per la causa della perdita. */
 function SelettoreCausa({ value, onChange }: { value: string; onChange: (v: string) => void }) {
@@ -211,6 +251,11 @@ export function DettaglioPianta({
   const [propSoil, setPropSoil] = useState(plant.prop_soil);
   const [propHum, setPropHum] = useState(plant.prop_hum);
   const [casaTuttoAnno, setCasaTuttoAnno] = useState(plant.casa_tutto_anno);
+  const [lastRepotDate, setLastRepotDate] = useState(plant.last_repot_date ?? "");
+  const [potDiameterCm, setPotDiameterCm] = useState(plant.pot_diameter_cm?.toString() ?? "");
+  const [maxHeight, setMaxHeight] = useState(plant.max_height ?? "???");
+  const [maxWidth, setMaxWidth] = useState(plant.max_width ?? "???");
+  const [darkPeriod, setDarkPeriod] = useState(plant.dark_period ?? "???");
   const [notes, setNotes] = useState(plant.notes);
   const [photoPath, setPhotoPath] = useState(plant.photo_path);
   const [fotoUrl, setFotoUrl] = useState(fotoUrlIniziale);
@@ -221,6 +266,7 @@ export function DettaglioPianta({
   const [lostYm, setLostYm] = useState(plant.lost_ym ?? "");
   const [cause, setCause] = useState(plant.cause ?? "");
   const [lesson, setLesson] = useState(plant.lesson ?? "");
+  const indicazioni = indicazioniPerPianta(plant);
 
   async function cambiaFoto(e: ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -262,6 +308,11 @@ export function DettaglioPianta({
           propHum,
           notes,
           casaTuttoAnno,
+          lastRepotDate: lastRepotDate || null,
+          potDiameterCm: potDiameterCm ? Number(potDiameterCm.replace(",", ".")) : null,
+          maxHeight,
+          maxWidth,
+          darkPeriod,
           photoPath,
         },
         plant.photo_path,
@@ -345,6 +396,25 @@ export function DettaglioPianta({
       </label>
 
       <GalleriaCrescita plantId={plant.id} foto={fotoCrescita} fotoUrl={fotoCrescitaUrl} />
+
+      {plant.kind !== "lost" && (
+        <div className="mt-5 grid grid-cols-2 gap-2.5">
+          <div className="rounded-2xl p-3.5" style={{ background: "var(--color-neutral-100)" }}>
+            <Etichetta>Esposizione</Etichetta>
+            <div className="flex items-center gap-2.5 text-[var(--color-brand)]">
+              <IconaEsposizione valore={indicazioni.esposizione} />
+              <p className="font-heading text-lg text-[var(--color-text)]">{indicazioni.esposizione}</p>
+            </div>
+          </div>
+          <div className="rounded-2xl p-3.5" style={{ background: "var(--color-neutral-100)" }}>
+            <Etichetta>Terriccio</Etichetta>
+            <div className="flex items-center gap-2.5 text-[var(--color-brand)]">
+              <IconaTerriccio valore={indicazioni.terriccio} />
+              <p className="font-heading text-lg text-[var(--color-text)]">{indicazioni.terriccio}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <form onSubmit={salva} className="mt-5 flex flex-col gap-4">
         <label>
@@ -442,6 +512,49 @@ export function DettaglioPianta({
             </p>
           </div>
         )}
+
+        {plant.kind === "collection" && (
+          <div className="grid grid-cols-2 gap-2.5">
+            <label>
+              <Etichetta>Ultimo rinvaso</Etichetta>
+              <input
+                type="date"
+                value={lastRepotDate}
+                onChange={(e) => setLastRepotDate(e.target.value)}
+                className={classeCampo}
+                style={{ border: BORDO_CAMPO }}
+              />
+            </label>
+            <label>
+              <Etichetta>Diametro vaso cm</Etichetta>
+              <input
+                type="number"
+                min="0"
+                step="0.5"
+                value={potDiameterCm}
+                onChange={(e) => setPotDiameterCm(e.target.value)}
+                className={classeCampo}
+                style={{ border: BORDO_CAMPO }}
+              />
+            </label>
+          </div>
+        )}
+
+        <div className="grid grid-cols-2 gap-2.5">
+          <label>
+            <Etichetta>Altezza max</Etichetta>
+            <input value={maxHeight} onChange={(e) => setMaxHeight(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
+          </label>
+          <label>
+            <Etichetta>Larghezza max</Etichetta>
+            <input value={maxWidth} onChange={(e) => setMaxWidth(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
+          </label>
+        </div>
+
+        <label>
+          <Etichetta>Periodo di buio</Etichetta>
+          <input value={darkPeriod} onChange={(e) => setDarkPeriod(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
+        </label>
 
         <label>
           <Etichetta>Note</Etichetta>

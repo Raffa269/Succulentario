@@ -14,7 +14,7 @@ export default async function PaginaCollezione() {
   return (
     <div className="relative mx-auto max-w-2xl px-4 pb-8 pt-3">
       <AppHeader />
-      <CardCopertura varKeys={piante.map((p) => p.var_key)} />
+      <CardCopertura piante={piante} />
 
       <ElencoPiante
         piante={piante}

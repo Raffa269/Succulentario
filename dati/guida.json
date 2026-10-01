@@ -77,16 +77,36 @@
   "p": "La maggior parte delle succulente ha un riposo invernale che va assecondato: ambiente fresco e luminoso, acqua ridottissima o nulla, niente concime. Gli inverni caldi e bui degli appartamenti sono il peggior compromesso possibile, perché la pianta continua a vegetare senza luce sufficiente e si fila. Un locale fresco a 8-12 °C, molto luminoso, è di gran lunga meglio del salotto."
  },
  {
-  "h2": "Problemi e parassiti"
+  "h2": "Problemi e malattie"
+ },
+ {
+  "p": "La regola più utile è intervenire presto e in modo leggero: isola la pianta sospetta, controlla ascelle delle foglie, colletto, pagina inferiore e radici, poi correggi luce, acqua, aria e substrato. Su piante grasse e pruinose prova sempre ogni prodotto su una piccola zona e tieni la pianta all'ombra finché è asciutta: oli, saponi e alcol possono macchiare o bruciare alcune specie."
+ },
+ {
+  "h3": "Parassiti"
  },
  {
   "ul": [
-   "<b>Filatura.</b> Crescita alta, esile e pallida, rosette che si appiattiscono e si aprono. Serve più luce, dieci ore al giorno o più. La parte filata non torna compatta: si taglia e si radica la cima.",
-   "<b>Scottature.</b> Macchie brune o beige dopo un cambio brusco di esposizione. Prevenzione: acclimatare per gradi.",
-   "<b>Marciume.</b> Substrato troppo a lungo umido e poco ossigeno alle radici. Se la pianta è compromessa si taglia la parte sana, si lascia callizzare e si riparte da talea.",
-   "<b>Cocciniglia cotonosa.</b> Masse bianche cotonose all'ascella delle foglie e ai nodi. Isolare la pianta, sciacquare, passare alcol con un cotton fioc, poi olio di neem o sapone insetticida. Servono più trattamenti a distanza di giorni.",
-   "<b>Cocciniglia bruna e ragnetto rosso.</b> Si rimuovono meccanicamente e si trattano allo stesso modo; il ragnetto rosso arriva soprattutto in inverno in casa, con aria secca e calda.",
-   "<b>Foglie basali secche.</b> Se il resto della pianta è sano è normale invecchiamento: si tolgono e basta."
+   "<b>Cocciniglia cotonosa.</b> Si vede come fiocchi bianchi nelle ascelle, fra le foglie, sui fusti o vicino alle spine; può lasciare melata appiccicosa e fumaggine. Rimedi naturali: isola la pianta, togli foglie secche e residui, rimuovi i batuffoli con pinzetta o cotton fioc, poi passa alcol isopropilico al 70% o meno solo sui punti infestati. Ripeti ogni 5-7 giorni per almeno tre giri. Se è diffusa, lava la pianta, cambia il substrato e controlla anche le radici.",
+   "<b>Cocciniglia radicale.</b> Radici con polvere o grumi bianchi, pianta ferma o disidratata anche dopo l'acqua. Rimedi naturali: svasa, butta il vecchio terriccio, lava le radici, elimina quelle morte, lascia asciugare e rinvasa in substrato nuovo e minerale. Tieni in quarantena. Se torna, usa un prodotto specifico per cocciniglie su ornamentali seguendo l'etichetta.",
+   "<b>Cocciniglia a scudetto.</b> Puntini o placche marroni/grigie fisse su foglie e fusti. Rimedi naturali: rimuovi una a una con cotton fioc, spazzolino morbido o unghia, poi lava bene la pianta. Se compaiono giovani mobili, sapone molle/insetticida o olio orticolo possono aiutare, ma solo se indicati per quella pianta e mai al sole.",
+   "<b>Ragnetto rosso e acari.</b> Puntinature chiare, ragnatele sottili, foglie che seccano; favoriti da caldo secco, polvere e piante stressate. Rimedi naturali: isola, rimuovi parti molto colpite, lava o spolvera le superfici e aumenta leggermente il ricambio d'aria. Se non basta, usa sapone insetticida o olio orticolo etichettato per acari; nei casi persistenti serve un acaricida specifico.",
+   "<b>Afidi.</b> Più frequenti su boccioli e nuovi getti teneri. Rimedi naturali: getto d'acqua, rimozione manuale e taglio delle parti troppo infestate. Se ricompaiono, sapone insetticida o olio orticolo, sempre provati prima su una piccola zona.",
+   "<b>Moscerini dei funghi.</b> Moscerini neri che escono dal vaso: sono quasi sempre il segnale di substrato troppo umido e organico. Rimedi naturali: lascia asciugare di più, migliora drenaggio e ventilazione, togli residui vegetali, usa trappole gialle per gli adulti e rinvasa se il terriccio resta bagnato troppo a lungo. Come rimedio biologico puoi usare prodotti a base di Bacillus thuringiensis israelensis; altri insetticidi in casa raramente sono necessari."
+  ]
+ },
+ {
+  "h3": "Funghi, marciumi e fisiopatie"
+ },
+ {
+  "ul": [
+   "<b>Marciume radicale o del colletto.</b> Foglie molli, fusto scuro, pianta che sembra assetata anche con terra umida: spesso è troppa acqua, poco ossigeno e substrato lento ad asciugare. Rimedi naturali: sospendi l'acqua, svasa, elimina tutto ciò che è nero o molle con lama pulita, lascia asciugare. Se resta una parte sana, taglia sopra il marcio, fai callizzare e radica come talea in substrato asciutto. Dopo il salvataggio: vaso con foro, miscela più minerale, bagnature abbondanti ma rare.",
+   "<b>Oidio o muffa bianca polverosa.</b> Macchie bianche farinose che si allargano, spesso in inverno o in casa con poca luce, aria ferma e piante strette. Rimedi naturali: isola subito, togli e butta le parti colpite, aumenta luce e circolazione d'aria, non nebulizzare e non bagnare le foglie. Se avanza, valuta zolfo o rame/fungicida ammesso per ornamentali, seguendo l'etichetta e provando prima su una zona nascosta.",
+   "<b>Macchie fungine o batteriche.</b> Chiazze molli, acquose o in espansione, spesso dopo freddo umido o acqua rimasta nelle rosette. Rimedi naturali: asciutto, aria, rimozione delle parti colpite e niente acqua sulle foglie. Se la macchia continua a crescere, taglia in tessuto sano e disinfetta la lama fra un taglio e l'altro. I fungicidi aiutano solo in alcuni casi e non riparano tessuti già marci.",
+   "<b>Filatura o eziolatura.</b> Crescita lunga, pallida, fragile, rosette aperte e internodi distanziati: manca luce. Rimedi: sposta gradualmente in posizione più luminosa o usa LED 12-16 ore al giorno. La parte filata non torna compatta: quando la pianta è stabile, taglia la cima sana, falla callizzare e radicala.",
+   "<b>Scottature.</b> Macchie beige, marroni o secche dopo passaggio brusco al sole. Non guariscono. Rimedi: sposta in luce forte ma filtrata, poi riabitua al sole in 7-14 giorni. Non bagnare né trattare con oli o alcol prima di esposizioni intense.",
+   "<b>Edema e crepe.</b> Foglie gonfie, spaccate o con bolle/cicatrici: spesso troppa acqua assorbita in poco tempo, dopo un periodo secco o con poca luce. Rimedi: bagnature meno frequenti, più luce e substrato più drenante.",
+   "<b>Foglie basali secche.</b> Se il resto della pianta è sano è normale ricambio. Togli le foglie morte perché sono rifugi per cocciniglia e funghi; non aumentare l'acqua solo per questo."
   ]
  },
  {

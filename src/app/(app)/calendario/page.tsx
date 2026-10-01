@@ -60,6 +60,18 @@ function dataDefault(anno: number, mese: number) {
   return `${chiaveMese(anno, mese)}-01`;
 }
 
+function dataIso(data: Date) {
+  return data.toISOString().slice(0, 10);
+}
+
+function formattaDataBreve(iso: string) {
+  return new Date(`${iso}T12:00:00`).toLocaleDateString("it-IT", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "2-digit",
+  });
+}
+
 function giorniDelMese(anno: number, mese: number) {
   const totale = new Date(anno, mese + 1, 0).getDate();
   const primoGiorno = new Date(anno, mese, 1).getDay();
@@ -117,8 +129,21 @@ export default async function PaginaCalendario({
     .order("event_date", { ascending: false })
     .order("created_at", { ascending: false });
 
+  const oggi = new Date();
+  const dodiciMesiFa = new Date(oggi);
+  dodiciMesiFa.setMonth(dodiciMesiFa.getMonth() - 12);
+  const { data: storicoData, error: storicoError } = await supabase
+    .from("calendar_events")
+    .select("*")
+    .eq("owner", user!.id)
+    .gte("event_date", dataIso(dodiciMesiFa))
+    .lte("event_date", dataIso(oggi))
+    .order("event_date", { ascending: false })
+    .order("created_at", { ascending: false });
+
   const tabellaAssente = error?.message.toLowerCase().includes("calendar_events");
   const interventi = error ? [] : ((data ?? []) as InterventoCalendario[]);
+  const storicoInterventi = error || storicoError ? [] : ((storicoData ?? []) as InterventoCalendario[]);
   const perGiorno = gruppoPerGiorno(interventi);
   const celle = giorniDelMese(anno, mese);
 
@@ -272,6 +297,31 @@ export default async function PaginaCalendario({
           </div>
         )}
       </section>
+
+      {storicoInterventi.length > 0 && (
+        <section className="mt-4 pb-2">
+          <p className="mb-2 font-sans text-[11px] font-bold uppercase tracking-wider text-[var(--color-text-secondary)]">
+            Ultimi 12 mesi
+          </p>
+          <div className="flex flex-col gap-1.5">
+            {storicoInterventi.map((intervento) => (
+              <div
+                key={intervento.id}
+                className="flex items-start gap-2 font-sans text-[11px] leading-snug text-[var(--color-text-secondary)]"
+              >
+                <span className="w-[52px] shrink-0 tabular-nums">{formattaDataBreve(intervento.event_date)}</span>
+                <span className="shrink-0" aria-hidden="true">
+                  {ICONA_INTERVENTO[intervento.kind]}
+                </span>
+                <span>
+                  {ETICHETTA_INTERVENTO[intervento.kind]}
+                  {intervento.note ? ` - ${intervento.note}` : ""}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

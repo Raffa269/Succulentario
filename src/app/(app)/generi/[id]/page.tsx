@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { generi, getGenere, getVarietaDiGenere, type Ricovero } from "@/lib/catalogo";
+import { RiquadroIndoor } from "@/components/indicazione-indoor";
 import { IllustrazioneGenere } from "@/components/illustrazione-genere";
 import { SezioniVarietaGenere } from "@/components/sezioni-varieta-genere";
 import { createClient } from "@/lib/supabase/server";
+import { indicazioneIndoorPerGenere } from "@/lib/indoor";
 
 export function generateStaticParams() {
   return generi.map((g) => ({ id: g.id }));
@@ -41,6 +43,7 @@ export default async function PaginaGenere({ params }: PageProps<"/generi/[id]">
   if (!genere) notFound();
 
   const varieta = getVarietaDiGenere(id);
+  const indoor = indicazioneIndoorPerGenere(id);
 
   // La sezione dominante (più varietà) intona l'intestazione, come nel
   // mockup 1e (Haworthia è a dominante "riparo").
@@ -109,6 +112,8 @@ export default async function PaginaGenere({ params }: PageProps<"/generi/[id]">
             ))}
           </div>
         </section>
+
+        <RiquadroIndoor indoor={indoor} className="mb-4" />
 
         <section className="mb-4 space-y-3 rounded-[20px] p-4" style={{ background: "var(--color-neutral-100)" }}>
           {genere.spec.map(([etichetta, testo]) => (

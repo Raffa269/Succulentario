@@ -64,9 +64,22 @@ export function ModuloNuovaPianta({
   const [identificando, setIdentificando] = useState(false);
   const [erroreIdentifica, setErroreIdentifica] = useState<string | null>(null);
   const [candidati, setCandidati] = useState<CandidatoIdentificazione[] | null>(null);
+  const [fotoIdentificazione, setFotoIdentificazione] = useState<File[]>([]);
+  const [anteprimeIdentificazione, setAnteprimeIdentificazione] = useState<string[]>([]);
+  const [tentativiIdentificazione, setTentativiIdentificazione] = useState(0);
+  const [genereIdentificato, setGenereIdentificato] = useState<string | null>(null);
+  const [portamento, setPortamento] = useState("");
+  const [foglie, setFoglie] = useState("");
+  const [marginiColorati, setMarginiColorati] = useState("");
+  const [spinePresenti, setSpinePresenti] = useState("");
+  const [dimensioneNota, setDimensioneNota] = useState("");
+  const [dimensione, setDimensione] = useState("");
+  const [crescita, setCrescita] = useState("");
 
   const suggerimenti = suggerimentiAperti ? cercaVarietaPerNome(nome) : [];
   const varietaGiaInCollezione = kind === "collection" && !!varKey && varKeyPossedute.includes(varKey);
+  const identificazioneIncerta = candidati !== null && (candidati.length === 0 || candidati.every((c) => c.confidenza === "bassa"));
+  const mostraDomandeIdentificazione = identificazioneIncerta && tentativiIdentificazione >= 2;
 
   function scegliFoto(e: ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -77,30 +90,57 @@ export function ModuloNuovaPianta({
     setErroreIdentifica(null);
   }
 
-  async function identificaDaFile(e: ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    setFileFoto(file);
-    setAnteprimaFoto(URL.createObjectURL(file));
+  async function eseguiIdentificazione(files: File[], usaMorfologia = false) {
+    if (files.length === 0) return;
     setCandidati(null);
     setIdentificando(true);
     setErroreIdentifica(null);
+    setGenereIdentificato(null);
 
     try {
-      const blob = await comprimiImmagine(file);
       const formData = new FormData();
-      formData.set("foto", blob, "foto.jpg");
+      const blob = await Promise.all(files.slice(0, 4).map((file) => comprimiImmagine(file)));
+      blob.forEach((foto, index) => formData.append("foto", foto, `foto-${index + 1}.jpg`));
+      if (usaMorfologia) {
+        formData.set("portamento", portamento);
+        formData.set("foglie", foglie);
+        formData.set("marginiColorati", marginiColorati);
+        formData.set("spinePresenti", spinePresenti);
+        formData.set("dimensioneNota", dimensioneNota);
+        formData.set("dimensione", dimensione);
+        formData.set("crescita", crescita);
+      }
 
       const res = await fetch("/api/identify", { method: "POST", body: formData });
       const dati = await res.json();
       if (!res.ok) throw new Error(dati.error ?? "Identificazione fallita.");
 
       setCandidati(dati.candidati ?? []);
+      setGenereIdentificato(dati.genere?.nome ?? null);
+      setTentativiIdentificazione((v) => v + 1);
     } catch (err) {
       setErroreIdentifica(err instanceof Error ? err.message : "Identificazione fallita.");
     } finally {
       setIdentificando(false);
     }
+  }
+
+  async function identificaDaFile(e: ChangeEvent<HTMLInputElement>) {
+    const files = Array.from(e.target.files ?? []);
+    e.target.value = "";
+    if (files.length === 0) return;
+    const prossimeFoto = [...fotoIdentificazione, ...files].slice(0, 4);
+    setFotoIdentificazione(prossimeFoto);
+    setAnteprimeIdentificazione(prossimeFoto.map((file) => URL.createObjectURL(file)));
+    if (!fileFoto) {
+      setFileFoto(files[0]);
+      setAnteprimaFoto(URL.createObjectURL(files[0]));
+    }
+    await eseguiIdentificazione(prossimeFoto);
+  }
+
+  async function riprovaConDomande() {
+    await eseguiIdentificazione(fotoIdentificazione, true);
   }
 
   function nonSoIlNome() {
@@ -173,7 +213,7 @@ export function ModuloNuovaPianta({
       <input ref={inputScatta} type="file" accept="image/*" capture="environment" onChange={scegliFoto} className="hidden" />
       <input ref={inputGalleria} type="file" accept="image/*" onChange={scegliFoto} className="hidden" />
       {/* Niente `capture`: deve restare la scelta fra scattare e pescare dalla galleria (il selettore nativo la offre di suo). */}
-      <input ref={inputIdentifica} type="file" accept="image/*" onChange={identificaDaFile} className="hidden" />
+      <input ref={inputIdentifica} type="file" accept="image/*" multiple onChange={identificaDaFile} className="hidden" />
 
       <div className="mb-2 flex h-12 items-center justify-between">
         <Link href={etichettaLista} className="font-sans text-base font-bold" style={{ color: "var(--color-brand)" }}>
@@ -285,10 +325,130 @@ export function ModuloNuovaPianta({
 
       {erroreIdentifica && <p className="mt-2.5 text-sm text-[var(--color-casa-esclamativo)]">{erroreIdentifica}</p>}
 
+      {fotoIdentificazione.length > 0 && (
+        <div className="mt-3 rounded-2xl p-3" style={{ background: "var(--color-neutral-100)" }}>
+          <div className="mb-2 flex items-center justify-between gap-2">
+            <p className="font-sans text-xs font-bold uppercase tracking-wider text-[var(--color-text-secondary)]">
+              Foto per riconoscimento
+            </p>
+            <button
+              type="button"
+              onClick={() => inputIdentifica.current?.click()}
+              disabled={identificando || fotoIdentificazione.length >= 4}
+              className="font-sans text-xs font-bold disabled:opacity-40"
+              style={{ color: "var(--color-brand)" }}
+            >
+              Aggiungi foto
+            </button>
+          </div>
+          <div className="flex gap-2">
+            {anteprimeIdentificazione.map((src, index) => (
+              <div key={`${src}-${index}`} className="relative h-14 w-14 overflow-hidden rounded-xl">
+                <Image src={src} alt={`Foto ${index + 1}`} fill unoptimized className="object-cover" />
+              </div>
+            ))}
+          </div>
+          {genereIdentificato && (
+            <p className="mt-2 text-sm text-[var(--color-text-secondary)]">
+              Genere probabile: <b>{genereIdentificato}</b>
+            </p>
+          )}
+        </div>
+      )}
+
       {candidati && candidati.length === 0 && (
         <p className="mt-2.5 text-sm text-[var(--color-text-secondary)]">
-          Nessun candidato plausibile. Prova con una foto più nitida, o compila a mano.
+          Nessun candidato plausibile. Aggiungi una foto dall&apos;alto, una laterale o un dettaglio di foglie/spine e riprova.
         </p>
+      )}
+
+      {identificazioneIncerta && !mostraDomandeIdentificazione && (
+        <div className="mt-3 rounded-2xl p-3.5" style={{ background: "var(--color-casa-tinta)" }}>
+          <p className="text-sm leading-relaxed text-[var(--color-text)]">
+            Il riconoscimento è ancora debole. Prova ad aggiungere altre foto: pianta intera, vista dall&apos;alto,
+            profilo laterale e dettaglio delle foglie.
+          </p>
+          <button
+            type="button"
+            onClick={() => inputIdentifica.current?.click()}
+            disabled={identificando || fotoIdentificazione.length >= 4}
+            className="mt-2 h-10 rounded-xl px-4 font-heading text-sm text-white disabled:opacity-50"
+            style={{ background: "var(--color-brand)" }}
+          >
+            Aggiungi foto e riprova
+          </button>
+        </div>
+      )}
+
+      {mostraDomandeIdentificazione && (
+        <div className="mt-3 rounded-[20px] p-4" style={{ background: "var(--color-neutral-100)" }}>
+          <p className="font-heading text-lg text-[var(--color-text)]">Aiutami a riconoscerla</p>
+          <p className="mt-1 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+            Le foto non bastano: aggiungi qualche dettaglio visivo e riprovo.
+          </p>
+          <div className="mt-3 flex flex-col gap-2.5">
+            <select value={portamento} onChange={(e) => setPortamento(e.target.value)} className="h-11 rounded-xl bg-white px-3 text-sm text-[var(--color-text)]">
+              <option value="">Rosetta o fusto?</option>
+              <option value="rosetta">Rosetta</option>
+              <option value="fusto">Fusto</option>
+              <option value="entrambi">Entrambi</option>
+              <option value="non so">Non so</option>
+            </select>
+            <select value={foglie} onChange={(e) => setFoglie(e.target.value)} className="h-11 rounded-xl bg-white px-3 text-sm text-[var(--color-text)]">
+              <option value="">Foglie?</option>
+              <option value="lisce">Lisce</option>
+              <option value="pelose">Pelose</option>
+              <option value="pruinose">Pruinose</option>
+              <option value="cilindriche">Cilindriche</option>
+              <option value="non so">Non so</option>
+            </select>
+            <div className="grid grid-cols-2 gap-2">
+              <select value={marginiColorati} onChange={(e) => setMarginiColorati(e.target.value)} className="h-11 rounded-xl bg-white px-3 text-sm text-[var(--color-text)]">
+                <option value="">Margini colorati?</option>
+                <option value="sì">Sì</option>
+                <option value="no">No</option>
+                <option value="non so">Non so</option>
+              </select>
+              <select value={spinePresenti} onChange={(e) => setSpinePresenti(e.target.value)} className="h-11 rounded-xl bg-white px-3 text-sm text-[var(--color-text)]">
+                <option value="">Spine?</option>
+                <option value="sì">Sì</option>
+                <option value="no">No</option>
+                <option value="non so">Non so</option>
+              </select>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <select value={dimensioneNota} onChange={(e) => setDimensioneNota(e.target.value)} className="h-11 rounded-xl bg-white px-3 text-sm text-[var(--color-text)]">
+                <option value="">Dimensione nota?</option>
+                <option value="sì">Sì</option>
+                <option value="no">No</option>
+              </select>
+              <input
+                value={dimensione}
+                onChange={(e) => setDimensione(e.target.value)}
+                placeholder="Es. 8 cm"
+                className="h-11 rounded-xl bg-white px-3 text-sm text-[var(--color-text)]"
+                disabled={dimensioneNota !== "sì"}
+              />
+            </div>
+            <select value={crescita} onChange={(e) => setCrescita(e.target.value)} className="h-11 rounded-xl bg-white px-3 text-sm text-[var(--color-text)]">
+              <option value="">Cresce come?</option>
+              <option value="a cespo">A cespo</option>
+              <option value="a colonna">A colonna</option>
+              <option value="ricadente">Ricadente</option>
+              <option value="solitaria">Solitaria</option>
+              <option value="non so">Non so</option>
+            </select>
+          </div>
+          <button
+            type="button"
+            onClick={riprovaConDomande}
+            disabled={identificando || fotoIdentificazione.length === 0}
+            className="mt-3 h-11 w-full rounded-xl font-heading text-sm text-white disabled:opacity-50"
+            style={{ background: "var(--color-brand)" }}
+          >
+            Riprova con questi dettagli
+          </button>
+        </div>
       )}
 
       {candidati && candidati.length > 0 && (

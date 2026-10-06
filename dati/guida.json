@@ -16,6 +16,24 @@
   "p": "Il passaggio da un ambiente poco luminoso al pieno sole va fatto per gradi nell'arco di una decina di giorni, altrimenti compaiono macchie brune o beige: sono scottature, e restano."
  },
  {
+  "h2": "Coltivazione indoor con luce artificiale"
+ },
+ {
+  "p": "Nei climi freddi, e in particolare nel Nord Italia, molte succulente passano mesi in casa: la differenza fra svernare bene e filare spesso la fa una grow light dedicata. Per confrontare le lampade conta il PPFD, cioè quanta luce utile alla fotosintesi arriva sulle foglie. Le schede indoor dell'app usano un fotoperiodo di riferimento di 12 ore al giorno."
+ },
+ {
+  "ul": [
+   "<b>Fascia 1, 100-200 µmol/m²/s.</b> Ombra luminosa: utile per piante da sottobosco, rara come obiettivo principale per succulente comuni.",
+   "<b>Fascia 2, 200-350 µmol/m²/s.</b> Mezz'ombra indoor: buona per Haworthia morbide, Gasteria, collane di Curio/Senecio e specie fogliose delicate.",
+   "<b>Fascia 3, 350-500 µmol/m²/s.</b> Sole moderato indoor: adatta a molte Aloe, Crassula ovata, Kalanchoe tomentosa e succulente che devono restare compatte senza stress forte.",
+   "<b>Fascia 4, 500-750 µmol/m²/s.</b> Pieno sole indoor standard: serve a molte Echeveria colorate, Sedum ricadenti, Euphorbia colonnari, Kalanchoe rosse e caudiciformi.",
+   "<b>Fascia 5, 750-1000+ µmol/m²/s.</b> Pieno sole estremo: per piante molto pruinose, globose, desertiche o con colori che si attivano solo con luce intensa."
+  ]
+ },
+ {
+  "p": "Il PPFD va sempre letto insieme a temperatura, distanza dalla lampada e ventilazione: una pianta può avere luce sufficiente ma soffrire caldo fermo o aria secca. Aumenta l'intensità gradualmente, osservando filatura, perdita di colore, scottature e raggrinzimento."
+ },
+ {
   "h2": "Acqua"
  },
  {

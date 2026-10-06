@@ -15,6 +15,16 @@ export interface Candidato {
   motivo: string;
 }
 
+export interface MorfologiaIdentificazione {
+  portamento?: string;
+  foglie?: string;
+  marginiColorati?: string;
+  spinePresenti?: string;
+  dimensioneNota?: string;
+  dimensione?: string;
+  crescita?: string;
+}
+
 const SCHEMA_CANDIDATI = {
   type: "object",
   properties: {
@@ -80,6 +90,7 @@ export interface VarietaCandidata {
 export async function riconciliaConCatalogo(
   risultatiPlantNet: { nomeScientifico: string; score: number }[],
   varieta: VarietaCandidata[],
+  morfologia?: MorfologiaIdentificazione,
 ): Promise<Candidato[]> {
   const elencoPlantNet = risultatiPlantNet
     .slice(0, 5)
@@ -89,12 +100,14 @@ export async function riconciliaConCatalogo(
   const elencoVarieta = varieta
     .map((v) => `- "${v.nome}"${v.sinonimo ? ` (sinonimo: ${v.sinonimo})` : ""}: ${v.descrizione}`)
     .join("\n");
+  const contestoMorfologico = descriviMorfologia(morfologia);
 
   const prompt = `Un servizio di riconoscimento immagini (Pl@ntNet) ha analizzato la foto di una pianta grassa e propone queste specie, in ordine di probabilità:
 ${elencoPlantNet}
 
 Il catalogo dell'app contiene queste varietà per il genere corrispondente, ciascuna con una breve descrizione morfologica:
 ${elencoVarieta}
+${contestoMorfologico}
 
 Scegli al massimo 3 varietà tra quelle elencate sopra (non proporre MAI un nome che non sia esattamente uguale a uno di quelli elencati) che meglio corrispondono al risultato di Pl@ntNet. Per ciascuna indica un livello di confidenza (alta, media o bassa) e una riga di motivazione che citi un dettaglio morfologico specifico dalla descrizione. Se nessuna varietà sembra plausibile, restituisci un elenco vuoto.`;
 
@@ -106,14 +119,41 @@ Scegli al massimo 3 varietà tra quelle elencate sopra (non proporre MAI un nome
  * quota, si manda la foto direttamente a Gemini (SPECIFICA.md §8.2). Senza
  * un elenco a cui vincolarsi, i nomi restano proposte libere.
  */
-export async function identificaDallaFoto(immagine: Blob): Promise<Candidato[]> {
-  const buffer = await immagine.arrayBuffer();
-  const base64 = Buffer.from(buffer).toString("base64");
+function descriviMorfologia(morfologia?: MorfologiaIdentificazione) {
+  if (!morfologia) return "";
+  const righe = [
+    morfologia.portamento ? `- portamento principale: ${morfologia.portamento}` : "",
+    morfologia.foglie ? `- foglie: ${morfologia.foglie}` : "",
+    morfologia.marginiColorati ? `- margini colorati: ${morfologia.marginiColorati}` : "",
+    morfologia.spinePresenti ? `- spine presenti: ${morfologia.spinePresenti}` : "",
+    morfologia.dimensioneNota ? `- dimensione approssimativa nota: ${morfologia.dimensioneNota}` : "",
+    morfologia.dimensione ? `- dimensione indicata: ${morfologia.dimensione}` : "",
+    morfologia.crescita ? `- crescita: ${morfologia.crescita}` : "",
+  ].filter(Boolean);
 
-  const prompt = `Questa è la foto di una pianta grassa (succulenta). Pl@ntNet non è riuscito a identificarla o la quota giornaliera è esaurita. Proponi al massimo 3 nomi scientifici plausibili (genere e specie, ed eventuale cultivar se riconoscibile), con un livello di confidenza (alta, media o bassa) e una riga di motivazione basata su ciò che vedi nella foto: forma, colore, spine, superficie. Sii onesto sull'incertezza: se la foto non è sufficiente, dillo nella motivazione e usa confidenza "bassa".`;
+  return righe.length > 0 ? `\n\nOsservazioni aggiunte dall'utente:\n${righe.join("\n")}` : "";
+}
+
+export async function identificaDallaFoto(
+  immaginiInput: Blob | Blob[],
+  morfologia?: MorfologiaIdentificazione,
+): Promise<Candidato[]> {
+  const immagini = Array.isArray(immaginiInput) ? immaginiInput : [immaginiInput];
+  const immaginiParts = await Promise.all(
+    immagini.slice(0, 4).map(async (immagine) => {
+      const buffer = await immagine.arrayBuffer();
+      const base64 = Buffer.from(buffer).toString("base64");
+      return { inline_data: { mime_type: immagine.type || "image/jpeg", data: base64 } };
+    }),
+  );
+  const contestoMorfologico = descriviMorfologia(morfologia);
+
+  const prompt = `Queste sono una o più foto di una pianta grassa (succulenta). Pl@ntNet non è riuscito a identificarla o la quota giornaliera è esaurita. Proponi al massimo 3 nomi scientifici plausibili (genere e specie, ed eventuale cultivar se riconoscibile), con un livello di confidenza (alta, media o bassa) e una riga di motivazione basata su ciò che vedi nella foto: forma, colore, spine, superficie.${contestoMorfologico}
+
+Sii onesto sull'incertezza: se le foto o le osservazioni non sono sufficienti, dillo nella motivazione e usa confidenza "bassa".`;
 
   return chiamaGemini([
     { text: prompt },
-    { inline_data: { mime_type: immagine.type || "image/jpeg", data: base64 } },
+    ...immaginiParts,
   ]);
 }

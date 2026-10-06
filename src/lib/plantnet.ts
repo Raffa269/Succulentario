@@ -29,13 +29,16 @@ export class ErrorePlantNet extends Error {
   }
 }
 
-export async function identificaConPlantNet(immagine: Blob): Promise<RisultatoPlantNet[]> {
+export async function identificaConPlantNet(immaginiInput: Blob | Blob[]): Promise<RisultatoPlantNet[]> {
   const apiKey = process.env.PLANTNET_API_KEY;
   if (!apiKey) throw new Error("PLANTNET_API_KEY non configurata.");
 
+  const immagini = Array.isArray(immaginiInput) ? immaginiInput : [immaginiInput];
   const formData = new FormData();
-  formData.append("images", immagine, "foto.jpg");
-  formData.append("organs", "auto");
+  immagini.slice(0, 4).forEach((immagine, index) => {
+    formData.append("images", immagine, `foto-${index + 1}.jpg`);
+    formData.append("organs", "auto");
+  });
 
   const res = await fetch(`https://my-api.plantnet.org/v2/identify/all?api-key=${apiKey}`, {
     method: "POST",

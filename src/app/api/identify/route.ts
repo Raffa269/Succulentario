@@ -2,7 +2,12 @@ import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { getVarietaDiGenere, trovaGenerePerNomeScientifico } from "@/lib/catalogo";
 import { ErrorePlantNet, identificaConPlantNet } from "@/lib/plantnet";
-import { identificaDallaFoto, riconciliaConCatalogo, type Candidato } from "@/lib/gemini";
+import {
+  identificaDallaFoto,
+  riconciliaConCatalogo,
+  type Candidato,
+  type MorfologiaIdentificazione,
+} from "@/lib/gemini";
 
 export interface CandidatoIdentificazione extends Candidato {
   genusId: string | null;
@@ -26,10 +31,19 @@ export async function POST(request: Request) {
   }
 
   const formData = await request.formData();
-  const foto = formData.get("foto");
-  if (!(foto instanceof Blob)) {
+  const foto = formData.getAll("foto").filter((file): file is File => file instanceof File);
+  if (foto.length === 0) {
     return NextResponse.json({ error: "Nessuna foto ricevuta." }, { status: 400 });
   }
+  const morfologia: MorfologiaIdentificazione = {
+    portamento: String(formData.get("portamento") ?? "").trim() || undefined,
+    foglie: String(formData.get("foglie") ?? "").trim() || undefined,
+    marginiColorati: String(formData.get("marginiColorati") ?? "").trim() || undefined,
+    spinePresenti: String(formData.get("spinePresenti") ?? "").trim() || undefined,
+    dimensioneNota: String(formData.get("dimensioneNota") ?? "").trim() || undefined,
+    dimensione: String(formData.get("dimensione") ?? "").trim() || undefined,
+    crescita: String(formData.get("crescita") ?? "").trim() || undefined,
+  };
 
   let fonte: "plantnet" | "gemini-photo" = "gemini-photo";
   let raw: unknown = null;
@@ -46,7 +60,7 @@ export async function POST(request: Request) {
 
     if (genereTrovato) {
       const varieta = getVarietaDiGenere(genereTrovato.id);
-      candidatiGemini = await riconciliaConCatalogo(risultatiPlantNet, varieta);
+      candidatiGemini = await riconciliaConCatalogo(risultatiPlantNet, varieta, morfologia);
       fonte = "plantnet";
     }
   } catch (err) {
@@ -61,7 +75,7 @@ export async function POST(request: Request) {
   // foto direttamente a Gemini, senza vincolo di elenco.
   if (!genereTrovato) {
     try {
-      candidatiGemini = await identificaDallaFoto(foto);
+      candidatiGemini = await identificaDallaFoto(foto, morfologia);
       fonte = "gemini-photo";
     } catch (err) {
       console.error("Errore Gemini:", err);
@@ -96,5 +110,9 @@ export async function POST(request: Request) {
     chosen: null,
   });
 
-  return NextResponse.json({ fonte, candidati });
+  return NextResponse.json({
+    fonte,
+    genere: genereTrovato ? { id: genereTrovato.id, nome: genereTrovato.nome } : null,
+    candidati,
+  });
 }

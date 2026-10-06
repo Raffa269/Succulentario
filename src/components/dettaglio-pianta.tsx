@@ -15,6 +15,7 @@ import {
   spostaInCimitero,
 } from "@/app/actions/plants";
 import { IllustrazioneGenere } from "@/components/illustrazione-genere";
+import { RiquadroIndoor } from "@/components/indicazione-indoor";
 import type { Genere } from "@/lib/catalogo";
 import { formattaMeseAnnoDaData, type Plant, type PlantPhoto } from "@/lib/plants";
 import { indicazioniPerPianta, type Esposizione, type Terriccio } from "@/lib/coltivazione";
@@ -398,22 +399,25 @@ export function DettaglioPianta({
       <GalleriaCrescita plantId={plant.id} foto={fotoCrescita} fotoUrl={fotoCrescitaUrl} />
 
       {plant.kind !== "lost" && (
-        <div className="mt-5 grid grid-cols-2 gap-2.5">
-          <div className="rounded-2xl p-3.5" style={{ background: "var(--color-neutral-100)" }}>
-            <Etichetta>Esposizione</Etichetta>
-            <div className="flex items-center gap-2.5 text-[var(--color-brand)]">
-              <IconaEsposizione valore={indicazioni.esposizione} />
-              <p className="font-heading text-lg text-[var(--color-text)]">{indicazioni.esposizione}</p>
+        <>
+          <div className="mt-5 grid grid-cols-2 gap-2.5">
+            <div className="rounded-2xl p-3.5" style={{ background: "var(--color-neutral-100)" }}>
+              <Etichetta>Esposizione</Etichetta>
+              <div className="flex items-center gap-2.5 text-[var(--color-brand)]">
+                <IconaEsposizione valore={indicazioni.esposizione} />
+                <p className="font-heading text-lg text-[var(--color-text)]">{indicazioni.esposizione}</p>
+              </div>
+            </div>
+            <div className="rounded-2xl p-3.5" style={{ background: "var(--color-neutral-100)" }}>
+              <Etichetta>Terriccio</Etichetta>
+              <div className="flex items-center gap-2.5 text-[var(--color-brand)]">
+                <IconaTerriccio valore={indicazioni.terriccio} />
+                <p className="font-heading text-lg text-[var(--color-text)]">{indicazioni.terriccio}</p>
+              </div>
             </div>
           </div>
-          <div className="rounded-2xl p-3.5" style={{ background: "var(--color-neutral-100)" }}>
-            <Etichetta>Terriccio</Etichetta>
-            <div className="flex items-center gap-2.5 text-[var(--color-brand)]">
-              <IconaTerriccio valore={indicazioni.terriccio} />
-              <p className="font-heading text-lg text-[var(--color-text)]">{indicazioni.terriccio}</p>
-            </div>
-          </div>
-        </div>
+          <RiquadroIndoor indoor={indicazioni.indoor} className="mt-2.5" />
+        </>
       )}
 
       <form onSubmit={salva} className="mt-5 flex flex-col gap-4">

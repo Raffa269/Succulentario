@@ -1,4 +1,5 @@
 import { getGenere, getVarietaByKey, normalizza, type Varieta } from "@/lib/catalogo";
+import { indicazioneIndoorPerScheda, type IndicazioneIndoor } from "@/lib/indoor";
 import type { Plant } from "@/lib/plants";
 
 export type Esposizione = "sole pieno" | "mezzo sole" | "mezz'ombra";
@@ -7,6 +8,7 @@ export type Terriccio = "normale" | "più drenante" | "meno drenante";
 export interface IndicazioniColtivazione {
   esposizione: Esposizione;
   terriccio: Terriccio;
+  indoor: IndicazioneIndoor;
 }
 
 const ESPOSIZIONE_PER_GENERE: Record<string, Esposizione> = {
@@ -107,5 +109,6 @@ export function indicazioniPerPianta(pianta: Plant): IndicazioniColtivazione {
       (varieta ? terriccioDaNota(varieta) : undefined) ??
       TERRICCIO_PER_GENERE[genere?.id ?? genereId] ??
       "normale",
+    indoor: indicazioneIndoorPerScheda(pianta.var_key, genere?.id ?? genereId),
   };
 }

@@ -10,9 +10,24 @@ import {
   type MorfologiaIdentificazione,
 } from "@/lib/gemini";
 
+type FonteIdentificazione = "plantnet" | "gemini-photo" | "plantnet-google" | "google-web";
+
 export interface CandidatoIdentificazione extends Candidato {
   genusId: string | null;
   varKey: string | null;
+}
+
+function descriviFonteIdentificazione(fonte: FonteIdentificazione) {
+  switch (fonte) {
+    case "plantnet-google":
+      return "Riconoscimento: Pl@ntNet + Google Vision + Gemini.";
+    case "google-web":
+      return "Riconoscimento: Google Vision + Gemini.";
+    case "plantnet":
+      return "Riconoscimento: Pl@ntNet + Gemini. Google Vision non usato in questo tentativo.";
+    case "gemini-photo":
+      return "Riconoscimento: Gemini. Google Vision non usato in questo tentativo.";
+  }
 }
 
 /**
@@ -46,7 +61,7 @@ export async function POST(request: Request) {
     crescita: String(formData.get("crescita") ?? "").trim() || undefined,
   };
 
-  let fonte: "plantnet" | "gemini-photo" | "plantnet-google" | "google-web" = "gemini-photo";
+  let fonte: FonteIdentificazione = "gemini-photo";
   let raw: unknown = null;
   let candidatiGemini: Candidato[] = [];
   let genereTrovato: ReturnType<typeof trovaGenerePerNomeScientifico> = undefined;
@@ -117,12 +132,14 @@ export async function POST(request: Request) {
   // recupera solo la sua chiave. In fallback (gemini-photo) restano nomi
   // liberi, senza collegamento al catalogo.
   const varietaGenere = genereTrovato ? getVarietaDiGenere(genereTrovato.id) : [];
-  const candidati: CandidatoIdentificazione[] = candidatiGemini.map((c) => {
+  const fonteDescritta = descriviFonteIdentificazione(fonte);
+  const candidati: CandidatoIdentificazione[] = candidatiGemini.map((c, index) => {
     const varietaCorrispondente = varietaGenere.find(
       (v) => v.nome.toLowerCase() === c.nome.toLowerCase() || v.sinonimo?.toLowerCase() === c.nome.toLowerCase(),
     );
     return {
       ...c,
+      motivo: index === 0 ? `${fonteDescritta} ${c.motivo}` : c.motivo,
       genusId: genereTrovato?.id ?? null,
       varKey: varietaCorrispondente?.key ?? null,
     };

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { getVarietaDiGenere, trovaGenerePerNomeScientifico } from "@/lib/catalogo";
 import { ErrorePlantNet, identificaConPlantNet } from "@/lib/plantnet";
+import { identificaConGoogleVisionWeb, type RisultatoGoogleVision } from "@/lib/google-vision";
 import {
   identificaDallaFoto,
   riconciliaConCatalogo,
@@ -45,14 +46,21 @@ export async function POST(request: Request) {
     crescita: String(formData.get("crescita") ?? "").trim() || undefined,
   };
 
-  let fonte: "plantnet" | "gemini-photo" = "gemini-photo";
+  let fonte: "plantnet" | "gemini-photo" | "plantnet-google" | "google-web" = "gemini-photo";
   let raw: unknown = null;
   let candidatiGemini: Candidato[] = [];
   let genereTrovato: ReturnType<typeof trovaGenerePerNomeScientifico> = undefined;
+  let risultatiGoogle: RisultatoGoogleVision[] = [];
+
+  try {
+    risultatiGoogle = await identificaConGoogleVisionWeb(foto[0]);
+  } catch (err) {
+    console.error("Errore Google Vision Web Detection:", err);
+  }
 
   try {
     const risultatiPlantNet = await identificaConPlantNet(foto);
-    raw = risultatiPlantNet;
+    raw = { plantnet: risultatiPlantNet, googleVision: risultatiGoogle };
 
     if (risultatiPlantNet.length > 0) {
       genereTrovato = trovaGenerePerNomeScientifico(risultatiPlantNet[0].genere);
@@ -60,8 +68,8 @@ export async function POST(request: Request) {
 
     if (genereTrovato) {
       const varieta = getVarietaDiGenere(genereTrovato.id);
-      candidatiGemini = await riconciliaConCatalogo(risultatiPlantNet, varieta, morfologia);
-      fonte = "plantnet";
+      candidatiGemini = await riconciliaConCatalogo(risultatiPlantNet, varieta, morfologia, risultatiGoogle);
+      fonte = risultatiGoogle.length > 0 ? "plantnet-google" : "plantnet";
     }
   } catch (err) {
     // Pl@ntNet non ha riconosciuto nulla, quota esaurita, o errore di rete:
@@ -71,12 +79,30 @@ export async function POST(request: Request) {
     }
   }
 
+  if (!raw) raw = { googleVision: risultatiGoogle };
+
+  if (!genereTrovato && risultatiGoogle.length > 0) {
+    genereTrovato = risultatiGoogle
+      .map((r) => trovaGenerePerNomeScientifico(r.descrizione))
+      .find(Boolean);
+    if (genereTrovato) {
+      const varieta = getVarietaDiGenere(genereTrovato.id);
+      candidatiGemini = await riconciliaConCatalogo(
+        risultatiGoogle.map((r) => ({ nomeScientifico: r.descrizione, score: r.score })),
+        varieta,
+        morfologia,
+        risultatiGoogle,
+      );
+      fonte = "google-web";
+    }
+  }
+
   // Nessun genere riconosciuto (Pl@ntNet fallito, o genere fuori catalogo):
   // foto direttamente a Gemini, senza vincolo di elenco.
   if (!genereTrovato) {
     try {
-      candidatiGemini = await identificaDallaFoto(foto, morfologia);
-      fonte = "gemini-photo";
+      candidatiGemini = await identificaDallaFoto(foto, morfologia, risultatiGoogle);
+      fonte = risultatiGoogle.length > 0 ? "google-web" : "gemini-photo";
     } catch (err) {
       console.error("Errore Gemini:", err);
       return NextResponse.json(

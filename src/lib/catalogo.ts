@@ -105,7 +105,13 @@ export function trovaGenerePerNomeScientifico(nome: string): Genere | undefined 
   const norm = normalizza(nome);
   if (!norm) return undefined;
   return generi.find(
-    (g) => normalizza(g.nome).includes(norm) || g.keys.some((k) => normalizza(k) === norm),
+    (g) => {
+      const nomeGenere = normalizza(g.nome);
+      return nomeGenere.includes(norm) || norm.includes(nomeGenere) || g.keys.some((k) => {
+        const key = normalizza(k);
+        return key === norm || norm.includes(key);
+      });
+    },
   );
 }
 

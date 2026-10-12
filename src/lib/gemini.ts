@@ -25,6 +25,11 @@ export interface MorfologiaIdentificazione {
   crescita?: string;
 }
 
+export interface SegnaleWebIdentificazione {
+  descrizione: string;
+  score: number;
+}
+
 const SCHEMA_CANDIDATI = {
   type: "object",
   properties: {
@@ -91,6 +96,7 @@ export async function riconciliaConCatalogo(
   risultatiPlantNet: { nomeScientifico: string; score: number }[],
   varieta: VarietaCandidata[],
   morfologia?: MorfologiaIdentificazione,
+  segnaliWeb: SegnaleWebIdentificazione[] = [],
 ): Promise<Candidato[]> {
   const elencoPlantNet = risultatiPlantNet
     .slice(0, 5)
@@ -101,15 +107,17 @@ export async function riconciliaConCatalogo(
     .map((v) => `- "${v.nome}"${v.sinonimo ? ` (sinonimo: ${v.sinonimo})` : ""}: ${v.descrizione}`)
     .join("\n");
   const contestoMorfologico = descriviMorfologia(morfologia);
+  const contestoWeb = descriviSegnaliWeb(segnaliWeb);
 
   const prompt = `Un servizio di riconoscimento immagini (Pl@ntNet) ha analizzato la foto di una pianta grassa e propone queste specie, in ordine di probabilità:
 ${elencoPlantNet}
 
 Il catalogo dell'app contiene queste varietà per il genere corrispondente, ciascuna con una breve descrizione morfologica:
 ${elencoVarieta}
+${contestoWeb}
 ${contestoMorfologico}
 
-Scegli al massimo 3 varietà tra quelle elencate sopra (non proporre MAI un nome che non sia esattamente uguale a uno di quelli elencati) che meglio corrispondono al risultato di Pl@ntNet. Per ciascuna indica un livello di confidenza (alta, media o bassa) e una riga di motivazione che citi un dettaglio morfologico specifico dalla descrizione. Se nessuna varietà sembra plausibile, restituisci un elenco vuoto.`;
+Scegli al massimo 3 varietà tra quelle elencate sopra (non proporre MAI un nome che non sia esattamente uguale a uno di quelli elencati) che meglio corrispondono ai segnali disponibili. Pl@ntNet e Google Vision possono sbagliare: usa Google Vision come indizio, non come autorità. Per ciascuna indica un livello di confidenza (alta, media o bassa) e una riga di motivazione che citi un dettaglio morfologico specifico dalla descrizione. Se nessuna varietà sembra plausibile, restituisci un elenco vuoto.`;
 
   return chiamaGemini([{ text: prompt }]);
 }
@@ -134,9 +142,20 @@ function descriviMorfologia(morfologia?: MorfologiaIdentificazione) {
   return righe.length > 0 ? `\n\nOsservazioni aggiunte dall'utente:\n${righe.join("\n")}` : "";
 }
 
+function descriviSegnaliWeb(segnaliWeb: SegnaleWebIdentificazione[] = []) {
+  const righe = segnaliWeb
+    .slice(0, 8)
+    .map((r) => `- ${r.descrizione} (score ${Math.round(r.score * 100)}%)`);
+
+  return righe.length > 0
+    ? `\n\nGoogle Cloud Vision Web Detection ha trovato queste entità/titoli da immagini simili sul web:\n${righe.join("\n")}`
+    : "";
+}
+
 export async function identificaDallaFoto(
   immaginiInput: Blob | Blob[],
   morfologia?: MorfologiaIdentificazione,
+  segnaliWeb: SegnaleWebIdentificazione[] = [],
 ): Promise<Candidato[]> {
   const immagini = Array.isArray(immaginiInput) ? immaginiInput : [immaginiInput];
   const immaginiParts = await Promise.all(
@@ -147,8 +166,11 @@ export async function identificaDallaFoto(
     }),
   );
   const contestoMorfologico = descriviMorfologia(morfologia);
+  const contestoWeb = descriviSegnaliWeb(segnaliWeb);
 
-  const prompt = `Queste sono una o più foto di una pianta grassa (succulenta). Pl@ntNet non è riuscito a identificarla o la quota giornaliera è esaurita. Proponi al massimo 3 nomi scientifici plausibili (genere e specie, ed eventuale cultivar se riconoscibile), con un livello di confidenza (alta, media o bassa) e una riga di motivazione basata su ciò che vedi nella foto: forma, colore, spine, superficie.${contestoMorfologico}
+  const prompt = `Queste sono una o più foto di una pianta grassa (succulenta). Pl@ntNet non è riuscito a identificarla o la quota giornaliera è esaurita.${contestoWeb}
+
+Proponi al massimo 3 nomi scientifici plausibili (genere e specie, ed eventuale cultivar se riconoscibile), con un livello di confidenza (alta, media o bassa) e una riga di motivazione basata su ciò che vedi nella foto: forma, colore, spine, superficie. Google Vision è solo un indizio e può contenere titoli web rumorosi.${contestoMorfologico}
 
 Sii onesto sull'incertezza: se le foto o le osservazioni non sono sufficienti, dillo nella motivazione e usa confidenza "bassa".`;
 

@@ -36,31 +36,15 @@
   --shadow-sm: 0 1px 2px rgb(46 43 37 / 14%);
   --shadow-md: 0 3px 10px rgb(46 43 37 / 16%);
   --shadow-lg: 0 12px 32px rgb(46 43 37 / 22%);
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Variante scura non fornita dal mockup: valori derivati, da
-       riverificare per contrasto quando serve davvero. */
-    --color-brand: #c087cb;
-    --color-fuori: #6bc490;
-    --color-riparo: #6fabd6;
-    --color-casa: #f0bd5c;
-    --color-casa-esclamativo: #e08a72;
-
-    --color-fuori-tinta: #17301f;
-    --color-riparo-tinta: #142a3a;
-    --color-casa-tinta: #3a2e12;
-    --color-casa-esclamativo-tinta: #3a1f19;
-
-    --color-bg: #1c1a17;
-    --color-surface: #262320;
-    --color-neutral-100: #2b2824;
-    --color-neutral-200: #35322c;
-    --color-neutral-300: #45413a;
-    --color-text: #f2ebe0;
-    --color-text-secondary: #b3a99a;
-    --color-divider: rgb(242 235 224 / 16%);
+    /* Il tema scuro era parziale: molte card restavano bianche mentre il
+       testo diventava chiaro. Finché non esiste un tema scuro completo,
+       manteniamo la palette chiara anche sui dispositivi in dark mode. */
+    color-scheme: light;
   }
 }
 
@@ -109,7 +93,8 @@ textarea {
 input,
 select,
 textarea {
-  color: var(--color-text);
+  color: #201e1d;
+  caret-color: #201e1d;
 }
 
 input::placeholder,

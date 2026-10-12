@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { PlantCard } from "@/components/plant-card";
 import { generi, getGenere, getVarietaByKey, type Ricovero } from "@/lib/catalogo";
+import { ricoveroVarietaPerClima, type ProfiloClimatico } from "@/lib/clima";
 import type { Plant } from "@/lib/plants";
 
 type Ordinamento = "catalogo" | "recenti" | "nome" | "genere";
@@ -26,8 +27,9 @@ function nomeGenere(p: Plant): string {
   return p.genus_id ? (getGenere(p.genus_id)?.nome ?? "") : "";
 }
 
-function ricoveroPianta(p: Plant): Ricovero | undefined {
-  return p.var_key ? getVarietaByKey(p.var_key)?.ricovero : undefined;
+function ricoveroPianta(p: Plant, clima: ProfiloClimatico): Ricovero | undefined {
+  const varieta = p.var_key ? getVarietaByKey(p.var_key) : undefined;
+  return varieta ? ricoveroVarietaPerClima(varieta, clima) : undefined;
 }
 
 /**
@@ -42,12 +44,14 @@ export function ElencoPiante({
   ordinamenti = ["nome"],
   vuoto,
   placeholder = "Cerca…",
+  clima,
 }: {
   piante: Plant[];
   fotoUrl: Record<string, string>;
   ordinamenti?: Ordinamento[];
   vuoto: string;
   placeholder?: string;
+  clima: ProfiloClimatico;
 }) {
   const [query, setQuery] = useState("");
   const [ordine, setOrdine] = useState<Ordinamento>(ordinamenti[0]);
@@ -70,7 +74,7 @@ export function ElencoPiante({
     const q = query.trim().toLowerCase();
     const filtrate = piante.filter((p) => {
       if (ricoveriAttivi.size > 0) {
-        const r = ricoveroPianta(p);
+        const r = ricoveroPianta(p, clima);
         if (!r || !ricoveriAttivi.has(r)) return false;
       }
       if (genereAttivo && p.genus_id !== genereAttivo) return false;
@@ -90,7 +94,7 @@ export function ElencoPiante({
       ordinate.sort((a, b) => nomeGenere(a).localeCompare(nomeGenere(b), "it"));
 
     return ordinate;
-  }, [piante, query, ordine, ricoveriAttivi, genereAttivo]);
+  }, [piante, query, ordine, ricoveriAttivi, genereAttivo, clima]);
 
   function alternaRicovero(r: Ricovero) {
     setRicoveriAttivi((precedente) => {
@@ -199,6 +203,7 @@ export function ElencoPiante({
               plant={p}
               fotoUrl={fotoUrl[p.id]}
               duplicato={!!p.var_key && varKeyDuplicati.has(p.var_key)}
+              clima={clima}
             />
           ))}
         </div>

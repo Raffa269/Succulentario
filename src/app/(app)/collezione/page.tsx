@@ -4,21 +4,23 @@ import { ElencoPiante } from "@/components/elenco-piante";
 import { AppHeader } from "@/components/app-header";
 import { CardCopertura } from "@/components/card-copertura";
 import { contaCatalogo } from "@/lib/catalogo";
+import { climaCorrenteDaCookie } from "@/lib/clima-server";
 
 export const metadata = { title: "Collezione · Succulentario" };
 
 export default async function PaginaCollezione() {
-  const { piante, fotoUrl } = await caricaPiante("collection");
+  const [{ piante, fotoUrl }, clima] = await Promise.all([caricaPiante("collection"), climaCorrenteDaCookie()]);
   const { totaleVarieta } = contaCatalogo();
 
   return (
     <div className="relative mx-auto max-w-2xl px-4 pb-8 pt-3">
       <AppHeader />
-      <CardCopertura piante={piante} />
+      <CardCopertura piante={piante} clima={clima} />
 
       <ElencoPiante
         piante={piante}
         fotoUrl={fotoUrl}
+        clima={clima}
         ordinamenti={["catalogo", "recenti", "nome", "genere"]}
         vuoto="Nessuna pianta ancora. Aggiungine una, o vai su un genere e tocca «Ho questa»."
         placeholder={`Cerca fra ${totaleVarieta} varietà`}

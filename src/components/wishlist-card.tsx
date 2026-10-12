@@ -3,7 +3,8 @@
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { promuoviACollezione, eliminaPianta } from "@/app/actions/plants";
-import { getGenere, type Ricovero } from "@/lib/catalogo";
+import { getGenere, getVarietaByKey, type Ricovero } from "@/lib/catalogo";
+import { ricoveroVarietaPerClima, type ProfiloClimatico } from "@/lib/clima";
 import type { Plant } from "@/lib/plants";
 
 const FASCIA: Record<Ricovero, { bg: string; testoChiaro: boolean }> = {
@@ -14,11 +15,13 @@ const FASCIA: Record<Ricovero, { bg: string; testoChiaro: boolean }> = {
 };
 
 /** Card della wishlist (mockup 1i): fascia colorata, "Ce l'ho", cestino. */
-export function WishlistCard({ plant, ricovero }: { plant: Plant; ricovero?: Ricovero }) {
+export function WishlistCard({ plant, clima }: { plant: Plant; clima: ProfiloClimatico }) {
   const router = useRouter();
   const [inCorso, startTransition] = useTransition();
   const [eliminazione, setEliminazione] = useState(false);
   const genere = plant.genus_id ? getGenere(plant.genus_id) : undefined;
+  const varieta = plant.var_key ? getVarietaByKey(plant.var_key) : undefined;
+  const ricovero = varieta ? ricoveroVarietaPerClima(varieta, clima) : undefined;
 
   function ceLho() {
     startTransition(async () => {

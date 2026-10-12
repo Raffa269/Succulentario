@@ -4,6 +4,7 @@ import { getGenere, getVarietaByKey, type Ricovero } from "@/lib/catalogo";
 import { IllustrazioneGenere } from "@/components/illustrazione-genere";
 import type { Plant } from "@/lib/plants";
 import { indicazioniPerPianta, type Esposizione, type Terriccio } from "@/lib/coltivazione";
+import { ricoveroVarietaPerClima, type ProfiloClimatico } from "@/lib/clima";
 
 const FASCIA: Record<Ricovero, { bg: string; testoChiaro: boolean; etichetta: string }> = {
   fuori: { bg: "var(--color-fuori)", testoChiaro: true, etichetta: "fuori" },
@@ -116,17 +117,19 @@ export function PlantCard({
   plant,
   fotoUrl,
   duplicato,
+  clima,
 }: {
   plant: Plant;
   fotoUrl?: string;
   /** Un'altra pianta della collezione ha la stessa varietà schedata (stesso var_key). */
   duplicato?: boolean;
+  clima: ProfiloClimatico;
 }) {
   const genere = plant.genus_id ? getGenere(plant.genus_id) : undefined;
   const varieta = plant.var_key ? getVarietaByKey(plant.var_key) : undefined;
-  const ricovero = plant.kind === "lost" ? undefined : varieta?.ricovero;
+  const ricovero = plant.kind === "lost" || !varieta ? undefined : ricoveroVarietaPerClima(varieta, clima);
   const illustrazione = ricovero ? SFONDO_ILLUSTRAZIONE[ricovero] : SFONDO_ILLUSTRAZIONE.riparo;
-  const indicazioni = indicazioniPerPianta(plant);
+  const indicazioni = indicazioniPerPianta(plant, clima);
 
   return (
     <Link

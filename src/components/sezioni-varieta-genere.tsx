@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { creaDaVarieta } from "@/app/actions/plants";
 import type { Ricovero, Varieta } from "@/lib/catalogo";
+import { ricoveroVarietaPerClima, type ProfiloClimatico } from "@/lib/clima";
 
 const ORDINE: Ricovero[] = ["fuori", "riparo", "casa", "casa!"];
 const COLORE: Record<Ricovero, { bg: string; testoChiaro: boolean }> = {
@@ -38,15 +39,17 @@ function Freccia({ aperta, chiaro }: { aperta: boolean; chiaro: boolean }) {
 export function SezioniVarietaGenere({
   varieta,
   varKeyPossedute,
+  clima,
 }: {
   varieta: Varieta[];
   varKeyPossedute: string[];
+  clima: ProfiloClimatico;
 }) {
   const possedute = new Set(varKeyPossedute);
   const [aperte, setAperte] = useState<Set<Ricovero>>(new Set());
 
   const gruppi: Record<Ricovero, Varieta[]> = { fuori: [], riparo: [], casa: [], "casa!": [] };
-  for (const v of varieta) gruppi[v.ricovero].push(v);
+  for (const v of varieta) gruppi[ricoveroVarietaPerClima(v, clima)].push(v);
 
   function alterna(r: Ricovero) {
     setAperte((precedente) => {

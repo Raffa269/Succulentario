@@ -6,6 +6,8 @@ import { IllustrazioneGenere } from "@/components/illustrazione-genere";
 import { SezioniVarietaGenere } from "@/components/sezioni-varieta-genere";
 import { createClient } from "@/lib/supabase/server";
 import { indicazioneIndoorPerGenere } from "@/lib/indoor";
+import { climaCorrenteDaCookie } from "@/lib/clima-server";
+import { ricoveroVarietaPerClima } from "@/lib/clima";
 
 export function generateStaticParams() {
   return generi.map((g) => ({ id: g.id }));
@@ -44,11 +46,12 @@ export default async function PaginaGenere({ params }: PageProps<"/generi/[id]">
 
   const varieta = getVarietaDiGenere(id);
   const indoor = indicazioneIndoorPerGenere(id);
+  const clima = await climaCorrenteDaCookie();
 
   // La sezione dominante (più varietà) intona l'intestazione, come nel
   // mockup 1e (Haworthia è a dominante "riparo").
   const conteggi: Record<Ricovero, number> = { fuori: 0, riparo: 0, casa: 0, "casa!": 0 };
-  for (const v of varieta) conteggi[v.ricovero]++;
+  for (const v of varieta) conteggi[ricoveroVarietaPerClima(v, clima)]++;
   const dominante = ORDINE.reduce((migliore, r) => (conteggi[r] > conteggi[migliore] ? r : migliore), "fuori" as Ricovero);
 
   const supabase = await createClient();
@@ -131,7 +134,7 @@ export default async function PaginaGenere({ params }: PageProps<"/generi/[id]">
           <span className="font-sans text-xs font-medium text-[var(--color-text-secondary)]">per etichetta</span>
         </div>
 
-        <SezioniVarietaGenere varieta={varieta} varKeyPossedute={varKeyPossedute} />
+        <SezioniVarietaGenere varieta={varieta} varKeyPossedute={varKeyPossedute} clima={clima} />
       </div>
     </div>
   );

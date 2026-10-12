@@ -1,4 +1,5 @@
-import { getVarietaByKey, type Ricovero } from "@/lib/catalogo";
+import type { Ricovero } from "@/lib/catalogo";
+import { ricoveroPerPianta, type ProfiloClimatico } from "@/lib/clima";
 import type { Plant } from "@/lib/plants";
 
 type Segmento = Ricovero | "senza-scheda";
@@ -24,7 +25,7 @@ const ORDINE: Segmento[] = ["fuori", "riparo", "casa", "casa!", "senza-scheda"];
  * per tenere sott'occhio le proporzioni fra esigenze di ricovero. Le piante
  * non ancora collegate a una varietà catalogata contano come "senza scheda".
  */
-export function CardCopertura({ piante }: { piante: Plant[] }) {
+export function CardCopertura({ piante, clima }: { piante: Plant[]; clima: ProfiloClimatico }) {
   const totale = piante.length;
   const perSegmento: Record<Segmento, number> = {
     fuori: 0,
@@ -35,7 +36,7 @@ export function CardCopertura({ piante }: { piante: Plant[] }) {
   };
 
   for (const pianta of piante) {
-    const ricovero = pianta.var_key ? getVarietaByKey(pianta.var_key)?.ricovero : undefined;
+    const ricovero = ricoveroPerPianta(pianta, clima);
     perSegmento[ricovero ?? "senza-scheda"]++;
   }
 

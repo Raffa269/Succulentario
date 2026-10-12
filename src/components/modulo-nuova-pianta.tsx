@@ -8,6 +8,7 @@ import { createClient } from "@/lib/supabase/client";
 import { comprimiImmagine } from "@/lib/immagine";
 import { creaManuale } from "@/app/actions/plants";
 import { cercaVarietaPerNome, type Genere, type Ricovero } from "@/lib/catalogo";
+import { ricoveroVarietaPerClima, type ProfiloClimatico } from "@/lib/clima";
 import { meseCorrente, type PlantKind } from "@/lib/plants";
 import type { CandidatoIdentificazione } from "@/app/api/identify/route";
 
@@ -32,11 +33,13 @@ export function ModuloNuovaPianta({
   kindIniziale,
   generi,
   varKeyPossedute = [],
+  clima,
 }: {
   kindIniziale: PlantKind;
   generi: Genere[];
   /** var_key già presenti in collezione: avvisa (senza bloccare) se se ne sceglie una uguale. */
   varKeyPossedute?: string[];
+  clima: ProfiloClimatico;
 }) {
   const router = useRouter();
   const supabase = createClient();
@@ -266,19 +269,22 @@ export function ModuloNuovaPianta({
             className="absolute z-10 mt-1.5 w-full overflow-hidden rounded-2xl bg-white"
             style={{ boxShadow: "var(--shadow-sm)" }}
           >
-            {suggerimenti.map((v, i) => (
-              <button
-                key={v.key}
-                type="button"
-                onMouseDown={(e) => e.preventDefault()}
-                onClick={() => scegliVarieta(v)}
-                className="flex w-full items-center gap-2.5 px-[15px] py-3.5 text-left"
-                style={{ borderBottom: i < suggerimenti.length - 1 ? "1px solid var(--color-divider)" : undefined }}
-              >
-                <i className="block h-[26px] w-[10px] shrink-0 rounded" style={{ background: COLORE_RICOVERO[v.ricovero].bg }} />
-                <span className="font-serif text-[17px] italic text-[var(--color-text)]">{v.nome}</span>
-              </button>
-            ))}
+            {suggerimenti.map((v, i) => {
+              const ricovero = ricoveroVarietaPerClima(v, clima);
+              return (
+                <button
+                  key={v.key}
+                  type="button"
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => scegliVarieta(v)}
+                  className="flex w-full items-center gap-2.5 px-[15px] py-3.5 text-left"
+                  style={{ borderBottom: i < suggerimenti.length - 1 ? "1px solid var(--color-divider)" : undefined }}
+                >
+                  <i className="block h-[26px] w-[10px] shrink-0 rounded" style={{ background: COLORE_RICOVERO[ricovero].bg }} />
+                  <span className="font-serif text-[17px] italic text-[var(--color-text)]">{v.nome}</span>
+                </button>
+              );
+            })}
           </div>
         )}
       </div>

@@ -4,6 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { urlFirmate } from "@/lib/foto-url";
 import { DettaglioPianta } from "@/components/dettaglio-pianta";
 import { generi } from "@/lib/catalogo";
+import { climaCorrenteDaCookie } from "@/lib/clima-server";
 import type { Plant, PlantPhoto } from "@/lib/plants";
 
 const PAGINA_PER_KIND = { collection: "/collezione", wishlist: "/wishlist", lost: "/cimitero" } as const;
@@ -34,6 +35,7 @@ export default async function PaginaPianta({ params }: PageProps<"/piante/[id]">
 
   const mappa = await urlFirmate(supabase, [plant.photo_path, ...fotoCrescita.map((f) => f.photo_path)]);
   const fotoUrl = plant.photo_path ? mappa.get(plant.photo_path) : undefined;
+  const clima = await climaCorrenteDaCookie();
 
   return (
     <div className="mx-auto max-w-2xl px-4 pb-8 pt-3">
@@ -53,6 +55,7 @@ export default async function PaginaPianta({ params }: PageProps<"/piante/[id]">
         generi={generi}
         fotoCrescita={fotoCrescita}
         fotoCrescitaUrl={Object.fromEntries(fotoCrescita.map((f) => [f.id, mappa.get(f.photo_path)]))}
+        clima={clima}
       />
     </div>
   );

@@ -1,5 +1,6 @@
 import { ModuloNuovaPianta } from "@/components/modulo-nuova-pianta";
 import { generi } from "@/lib/catalogo";
+import { climaCorrenteDaCookie } from "@/lib/clima-server";
 import { createClient } from "@/lib/supabase/server";
 
 export const metadata = { title: "Aggiungi pianta · Succulentario" };
@@ -20,10 +21,11 @@ export default async function PaginaNuovaPianta({
     .eq("owner", user!.id)
     .eq("kind", "collection");
   const varKeyPossedute = (possedute ?? []).map((p) => p.var_key).filter((k): k is string => !!k);
+  const clima = await climaCorrenteDaCookie();
 
   return (
     <div className="mx-auto max-w-2xl">
-      <ModuloNuovaPianta kindIniziale={kindIniziale} generi={generi} varKeyPossedute={varKeyPossedute} />
+      <ModuloNuovaPianta kindIniziale={kindIniziale} generi={generi} varKeyPossedute={varKeyPossedute} clima={clima} />
     </div>
   );
 }

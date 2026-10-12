@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { caricaPiante } from "@/lib/piante-server";
-import { getVarietaByKey } from "@/lib/catalogo";
 import { WishlistCard } from "@/components/wishlist-card";
 import { AppHeader } from "@/components/app-header";
+import { climaCorrenteDaCookie } from "@/lib/clima-server";
 
 export const metadata = { title: "Wishlist · Succulentario" };
 
 export default async function PaginaWishlist() {
-  const { piante } = await caricaPiante("wishlist");
+  const [{ piante }, clima] = await Promise.all([caricaPiante("wishlist"), climaCorrenteDaCookie()]);
 
   return (
     <div className="relative mx-auto max-w-2xl px-4 pb-8 pt-3">
@@ -21,7 +21,7 @@ export default async function PaginaWishlist() {
 
       <div className="flex flex-col gap-2.5">
         {piante.map((p) => (
-          <WishlistCard key={p.id} plant={p} ricovero={p.var_key ? getVarietaByKey(p.var_key)?.ricovero : undefined} />
+          <WishlistCard key={p.id} plant={p} clima={clima} />
         ))}
       </div>
 

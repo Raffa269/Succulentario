@@ -1,5 +1,6 @@
 import { getGenere, getVarietaByKey, normalizza, type Varieta } from "@/lib/catalogo";
 import { indicazioneIndoorPerScheda, type IndicazioneIndoor } from "@/lib/indoor";
+import { CLIMA_ROMA_DEFAULT, temperatureChiave, type ProfiloClimatico } from "@/lib/clima";
 import type { Plant } from "@/lib/plants";
 
 export type Esposizione = "sole pieno" | "mezzo sole" | "mezz'ombra";
@@ -95,16 +96,27 @@ function terriccioDaNota(varieta: Varieta): Terriccio | undefined {
   return undefined;
 }
 
-export function indicazioniPerPianta(pianta: Plant): IndicazioniColtivazione {
+function adattaEsposizioneAlClima(esposizione: Esposizione, clima: ProfiloClimatico): Esposizione {
+  const { massimaEstivaMedia } = temperatureChiave(clima);
+  if (massimaEstivaMedia >= 35 && esposizione === "mezzo sole") return "mezz'ombra";
+  if (massimaEstivaMedia >= 32 && esposizione === "sole pieno") return "mezzo sole";
+  return esposizione;
+}
+
+export function indicazioniPerPianta(
+  pianta: Plant,
+  clima: ProfiloClimatico = CLIMA_ROMA_DEFAULT,
+): IndicazioniColtivazione {
   const varieta = pianta.var_key ? getVarietaByKey(pianta.var_key) : undefined;
   const genereId = varieta?.genere ?? pianta.genus_id ?? "";
   const genere = genereId ? getGenere(genereId) : undefined;
+  const esposizioneBase =
+    (varieta ? esposizioneDaNota(varieta) : undefined) ??
+    ESPOSIZIONE_PER_GENERE[genere?.id ?? genereId] ??
+    "mezzo sole";
 
   return {
-    esposizione:
-      (varieta ? esposizioneDaNota(varieta) : undefined) ??
-      ESPOSIZIONE_PER_GENERE[genere?.id ?? genereId] ??
-      "mezzo sole",
+    esposizione: adattaEsposizioneAlClima(esposizioneBase, clima),
     terriccio:
       (varieta ? terriccioDaNota(varieta) : undefined) ??
       TERRICCIO_PER_GENERE[genere?.id ?? genereId] ??

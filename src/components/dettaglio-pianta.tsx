@@ -19,6 +19,7 @@ import { RiquadroIndoor } from "@/components/indicazione-indoor";
 import type { Genere } from "@/lib/catalogo";
 import { formattaMeseAnnoDaData, type Plant, type PlantPhoto } from "@/lib/plants";
 import { indicazioniPerPianta, type Esposizione, type Terriccio } from "@/lib/coltivazione";
+import type { ProfiloClimatico } from "@/lib/clima";
 
 const PAGINA_PER_KIND = { collection: "/collezione", wishlist: "/wishlist", lost: "/cimitero" } as const;
 const BORDO_CAMPO = "1.5px solid rgba(32,30,29,.16)";
@@ -236,12 +237,14 @@ export function DettaglioPianta({
   generi,
   fotoCrescita,
   fotoCrescitaUrl,
+  clima,
 }: {
   plant: Plant;
   fotoUrlIniziale: string | undefined;
   generi: Genere[];
   fotoCrescita: PlantPhoto[];
   fotoCrescitaUrl: Record<string, string | undefined>;
+  clima: ProfiloClimatico;
 }) {
   const router = useRouter();
   const supabase = createClient();
@@ -267,7 +270,7 @@ export function DettaglioPianta({
   const [lostYm, setLostYm] = useState(plant.lost_ym ?? "");
   const [cause, setCause] = useState(plant.cause ?? "");
   const [lesson, setLesson] = useState(plant.lesson ?? "");
-  const indicazioni = indicazioniPerPianta(plant);
+  const indicazioni = indicazioniPerPianta(plant, clima);
 
   async function cambiaFoto(e: ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];

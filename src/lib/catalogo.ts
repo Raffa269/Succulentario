@@ -3,6 +3,7 @@ import varietaJson from "../../dati/varieta.json";
 import guidaJson from "../../dati/guida.json";
 import illustrazioniJson from "../../dati/illustrazioni.json";
 import calendarioJson from "../../dati/calendario.json";
+import { generiExtra, varietaExtra } from "@/lib/catalogo-extra";
 
 /**
  * Carica e indicizza i JSON di `dati/`: dati di sola lettura versionati nel
@@ -64,8 +65,8 @@ interface MeseCalendario {
   voci: VoceCalendario[];
 }
 
-export const generi: Genere[] = generiJson as Genere[];
-export const varieta: Varieta[] = varietaJson as Varieta[];
+export const generi: Genere[] = [...(generiJson as Genere[]), ...generiExtra];
+export const varieta: Varieta[] = [...(varietaJson as Varieta[]), ...varietaExtra];
 export const guida: BloccoGuida[] = guidaJson as BloccoGuida[];
 export const calendario: MeseCalendario[] = calendarioJson as MeseCalendario[];
 export const illustrazioni: Illustrazioni = illustrazioniJson as Illustrazioni;
@@ -108,7 +109,7 @@ export function trovaGenerePerNomeScientifico(nome: string): Genere | undefined 
   );
 }
 
-/** Conteggio di controllo: 11 generi, 525 varietà, 39/256/199/31 per ricovero. */
+/** Conteggio di controllo del catalogo versionato. */
 export function contaCatalogo() {
   const perRicovero: Record<Ricovero, number> = { fuori: 0, riparo: 0, casa: 0, "casa!": 0 };
   for (const v of varieta) perRicovero[v.ricovero]++;

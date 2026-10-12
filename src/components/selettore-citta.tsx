@@ -68,7 +68,7 @@ export function SelettoreCitta() {
         type="button"
         onClick={() => setAperto((v) => !v)}
         className="rounded-full px-3 py-1 font-sans text-xs font-bold"
-        style={{ background: "#ffe46b", color: "var(--color-text)", boxShadow: "inset 0 0 0 1px rgba(32,30,29,.08)" }}
+        style={{ background: "#ffe46b", color: "#201e1d", boxShadow: "inset 0 0 0 1px rgba(32,30,29,.2)" }}
         aria-label="Cambia città per le indicazioni climatiche"
       >
         per {cittaCorrente.nome}

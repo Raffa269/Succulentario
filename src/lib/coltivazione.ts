@@ -40,6 +40,67 @@ const TERRICCIO_PER_GENERE: Record<string, Terriccio> = {
   sedum: "più drenante",
 };
 
+const GENERI_SOLE_PIENO = new Set([
+  "agave",
+  "astrophytum",
+  "cereus",
+  "cleistocactus",
+  "copiapoa",
+  "dasylirion",
+  "delosperma",
+  "echinocactus",
+  "echinocereus",
+  "echinopsis",
+  "ferocactus",
+  "mammillaria",
+  "opuntia",
+  "pachycereus",
+  "pilosocereus",
+  "rebutia",
+  "sempervivum",
+  "trichocereus",
+  "yucca",
+]);
+
+const GENERI_MEZZOMBRA = new Set([
+  "cryptanthus",
+  "epiphyllum",
+  "hoya",
+  "peperomia",
+  "pilea",
+  "rhipsalis",
+  "tradescantia",
+  "zamioculcas",
+]);
+
+const GENERI_DRENANTI = new Set([
+  ...GENERI_SOLE_PIENO,
+  "adenia",
+  "adenium",
+  "adromischus",
+  "aeonium",
+  "anacampseros",
+  "cotyledon",
+  "dioscorea",
+  "fockea",
+  "pachyphytum",
+  "pachypodium",
+  "sarcocaulon",
+  "tylecodon",
+]);
+
+function esposizioneDaGenere(genereId: string): Esposizione | undefined {
+  if (GENERI_MEZZOMBRA.has(genereId)) return "mezz'ombra";
+  if (GENERI_SOLE_PIENO.has(genereId)) return "sole pieno";
+  return ESPOSIZIONE_PER_GENERE[genereId];
+}
+
+function terriccioDaGenere(genereId: string): Terriccio | undefined {
+  if (GENERI_DRENANTI.has(genereId)) return "più drenante";
+  if (GENERI_MEZZOMBRA.has(genereId)) return "normale";
+  return TERRICCIO_PER_GENERE[genereId];
+}
+
 function esposizioneDaNota(varieta: Varieta): Esposizione | undefined {
   const nota = normalizza(`${varieta.descrizione} ${varieta.note}`);
   if (
@@ -112,14 +173,14 @@ export function indicazioniPerPianta(
   const genere = genereId ? getGenere(genereId) : undefined;
   const esposizioneBase =
     (varieta ? esposizioneDaNota(varieta) : undefined) ??
-    ESPOSIZIONE_PER_GENERE[genere?.id ?? genereId] ??
+    esposizioneDaGenere(genere?.id ?? genereId) ??
     "mezzo sole";
 
   return {
     esposizione: adattaEsposizioneAlClima(esposizioneBase, clima),
     terriccio:
       (varieta ? terriccioDaNota(varieta) : undefined) ??
-      TERRICCIO_PER_GENERE[genere?.id ?? genereId] ??
+      terriccioDaGenere(genere?.id ?? genereId) ??
       "normale",
     indoor: indicazioneIndoorPerScheda(pianta.var_key, genere?.id ?? genereId),
   };

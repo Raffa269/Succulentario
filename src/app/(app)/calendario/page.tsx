@@ -96,7 +96,7 @@ function IconaTipo({ tipo }: { tipo: TipoIntervento }) {
   return (
     <span
       className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-sans text-sm font-bold"
-      style={{ background: "var(--color-neutral-200)", color: "var(--color-brand)" }}
+      style={{ background: "var(--color-brand)", color: "#fff" }}
       aria-hidden="true"
     >
       {ICONA_INTERVENTO[tipo]}
@@ -232,7 +232,7 @@ export default async function PaginaCalendario({
 
         <div className="grid grid-cols-7 gap-1">
           {GIORNI_SETTIMANA.map((giorno) => (
-            <div key={giorno} className="pb-1 text-center font-sans text-[11px] font-bold text-[var(--color-text-secondary)]">
+            <div key={giorno} className="pb-1 text-center font-sans text-[11px] font-bold text-[var(--color-text)]">
               {giorno}
             </div>
           ))}
@@ -254,14 +254,14 @@ export default async function PaginaCalendario({
                         key={intervento.id}
                         title={`${ETICHETTA_INTERVENTO[intervento.kind]}${intervento.note ? `: ${intervento.note}` : ""}`}
                         aria-label={`${ETICHETTA_INTERVENTO[intervento.kind]} del ${giorno}`}
-                        className="flex h-5 w-5 items-center justify-center rounded-full text-[11px]"
-                        style={{ background: "var(--color-neutral-200)", color: "var(--color-brand)" }}
+                        className="flex h-5 w-5 items-center justify-center rounded-full text-[11px] font-bold"
+                        style={{ background: "var(--color-brand)", color: "#fff" }}
                       >
                         {ICONA_INTERVENTO[intervento.kind]}
                       </span>
                     ))}
                     {voci.length > 4 && (
-                      <span className="text-[10px] font-bold text-[var(--color-text-secondary)]">+{voci.length - 4}</span>
+                      <span className="text-[10px] font-bold text-[var(--color-text)]">+{voci.length - 4}</span>
                     )}
                   </div>
                 )}
@@ -307,7 +307,7 @@ export default async function PaginaCalendario({
             {storicoInterventi.map((intervento) => (
               <div
                 key={intervento.id}
-                className="flex items-start gap-2 font-sans text-[11px] leading-snug text-[var(--color-text-secondary)]"
+                className="flex items-start gap-2 font-sans text-[12px] leading-snug text-[var(--color-text)]"
               >
                 <span className="w-[52px] shrink-0 tabular-nums">{formattaDataBreve(intervento.event_date)}</span>
                 <span className="shrink-0" aria-hidden="true">

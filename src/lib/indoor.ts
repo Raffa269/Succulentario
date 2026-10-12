@@ -208,6 +208,12 @@ export function indicazioneIndoorPerGenere(genereId: string | null | undefined):
       return indoor([4, 5], "Mesembriantemi da luce molto alta; controlla sempre temperatura e ventilazione sotto LED.");
     case "sansevieria":
       return indoor([2, 3], "Dato non presente nella guida PPFD allegata: indicazione prudente per coltivazione indoor luminosa.");
+    case "zamioculcas":
+      return indoor([1, 2], "Pianta da interno tollerante: cresce meglio con luce artificiale bassa o moderata, senza lampada troppo vicina.");
+    case "pachyphytum":
+      return indoor([4, 5], "Foglie pruinose e compatte: indoor richiede luce forte, con attenzione a calore e scottature.");
+    case "delosperma":
+      return indoor([4, 5], "Tappezzante molto luminoso: sotto LED deboli fila e fiorisce poco.");
     default:
       return indoor([3, 4], "Scegli il genere o una varietà schedata per ottenere una stima PPFD più precisa.", "generica");
   }

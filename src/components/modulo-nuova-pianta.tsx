@@ -589,7 +589,7 @@ export function ModuloNuovaPianta({
           style={
             propSoil
               ? { background: "var(--color-fuori)", color: "#fff" }
-              : { background: "#fff", border: "1.5px solid rgba(32,30,29,.16)", color: "var(--color-text-secondary)" }
+              : { background: "#fff", border: "1.5px solid rgba(32,30,29,.16)", color: "var(--color-text)" }
           }
         >
           {propSoil ? (
@@ -608,7 +608,7 @@ export function ModuloNuovaPianta({
           style={
             propHum
               ? { background: "var(--color-fuori)", color: "#fff" }
-              : { background: "#fff", border: "1.5px solid rgba(32,30,29,.16)", color: "var(--color-text-secondary)" }
+              : { background: "#fff", border: "1.5px solid rgba(32,30,29,.16)", color: "var(--color-text)" }
           }
         >
           {propHum ? (
@@ -630,7 +630,7 @@ export function ModuloNuovaPianta({
         onChange={(e) => setNote(e.target.value)}
         rows={3}
         placeholder="Presa al mercato di via Trieste."
-        className="w-full rounded-2xl bg-white p-[15px] text-base text-[var(--color-text)] outline-none placeholder:text-[var(--color-text-secondary)]"
+        className="w-full rounded-2xl bg-white p-[15px] text-base text-[var(--color-text)] outline-none"
         style={{ border: "1.5px solid rgba(32,30,29,.16)" }}
       />
 

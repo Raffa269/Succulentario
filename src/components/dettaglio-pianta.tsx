@@ -97,7 +97,7 @@ function SelettoreCausa({ value, onChange }: { value: string; onChange: (v: stri
             style={
               !modalitaAltro && value === opzione
                 ? { background: "var(--color-casa-esclamativo)", color: "#fff" }
-                : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text-secondary)" }
+                : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text)" }
             }
           >
             {opzione}
@@ -113,7 +113,7 @@ function SelettoreCausa({ value, onChange }: { value: string; onChange: (v: stri
           style={
             modalitaAltro
               ? { background: "var(--color-casa-esclamativo)", color: "#fff" }
-              : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text-secondary)" }
+              : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text)" }
           }
         >
           Altro
@@ -472,7 +472,7 @@ export function DettaglioPianta({
                   style={
                     valore
                       ? { background: "var(--color-fuori)", color: "#fff" }
-                      : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text-secondary)" }
+                      : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text)" }
                   }
                 >
                   {valore ? (
@@ -499,7 +499,7 @@ export function DettaglioPianta({
               style={
                 casaTuttoAnno
                   ? { background: "var(--color-fuori)", color: "#fff" }
-                  : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text-secondary)" }
+                  : { background: "#fff", border: BORDO_CAMPO, color: "var(--color-text)" }
               }
             >
               {casaTuttoAnno ? (
@@ -637,7 +637,7 @@ export function DettaglioPianta({
             <div className="mt-3 flex gap-2.5">
               <button
                 onClick={() => setMostraFormPersa(false)}
-                className="h-11 flex-1 rounded-xl bg-white text-sm font-medium text-[var(--color-text-secondary)]"
+                className="h-11 flex-1 rounded-xl bg-white text-sm font-medium text-[var(--color-text)]"
               >
                 Annulla
               </button>

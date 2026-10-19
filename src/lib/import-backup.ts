@@ -1,5 +1,6 @@
 import { relinkVarKey } from "@/lib/catalogo";
 import type { PlantKind } from "@/lib/plants";
+import { SISTEMAZIONI, ORIENTAMENTI, type NotaPianta, type Sistemazione, type Orientamento } from "@/lib/diario-pianta";
 
 /**
  * Legge un backup, in uno dei due formati: quello dell'artifact originale
@@ -34,6 +35,9 @@ export interface VoceDaImportare {
   propSoil: boolean;
   propHum: boolean;
   notes: string;
+  noteEntries: NotaPianta[];
+  sistemazione: Sistemazione | null;
+  orientamento: Orientamento | null;
   addedAt: string | null;
   lostYm: string | null;
   cause: string | null;
@@ -64,6 +68,9 @@ function analizzaVoceArtifact(v: Record<string, unknown>, kind: PlantKind): Voce
     propSoil: Boolean(v.propSoil),
     propHum: Boolean(v.propHum),
     notes: testo(v.notes),
+    noteEntries: [],
+    sistemazione: null,
+    orientamento: null,
     addedAt: testo(v.added) || null,
     lostYm: testo(v.lostDate) || null,
     cause: testo(v.cause) || null,
@@ -92,6 +99,11 @@ function analizzaVoceApp(v: Record<string, unknown>): VoceDaImportare {
     propSoil: Boolean(v.propSoil),
     propHum: Boolean(v.propHum),
     notes: testo(v.notes),
+    noteEntries: Array.isArray(v.noteEntries) ? v.noteEntries.filter((n): n is NotaPianta =>
+      !!n && typeof n === "object" && typeof n.id === "string" && typeof n.text === "string" &&
+      typeof n.created_at === "string" && Number.isFinite(Date.parse(n.created_at))) : [],
+    sistemazione: SISTEMAZIONI.includes(v.sistemazione as Sistemazione) ? v.sistemazione as Sistemazione : null,
+    orientamento: ORIENTAMENTI.includes(v.orientamento as Orientamento) ? v.orientamento as Orientamento : null,
     addedAt: testo(v.addedAt) || null,
     lostYm: testo(v.lostYm) || null,
     cause: testo(v.cause) || null,
@@ -133,3 +145,4 @@ export function analizzaBackup(testoFile: string): BackupAnalizzato {
     ],
   };
 }
+

@@ -17,7 +17,9 @@ import {
 import { IllustrazioneGenere } from "@/components/illustrazione-genere";
 import { RiquadroIndoor } from "@/components/indicazione-indoor";
 import type { Genere } from "@/lib/catalogo";
-import { formattaMeseAnnoDaData, type Plant, type PlantPhoto } from "@/lib/plants";
+import { type Plant, type PlantPhoto } from "@/lib/plants";
+import { SISTEMAZIONI, ORIENTAMENTI, formattaDataCompleta, type Sistemazione, type Orientamento } from "@/lib/diario-pianta";
+import { NotePianta } from "@/components/note-pianta";
 import { indicazioniPerPianta, type Esposizione, type Terriccio } from "@/lib/coltivazione";
 import type { ProfiloClimatico } from "@/lib/clima";
 
@@ -205,7 +207,7 @@ function GalleriaCrescita({
               </button>
             </div>
             <p className="mt-1 text-center text-[10px] capitalize text-[var(--color-text-secondary)]">
-              {formattaMeseAnnoDaData(f.created_at)}
+              <time dateTime={f.created_at}>{formattaDataCompleta(f.created_at)}</time>
             </p>
           </div>
         ))}
@@ -260,7 +262,8 @@ export function DettaglioPianta({
   const [maxHeight, setMaxHeight] = useState(plant.max_height ?? "???");
   const [maxWidth, setMaxWidth] = useState(plant.max_width ?? "???");
   const [darkPeriod, setDarkPeriod] = useState(plant.dark_period ?? "???");
-  const [notes, setNotes] = useState(plant.notes);
+  const [sistemazione, setSistemazione] = useState<Sistemazione | "">(plant.sistemazione ?? "");
+  const [orientamento, setOrientamento] = useState<Orientamento | "">(plant.orientamento ?? "");
   const [photoPath, setPhotoPath] = useState(plant.photo_path);
   const [fotoUrl, setFotoUrl] = useState(fotoUrlIniziale);
 
@@ -310,7 +313,8 @@ export function DettaglioPianta({
           purchaseYm: purchaseYm || null,
           propSoil,
           propHum,
-          notes,
+          sistemazione: sistemazione || null,
+          orientamento: sistemazione ? orientamento || null : null,
           casaTuttoAnno,
           lastRepotDate: lastRepotDate || null,
           potDiameterCm: potDiameterCm ? Number(potDiameterCm.replace(",", ".")) : null,
@@ -424,6 +428,27 @@ export function DettaglioPianta({
       )}
 
       <form onSubmit={salva} className="mt-5 flex flex-col gap-4">
+        <fieldset className="flex flex-col gap-3 rounded-2xl p-4" style={{ background: "var(--color-neutral-100)" }}>
+          <legend className="font-heading text-lg">Sistemazione</legend>
+          <label>
+            <Etichetta>Posizione della pianta</Etichetta>
+            <select value={sistemazione} onChange={(e) => {
+              setSistemazione(e.target.value as Sistemazione | "");
+              if (!e.target.value) setOrientamento("");
+            }} className={classeCampo} style={{ border: BORDO_CAMPO }}>
+              <option value="">Seleziona la sistemazione</option>
+              {SISTEMAZIONI.map((s) => <option key={s} value={s}>{s.charAt(0).toUpperCase() + s.slice(1)}</option>)}
+            </select>
+          </label>
+          {sistemazione && <label>
+            <Etichetta>Esposizione della sistemazione</Etichetta>
+            <select value={orientamento} required onChange={(e) => setOrientamento(e.target.value as Orientamento | "")}
+              className={classeCampo} style={{ border: BORDO_CAMPO }}>
+              <option value="">Seleziona l’orientamento</option>
+              {ORIENTAMENTI.map((o) => <option key={o} value={o}>{o.charAt(0).toUpperCase() + o.slice(1)}</option>)}
+            </select>
+          </label>}
+        </fieldset>
         <label>
           <Etichetta>Nome</Etichetta>
           <input value={name} onChange={(e) => setName(e.target.value)} required className={classeCampo} style={{ border: BORDO_CAMPO }} />
@@ -563,11 +588,6 @@ export function DettaglioPianta({
           <input value={darkPeriod} onChange={(e) => setDarkPeriod(e.target.value)} className={classeCampo} style={{ border: BORDO_CAMPO }} />
         </label>
 
-        <label>
-          <Etichetta>Note</Etichetta>
-          <textarea value={notes} onChange={(e) => setNotes(e.target.value)} rows={3} className={classeArea} style={{ border: BORDO_CAMPO }} />
-        </label>
-
         {plant.kind === "lost" && (
           <>
             <label>
@@ -596,6 +616,8 @@ export function DettaglioPianta({
           {salvando ? "Salvo…" : "Salva modifiche"}
         </button>
       </form>
+
+      <NotePianta plantId={plant.id} note={plant.note_entries ?? []} notaPrecedente={plant.notes ?? ""} />
 
       <div className="mt-6 flex flex-col gap-2.5 pt-6" style={{ borderTop: "1px solid var(--color-divider)" }}>
         {plant.kind === "wishlist" && (
@@ -675,3 +697,4 @@ export function DettaglioPianta({
     </div>
   );
 }
+

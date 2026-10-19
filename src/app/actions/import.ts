@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import type { PlantKind } from "@/lib/plants";
+import type { NotaPianta, Sistemazione, Orientamento } from "@/lib/diario-pianta";
 
 async function clientAutenticato() {
   const supabase = await createClient();
@@ -41,6 +42,9 @@ export interface VoceImport {
   propSoil: boolean;
   propHum: boolean;
   notes: string;
+  noteEntries: NotaPianta[];
+  sistemazione: Sistemazione | null;
+  orientamento: Orientamento | null;
   addedAt: string | null;
   lostYm: string | null;
   cause: string | null;
@@ -68,6 +72,9 @@ export async function importaVoce(voce: VoceImport, modalita: "sostituisci" | "u
     prop_soil: voce.propSoil,
     prop_hum: voce.propHum,
     notes: voce.notes,
+    note_entries: voce.noteEntries,
+    sistemazione: voce.sistemazione,
+    orientamento: voce.sistemazione ? voce.orientamento : null,
     lost_ym: voce.lostYm,
     cause: voce.cause,
     lesson: voce.lesson,
@@ -88,3 +95,4 @@ export async function fineImportazione() {
   revalidatePath("/wishlist");
   revalidatePath("/cimitero");
 }
+

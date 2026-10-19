@@ -58,6 +58,9 @@ export async function esportaBackup(): Promise<string> {
         propSoil: p.prop_soil as boolean,
         propHum: p.prop_hum as boolean,
         notes: (p.notes as string) ?? "",
+        noteEntries: (p.note_entries ?? []) as { id: string; text: string; created_at: string }[],
+        sistemazione: (p.sistemazione as string | null) ?? null,
+        orientamento: (p.orientamento as string | null) ?? null,
         addedAt: p.added_at as string | null,
         lostYm: p.lost_ym as string | null,
         cause: p.cause as string | null,
@@ -89,7 +92,8 @@ export async function esportaBackup(): Promise<string> {
 <td>${escapeHtml(p.purchaseYm ?? "")}</td>
 <td>${p.propSoil ? "sì" : ""}</td>
 <td>${p.propHum ? "sì" : ""}</td>
-<td>${escapeHtml(p.notes)}</td>
+<td>${escapeHtml(p.notes)}${p.noteEntries.map((n) => `<p>${escapeHtml(n.created_at)}: ${escapeHtml(n.text)}</p>`).join("")}</td>
+<td>${escapeHtml(p.sistemazione ?? "")}</td><td>${escapeHtml(p.orientamento ?? "")}</td>
 <td>${escapeHtml(p.addedAt ?? "")}</td>
 <td>${escapeHtml(p.lostYm ?? "")}</td>
 <td>${escapeHtml(p.cause ?? "")}</td>
@@ -119,7 +123,7 @@ export async function esportaBackup(): Promise<string> {
 <table>
 <thead><tr>
 <th>Stato</th><th>N.</th><th>Nome</th><th>Genere</th><th>Varietà</th><th>Foto</th>
-<th>Acquisto</th><th>Terra</th><th>Umidità</th><th>Note</th><th>Aggiunta</th>
+<th>Acquisto</th><th>Terra</th><th>Umidità</th><th>Note</th><th>Sistemazione</th><th>Orientamento</th><th>Aggiunta</th>
 <th>Persa il</th><th>Causa</th><th>Lezione</th>
 </tr></thead>
 <tbody>
@@ -132,3 +136,4 @@ ${righe}
 </html>
 `;
 }
+

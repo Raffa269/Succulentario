@@ -91,6 +91,9 @@ export function ModuloImportazione() {
             propSoil: v.propSoil,
             propHum: v.propHum,
             notes: v.notes,
+            noteEntries: v.noteEntries,
+            sistemazione: v.sistemazione,
+            orientamento: v.orientamento,
             addedAt: v.addedAt,
             lostYm: v.lostYm,
             cause: v.cause,
@@ -237,3 +240,4 @@ export function ModuloImportazione() {
     </div>
   );
 }
+

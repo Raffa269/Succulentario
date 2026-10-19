@@ -1,3 +1,5 @@
+import type { NotaPianta, Orientamento, Sistemazione } from "@/lib/diario-pianta";
+
 export type PlantKind = "collection" | "wishlist" | "lost";
 
 export interface Plant {
@@ -13,6 +15,9 @@ export interface Plant {
   prop_soil: boolean;
   prop_hum: boolean;
   notes: string;
+  note_entries: NotaPianta[];
+  sistemazione: Sistemazione | null;
+  orientamento: Orientamento | null;
   added_at: string;
   lost_ym: string | null;
   cause: string | null;
@@ -54,3 +59,4 @@ export function formattaMese(ym: string | null): string {
 export function formattaMeseAnnoDaData(iso: string): string {
   return new Date(iso).toLocaleDateString("it-IT", { month: "long", year: "numeric" });
 }
+

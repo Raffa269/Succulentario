@@ -6,6 +6,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getVarietaByKey } from "@/lib/catalogo";
 import { meseCorrente, type PlantKind } from "@/lib/plants";
 import { schedaColtivazioneSuggerita } from "@/lib/scheda-coltivazione";
+import { SISTEMAZIONI, ORIENTAMENTI, type Sistemazione, type Orientamento, type NotaPianta } from "@/lib/diario-pianta";
 
 async function clientAutenticato() {
   const supabase = await createClient();
@@ -106,7 +107,8 @@ export async function creaManuale(formData: FormData) {
       genus_id: genusId,
       var_key: varKey,
       photo_path: photoPath,
-      notes,
+      notes: "",
+      note_entries: notes ? [{ id: crypto.randomUUID(), text: notes, created_at: new Date().toISOString() }] : [],
       num,
       prop_soil: propSoil,
       prop_hum: propHum,
@@ -138,7 +140,8 @@ export interface CampiPianta {
   purchaseYm: string | null;
   propSoil: boolean;
   propHum: boolean;
-  notes: string;
+  sistemazione: Sistemazione | null;
+  orientamento: Orientamento | null;
   casaTuttoAnno: boolean;
   lastRepotDate: string | null;
   potDiameterCm: number | null;
@@ -152,6 +155,10 @@ export interface CampiPianta {
 export async function aggiornaPianta(id: string, campi: CampiPianta, fotoPrecedente: string | null) {
   const { supabase } = await clientAutenticato();
 
+  if (campi.sistemazione !== null && !SISTEMAZIONI.includes(campi.sistemazione)) throw new Error("Sistemazione non valida.");
+  if (campi.orientamento !== null && !ORIENTAMENTI.includes(campi.orientamento)) throw new Error("Orientamento non valido.");
+  if (campi.sistemazione && !campi.orientamento) throw new Error("Seleziona l'esposizione della pianta.");
+
   if (campi.photoPath !== undefined && campi.photoPath !== fotoPrecedente) {
     await cancellaFotoSePresente(supabase, fotoPrecedente);
   }
@@ -164,7 +171,8 @@ export async function aggiornaPianta(id: string, campi: CampiPianta, fotoPrecede
       purchase_ym: campi.purchaseYm,
       prop_soil: campi.propSoil,
       prop_hum: campi.propHum,
-      notes: campi.notes,
+      sistemazione: campi.sistemazione,
+      orientamento: campi.sistemazione ? campi.orientamento : null,
       casa_tutto_anno: campi.casaTuttoAnno,
       last_repot_date: campi.lastRepotDate,
       pot_diameter_cm: campi.potDiameterCm,
@@ -180,6 +188,22 @@ export async function aggiornaPianta(id: string, campi: CampiPianta, fotoPrecede
   revalidatePath("/collezione");
   revalidatePath("/wishlist");
   revalidatePath(`/piante/${id}`);
+}
+
+export async function aggiungiNotaPianta(plantId: string, testo: string): Promise<NotaPianta> {
+  const { supabase } = await clientAutenticato();
+  if (!testo.trim() || testo.length > 10000) throw new Error("La nota deve contenere da 1 a 10000 caratteri.");
+  const { data, error } = await supabase.rpc("aggiungi_nota_pianta", { p_plant_id: plantId, p_text: testo });
+  if (error) throw new Error(error.message);
+  revalidatePath(`/piante/${plantId}`);
+  return data as NotaPianta;
+}
+
+export async function eliminaNotaPianta(plantId: string, notaId: string) {
+  const { supabase } = await clientAutenticato();
+  const { error } = await supabase.rpc("elimina_nota_pianta", { p_plant_id: plantId, p_note_id: notaId });
+  if (error) throw new Error(error.message);
+  revalidatePath(`/piante/${plantId}`);
 }
 
 /** Aggiunge una foto alla cronologia di crescita della pianta (galleria datata sulla scheda). */
@@ -293,3 +317,4 @@ export async function eliminaPianta(id: string, photoPath: string | null) {
   revalidatePath("/wishlist");
   revalidatePath("/cimitero");
 }
+

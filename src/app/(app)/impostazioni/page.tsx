@@ -47,8 +47,8 @@ export default function PaginaImpostazioni() {
         <div className="rounded-2xl border border-black/10 p-4">
           <p className="font-sans text-[15px] font-bold text-[var(--color-text)]">Esporta backup</p>
           <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
-            Una pagina .html con collezione, wishlist e cimitero al completo — tutti i campi, foto
-            incorporate. Riconoscibile in importazione.
+            Salva collezione, wishlist e cimitero con foto e note. Scegli HTML per
+            reimportare il backup nell’app oppure PDF per consultarlo e stamparlo.
           </p>
           <div className="mt-3">
             <ModuloEsportazione />
@@ -70,3 +70,4 @@ export default function PaginaImpostazioni() {
     </div>
   );
 }
+

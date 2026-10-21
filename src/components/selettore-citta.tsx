@@ -67,16 +67,26 @@ export function SelettoreCitta() {
       <button
         type="button"
         onClick={() => setAperto((v) => !v)}
-        className="rounded-full px-3 py-1 font-sans text-xs font-bold"
+        className="flex min-h-11 max-w-full cursor-pointer items-center gap-2 rounded-full px-3 py-2 font-sans text-sm font-bold transition-shadow hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand)]"
         style={{ background: "#ffe46b", color: "#201e1d", boxShadow: "inset 0 0 0 1px rgba(32,30,29,.2)" }}
         aria-label="Cambia città per le indicazioni climatiche"
+        aria-expanded={aperto}
+        aria-controls="selezione-citta"
       >
-        per {cittaCorrente.nome}
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="shrink-0">
+          <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" />
+        </svg>
+        <span className="min-w-0 text-left">Città: {cittaCorrente.nome}</span>
+        <span className="shrink-0 underline underline-offset-2">Cambia</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true" className="shrink-0">
+          <path d={aperto ? "m6 15 6-6 6 6" : "m6 9 6 6 6-6"} />
+        </svg>
       </button>
 
       {aperto && (
         <div
-          className="absolute left-0 top-8 z-30 w-[min(82vw,320px)] overflow-hidden rounded-2xl bg-white"
+          id="selezione-citta"
+          className="absolute left-0 top-full z-30 mt-2 w-[min(82vw,320px)] overflow-hidden rounded-2xl bg-white"
           style={{ boxShadow: "var(--shadow-md)" }}
         >
           <div className="p-3" style={{ borderBottom: "1px solid var(--color-divider)" }}>
@@ -86,6 +96,7 @@ export function SelettoreCitta() {
               autoFocus
               type="search"
               placeholder="Cerca capoluogo"
+              aria-label="Cerca città"
               className="h-10 w-full rounded-xl bg-[var(--color-neutral-100)] px-3 text-sm text-[var(--color-text)] outline-none"
             />
             <p className="mt-1.5 text-xs leading-relaxed text-[var(--color-text-secondary)]">
@@ -113,3 +124,4 @@ export function SelettoreCitta() {
     </div>
   );
 }
+

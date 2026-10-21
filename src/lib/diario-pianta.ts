@@ -7,6 +7,7 @@ export interface NotaPianta {
   id: string;
   text: string;
   created_at: string;
+  updated_at?: string;
 }
 
 export function formattaDataCompleta(iso: string): string {

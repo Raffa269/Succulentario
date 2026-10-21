@@ -325,6 +325,7 @@ export function DettaglioPianta({
         },
         plant.photo_path,
       );
+      router.push("/collezione");
       router.refresh();
     } catch (err) {
       setErrore(err instanceof Error ? err.message : "Salvataggio fallito.");
@@ -481,19 +482,21 @@ export function DettaglioPianta({
 
         {plant.kind === "collection" && (
           <div>
-            <Etichetta>Propagazione</Etichetta>
-            <div className="flex gap-2.5">
+            <Etichetta>L’ho propagata</Etichetta>
+            <div className="grid grid-cols-1 gap-2.5 min-[380px]:grid-cols-2 sm:grid-cols-3">
               {(
                 [
-                  ["In terra", propSoil, setPropSoil],
-                  ["Per umidità", propHum, setPropHum],
+                  ["In terra", propSoil, () => setPropSoil((v) => !v)],
+                  ["Per umidità", propHum, () => setPropHum((v) => !v)],
+                  ["Ancora no", !propSoil && !propHum, () => { setPropSoil(false); setPropHum(false); }],
                 ] as const
               ).map(([etichetta, valore, imposta]) => (
                 <button
                   key={etichetta}
                   type="button"
-                  onClick={() => imposta(!valore)}
-                  className="flex h-[52px] flex-1 items-center gap-2.5 rounded-2xl px-3.5"
+                  onClick={imposta}
+                  aria-pressed={valore}
+                  className="flex min-h-[52px] min-w-0 items-center gap-2.5 rounded-2xl px-3.5 last:min-[380px]:col-span-2 last:sm:col-span-1"
                   style={
                     valore
                       ? { background: "var(--color-fuori)", color: "#fff" }

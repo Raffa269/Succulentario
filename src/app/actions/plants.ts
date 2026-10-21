@@ -199,6 +199,16 @@ export async function aggiungiNotaPianta(plantId: string, testo: string): Promis
   return data as NotaPianta;
 }
 
+export async function modificaNotaPianta(plantId: string, notaId: string, testo: string) {
+  const { supabase } = await clientAutenticato();
+  if (!testo.trim() || testo.length > 10000) throw new Error("La nota deve contenere da 1 a 10000 caratteri.");
+  const { error } = await supabase.rpc("modifica_nota_pianta", {
+    p_plant_id: plantId, p_note_id: notaId, p_text: testo,
+  });
+  if (error) throw new Error(error.message);
+  revalidatePath(`/piante/${plantId}`);
+}
+
 export async function eliminaNotaPianta(plantId: string, notaId: string) {
   const { supabase } = await clientAutenticato();
   const { error } = await supabase.rpc("elimina_nota_pianta", { p_plant_id: plantId, p_note_id: notaId });

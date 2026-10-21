@@ -21,7 +21,7 @@ export function NavLink({
   return (
     <Link
       href={href}
-      className="relative flex min-h-[56px] w-[76px] flex-col items-center justify-center gap-1"
+      className="relative flex min-h-[56px] min-w-0 flex-1 flex-col items-center justify-center gap-1"
       style={{ color: attivo ? "#fff" : "rgb(255 255 255 / 72%)" }}
     >
       {icona}
@@ -37,3 +37,4 @@ export function NavLink({
     </Link>
   );
 }
+

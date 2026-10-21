@@ -65,12 +65,12 @@ export default function AppLayout({ children }: { children: ReactNode }) {
   const cambiDiStagione = voceCalendarioDelMese(meseCorrente).length > 0;
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <main className="flex-1 pb-24">{children}</main>
+    <div className="app-shell">
+      <main className="app-content">{children}</main>
 
       <nav
-        className="fixed inset-x-0 bottom-0 z-10 flex justify-around rounded-t-3xl pt-3"
-        style={{ background: "var(--color-brand)", paddingBottom: "max(4px, env(safe-area-inset-bottom))" }}
+        aria-label="Sezioni dell’app"
+        className="app-navigation"
       >
         <NavLink href="/collezione" label="Collezione" icona={icone.collezione} />
         <NavLink href="/generi" label="Generi" icona={icone.generi} />
@@ -81,3 +81,4 @@ export default function AppLayout({ children }: { children: ReactNode }) {
     </div>
   );
 }
+

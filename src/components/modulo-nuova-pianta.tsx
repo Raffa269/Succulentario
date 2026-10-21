@@ -201,8 +201,8 @@ export function ModuloNuovaPianta({
         formData.set("photoPath", percorso);
       }
 
-      const { id } = await creaManuale(formData);
-      router.push(`/piante/${id}`);
+      await creaManuale(formData);
+      router.push("/collezione");
     } catch (err) {
       setErrore(err instanceof Error ? err.message : "Qualcosa è andato storto.");
       setInviando(false);
@@ -579,11 +579,12 @@ export function ModuloNuovaPianta({
       )}
 
       <p className="mb-1.5 mt-4 font-sans text-xs font-bold uppercase tracking-wider text-[var(--color-text-secondary)]">
-        Propagazione
+        L’ho propagata
       </p>
-      <div className="flex gap-2.5">
+      <div className="grid grid-cols-1 gap-2.5 min-[380px]:grid-cols-2 sm:grid-cols-3">
         <button
           type="button"
+          aria-pressed={propSoil}
           onClick={() => setPropSoil((v) => !v)}
           className="flex h-[52px] flex-1 items-center gap-2.5 rounded-2xl px-3.5"
           style={
@@ -603,6 +604,7 @@ export function ModuloNuovaPianta({
         </button>
         <button
           type="button"
+          aria-pressed={propHum}
           onClick={() => setPropHum((v) => !v)}
           className="flex h-[52px] flex-1 items-center gap-2.5 rounded-2xl px-3.5"
           style={
@@ -619,6 +621,16 @@ export function ModuloNuovaPianta({
             <i className="block h-5 w-5 rounded-md" style={{ border: "2px solid rgba(32,30,29,.3)" }} />
           )}
           <span className="font-sans text-sm font-bold">Per umidità</span>
+        </button>
+        <button type="button" aria-pressed={!propSoil && !propHum}
+          onClick={() => { setPropSoil(false); setPropHum(false); }}
+          className="flex h-[52px] items-center gap-2.5 rounded-2xl px-3.5 min-[380px]:col-span-2 sm:col-span-1"
+          style={!propSoil && !propHum
+            ? { background: "var(--color-fuori)", color: "#fff" }
+            : { background: "#fff", border: "1.5px solid rgba(32,30,29,.16)", color: "var(--color-text)" }}>
+          {!propSoil && !propHum ? <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3} strokeLinecap="round" aria-hidden="true"><path d="M4 12l5 5 11-11" /></svg>
+            : <i className="block h-5 w-5 rounded-md" style={{ border: "2px solid rgba(32,30,29,.3)" }} />}
+          <span className="font-sans text-sm font-bold">Ancora no</span>
         </button>
       </div>
 

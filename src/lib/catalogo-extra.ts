@@ -1,1 +1,239 @@
-aW1wb3J0IHR5cGUgeyBHZW5lcmUsIFJpY292ZXJvLCBWYXJpZXRhIH0gZnJvbSAiQC9saWIvY2F0YWxvZ28iOwoKY29uc3QgQ0FUQUxPR09fRVhUUkEgPSBbCiAgWyJhZGVuaWEiLCAiQWRlbmlhIl0sCiAgWyJhZGVuaXVtIiwgIkFkZW5pdW0iXSwKICBbImFkcm9taXNjaHVzIiwgIkFkcm9taXNjaHVzIl0sCiAgWyJhZW9uaXVtIiwgIkFlb25pdW0iXSwKICBbImFnYXZlIiwgIkFnYXZlIl0sCiAgWyJhbGJ1Y2EiLCAiQWxidWNhIl0sCiAgWyJhbW1vY2hhcmlzIiwgIkFtbW9jaGFyaXMiXSwKICBbImFuYWNhbXBzZXJvcyIsICJBbmFjYW1wc2Vyb3MiXSwKICBbImFzY2xlcGlhZGFjZWEiLCAiQXNjbGVwaWFkYWNlYWUgc3RhcGVsaWFkaSJdLAogIFsiYXN0cm9waHl0dW0iLCAiQXN0cm9waHl0dW0iXSwKICBbImJhb2JhYiIsICJCYW9iYWIiXSwKICBbImJlYXVjYXJuZWEiLCAiQmVhdWNhcm5lYSJdLAogIFsiYm9vcGhvbmUiLCAiQm9vcGhvbmUiXSwKICBbImNlcmV1cyIsICJDZXJldXMiXSwKICBbImNsZWlzdG9jYWN0dXMiLCAiQ2xlaXN0b2NhY3R1cyJdLAogIFsiY29waWFwb2EiLCAiQ29waWFwb2EiXSwKICBbImNvdHlsZWRvbiIsICJDb3R5bGVkb24iXSwKICBbImNyeXB0YW50aHVzIiwgIkNyeXB0YW50aHVzIl0sCiAgWyJkYXN5bGlyaW9uIiwgIkRhc3lsaXJpb24iXSwKICBbImRlbG9zcGVybWEiLCAiRGVsb3NwZXJtYSJdLAogIFsiZGlvc2NvcmVhIiwgIkRpb3Njb3JlYSJdLAogIFsiZWNoaW5vY2FjdHVzIiwgIkVjaGlub2NhY3R1cyJdLAogIFsiZWNoaW5vY2VyZXVzIiwgIkVjaGlub2NlcmV1cyJdLAogIFsiZWNoaW5vZm9zc3Vsb2NhY3R1cyIsICJFY2hpbm9mb3NzdWxvY2FjdHVzIl0sCiAgWyJlY2hpbm9wc2lzIiwgIkVjaGlub3BzaXMiXSwKICBbImVwaXBoeWxsdW0iLCAiRXBpcGh5bGx1bSJdLAogIFsiZXNwb3N0b2EiLCAiRXNwb3N0b2EiXSwKICBbImV1bHljaG5pYSIsICJFdWx5Y2huaWEiXSwKICBbImZlcm9jYWN0dXMiLCAiRmVyb2NhY3R1cyJdLAogIFsiZm9ja2VhIiwgIkZvY2tlYSJdLAogIFsiZ2FzdGVyaWEiLCAiR2FzdGVyaWEiXSwKICBbImdyYXB0b3BldGFsdW0iLCAiR3JhcHRvcGV0YWx1bSJdLAogIFsiZ3ltbm9jYWx5Y2l1bSIsICJHeW1ub2NhbHljaXVtIl0sCiAgWyJoaWxkZXdpbnRlcmEiLCAiSGlsZGV3aW50ZXJhIl0sCiAgWyJob3lhIiwgIkhveWEiXSwKICBbImlwb21lYSIsICJJcG9tb2VhIl0sCiAgWyJsb2JpdmlhIiwgIkxvYml2aWEiXSwKICBbImxvcGhvY2VyZXVzIiwgIkxvcGhvY2VyZXVzIl0sCiAgWyJtYW1taWxsYXJpYSIsICJNYW1taWxsYXJpYSJdLAogIFsibWF0dWNhbmEiLCAiTWF0dWNhbmEiXSwKICBbIm1lbG9jYWN0dXMiLCAiTWVsb2NhY3R1cyJdLAogIFsibW9udmlsbGVhIiwgIk1vbnZpbGxlYSJdLAogIFsibXlydGlsbG9jYWN0dXMiLCAiTXlydGlsbG9jYWN0dXMiXSwKICBbIm5lb3BvcnRlcmlhIiwgIk5lb3BvcnRlcmlhIl0sCiAgWyJub3RvY2FjdHVzIiwgIk5vdG9jYWN0dXMiXSwKICBbIm9wdW50aWEiLCAiT3B1bnRpYSJdLAogIFsib3Jlb2NlcmV1cyIsICJPcmVvY2VyZXVzIl0sCiAgWyJvcm5pdGhvZ2FsdW0iLCAiT3JuaXRob2dhbHVtIl0sCiAgWyJwYWNoeWNlcmV1cyIsICJQYWNoeWNlcmV1cyJdLAogIFsicGFjaHlwaHl0dW0iLCAiUGFjaHlwaHl0dW0iXSwKICBbInBhY2h5cG9kaXVtIiwgIlBhY2h5cG9kaXVtIl0sCiAgWyJwZXBlcm9taWEiLCAiUGVwZXJvbWlhIl0sCiAgWyJwaWxlYSIsICJQaWxlYSJdLAogIFsicGlsb3NvY2VyZXVzIiwgIlBpbG9zb2NlcmV1cyJdLAogIFsicG9sYXNraWEiLCAiUG9sYXNraWEiXSwKICBbInJhcGhpb25hY21lIiwgIlJhcGhpb25hY21lIl0sCiAgWyJyZWJ1dGlhIiwgIlJlYnV0aWEiXSwKICBbInJoaXBzYWxpcyIsICJSaGlwc2FsaXMiXSwKICBbInNhcmNvY2F1bG9uIiwgIlNhcmNvY2F1bG9uIl0sCiAgWyJzY2lsbGEiLCAiU2NpbGxhIl0sCiAgWyJzZWRldmVyaWEiLCAiU2VkZXZlcmlhIl0sCiAgWyJzZW1wZXJ2aXZ1bSIsICJTZW1wZXJ2aXZ1bSJdLAogIFsic3Rlbm9jZXJldXMiLCAiU3Rlbm9jZXJldXMiXSwKICBbInN0ZXRzb25pYSIsICJTdGV0c29uaWEiXSwKICBbInN1bGNvcmVidXRpYSIsICJTdWxjb3JlYnV0aWEiXSwKICBbInRoZWxvY2FjdHVzIiwgIlRoZWxvY2FjdHVzIl0sCiAgWyJ0cmFkZXNjYW50aWEiLCAiVHJhZGVzY2FudGlhIHN1Y2N1bGVudGUiXSwKICBbInRyaWNob2NlcmV1cyIsICJUcmljaG9jZXJldXMiXSwKICBbInR5bGVjb2RvbiIsICJUeWxlY29kb24iXSwKICBbInl1Y2NhIiwgIll1Y2NhIl0sCiAgWyJ6YW1pb2N1bGNhcyIsICJaYW1pb2N1bGNhcyJdLApdIGFzIGNvbnN0OwoKY29uc3QgY2FjdHVzID0gbmV3IFNldChbCiAgImFzdHJvcGh5dHVtIiwKICAiY2VyZXVzIiwKICAiY2xlaXN0b2NhY3R1cyIsCiAgImNvcGlhcG9hIiwKICAiZWNoaW5vY2FjdHVzIiwKICAiZWNoaW5vY2VyZXVzIiwKICAiZWNoaW5vZm9zc3Vsb2NhY3R1cyIsCiAgImVjaGlub3BzaXMiLAogICJlc3Bvc3RvYSIsCiAgImV1bHljaG5pYSIsCiAgImZlcm9jYWN0dXMiLAogICJneW1ub2NhbHljaXVtIiwKICAiaGlsZGV3aW50ZXJhIiwKICAibG9iaXZpYSIsCiAgImxvcGhvY2VyZXVzIiwKICAibWFtbWlsbGFyaWEiLAogICJtYXR1Y2FuYSIsCiAgIm1lbG9jYWN0dXMiLAogICJtb252aWxsZWEiLAogICJteXJ0aWxsb2NhY3R1cyIsCiAgIm5lb3BvcnRlcmlhIiwKICAibm90b2NhY3R1cyIsCiAgIm9wdW50aWEiLAogICJvcmVvY2VyZXVzIiwKICAicGFjaHljZXJldXMiLAogICJwaWxvc29jZXJldXMiLAogICJwb2xhc2tpYSIsCiAgInJlYnV0aWEiLAogICJzdGVub2NlcmV1cyIsCiAgInN0ZXRzb25pYSIsCiAgInN1bGNvcmVidXRpYSIsCiAgInRoZWxvY2FjdHVzIiwKICAidHJpY2hvY2VyZXVzIiwKXSk7CmNvbnN0IHRyb3BpY2FsaSA9IG5ldyBTZXQoWwogICJhbGJ1Y2EiLAogICJhbW1vY2hhcmlzIiwKICAiYXNjbGVwaWFkYWNlYSIsCiAgImJlYXVjYXJuZWEiLAogICJib29waG9uZSIsCiAgImNyeXB0YW50aHVzIiwKICAiZXBpcGh5bGx1bSIsCiAgImhveWEiLAogICJvcm5pdGhvZ2FsdW0iLAogICJwZXBlcm9taWEiLAogICJwaWxlYSIsCiAgInJhcGhpb25hY21lIiwKICAicmhpcHNhbGlzIiwKICAic2NpbGxhIiwKICAidHJhZGVzY2FudGlhIiwKICAiemFtaW9jdWxjYXMiLApdKTsKY29uc3QgcnVzdGljaGUgPSBuZXcgU2V0KFsiZGFzeWxpcmlvbiIsICJkZWxvc3Blcm1hIiwgInNlbXBlcnZpdnVtIiwgInl1Y2NhIl0pOwpjb25zdCBjYXVkaWNpZm9ybWkgPSBuZXcgU2V0KFsKICAiYWRlbmlhIiwKICAiYWRlbml1bSIsCiAgImJhb2JhYiIsCiAgImRpb3Njb3JlYSIsCiAgImZvY2tlYSIsCiAgImlwb21lYSIsCiAgInBhY2h5cG9kaXVtIiwKICAic2FyY29jYXVsb24iLAogICJ0eWxlY29kb24iLApdKTsKY29uc3QgZm9nbGlhID0gbmV3IFNldChbImFkcm9taXNjaHVzIiwgImFlb25pdW0iLCAiYWdhdmUiLCAiYW5hY2FtcHNlcm9zIiwgImNvdHlsZWRvbiIsICJnYXN0ZXJpYSIsICJwYWNoeXBoeXR1bSJdKTsKCmZ1bmN0aW9uIGZhbWlnbGlhKGlkOiBzdHJpbmcpIHsKICBpZiAoaWQgPT09ICJncmFwdG9wZXRhbHVtIikgcmV0dXJuICJDcmFzc3VsYWNlYWUgwrcgTWVzc2ljbyI7CiAgaWYgKGlkID09PSAic2VkZXZlcmlhIikgcmV0dXJuICJDcmFzc3VsYWNlYWUgwrcgaWJyaWRpIEVjaGV2ZXJpYSDDlyBTZWR1bSI7CiAgaWYgKGNhY3R1cy5oYXMoaWQpKSByZXR1cm4gIkNhY3RhY2VhZSDCtyBBbWVyaWNoZSBhcmlkZSI7CiAgaWYgKGlkID09PSAiZGVsb3NwZXJtYSIpIHJldHVybiAiQWl6b2FjZWFlIMK3IFN1ZGFmcmljYSBtb250YW5vIjsKICBpZiAoaWQgPT09ICJwYWNoeXBoeXR1bSIpIHJldHVybiAiQ3Jhc3N1bGFjZWFlIMK3IE1lc3NpY28iOwogIGlmIChpZCA9PT0gInphbWlvY3VsY2FzIikgcmV0dXJuICJBcmFjZWFlIMK3IEFmcmljYSBvcmllbnRhbGUiOwogIGlmIChmb2dsaWEuaGFzKGlkKSkgcmV0dXJuICJTdWNjdWxlbnRlIGEgZm9nbGlhIMK3IEFmcmljYSBlIEFtZXJpY2hlIjsKICBpZiAoY2F1ZGljaWZvcm1pLmhhcyhpZCkpIHJldHVybiAiQ2F1ZGljaWZvcm1pIMK3IEFmcmljYSBlIE1hZGFnYXNjYXIiOwogIGlmICh0cm9waWNhbGkuaGFzKGlkKSkgcmV0dXJuICJTdWNjdWxlbnRlIHRyb3BpY2FsaSDCtyBjb2x0aXZhemlvbmUgcmlwYXJhdGEiOwogIGlmIChydXN0aWNoZS5oYXMoaWQpKSByZXR1cm4gIlN1Y2N1bGVudGUgcnVzdGljaGUgbyBzZW1pcnVzdGljaGUiOwogIHJldHVybiAiU3VjY3VsZW50ZSDCtyBvcmlnaW5pIHZhcmlhYmlsaSI7Cn0KCmZ1bmN0aW9uIHJpY292ZXJvKGlkOiBzdHJpbmcpOiBSaWNvdmVybyB7CiAgaWYgKHJ1c3RpY2hlLmhhcyhpZCkpIHJldHVybiAiZnVvcmkiOwogIGlmICh0cm9waWNhbGkuaGFzKGlkKSB8fCBpZCA9PT0gIm1lbG9jYWN0dXMiKSByZXR1cm4gImNhc2EiOwogIGlmIChjYXVkaWNpZm9ybWkuaGFzKGlkKSB8fCBpZCA9PT0gImFlb25pdW0iIHx8IGlkID09PSAicGFjaHlwaHl0dW0iKSByZXR1cm4gImNhc2EiOwogIHJldHVybiAicmlwYXJvIjsKfQoKZnVuY3Rpb24gaW52ZXJubyhpZDogc3RyaW5nKSB7CiAgY29uc3QgciA9IHJpY292ZXJvKGlkKTsKICBpZiAociA9PT0gImZ1b3JpIikgcmV0dXJuICJQdcOyIHJlc3RhcmUgZnVvcmkgc29sbyBjb24gc3Vic3RyYXRvIG1vbHRvIGRyZW5hbnRlIGUgcGlvZ2dpYSBpbnZlcm5hbGUgbGltaXRhdGE6IGZyZWRkbyBhc2NpdXR0byBlIGZyZWRkbyBiYWduYXRvIG5vbiBzb25vIGxhIHN0ZXNzYSBjb3NhLiI7CiAgaWYgKHIgPT09ICJyaXBhcm8iKSByZXR1cm4gIkluIGludmVybm8gcHJlZmVyaXNjZSB1biBwdW50byBsdW1pbm9zbywgYXNjaXV0dG8gZSByaXBhcmF0byBkYWxsYSBwaW9nZ2lhLiBMZSBnZWxhdGUgY29uIHZhc28gYmFnbmF0byBhdW1lbnRhbm8gbW9sdG8gaWwgcmlzY2hpbyBkaSBtYXJjaXVtZS4iOwogIHJldHVybiAiRGEgcml0aXJhcmUgaW4gY2FzYSBvIGluIGxvY2FsZSBsdW1pbm9zbyBwcmltYSBkZWxsZSBub3R0aSBmcmVkZGUuIEluIGludmVybm8gYWNxdWEgbWluaW1hOiBjb24gcG9jYSBsdWNlIGUgc3Vic3RyYXRvIGJhZ25hdG8gbWFyY2lzY2UgZmFjaWxtZW50ZS4iOwp9CgpmdW5jdGlvbiBpbnRybyhpZDogc3RyaW5nLCBub21lOiBzdHJpbmcpIHsKICAvLyBGb250aTogUkhTLCBHcmFwdG9wZXRhbHVtIHBhcmFndWF5ZW5zZTsgS2V3IFBPV08sIMOXIFNlZGV2ZXJpYS4KICBpZiAoaWQgPT09ICJncmFwdG9wZXRhbHVtIikgcmV0dXJuICJTdWNjdWxlbnRlIGRlbGxhIGZhbWlnbGlhIENyYXNzdWxhY2VhZSBjb24gZm9nbGllIGNhcm5vc2UgZGlzcG9zdGUgYSByb3NldHRhIGUgcGljY29saSBmaW9yaSBzdGVsbGF0aS4gR3JhcHRvcGV0YWx1bSBwYXJhZ3VheWVuc2Ugw6ggdW5hIGRlbGxlIHNwZWNpZSBwacO5IGRpZmZ1c2UgaW4gY29sdGl2YXppb25lLiI7CiAgaWYgKGlkID09PSAic2VkZXZlcmlhIikgcmV0dXJuICJTZWRldmVyaWEsIGluZGljYXRhIGFuY2hlIGNvbWUgw5cgU2VkZXZlcmlhLCDDqCB1biBnZW5lcmUgaWJyaWRvIG90dGVudXRvIGRhbGwnaW5jcm9jaW8gZnJhIEVjaGV2ZXJpYSBlIFNlZHVtLiBBc3BldHRvIGVkIGVzaWdlbnplIHBvc3Nvbm8gdmFyaWFyZSBzZWNvbmRvIGxhIGN1bHRpdmFyIGUgaSBnZW5pdG9yaSBkZWxsJ2licmlkby4iOwogIGlmIChpZCA9PT0gInphbWlvY3VsY2FzIikgcmV0dXJuICJHZW5lcmUgc3Blc3NvIHZlbmR1dG8gY29tZSBwaWFudGEgZGEgaW50ZXJubyByZXNpc3RlbnRlLiBOb24gw6ggdW4gY2FjdHVzOiBhY2N1bXVsYSByaXNlcnZlIGluIHJpem9taSBlIHBpY2Npb2xpIGNhcm5vc2ksIHF1aW5kaSB0b2xsZXJhIGRpbWVudGljYW56ZSBkJ2FjcXVhIG1hIG5vbiBpbCBmcmVkZG8gbsOpIGlsIHJpc3RhZ25vLiI7CiAgaWYgKGlkID09PSAiZGVsb3NwZXJtYSIpIHJldHVybiAiTWVzZW1icmlhbnRlbWkgdGFwcGV6emFudGksIG1vbHRvIGZpb3JpZmVyaSwgdXRpbGkgYW5jaGUgZnVvcmkgbmVpIGNsaW1pIGZyZWRkaSBzZSBpbCBkcmVuYWdnaW8gw6ggZWNjZWxsZW50ZS4gTGEgcnVzdGljaXTDoCBjYW1iaWEgcGVyIHNwZWNpZSBlIGN1bHRpdmFyLiI7CiAgaWYgKGlkID09PSAicGFjaHlwaHl0dW0iKSByZXR1cm4gIkNyYXNzdWxhY2VhZSBtZXNzaWNhbmUgY29uIGZvZ2xpZSBtb2x0byBjYXJub3NlIGUgc3Blc3NvIHBydWlub3NlLiBCZWxsZSBtYSBkZWxpY2F0ZSBhbCB0YXR0bzogbGEgcHJ1aW5hIHNpIHJvdmluYSBmYWNpbG1lbnRlIGUgbm9uIHNpIHJpY29zdHJ1aXNjZS4iOwogIGlmIChjYWN0dXMuaGFzKGlkKSkgcmV0dXJuIGAke25vbWV9IGNvbXByZW5kZSBjYWN0dXMgZGEgbHVjZSBmb3J0ZSwgc3Blc3NvIHBpw7kgcm9idXN0aSBzZSBjb2x0aXZhdGkgYXNjaXV0dGkgZSB2ZW50aWxhdGkuIEluIHZhc28gaWwgcHVudG8gY3JpdGljbyDDqCBzZW1wcmUgaWwgZnJlZGRvIHVtaWRvLmA7CiAgaWYgKGNhdWRpY2lmb3JtaS5oYXMoaWQpKSByZXR1cm4gYCR7bm9tZX0gw6ggdHJhdHRhdG8gbmVsbCdhcHAgY29tZSBjYXVkaWNpZm9ybWU6IGZ1c3RvIG8gcmFkaWNlIGluZ3Jvc3NhdGEsIGNyZXNjaXRhIHN0YWdpb25hbGUgZSByaXBvc28gYXNjaXV0dG8gcXVhbmRvIHBlcmRlIHZpZ29yZSBvIGZvZ2xpZS5gOwogIGlmICh0cm9waWNhbGkuaGFzKGlkKSkgcmV0dXJuIGAke25vbWV9IMOoIHVuIGdydXBwbyBkYSBsdWNlIGZpbHRyYXRhIG8gYW1iaWVudGUgcmlwYXJhdG86IGluIEl0YWxpYSBkaSBzb2xpdG8gbm9uIHZhIGxhc2NpYXRvIGFsIGZyZWRkbyBpbnZlcm5hbGUuYDsKICByZXR1cm4gYCR7bm9tZX0gw6ggYWdnaXVudG8gYWwgY2F0YWxvZ28gY29tZSBzY2hlZGEgZGkgZ2VuZXJlLCBjb3PDrCBwdcOyIGVzc2VyZSBjZXJjYXRvLCBhc3NlZ25hdG8gYWxsZSBwaWFudGUgZSBhcnJpY2NoaXRvIGNvbiB2YXJpZXTDoCBzcGVjaWZpY2hlIG5lbCB0ZW1wby5gOwp9CgpmdW5jdGlvbiBzcGVjaWZpY2hlKGlkOiBzdHJpbmcpOiBHZW5lcmVbInNwZWMiXSB7CiAgY29uc3QgbHVjZSA9IHRyb3BpY2FsaS5oYXMoaWQpIHx8IGlkID09PSAiemFtaW9jdWxjYXMiCiAgICA/ICJMdWNlIGFiYm9uZGFudGUgbWEgZmlsdHJhdGE7IHRvbGxlcmEgYW1iaWVudGkgbHVtaW5vc2kgc2VuemEgc29sZSBkaXJldHRvIGZvcnRlLiIKICAgIDogY2FjdHVzLmhhcyhpZCkgfHwgcnVzdGljaGUuaGFzKGlkKQogICAgICA/ICJNb2x0YSBsdWNlLCBjb24gc29sZSBkaXJldHRvIGdyYWR1YWxlLiBJbiBlc3RhdGUgcHJvdGVnZ2VyZSBsZSBwaWFudGUgYXBwZW5hIGFjcXVpc3RhdGUgZGFsbGUgb3JlIHBpw7kgY2FsZGUuIgogICAgICA6ICJMdWNlIG1vbHRvIGJ1b25hOyBzb2xlIGRlbCBtYXR0aW5vIG8gbWV6em8gc29sZSBzb25vIHVuYSBiYXNlIHBydWRlbnRlLiI7CiAgY29uc3QgYWNxdWEgPSByaWNvdmVybyhpZCkgPT09ICJmdW9yaSIKICAgID8gIkluIHN0YWdpb25lIGlycmlnYXJlIHF1YW5kbyBpbCB2YXNvIGFzY2l1Z2E7IGluIGludmVybm8gcmlkdXJyZSBtb2x0bywgc29wcmF0dHV0dG8gc2UgcGlvdmUuIgogICAgOiAiQmFnbmFyZSBzb2xvIGEgc3Vic3RyYXRvIGFzY2l1dHRvLiBJbiBpbnZlcm5vIHF1YXNpIGFzY2l1dHRvLCBzcGVjaWUgaW4gY2FzYSBvIGluIHNlcnJhIGZyZWRkYS4iOwogIGNvbnN0IHRlcnJpY2NpbyA9IGNhY3R1cy5oYXMoaWQpIHx8IGNhdWRpY2lmb3JtaS5oYXMoaWQpIHx8IHJ1c3RpY2hlLmhhcyhpZCkKICAgID8gIk1vbHRvIGRyZW5hbnRlLCBjb24gYWx0YSBxdW90YSBtaW5lcmFsZTogcG9taWNlLCBsYXBpbGxvLCBzYWJiaWEgZ3Jvc3NhIG8gbWF0ZXJpYWxpIGVxdWl2YWxlbnRpLiIKICAgIDogIkRyZW5hbnRlIGUgYXJpb3NvOyBldml0YXJlIHRlcnJpY2NpIGNvbXBhdHRpIGNoZSByZXN0YW5vIHVtaWRpIHBlciBnaW9ybmkuIjsKICByZXR1cm4gWwogICAgWyJMdWNlIiwgbHVjZV0sCiAgICBbIkFjcXVhIiwgYWNxdWFdLAogICAgWyJUZXJyaWNjaW8iLCB0ZXJyaWNjaW9dLAogICAgWyJJbnZlcm5vIiwgaW52ZXJubyhpZCldLAogICAgWyJOb3RhIiwgIlNjaGVkYSBzaW50ZXRpY2E6IGFnZ2l1bmdpIHZhcmlldMOgIHNwZWNpZmljaGUgcXVhbmRvIHZ1b2kgZGlzdGluZ3VlcmUgZXNpZ2VuemUgcGFydGljb2xhcmkuIl0sCiAgXTsKfQoKZXhwb3J0IGNvbnN0IGdlbmVyaUV4dHJhOiBHZW5lcmVbXSA9IENBVEFMT0dPX0VYVFJBLm1hcCgoW2lkLCBub21lXSkgPT4gKHsKICBpZCwKICBub21lLAogIGZhbTogZmFtaWdsaWEoaWQpLAogIGlsbHU6IGlkLAogIHJhcHByOiBgJHtub21lfSBzcC5gLAogIHRvdGFsZTogIlNjaGVkYSBzaW50ZXRpY2EgZGEgYW1wbGlhcmUgY29uIHNwZWNpZSBlIGN1bHRpdmFyIHNwZWNpZmljaGUuIiwKICBpbnZlcm5vOiBpbnZlcm5vKGlkKSwKICBrZXlzOiBbaWQsIG5vbWUudG9Mb3dlckNhc2UoKSwgLi4uKGlkID09PSAiemFtaW9jdWxjYXMiID8gWyJ6ZW1pb2N1bGNhcyIsICJ6YW1pb2N1bGNhIiwgInp6IHBsYW50Il0gOiBbXSldLAogIGludHJvOiBpbnRybyhpZCwgbm9tZSksCiAgc3BlYzogc3BlY2lmaWNoZShpZCksCn0pKTsKCmV4cG9ydCBjb25zdCB2YXJpZXRhRXh0cmE6IFZhcmlldGFbXSA9IENBVEFMT0dPX0VYVFJBLm1hcCgoW2lkLCBub21lXSkgPT4gewogIGNvbnN0IHIgPSByaWNvdmVybyhpZCk7CiAgY29uc3Qgbm90YSA9CiAgICByID09PSAiZnVvcmkiCiAgICAgID8gIlB1w7Igc3RhcmUgZnVvcmkgbmVpIGNsaW1pIGFkYXR0aSBzZSBhc2NpdXR0YSBlIG1vbHRvIGRyZW5hdGEuIFNvbGUgcGllbm8gbyBtZXp6byBzb2xlLCB0ZXJyaWNjaW8gbW9sdG8gZHJlbmFudGUuIgogICAgICA6IHIgPT09ICJyaXBhcm8iCiAgICAgICAgPyAiTWVnbGlvIHJpcGFybyBsdW1pbm9zbyBlIGFzY2l1dHRvIGluIGludmVybm8uIFNvbGUgcGllbm8gbyBtZXp6byBzb2xlLCB0ZXJyaWNjaW8gbW9sdG8gZHJlbmFudGUuIgogICAgICAgIDogdHJvcGljYWxpLmhhcyhpZCkgfHwgaWQgPT09ICJ6YW1pb2N1bGNhcyIKICAgICAgICAgID8gIkRhIHRlbmVyZSBpbiBjYXNhIG8gaW4gbG9jYWxlIGx1bWlub3NvIGR1cmFudGUgbCdpbnZlcm5vLiBNZXp6J29tYnJhIGx1bWlub3NhLCB0ZXJyaWNjaW8gZHJlbmFudGUgbWEgbm9uIGVzdHJlbW8uIgogICAgICAgICAgOiAiRGEgdGVuZXJlIGluIGNhc2EgbyBpbiBsb2NhbGUgbHVtaW5vc28gZHVyYW50ZSBsJ2ludmVybm8uIE1lenpvIHNvbGUsIHRlcnJpY2NpbyBkcmVuYW50ZS4iOwogIHJldHVybiB7CiAgICBrZXk6IGAke2lkfSMke2lkfS1zcGAsCiAgICBnZW5lcmU6IGlkLAogICAgbm9tZTogYCR7bm9tZX0gc3AuYCwKICAgIHNpbm9uaW1vOiBpZCA9PT0gInphbWlvY3VsY2FzIiA/ICJaZW1pb2N1bGNhczsgWlogcGxhbnQiIDogIiIsCiAgICBkZXNjcml6aW9uZTogInZvY2UgZ2VuZXJpY2EgcGVyIGNvbGxlZ2FyZSB1bmEgcGlhbnRhIGFsIGdlbmVyZSBxdWFuZG8gbGEgc3BlY2llIG5vbiDDqCBhbmNvcmEgaWRlbnRpZmljYXRhIiwKICAgIHJpY292ZXJvOiByLAogICAgbm90ZTogbm90YSwKICB9Owp9KTsK
+import type { Genere, Ricovero, Varieta } from "@/lib/catalogo";
+
+const CATALOGO_EXTRA = [
+  ["adenia", "Adenia"],
+  ["adenium", "Adenium"],
+  ["adromischus", "Adromischus"],
+  ["aeonium", "Aeonium"],
+  ["agave", "Agave"],
+  ["albuca", "Albuca"],
+  ["ammocharis", "Ammocharis"],
+  ["anacampseros", "Anacampseros"],
+  ["asclepiadacea", "Asclepiadaceae stapeliadi"],
+  ["astrophytum", "Astrophytum"],
+  ["baobab", "Baobab"],
+  ["beaucarnea", "Beaucarnea"],
+  ["boophone", "Boophone"],
+  ["cereus", "Cereus"],
+  ["cleistocactus", "Cleistocactus"],
+  ["copiapoa", "Copiapoa"],
+  ["cotyledon", "Cotyledon"],
+  ["cryptanthus", "Cryptanthus"],
+  ["dasylirion", "Dasylirion"],
+  ["delosperma", "Delosperma"],
+  ["dioscorea", "Dioscorea"],
+  ["echinocactus", "Echinocactus"],
+  ["echinocereus", "Echinocereus"],
+  ["echinofossulocactus", "Echinofossulocactus"],
+  ["echinopsis", "Echinopsis"],
+  ["epiphyllum", "Epiphyllum"],
+  ["espostoa", "Espostoa"],
+  ["eulychnia", "Eulychnia"],
+  ["ferocactus", "Ferocactus"],
+  ["fockea", "Fockea"],
+  ["gasteria", "Gasteria"],
+  ["graptopetalum", "Graptopetalum"],
+  ["gymnocalycium", "Gymnocalycium"],
+  ["hildewintera", "Hildewintera"],
+  ["hoya", "Hoya"],
+  ["ipomea", "Ipomoea"],
+  ["lobivia", "Lobivia"],
+  ["lophocereus", "Lophocereus"],
+  ["mammillaria", "Mammillaria"],
+  ["matucana", "Matucana"],
+  ["melocactus", "Melocactus"],
+  ["monvillea", "Monvillea"],
+  ["myrtillocactus", "Myrtillocactus"],
+  ["neoporteria", "Neoporteria"],
+  ["notocactus", "Notocactus"],
+  ["opuntia", "Opuntia"],
+  ["oreocereus", "Oreocereus"],
+  ["ornithogalum", "Ornithogalum"],
+  ["pachycereus", "Pachycereus"],
+  ["pachyphytum", "Pachyphytum"],
+  ["pachypodium", "Pachypodium"],
+  ["peperomia", "Peperomia"],
+  ["pilea", "Pilea"],
+  ["pilosocereus", "Pilosocereus"],
+  ["polaskia", "Polaskia"],
+  ["raphionacme", "Raphionacme"],
+  ["rebutia", "Rebutia"],
+  ["rhipsalis", "Rhipsalis"],
+  ["sarcocaulon", "Sarcocaulon"],
+  ["scilla", "Scilla"],
+  ["sedeveria", "Sedeveria"],
+  ["sempervivum", "Sempervivum"],
+  ["stenocereus", "Stenocereus"],
+  ["stetsonia", "Stetsonia"],
+  ["sulcorebutia", "Sulcorebutia"],
+  ["thelocactus", "Thelocactus"],
+  ["tradescantia", "Tradescantia succulente"],
+  ["trichocereus", "Trichocereus"],
+  ["tylecodon", "Tylecodon"],
+  ["yucca", "Yucca"],
+  ["zamioculcas", "Zamioculcas"],
+] as const;
+
+const cactus = new Set([
+  "astrophytum",
+  "cereus",
+  "cleistocactus",
+  "copiapoa",
+  "echinocactus",
+  "echinocereus",
+  "echinofossulocactus",
+  "echinopsis",
+  "espostoa",
+  "eulychnia",
+  "ferocactus",
+  "gymnocalycium",
+  "hildewintera",
+  "lobivia",
+  "lophocereus",
+  "mammillaria",
+  "matucana",
+  "melocactus",
+  "monvillea",
+  "myrtillocactus",
+  "neoporteria",
+  "notocactus",
+  "opuntia",
+  "oreocereus",
+  "pachycereus",
+  "pilosocereus",
+  "polaskia",
+  "rebutia",
+  "stenocereus",
+  "stetsonia",
+  "sulcorebutia",
+  "thelocactus",
+  "trichocereus",
+]);
+const tropicali = new Set([
+  "albuca",
+  "ammocharis",
+  "asclepiadacea",
+  "beaucarnea",
+  "boophone",
+  "cryptanthus",
+  "epiphyllum",
+  "hoya",
+  "ornithogalum",
+  "peperomia",
+  "pilea",
+  "raphionacme",
+  "rhipsalis",
+  "scilla",
+  "tradescantia",
+  "zamioculcas",
+]);
+const rustiche = new Set(["dasylirion", "delosperma", "sempervivum", "yucca"]);
+const caudiciformi = new Set([
+  "adenia",
+  "adenium",
+  "baobab",
+  "dioscorea",
+  "fockea",
+  "ipomea",
+  "pachypodium",
+  "sarcocaulon",
+  "tylecodon",
+]);
+const foglia = new Set(["adromischus", "aeonium", "agave", "anacampseros", "cotyledon", "gasteria", "pachyphytum"]);
+
+function famiglia(id: string) {
+  if (id === "graptopetalum") return "Crassulaceae · Messico";
+  if (id === "sedeveria") return "Crassulaceae · ibridi Echeveria × Sedum";
+  if (cactus.has(id)) return "Cactaceae · Americhe aride";
+  if (id === "delosperma") return "Aizoaceae · Sudafrica montano";
+  if (id === "pachyphytum") return "Crassulaceae · Messico";
+  if (id === "zamioculcas") return "Araceae · Africa orientale";
+  if (foglia.has(id)) return "Succulente a foglia · Africa e Americhe";
+  if (caudiciformi.has(id)) return "Caudiciformi · Africa e Madagascar";
+  if (tropicali.has(id)) return "Succulente tropicali · coltivazione riparata";
+  if (rustiche.has(id)) return "Succulente rustiche o semirustiche";
+  return "Succulente · origini variabili";
+}
+
+function ricovero(id: string): Ricovero {
+  if (rustiche.has(id)) return "fuori";
+  if (tropicali.has(id) || id === "melocactus") return "casa";
+  if (caudiciformi.has(id) || id === "aeonium" || id === "pachyphytum") return "casa";
+  return "riparo";
+}
+
+function inverno(id: string) {
+  const r = ricovero(id);
+  if (r === "fuori") return "Può restare fuori solo con substrato molto drenante e pioggia invernale limitata: freddo asciutto e freddo bagnato non sono la stessa cosa.";
+  if (r === "riparo") return "In inverno preferisce un punto luminoso, asciutto e riparato dalla pioggia. Le gelate con vaso bagnato aumentano molto il rischio di marciume.";
+  return "Da ritirare in casa o in locale luminoso prima delle notti fredde. In inverno acqua minima: con poca luce e substrato bagnato marcisce facilmente.";
+}
+
+function intro(id: string, nome: string) {
+  // Fonti: RHS, Graptopetalum paraguayense; Kew POWO, × Sedeveria.
+  if (id === "graptopetalum") return "Succulente della famiglia Crassulaceae con foglie carnose disposte a rosetta e piccoli fiori stellati. Graptopetalum paraguayense è una delle specie più diffuse in coltivazione.";
+  if (id === "sedeveria") return "Sedeveria, indicata anche come × Sedeveria, è un genere ibrido ottenuto dall'incrocio fra Echeveria e Sedum. Aspetto ed esigenze possono variare secondo la cultivar e i genitori dell'ibrido.";
+  if (id === "zamioculcas") return "Genere spesso venduto come pianta da interno resistente. Non è un cactus: accumula riserve in rizomi e piccioli carnosi, quindi tollera dimenticanze d'acqua ma non il freddo né il ristagno.";
+  if (id === "delosperma") return "Mesembriantemi tappezzanti, molto fioriferi, utili anche fuori nei climi freddi se il drenaggio è eccellente. La rusticità cambia per specie e cultivar.";
+  if (id === "pachyphytum") return "Crassulaceae messicane con foglie molto carnose e spesso pruinose. Belle ma delicate al tatto: la pruina si rovina facilmente e non si ricostruisce.";
+  if (cactus.has(id)) return `${nome} comprende cactus da luce forte, spesso più robusti se coltivati asciutti e ventilati. In vaso il punto critico è sempre il freddo umido.`;
+  if (caudiciformi.has(id)) return `${nome} è trattato nell'app come caudiciforme: fusto o radice ingrossata, crescita stagionale e riposo asciutto quando perde vigore o foglie.`;
+  if (tropicali.has(id)) return `${nome} è un gruppo da luce filtrata o ambiente riparato: in Italia di solito non va lasciato al freddo invernale.`;
+  return `${nome} è aggiunto al catalogo come scheda di genere, così può essere cercato, assegnato alle piante e arricchito con varietà specifiche nel tempo.`;
+}
+
+function specifiche(id: string): Genere["spec"] {
+  const luce = tropicali.has(id) || id === "zamioculcas"
+    ? "Luce abbondante ma filtrata; tollera ambienti luminosi senza sole diretto forte."
+    : cactus.has(id) || rustiche.has(id)
+      ? "Molta luce, con sole diretto graduale. In estate proteggere le piante appena acquistate dalle ore più calde."
+      : "Luce molto buona; sole del mattino o mezzo sole sono una base prudente.";
+  const acqua = ricovero(id) === "fuori"
+    ? "In stagione irrigare quando il vaso asciuga; in inverno ridurre molto, soprattutto se piove."
+    : "Bagnare solo a substrato asciutto. In inverno quasi asciutto, specie in casa o in serra fredda.";
+  const terriccio = cactus.has(id) || caudiciformi.has(id) || rustiche.has(id)
+    ? "Molto drenante, con alta quota minerale: pomice, lapillo, sabbia grossa o materiali equivalenti."
+    : "Drenante e arioso; evitare terricci compatti che restano umidi per giorni.";
+  return [
+    ["Luce", luce],
+    ["Acqua", acqua],
+    ["Terriccio", terriccio],
+    ["Inverno", inverno(id)],
+    ["Nota", "Scheda sintetica: aggiungi varietà specifiche quando vuoi distinguere esigenze particolari."],
+  ];
+}
+
+export const generiExtra: Genere[] = CATALOGO_EXTRA.map(([id, nome]) => ({
+  id,
+  nome,
+  fam: famiglia(id),
+  illu: id,
+  rappr: `${nome} sp.`,
+  totale: "Scheda sintetica da ampliare con specie e cultivar specifiche.",
+  inverno: inverno(id),
+  keys: [id, nome.toLowerCase(), ...(id === "zamioculcas" ? ["zemioculcas", "zamioculca", "zz plant"] : [])],
+  intro: intro(id, nome),
+  spec: specifiche(id),
+}));
+
+export const varietaExtra: Varieta[] = CATALOGO_EXTRA.map(([id, nome]) => {
+  const r = ricovero(id);
+  const nota =
+    r === "fuori"
+      ? "Può stare fuori nei climi adatti se asciutta e molto drenata. Sole pieno o mezzo sole, terriccio molto drenante."
+      : r === "riparo"
+        ? "Meglio riparo luminoso e asciutto in inverno. Sole pieno o mezzo sole, terriccio molto drenante."
+        : tropicali.has(id) || id === "zamioculcas"
+          ? "Da tenere in casa o in locale luminoso durante l'inverno. Mezz'ombra luminosa, terriccio drenante ma non estremo."
+          : "Da tenere in casa o in locale luminoso durante l'inverno. Mezzo sole, terriccio drenante.";
+  return {
+    key: `${id}#${id}-sp`,
+    genere: id,
+    nome: `${nome} sp.`,
+    sinonimo: id === "zamioculcas" ? "Zemioculcas; ZZ plant" : "",
+    descrizione: "voce generica per collegare una pianta al genere quando la specie non è ancora identificata",
+    ricovero: r,
+    note: nota,
+  };
+});
+

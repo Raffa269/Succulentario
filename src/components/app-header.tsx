@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SelettoreCitta } from "@/components/selettore-citta";
+import { LinkPosterCollezione } from "@/features/poster-collezione/link";
 
 /**
  * Intestazione condivisa dalle schermate principali (mockup 1a/1e/1i/1h):
@@ -31,7 +32,10 @@ export function AppHeader() {
             succulentario
           </span>
         </div>
-        <SelettoreCitta />
+        <div className="flex flex-wrap items-center gap-2">
+          <SelettoreCitta />
+          <LinkPosterCollezione />
+        </div>
       </div>
       <Link
         href="/impostazioni"
@@ -54,4 +58,3 @@ export function AppHeader() {
     </div>
   );
 }
-

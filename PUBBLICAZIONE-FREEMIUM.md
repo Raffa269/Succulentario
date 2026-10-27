@@ -1,5 +1,23 @@
 # Succulentario: BETA e 1.0 freemium nello stesso progetto Supabase
 
+## Stato del 27 ottobre 2026
+
+I due script SQL sono stati applicati al progetto esistente dopo una prova
+con rollback. Verificati online: 62 schede BETA conservate, 6 utenti BETA,
+schema freemium vuoto, Raffaele amministratore. Con ruolo authenticated,
+Raffaele vede le proprie 51 schede BETA e zero freemium; una sessione esterna
+non autorizzata non vede schede o foto di nessuna delle due aree.
+Lo schema freemium è stato aggiunto agli schemi API esposti; app_private è escluso.
+Registrazione email e SMTP personalizzato erano già abilitati. Il template
+Confirm Signup è stato aggiornato per mostrare il codice numerico.
+
+Superati test PostgreSQL temporaneo, TypeScript, ESLint e build freemium.
+Il codice è salvato sul ramo locale freemium-1.0. Il controllo automatico ha
+respinto il push GitHub: occorre l’autorizzazione esplicita dell’utente al
+caricamento del codice nel repository Raffa269/Succulentario. Non è stato
+eseguito alcun deployment; rimangono da configurare il sito separato su Vercel,
+il suo callback nei redirect Auth e da verificare il flusso email completo.
+
 ## Architettura
 
 - Progetto Supabase esistente: `vxjptqjfvuuvlsfksirl`.

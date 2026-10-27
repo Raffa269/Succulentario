@@ -12,11 +12,15 @@ Registrazione email e SMTP personalizzato erano già abilitati. Il template
 Confirm Signup è stato aggiornato per mostrare il codice numerico.
 
 Superati test PostgreSQL temporaneo, TypeScript, ESLint e build freemium.
-Il codice è salvato sul ramo locale freemium-1.0. Il controllo automatico ha
-respinto il push GitHub: occorre l’autorizzazione esplicita dell’utente al
-caricamento del codice nel repository Raffa269/Succulentario. Non è stato
-eseguito alcun deployment; rimangono da configurare il sito separato su Vercel,
-il suo callback nei redirect Auth e da verificare il flusso email completo.
+Il codice è stato caricato nel repository Raffa269/Succulentario sul ramo
+freemium-1.0 dopo l’autorizzazione esplicita dell’utente. Su Vercel è pronto il
+modulo di importazione di quel ramo come succulentario-freemium, con edizione
+freemium impostata. Il controllo automatico ha bloccato la lettura delle variabili
+del sito BETA e la creazione del nuovo progetto prima dell’inserimento delle
+variabili obbligatorie. È stata chiesta l’autorizzazione a copiare le chiavi
+Supabase e di riconoscimento dalla BETA al nuovo progetto nello stesso account,
+senza mostrarle in chat o modificare la BETA. Nessun nuovo deployment eseguito;
+rimangono il collegamento Vercel, il callback Auth e la verifica email completa.
 
 ## Architettura
 

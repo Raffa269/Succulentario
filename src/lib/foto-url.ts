@@ -1,3 +1,4 @@
+import { photoBucket } from "@/lib/edition";
 import type { createClient } from "@/lib/supabase/server";
 
 const SCADENZA_SECONDI = 60 * 60; // 1 ora: rigenerato a ogni caricamento pagina
@@ -11,7 +12,7 @@ export async function urlFirmate(
   const mappa = new Map<string, string>();
   if (validi.length === 0) return mappa;
 
-  const { data } = await supabase.storage.from("foto").createSignedUrls(validi, SCADENZA_SECONDI);
+  const { data } = await supabase.storage.from(photoBucket).createSignedUrls(validi, SCADENZA_SECONDI);
 
   for (const voce of data ?? []) {
     if (voce.signedUrl && voce.path) mappa.set(voce.path, voce.signedUrl);

@@ -1,4 +1,5 @@
 "use client";
+import { photoBucket } from "@/lib/edition";
 
 import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
@@ -166,7 +167,7 @@ function GalleriaCrescita({
 
       const blob = await comprimiImmagine(file);
       const percorso = `${user.id}/${crypto.randomUUID()}.jpg`;
-      const { error } = await supabase.storage.from("foto").upload(percorso, blob, { contentType: "image/jpeg" });
+      const { error } = await supabase.storage.from(photoBucket).upload(percorso, blob, { contentType: "image/jpeg" });
       if (error) throw new Error(error.message);
 
       await aggiungiFotoCrescita(plantId, percorso);
@@ -289,7 +290,7 @@ export function DettaglioPianta({
       const blob = await comprimiImmagine(file);
       const percorso = `${user.id}/${crypto.randomUUID()}.jpg`;
       const { error } = await supabase.storage
-        .from("foto")
+        .from(photoBucket)
         .upload(percorso, blob, { contentType: "image/jpeg" });
       if (error) throw new Error(error.message);
 

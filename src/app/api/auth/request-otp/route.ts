@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import { isFreemium } from "@/lib/edition";
 
 /**
  * Invia il codice a 6 cifre di accesso via email.
@@ -41,7 +42,7 @@ export async function POST(request: Request) {
     .split(",")
     .map((e) => e.trim().toLowerCase())
     .filter(Boolean);
-  if (consentiti.length > 0 && !consentiti.includes(email.trim().toLowerCase())) {
+  if (!isFreemium && consentiti.length > 0 && !consentiti.includes(email.trim().toLowerCase())) {
     return NextResponse.json(
       { error: "Questo Succulentario è privato: nessun accesso per questo indirizzo." },
       { status: 403 },
@@ -54,7 +55,7 @@ export async function POST(request: Request) {
   const { error } = await supabase.auth.signInWithOtp({
     email: email.trim(),
     options: {
-      shouldCreateUser: false,
+      shouldCreateUser: isFreemium,
       emailRedirectTo: `${origin}/auth/callback`,
     },
   });

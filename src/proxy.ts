@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { createServerClient } from "@supabase/ssr";
+import { isFreemium, supabaseOptions } from "@/lib/edition";
 
 // Percorsi raggiungibili senza sessione attiva.
 const PUBLIC_PATHS = ["/login", "/auth/callback", "/api/auth/request-otp"];
@@ -30,6 +31,7 @@ export async function proxy(request: NextRequest) {
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
+      ...supabaseOptions,
       cookies: {
         getAll() {
           return request.cookies.getAll();
@@ -69,6 +71,27 @@ export async function proxy(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     return redirectPreservingCookies(url, response);
+  }
+
+  if (user && isFreemium && !isPublicPath(pathname)) {
+    // Crea la richiesta solo quando la persona visita la freemium dopo il login.
+    // L'Auth condiviso non registra automaticamente i tester BETA.
+    const { error: registrationError } = await supabase.rpc("request_access");
+    const { data: accesso, error } = await supabase.from("access_requests")
+      .select("status").eq("user_id", user.id).maybeSingle();
+    const approvato = !registrationError && !error && accesso?.status === "approved";
+    if (!approvato && pathname !== "/accesso-in-attesa") {
+      if (pathname.startsWith("/api/") || request.method !== "GET") {
+        return NextResponse.json({ error: "Accesso in attesa di approvazione." }, { status: 403 });
+      }
+      const url = request.nextUrl.clone();
+      url.pathname = "/accesso-in-attesa";
+      url.search = "";
+      return redirectPreservingCookies(url, response);
+    }
+    if (approvato && pathname === "/accesso-in-attesa") {
+      return redirectPreservingCookies(new URL("/collezione", request.url), response);
+    }
   }
 
   if (user && pathname === "/login") {

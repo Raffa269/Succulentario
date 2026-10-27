@@ -1,5 +1,11 @@
 # Succulentario
 
+La versione pubblica è preparata sul ramo `freemium-1.0`: massimo 5 schede
+per utente e accessi aperti su richiesta, approvati dall’amministratore.
+La versione attuale resta **Succulentario (BETA)** sul sito e database esistenti.
+Vedi [PUBBLICAZIONE-FREEMIUM.md](./PUBBLICAZIONE-FREEMIUM.md) per attivazione,
+separazione degli ambienti e verifiche da completare sul nuovo database.
+
 Il catalogo personale della collezione di piante grasse di Raffaele. Vedi
 [`SPECIFICA.md`](./SPECIFICA.md) per il documento di riferimento completo
 (stack, modello dati, funzionalità, ordine di costruzione).

@@ -1,4 +1,5 @@
 "use server";
+import { photoBucket } from "@/lib/edition";
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
@@ -37,7 +38,7 @@ async function cancellaFotoSePresente(
   photoPath: string | null,
 ) {
   if (photoPath) {
-    await supabase.storage.from("foto").remove([photoPath]);
+    await supabase.storage.from(photoBucket).remove([photoPath]);
   }
 }
 
@@ -317,7 +318,7 @@ export async function eliminaPianta(id: string, photoPath: string | null) {
   const { data: fotoCrescita } = await supabase.from("plant_photos").select("photo_path").eq("plant_id", id);
   const percorsiCrescita = (fotoCrescita ?? []).map((f) => f.photo_path);
   if (percorsiCrescita.length > 0) {
-    await supabase.storage.from("foto").remove(percorsiCrescita);
+    await supabase.storage.from(photoBucket).remove(percorsiCrescita);
   }
 
   const { error } = await supabase.from("plants").delete().eq("id", id);

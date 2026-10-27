@@ -3,6 +3,8 @@ import { ModuloEsportazione } from "@/components/modulo-esportazione";
 import { signOut } from "@/app/actions/auth";
 import { AppHeader } from "@/components/app-header";
 import packageJson from "../../../../package.json";
+import { isFreemium, editionName } from "@/lib/edition";
+import { createClient } from "@/lib/supabase/server";
 
 export const metadata = { title: "Impostazioni · Succulentario" };
 
@@ -20,13 +22,20 @@ function VoceMenu({ href, titolo, testo }: { href: string; titolo: string; testo
   );
 }
 
-export default function PaginaImpostazioni() {
+export default async function PaginaImpostazioni() {
+  let admin = false;
+  if (isFreemium) {
+    const supabase = await createClient();
+    const { data } = await supabase.rpc("is_access_admin");
+    admin = data === true;
+  }
   return (
     <div className="mx-auto max-w-2xl px-4 pb-8 pt-3">
       <AppHeader />
       <h1 className="mb-4 font-heading text-2xl text-[var(--color-text)]">Menu</h1>
 
       <div className="mb-5 flex flex-col gap-2">
+        {admin && <VoceMenu href="/amministrazione" titolo="Richieste di accesso" testo="Approva o revoca l’accesso degli utenti." />}
         <VoceMenu href="/wishlist" titolo="Wishlist" testo="Le varietà che vorresti avere." />
         <VoceMenu href="/cimitero" titolo="Cimitero" testo="Le piante perse, e cosa hanno insegnato." />
         <VoceMenu href="/guida" titolo="Guida generale" testo="Luce, acqua, terriccio, calendario." />
@@ -58,7 +67,7 @@ export default function PaginaImpostazioni() {
 
       <form action={signOut} className="mt-6">
         <p className="mb-2 text-center font-sans text-xs text-[var(--color-text-secondary)]">
-          versione {packageJson.version}
+          {editionName} · versione {packageJson.version}
         </p>
         <button
           type="submit"

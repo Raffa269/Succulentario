@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import { NavLink } from "@/components/nav-link";
 import { voceCalendarioDelMese } from "@/lib/catalogo";
+import { isFreemium, plantLimit } from "@/lib/edition";
+import { createClient } from "@/lib/supabase/server";
 
 const iconaProps = {
   viewBox: "0 0 24 24",
@@ -60,13 +62,27 @@ const icone = {
  * (il contenuto vero di /allerte, che conta, è invece dinamico per scelta:
  * vedi `export const dynamic` in quella pagina).
  */
-export default function AppLayout({ children }: { children: ReactNode }) {
+export default async function AppLayout({ children }: { children: ReactNode }) {
+  let numeroPiante = 0;
+  if (isFreemium) {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
+      const { count } = await supabase.from("plants").select("id", { count: "exact", head: true }).eq("owner", user.id);
+      numeroPiante = count ?? 0;
+    }
+  }
   const meseCorrente = new Date().getMonth() + 1;
   const cambiDiStagione = voceCalendarioDelMese(meseCorrente).length > 0;
 
   return (
     <div className="app-shell">
-      <main className="app-content">{children}</main>
+      <main className="app-content">
+        {isFreemium && <p className="mx-4 mt-3 rounded-xl border border-black/10 px-4 py-2 text-sm" role="status">
+          Piano gratuito · {numeroPiante}/{plantLimit} schede{numeroPiante >= plantLimit ? ". Limite raggiunto: elimina una scheda per aggiungerne un’altra." : ". Collezione, wishlist e cimitero condividono il limite."}
+        </p>}
+        {children}
+      </main>
 
       <nav
         aria-label="Sezioni dell’app"

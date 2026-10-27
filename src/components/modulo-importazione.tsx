@@ -1,10 +1,11 @@
 "use client";
+import { photoBucket } from "@/lib/edition";
 
 import { useState, type ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { analizzaBackup, type VoceDaImportare } from "@/lib/import-backup";
-import { svuotaPiante, importaVoce, fineImportazione } from "@/app/actions/import";
+import { svuotaPiante, importaVoce, fineImportazione, verificaLimiteImportazione } from "@/app/actions/import";
 
 type Fase = "scegli" | "anteprima" | "importando" | "fatto" | "errore";
 type Modalita = "unisci" | "sostituisci";
@@ -52,6 +53,7 @@ export function ModuloImportazione() {
     setErrore(null);
 
     try {
+      await verificaLimiteImportazione(voci.map(v => v.importId), modalita);
       if (modalita === "sostituisci") {
         await svuotaPiante();
       }
@@ -70,7 +72,7 @@ export function ModuloImportazione() {
             const blob = dataUrlABlob(v.fotoDataUrl);
             const percorso = `${user.id}/${crypto.randomUUID()}.jpg`;
             const { error } = await supabase.storage
-              .from("foto")
+              .from(photoBucket)
               .upload(percorso, blob, { contentType: blob.type || "image/jpeg" });
             if (!error) photoPath = percorso;
           } catch {

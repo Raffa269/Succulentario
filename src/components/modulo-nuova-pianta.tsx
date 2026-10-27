@@ -1,4 +1,5 @@
 "use client";
+import { photoBucket } from "@/lib/edition";
 
 import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
@@ -194,7 +195,7 @@ export function ModuloNuovaPianta({
         const blob = await comprimiImmagine(fileFoto);
         const percorso = `${user.id}/${crypto.randomUUID()}.jpg`;
         const { error: erroreUpload } = await supabase.storage
-          .from("foto")
+          .from(photoBucket)
           .upload(percorso, blob, { contentType: "image/jpeg" });
         if (erroreUpload) throw new Error(erroreUpload.message);
 

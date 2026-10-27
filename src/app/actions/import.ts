@@ -1,9 +1,25 @@
 "use server";
+import { photoBucket } from "@/lib/edition";
 
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import type { PlantKind } from "@/lib/plants";
 import type { NotaPianta, Sistemazione, Orientamento } from "@/lib/diario-pianta";
+import { isFreemium, plantLimit } from "@/lib/edition";
+
+/** Verifica il limite prima di cancellare dati o caricare le foto del backup. */
+export async function verificaLimiteImportazione(importIds: string[], modalita: "sostituisci" | "unisci") {
+  if (!isFreemium) return;
+  const { supabase, userId } = await clientAutenticato();
+  const ids = new Set(importIds);
+  let totale = ids.size;
+  if (modalita === "unisci") {
+    const { data, error } = await supabase.from("plants").select("import_id").eq("owner", userId);
+    if (error) throw new Error("Impossibile verificare le schede esistenti.");
+    totale += (data ?? []).filter(p => !p.import_id || !ids.has(p.import_id)).length;
+  }
+  if (totale > plantLimit) throw new Error("Questo backup supera il limite di 5 schede della versione freemium. Nessun dato è stato modificato.");
+}
 
 async function clientAutenticato() {
   const supabase = await createClient();
@@ -23,7 +39,7 @@ export async function svuotaPiante() {
     .map((p) => p.photo_path)
     .filter((p): p is string => Boolean(p));
   if (percorsi.length > 0) {
-    await supabase.storage.from("foto").remove(percorsi);
+    await supabase.storage.from(photoBucket).remove(percorsi);
   }
 
   const { error } = await supabase.from("plants").delete().eq("owner", userId);

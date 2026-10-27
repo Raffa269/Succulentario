@@ -3,6 +3,7 @@
 import { Suspense, useState, type FormEvent } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { isFreemium } from "@/lib/edition";
 
 type Stato = "idle" | "invio" | "codiceInviato" | "verifica" | "errore";
 
@@ -185,6 +186,7 @@ function FormLogin() {
               </p>
             </div>
 
+            {isFreemium && <p className="mb-5 text-sm leading-relaxed">Crea gratuitamente fino a 5 schede pianta. Richiedi il codice e verifica la tua email: Raffaele approverà personalmente il tuo accesso.</p>}
             <form onSubmit={inviaCodice} className="flex flex-col gap-3">
               <div>
                 <span className="mb-2 block font-sans text-xs font-bold uppercase tracking-wider text-[var(--color-text-secondary)]">
@@ -230,7 +232,7 @@ function FormLogin() {
 
       {!inCorsoVerifica && (
         <p className="absolute inset-x-0 bottom-8 text-center font-sans text-[13px] font-medium text-[var(--color-text-secondary)]">
-          Nessuna password, nessun account.
+          {isFreemium ? "Accesso gratuito, con approvazione." : "Nessuna password, nessun account."}
         </p>
       )}
     </main>

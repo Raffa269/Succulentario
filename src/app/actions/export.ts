@@ -1,4 +1,5 @@
 "use server";
+import { photoBucket } from "@/lib/edition";
 
 import { createClient } from "@/lib/supabase/server";
 
@@ -39,7 +40,7 @@ export async function esportaBackup(): Promise<string> {
     piante.map(async (p) => {
       let photoDataUrl: string | null = null;
       if (p.photo_path) {
-        const { data: file } = await supabase.storage.from("foto").download(p.photo_path);
+        const { data: file } = await supabase.storage.from(photoBucket).download(p.photo_path);
         if (file) {
           const buf = await file.arrayBuffer();
           const base64 = Buffer.from(buf).toString("base64");

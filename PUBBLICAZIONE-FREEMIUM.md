@@ -12,15 +12,21 @@ Registrazione email e SMTP personalizzato erano già abilitati. Il template
 Confirm Signup è stato aggiornato per mostrare il codice numerico.
 
 Superati test PostgreSQL temporaneo, TypeScript, ESLint e build freemium.
-Il codice è stato caricato nel repository Raffa269/Succulentario sul ramo
-freemium-1.0 dopo l’autorizzazione esplicita dell’utente. Su Vercel è pronto il
-modulo di importazione di quel ramo come succulentario-freemium, con edizione
-freemium impostata. Il controllo automatico ha bloccato la lettura delle variabili
-del sito BETA e la creazione del nuovo progetto prima dell’inserimento delle
-variabili obbligatorie. È stata chiesta l’autorizzazione a copiare le chiavi
-Supabase e di riconoscimento dalla BETA al nuovo progetto nello stesso account,
-senza mostrarle in chat o modificare la BETA. Nessun nuovo deployment eseguito;
-rimangono il collegamento Vercel, il callback Auth e la verifica email completa.
+La freemium è pubblicata su https://succulentario-freemium.vercel.app nel
+progetto Vercel succulentario-freemium. Il ramo di produzione è freemium-1.0;
+la BETA mantiene il proprio progetto Vercel e il ramo main.
+Configurati NEXT_PUBLIC_APP_EDITION=freemium e i parametri pubblici Supabase.
+Aggiunto il callback esatto freemium alle URL consentite senza cambiare il Site URL BETA.
+Verificati sul sito pubblico: invio e ricezione del codice email, login di
+Raffaele, collezione separata vuota con contatore 0/5, pannello Richieste di
+accesso e modulo di inserimento manuale con foto.
+
+L’utente ha scelto di pubblicare senza riconoscimento automatico: Vercel
+conserva le chiavi esistenti come Secret di sola scrittura, non recuperabili.
+Il comando Identifica è nascosto nella freemium e l’API risponde con un messaggio
+esplicito senza chiamare servizi esterni. Per riattivarlo in futuro configurare
+le chiavi originali nel nuovo progetto e NEXT_PUBLIC_IDENTIFICATION_ENABLED=true,
+poi ricompilare. Il riconoscimento della BETA rimane invariato.
 
 ## Architettura
 

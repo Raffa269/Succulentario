@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { identificationEnabled } from "@/lib/edition";
 import { createClient } from "@/lib/supabase/server";
 import { getVarietaDiGenere, trovaGenerePerNomeScientifico } from "@/lib/catalogo";
 import { ErrorePlantNet, identificaConPlantNet } from "@/lib/plantnet";
@@ -38,6 +39,9 @@ function descriviFonteIdentificazione(fonte: FonteIdentificazione) {
  * Sono proposte, non diagnosi: lo dice anche l'interfaccia.
  */
 export async function POST(request: Request) {
+  if (!identificationEnabled) {
+    return NextResponse.json({ error: "Il riconoscimento automatico non è disponibile in questa versione." }, { status: 503 });
+  }
   const supabase = await createClient();
   const {
     data: { user },

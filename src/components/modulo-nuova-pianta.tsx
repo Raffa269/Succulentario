@@ -1,5 +1,5 @@
 "use client";
-import { photoBucket } from "@/lib/edition";
+import { photoBucket, identificationEnabled } from "@/lib/edition";
 
 import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
@@ -95,7 +95,7 @@ export function ModuloNuovaPianta({
   }
 
   async function eseguiIdentificazione(files: File[], usaMorfologia = false) {
-    if (files.length === 0) return;
+    if (!identificationEnabled || files.length === 0) return;
     setCandidati(null);
     setIdentificando(true);
     setErroreIdentifica(null);
@@ -306,7 +306,7 @@ export function ModuloNuovaPianta({
         </div>
       )}
 
-      <div className="mt-4 flex gap-2.5">
+      {identificationEnabled ? <div className="mt-4 flex gap-2.5">
         <button
           type="button"
           onClick={() => inputIdentifica.current?.click()}
@@ -329,6 +329,8 @@ export function ModuloNuovaPianta({
           Non so il nome
         </button>
       </div>
+
+      : <p className="mt-4 text-sm text-[var(--color-text-secondary)]">Il riconoscimento automatico non è disponibile in questa versione. Puoi cercare una pianta per nome nel catalogo oppure compilare la scheda manualmente e aggiungere le tue foto.</p>}
 
       {erroreIdentifica && <p className="mt-2.5 text-sm text-[var(--color-casa-esclamativo)]">{erroreIdentifica}</p>}
 

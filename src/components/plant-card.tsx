@@ -99,12 +99,10 @@ export function PlantCard({
             <div className="flex min-w-0 flex-col items-center rounded-xl bg-white/70 px-1 py-2 text-center" aria-label={`Luce: ${indicazioni.esposizione}`}>
               <span className="text-[10px] font-bold tracking-wide text-[var(--color-brand)]">LUCE</span>
               <IconaLuce valore={indicazioni.esposizione} />
-              <span className="mt-1 text-xs font-semibold leading-tight text-[var(--color-text)]">{indicazioni.esposizione}</span>
             </div>
             <div className="flex min-w-0 flex-col items-center rounded-xl bg-white/70 px-1 py-2 text-center" aria-label={`Terriccio: ${indicazioni.terriccio}`}>
               <span className="text-[10px] font-bold tracking-wide text-[var(--color-brand)]">TERRICCIO</span>
               <IconaSubstrato valore={indicazioni.terriccio} />
-              <span className="mt-1 text-xs font-semibold leading-tight text-[var(--color-text)]">{indicazioni.terriccio}</span>
             </div>
           </div>
         )}

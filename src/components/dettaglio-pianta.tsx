@@ -140,10 +140,14 @@ function GalleriaCrescita({
   plantId,
   foto,
   fotoUrl,
+  onSeleziona,
+  fotoSelezionata,
 }: {
   plantId: string;
   foto: PlantPhoto[];
   fotoUrl: Record<string, string | undefined>;
+  onSeleziona: (id: string) => void;
+  fotoSelezionata: string | undefined;
 }) {
   const router = useRouter();
   const supabase = createClient();
@@ -195,7 +199,11 @@ function GalleriaCrescita({
         {foto.map((f) => (
           <div key={f.id} className="relative shrink-0">
             <div className="relative h-20 w-20 overflow-hidden rounded-2xl" style={{ background: "var(--color-neutral-100)" }}>
-              {fotoUrl[f.id] && <Image src={fotoUrl[f.id]!} alt="" fill unoptimized className="object-cover" />}
+              {fotoUrl[f.id] && (
+                <button type="button" onClick={() => onSeleziona(f.id)} aria-label={`Mostra foto del ${formattaDataCompleta(f.created_at)}`} aria-pressed={fotoSelezionata === f.id} className="absolute inset-0 rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[var(--color-brand)]">
+                  <Image src={fotoUrl[f.id]!} alt="" fill unoptimized className="object-cover" />
+                </button>
+              )}
               <button
                 type="button"
                 onClick={() => elimina(f)}
@@ -266,6 +274,7 @@ export function DettaglioPianta({
   const [orientamento, setOrientamento] = useState<Orientamento | "">(plant.orientamento ?? "");
   const [photoPath, setPhotoPath] = useState(plant.photo_path);
   const [fotoUrl, setFotoUrl] = useState(fotoUrlIniziale);
+  const [fotoSelezionata, setFotoSelezionata] = useState("copertina");
 
   const [salvando, setSalvando] = useState(false);
   const [errore, setErrore] = useState<string | null>(null);
@@ -274,6 +283,18 @@ export function DettaglioPianta({
   const [cause, setCause] = useState(plant.cause ?? "");
   const [lesson, setLesson] = useState(plant.lesson ?? "");
   const indicazioni = indicazioniPerPianta(plant, clima);
+  const fotoSfogliabili = [
+    ...(fotoUrl ? [{ id: "copertina", url: fotoUrl, data: null as string | null }] : []),
+    ...fotoCrescita.flatMap((f) => fotoCrescitaUrl[f.id] ? [{ id: f.id, url: fotoCrescitaUrl[f.id]!, data: f.created_at }] : []),
+  ];
+  // Se una foto viene eliminata, mostra la prima disponibile senza indici obsoleti.
+  const indiceFoto = Math.max(0, fotoSfogliabili.findIndex((f) => f.id === fotoSelezionata));
+  const fotoAttiva = fotoSfogliabili[indiceFoto];
+  function scorriFoto(direzione: number) {
+    if (fotoSfogliabili.length < 2) return;
+    const indice = (indiceFoto + direzione + fotoSfogliabili.length) % fotoSfogliabili.length;
+    setFotoSelezionata(fotoSfogliabili[indice].id);
+  }
 
   async function cambiaFoto(e: ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -385,11 +406,20 @@ export function DettaglioPianta({
   return (
     <div>
       <div
+        role="region"
+        aria-label="Foto della pianta"
+        tabIndex={fotoSfogliabili.length > 1 ? 0 : undefined}
+        onKeyDown={(e) => {
+          if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+            e.preventDefault();
+            scorriFoto(e.key === "ArrowLeft" ? -1 : 1);
+          }
+        }}
         className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-[20px]"
         style={{ background: "var(--color-neutral-100)" }}
       >
-        {fotoUrl ? (
-          <Image src={fotoUrl} alt={name} fill unoptimized className="object-cover" />
+        {fotoAttiva ? (
+          <Image src={fotoAttiva.url} alt={`${name}, foto ${indiceFoto + 1} di ${fotoSfogliabili.length}`} fill unoptimized className="object-contain" />
         ) : genusId ? (
           <IllustrazioneGenere
             genereId={genusId}
@@ -397,14 +427,25 @@ export function DettaglioPianta({
             style={{ color: "var(--color-riparo)" }}
           />
         ) : null}
+        {fotoSfogliabili.length > 1 && (
+          <>
+            <button type="button" onClick={() => scorriFoto(-1)} aria-label="Foto precedente" className="absolute left-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl text-[#201e1d] shadow">‹</button>
+            <button type="button" onClick={() => scorriFoto(1)} aria-label="Foto successiva" className="absolute right-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl text-[#201e1d] shadow">›</button>
+          </>
+        )}
       </div>
+      {fotoAttiva && (
+        <p role="status" className="mt-2 text-center text-xs text-[var(--color-text-secondary)]">
+          Foto {indiceFoto + 1} di {fotoSfogliabili.length} · {fotoAttiva.data ? <time dateTime={fotoAttiva.data}>{formattaDataCompleta(fotoAttiva.data)}</time> : "Copertina"}
+        </p>
+      )}
       <label className="mt-2.5 block text-center font-sans text-sm font-bold" style={{ color: "var(--color-brand)" }}>
-        {fotoUrl ? "Cambia foto" : "Aggiungi foto"}
+        {fotoUrl ? "Cambia foto di copertina" : "Aggiungi foto di copertina"}
         {/* Niente `capture`: deve restare la scelta fra scattare e pescare dalla galleria. */}
         <input type="file" accept="image/*" onChange={cambiaFoto} className="hidden" />
       </label>
 
-      <GalleriaCrescita plantId={plant.id} foto={fotoCrescita} fotoUrl={fotoCrescitaUrl} />
+      <GalleriaCrescita plantId={plant.id} foto={fotoCrescita} fotoUrl={fotoCrescitaUrl} onSeleziona={setFotoSelezionata} fotoSelezionata={fotoAttiva?.id} />
 
       {plant.kind !== "lost" && (
         <>
@@ -700,4 +741,3 @@ export function DettaglioPianta({
     </div>
   );
 }
-

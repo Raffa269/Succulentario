@@ -107,21 +107,23 @@ export function ElencoPiante({
 
   return (
     <div>
-      <div className="flex gap-2">
+      <div className="flex min-w-0 gap-1">
         <div
-          className="flex h-12 flex-1 items-center gap-2 rounded-full border border-black/[.16] bg-white px-4"
+          className="flex h-12 min-w-0 flex-1 items-center gap-1 rounded-full border border-black/[.16] bg-white px-3"
           style={{ colorScheme: "light" }}
         >
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#645c50" strokeWidth={2.75} strokeLinecap="round" aria-hidden="true">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#645c50" strokeWidth={2.75} strokeLinecap="round" aria-hidden="true" className="shrink-0">
             <circle cx="11" cy="11" r="7" />
             <path d="M16.5 16.5L21 21" />
           </svg>
           <input
             type="search"
+            size={16}
+            aria-label={placeholder}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={placeholder}
-            className="h-full flex-1 bg-transparent text-base text-[#201e1d] outline-none placeholder:text-[#645c50]"
+            className="h-full min-w-0 w-0 flex-1 bg-transparent text-base text-[#201e1d] outline-none placeholder:text-[#645c50]"
           />
         </div>
         <button
@@ -129,7 +131,7 @@ export function ElencoPiante({
           onClick={() => setFiltriAperti((v) => !v)}
           aria-pressed={filtriAperti || ricoveriAttivi.size > 0 || !!genereAttivo}
           aria-label="Filtra per ricovero e genere"
-          className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full"
+          className="relative flex h-12 w-11 shrink-0 items-center justify-center rounded-full"
           style={{ background: "var(--color-neutral-100)" }}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" strokeWidth={2.75} strokeLinecap="round" aria-hidden="true">
@@ -141,9 +143,10 @@ export function ElencoPiante({
         </button>
         {ordinamenti.length > 1 && (
           <select
+            aria-label="Ordina le piante"
             value={ordine}
             onChange={(e) => setOrdine(e.target.value as Ordinamento)}
-            className="h-12 shrink-0 rounded-full border border-black/[.16] bg-white px-2 text-sm text-[#201e1d]"
+            className="h-12 w-[104px] min-w-0 shrink-0 rounded-full border border-black/[.16] bg-white px-1 text-sm text-[#201e1d] sm:w-auto"
           >
             {ordinamenti.map((o) => (
               <option key={o} value={o}>

@@ -20,6 +20,7 @@ export default async function PaginaCollezione() {
         fotoUrl={fotoUrl}
         clima={clima}
         ordinamenti={["catalogo", "recenti", "nome", "genere"]}
+        chiaveOrdinamento="succulentario.collezione.ordinamento"
         vuoto="Nessuna pianta ancora. Aggiungine una, o vai su un genere e tocca «Ho questa»."
         placeholder="cerca in collezione"
       />

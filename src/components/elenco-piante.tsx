@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import { PlantCard } from "@/components/plant-card";
 import { generi, getGenere, getVarietaByKey, type Ricovero } from "@/lib/catalogo";
 import { ricoveroVarietaPerClima, type ProfiloClimatico } from "@/lib/clima";
@@ -45,6 +45,7 @@ export function ElencoPiante({
   vuoto,
   placeholder = "Cerca…",
   clima,
+  chiaveOrdinamento,
 }: {
   piante: Plant[];
   fotoUrl: Record<string, string>;
@@ -52,9 +53,32 @@ export function ElencoPiante({
   vuoto: string;
   placeholder?: string;
   clima: ProfiloClimatico;
+  chiaveOrdinamento?: string;
 }) {
   const [query, setQuery] = useState("");
-  const [ordine, setOrdine] = useState<Ordinamento>(ordinamenti[0]);
+  const [ordineScelto, setOrdineScelto] = useState<Ordinamento | null>(null);
+  // Rilegge la preferenza anche quando Next riusa una pagina dalla propria cache.
+  // Lo snapshot server evita di leggere window durante rendering e idratazione.
+  const ordineMemorizzato = useSyncExternalStore(
+    (notifica) => {
+      window.addEventListener("storage", notifica);
+      return () => window.removeEventListener("storage", notifica);
+    },
+    () => {
+      try { return chiaveOrdinamento ? localStorage.getItem(chiaveOrdinamento) : null; }
+      catch { return null; }
+    },
+    () => null,
+  );
+  const ordineValido = ordinamenti.find((o) => o === ordineMemorizzato);
+  const ordine = ordineScelto ?? ordineValido ?? ordinamenti[0];
+  function cambiaOrdinamento(nuovo: Ordinamento) {
+    setOrdineScelto(nuovo);
+    if (chiaveOrdinamento) {
+      try { localStorage.setItem(chiaveOrdinamento, nuovo); }
+      catch { /* Se il browser blocca lo storage, l'ordinamento funziona comunque. */ }
+    }
+  }
   const [filtriAperti, setFiltriAperti] = useState(false);
   const [ricoveriAttivi, setRicoveriAttivi] = useState<Set<Ricovero>>(new Set());
   const [genereAttivo, setGenereAttivo] = useState("");
@@ -145,7 +169,7 @@ export function ElencoPiante({
           <select
             aria-label="Ordina le piante"
             value={ordine}
-            onChange={(e) => setOrdine(e.target.value as Ordinamento)}
+            onChange={(e) => cambiaOrdinamento(e.target.value as Ordinamento)}
             className="h-12 w-[104px] min-w-0 shrink-0 rounded-full border border-black/[.16] bg-white px-1 text-sm text-[#201e1d] sm:w-auto"
           >
             {ordinamenti.map((o) => (

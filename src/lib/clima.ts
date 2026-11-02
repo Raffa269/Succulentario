@@ -230,7 +230,8 @@ export function ricoveroPerClima(ricovero: Ricovero, clima: ProfiloClimatico): R
 
   if (ricovero === "fuori") return "fuori";
   if (ricovero === "riparo") {
-    if (minimaInvernaleMedia >= 7) return "fuori";
+    // Soglia sulle minime medie mensili invernali: riparo sotto 3 °C.
+    if (minimaInvernaleMedia >= 3) return "fuori";
     if (minimaInvernaleMedia <= 1) return "casa";
     return "riparo";
   }

@@ -5,11 +5,11 @@ export function approvalEmailConfigured() {
   return Boolean(process.env.SMTP_USER?.trim() && process.env.SMTP_PASSWORD);
 }
 
-export async function sendApprovalEmail(email: string) {
+function approvalTransport() {
   if (!approvalEmailConfigured()) throw new Error("SMTP non configurato.");
   const port = Number(process.env.SMTP_PORT || "465");
   if (![465, 587].includes(port)) throw new Error("Porta SMTP non valida.");
-  const transport = nodemailer.createTransport({
+  return nodemailer.createTransport({
     host: process.env.SMTP_HOST || "smtp.gmail.com",
     port,
     secure: port === 465,
@@ -21,6 +21,23 @@ export async function sendApprovalEmail(email: string) {
     disableFileAccess: true,
     disableUrlAccess: true,
   });
+}
+
+// Authenticates to SMTP without sending a message or changing any access request.
+export async function verifyApprovalEmail() {
+  if (!approvalEmailConfigured()) return "smtp_missing";
+  try {
+    await approvalTransport().verify();
+    return "smtp_ok";
+  } catch (error) {
+    // Never return raw provider errors, which can contain account details.
+    return error && typeof error === "object" && "code" in error && error.code === "EAUTH"
+      ? "smtp_auth_failed" : "smtp_connection_failed";
+  }
+}
+
+export async function sendApprovalEmail(email: string) {
+  const transport = approvalTransport();
   const url = "https://succulentario-freemium.vercel.app/collezione";
   const info = await transport.sendMail({
     from: { name: "Succulentario", address: process.env.SMTP_USER!.trim() },

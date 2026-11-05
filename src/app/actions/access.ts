@@ -5,7 +5,18 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { isFreemium } from "@/lib/edition";
 import { decideAccess, type AccessStatus } from "@/lib/access-decision";
-import { sendApprovalEmail } from "@/lib/approval-email";
+import { sendApprovalEmail, verifyApprovalEmail } from "@/lib/approval-email";
+
+export async function verificaEmailAccesso() {
+  if (!isFreemium) throw new Error("Funzione disponibile nella versione freemium.");
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) throw new Error("Non autenticato.");
+  const { data: admin, error } = await supabase.rpc("is_access_admin");
+  if (error || admin !== true) throw new Error("Non autorizzato.");
+  const result = await verifyApprovalEmail();
+  redirect(`/amministrazione?esito=${result}`);
+}
 
 export async function aggiornaAccesso(form: FormData) {
   if (!isFreemium) throw new Error("Funzione disponibile nella versione freemium.");

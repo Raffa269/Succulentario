@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { isFreemium } from "@/lib/edition";
-import { aggiornaAccesso } from "@/app/actions/access";
+import { aggiornaAccesso, verificaEmailAccesso } from "@/app/actions/access";
 import { AppHeader } from "@/components/app-header";
 import { AccessSubmit } from "@/components/access-submit";
 import { approvalEmailConfigured } from "@/lib/approval-email";
@@ -17,6 +17,10 @@ export default async function Amministrazione({ searchParams }: { searchParams: 
   const stati: Record<string, string> = { pending: "In attesa", approved: "Approvato", rejected: "Non approvato" };
   const { esito } = await searchParams;
   const messaggi: Record<string, string> = {
+    smtp_ok: "Connessione riuscita: Gmail ha accettato le credenziali. Nessuna email inviata e nessun accesso modificato.",
+    smtp_missing: "Mancano le credenziali SMTP nella configurazione del sito.",
+    smtp_auth_failed: "Gmail non ha accettato le credenziali. Controlla l’indirizzo del mittente e la password per app Gmail (non la password normale).",
+    smtp_connection_failed: "Non è stato possibile completare la connessione al server di posta. Riprova tra poco; se persiste, controlla host, porta e connessione.",
     email_sent: "Accesso approvato. Il server di posta ha accettato l’email di notifica.",
     email_failed: "L’accesso è approvato, ma l’invio dell’email non è riuscito. Usa «Invia di nuovo l’email» sulla richiesta interessata per ritentare.",
     updated: "Accesso aggiornato.", unchanged: "La richiesta era già in questo stato: nessuna email inviata.",
@@ -27,6 +31,10 @@ export default async function Amministrazione({ searchParams }: { searchParams: 
     <p>Approva ogni persona per consentirle di usare il Succulentario. Dopo l’approvazione viene inviata un’email con il link per entrare.</p>
     {!approvalEmailConfigured() && <p role="alert" className="rounded-xl bg-amber-50 p-3">L’invio delle notifiche email deve essere configurato. Le approvazioni restano valide, ma gli utenti non ricevono ancora l’avviso automatico.</p>}
     {esito && messaggi[esito] && <p role={esito === "email_failed" ? "alert" : "status"} className="rounded-xl border p-3">{messaggi[esito]}</p>}
+    <form action={verificaEmailAccesso}>
+      <AccessSubmit name="verify_smtp" value="true">Verifica connessione email</AccessSubmit>
+      <p className="mt-2 text-sm">Controlla le credenziali senza inviare email o modificare gli accessi.</p>
+    </form>
     {!data?.length && <p>Nessuna richiesta ricevuta.</p>}
     {data?.map(r => <section key={r.user_id} className="space-y-3 rounded-2xl border border-black/10 p-4">
       <p className="break-all font-bold">{r.email}</p><p>{stati[r.status]}</p>

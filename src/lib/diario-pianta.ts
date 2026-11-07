@@ -16,3 +16,8 @@ export function formattaDataCompleta(iso: string): string {
   });
 }
 
+/** Giorno di calendario in Italia, nel formato del campo data HTML. */
+export function giornoFoto(timestamp: string): string {
+  return formattaDataCompleta(timestamp).split("/").reverse().join("-");
+}
+

@@ -10,6 +10,7 @@ import {
   aggiungiFotoCrescita,
   eliminaFotoCrescita,
   eliminaPianta,
+  modificaDataFoto,
   promuoviACollezione,
   riportaInCollezione,
   spostaInCimitero,
@@ -18,7 +19,7 @@ import { IllustrazioneGenere } from "@/components/illustrazione-genere";
 import { RiquadroIndoor } from "@/components/indicazione-indoor";
 import type { Genere } from "@/lib/catalogo";
 import { type Plant, type PlantPhoto } from "@/lib/plants";
-import { SISTEMAZIONI, ORIENTAMENTI, formattaDataCompleta, type Sistemazione, type Orientamento } from "@/lib/diario-pianta";
+import { SISTEMAZIONI, ORIENTAMENTI, formattaDataCompleta, giornoFoto, type Sistemazione, type Orientamento } from "@/lib/diario-pianta";
 import { NotePianta } from "@/components/note-pianta";
 import { indicazioniPerPianta, type Esposizione, type Terriccio } from "@/lib/coltivazione";
 import type { ProfiloClimatico } from "@/lib/clima";
@@ -200,7 +201,7 @@ function GalleriaCrescita({
           <div key={f.id} className="relative shrink-0">
             <div className="relative h-20 w-20 overflow-hidden rounded-2xl" style={{ background: "var(--color-neutral-100)" }}>
               {fotoUrl[f.id] && (
-                <button type="button" onClick={() => onSeleziona(f.id)} aria-label={`Mostra foto del ${formattaDataCompleta(f.created_at)}`} aria-pressed={fotoSelezionata === f.id} className="absolute inset-0 rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[var(--color-brand)]">
+                <button type="button" onClick={() => onSeleziona(f.id)} aria-label={`Mostra foto del ${formattaDataCompleta(f.taken_on ?? f.created_at)}`} aria-pressed={fotoSelezionata === f.id} className="absolute inset-0 rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[var(--color-brand)]">
                   <Image src={fotoUrl[f.id]!} alt="" fill unoptimized className="object-cover" />
                 </button>
               )}
@@ -215,7 +216,7 @@ function GalleriaCrescita({
               </button>
             </div>
             <p className="mt-1 text-center text-[10px] capitalize text-[var(--color-text-secondary)]">
-              <time dateTime={f.created_at}>{formattaDataCompleta(f.created_at)}</time>
+              <time dateTime={f.taken_on ?? f.created_at}>{formattaDataCompleta(f.taken_on ?? f.created_at)}</time>
             </p>
           </div>
         ))}
@@ -238,6 +239,55 @@ function GalleriaCrescita({
       </div>
       {errore && <p className="mt-1.5 text-sm text-[var(--color-casa-esclamativo)]">{errore}</p>}
     </div>
+  );
+}
+
+function DataFoto({ plantId, fotoId, percorso, giorno }: {
+  plantId: string;
+  fotoId: string | null;
+  percorso: string;
+  giorno: string;
+}) {
+  const [bozza, setBozza] = useState<string | null>(null);
+  const [salvando, setSalvando] = useState(false);
+  const [errore, setErrore] = useState<string | null>(null);
+
+  async function salva(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!bozza || salvando) return;
+    setSalvando(true);
+    setErrore(null);
+    try {
+      const risultato = await modificaDataFoto(plantId, fotoId, percorso, bozza);
+      if (risultato.errore) setErrore(risultato.errore);
+      else setBozza(null);
+    } catch {
+      setErrore("Non è stato possibile salvare la data. Riprova.");
+    } finally {
+      setSalvando(false);
+    }
+  }
+
+  if (bozza === null) return (
+    <button type="button" onClick={() => setBozza(giorno)} className="px-2 py-1 font-semibold underline">
+      Modifica data
+    </button>
+  );
+
+  return (
+    <form onSubmit={salva} className="mt-2 flex flex-wrap items-end justify-center gap-2 text-sm">
+      <label className="flex flex-col gap-1 text-left">
+        Data della foto
+        <input type="date" required min="0001-01-01" max="9999-12-31" value={bozza}
+          onChange={(e) => setBozza(e.target.value)} disabled={salvando}
+          className="rounded-lg border border-black/20 bg-white px-2 py-2" />
+      </label>
+      <button type="submit" disabled={salvando} className="rounded-lg bg-[var(--color-brand)] px-3 py-2 font-semibold text-white">
+        {salvando ? "Salvataggio…" : "Salva data"}
+      </button>
+      <button type="button" disabled={salvando} onClick={() => { setBozza(null); setErrore(null); }} className="px-2 py-2">Annulla</button>
+      {errore && <p role="alert" className="w-full text-center text-[var(--color-casa-esclamativo)]">{errore}</p>}
+    </form>
   );
 }
 
@@ -283,9 +333,18 @@ export function DettaglioPianta({
   const [cause, setCause] = useState(plant.cause ?? "");
   const [lesson, setLesson] = useState(plant.lesson ?? "");
   const indicazioni = indicazioniPerPianta(plant, clima);
+  const fotoDiCopertina = fotoCrescita.find((f) => f.photo_path === plant.photo_path);
+  const giornoCopertina = plant.cover_photo_date ?? fotoDiCopertina?.taken_on
+    ?? giornoFoto(fotoDiCopertina?.created_at ?? plant.added_at);
+  const fotoGalleria = fotoCrescita.map((f) => ({
+    ...f,
+    taken_on: f.photo_path === plant.photo_path ? giornoCopertina : f.taken_on ?? giornoFoto(f.created_at),
+  })).sort((a, b) => a.taken_on.localeCompare(b.taken_on));
   const fotoSfogliabili = [
-    ...(fotoUrl ? [{ id: "copertina", url: fotoUrl, data: null as string | null }] : []),
-    ...fotoCrescita.flatMap((f) => fotoCrescitaUrl[f.id] ? [{ id: f.id, url: fotoCrescitaUrl[f.id]!, data: f.created_at }] : []),
+    ...(fotoUrl && photoPath ? [{ id: "copertina", url: fotoUrl, data: photoPath === plant.photo_path ? giornoCopertina : null, percorso: photoPath }] : []),
+    ...fotoGalleria.flatMap((f) => f.photo_path !== photoPath && fotoCrescitaUrl[f.id]
+      ? [{ id: f.id, url: fotoCrescitaUrl[f.id]!, data: f.taken_on, percorso: f.photo_path }]
+      : []),
   ];
   // Se una foto viene eliminata, mostra la prima disponibile senza indici obsoleti.
   const indiceFoto = Math.max(0, fotoSfogliabili.findIndex((f) => f.id === fotoSelezionata));
@@ -316,6 +375,7 @@ export function DettaglioPianta({
 
       setPhotoPath(percorso);
       setFotoUrl(URL.createObjectURL(file));
+      setFotoSelezionata("copertina");
     } catch (err) {
       setErrore(err instanceof Error ? err.message : "Caricamento foto fallito.");
     }
@@ -435,9 +495,17 @@ export function DettaglioPianta({
         )}
       </div>
       {fotoAttiva && (
-        <p role="status" className="mt-2 text-center text-xs text-[var(--color-text-secondary)]">
-          Foto {indiceFoto + 1} di {fotoSfogliabili.length} · {fotoAttiva.data ? <time dateTime={fotoAttiva.data}>{formattaDataCompleta(fotoAttiva.data)}</time> : "Copertina"}
-        </p>
+        <div className="mt-2 text-center text-xs text-[var(--color-text-secondary)]">
+          <p role="status">
+            Foto {indiceFoto + 1} di {fotoSfogliabili.length}
+            {fotoAttiva.id === "copertina" && " · Copertina"}
+            {fotoAttiva.data && <> · <time dateTime={fotoAttiva.data}>{formattaDataCompleta(fotoAttiva.data)}</time></>}
+          </p>
+          {fotoAttiva.data && (
+            <DataFoto key={fotoAttiva.id} plantId={plant.id} fotoId={fotoAttiva.id === "copertina" ? null : fotoAttiva.id}
+              percorso={fotoAttiva.percorso} giorno={fotoAttiva.data} />
+          )}
+        </div>
       )}
       <label className="mt-2.5 block text-center font-sans text-sm font-bold" style={{ color: "var(--color-brand)" }}>
         {fotoUrl ? "Cambia foto di copertina" : "Aggiungi foto di copertina"}
@@ -445,7 +513,9 @@ export function DettaglioPianta({
         <input type="file" accept="image/*" onChange={cambiaFoto} className="hidden" />
       </label>
 
-      <GalleriaCrescita plantId={plant.id} foto={fotoCrescita} fotoUrl={fotoCrescitaUrl} onSeleziona={setFotoSelezionata} fotoSelezionata={fotoAttiva?.id} />
+      <GalleriaCrescita plantId={plant.id} foto={fotoGalleria} fotoUrl={fotoCrescitaUrl}
+        onSeleziona={(id) => setFotoSelezionata(id === fotoDiCopertina?.id && photoPath === plant.photo_path && fotoUrl ? "copertina" : id)}
+        fotoSelezionata={fotoAttiva?.id === "copertina" ? fotoDiCopertina?.id : fotoAttiva?.id} />
 
       {plant.kind !== "lost" && (
         <>

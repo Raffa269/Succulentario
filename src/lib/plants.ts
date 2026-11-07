@@ -11,6 +11,7 @@ export interface Plant {
   genus_id: string | null;
   var_key: string | null;
   photo_path: string | null;
+  cover_photo_date: string | null;
   purchase_ym: string | null;
   prop_soil: boolean;
   prop_hum: boolean;
@@ -38,6 +39,7 @@ export interface PlantPhoto {
   plant_id: string;
   photo_path: string;
   created_at: string;
+  taken_on: string | null;
 }
 
 /** 'AAAA-MM' di oggi, per impostare l'acquisto al mese corrente (spec §8.1). */

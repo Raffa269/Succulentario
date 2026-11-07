@@ -6,7 +6,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getVarietaByKey } from "@/lib/catalogo";
 import { meseCorrente, type PlantKind } from "@/lib/plants";
 import { schedaColtivazioneSuggerita } from "@/lib/scheda-coltivazione";
-import { SISTEMAZIONI, ORIENTAMENTI, type Sistemazione, type Orientamento, type NotaPianta } from "@/lib/diario-pianta";
+import { giornoFoto, SISTEMAZIONI, ORIENTAMENTI, type Sistemazione, type Orientamento, type NotaPianta } from "@/lib/diario-pianta";
 
 async function clientAutenticato() {
   const supabase = await createClient();
@@ -180,6 +180,9 @@ export async function aggiornaPianta(id: string, campi: CampiPianta, fotoPrecede
       max_width: campi.maxWidth || "???",
       dark_period: campi.darkPeriod || "???",
       ...(campi.photoPath !== undefined ? { photo_path: campi.photoPath } : {}),
+      ...(campi.photoPath !== undefined && campi.photoPath !== fotoPrecedente
+        ? { cover_photo_date: campi.photoPath ? giornoFoto(new Date().toISOString()) : null }
+        : {}),
     })
     .eq("id", id);
 
@@ -226,6 +229,28 @@ export async function aggiungiFotoCrescita(plantId: string, photoPath: string) {
   if (error) throw new Error(error.message);
 
   revalidatePath(`/piante/${plantId}`);
+}
+
+/** Salva il giorno della foto senza alterare il timestamp di caricamento. */
+export async function modificaDataFoto(plantId: string, fotoId: string | null, photoPath: string, giorno: string) {
+  const { supabase, userId } = await clientAutenticato();
+  if (typeof giorno !== "string" || !/^(?!0000)\d{4}-\d{2}-\d{2}$/.test(giorno)) {
+    return { errore: "Inserisci una data valida." };
+  }
+  const data = new Date(`${giorno}T00:00:00Z`);
+  if (Number.isNaN(data.getTime()) || data.toISOString().slice(0, 10) !== giorno) {
+    return { errore: "Inserisci una data valida." };
+  }
+
+  const { data: foto, error } = fotoId === null
+    ? await supabase.from("plants").update({ cover_photo_date: giorno })
+        .eq("id", plantId).eq("owner", userId).eq("photo_path", photoPath).select("id").maybeSingle()
+    : await supabase.from("plant_photos").update({ taken_on: giorno })
+        .eq("id", fotoId).eq("plant_id", plantId).eq("owner", userId).eq("photo_path", photoPath).select("id").maybeSingle();
+  if (error || !foto) return { errore: "Non è stato possibile salvare la data della foto." };
+
+  revalidatePath(`/piante/${plantId}`);
+  return { errore: null };
 }
 
 /** Toglie una foto dalla cronologia di crescita (non tocca la foto di copertina). */
